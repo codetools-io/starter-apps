@@ -75,7 +75,8 @@ function AppShellNav() {
     <nav className={styles.Nav}>
       {config?.nav?.routes?.map((route) => (
         <NavLink key={route.key} to={route.path}>
-          {route.label}
+          {route?.icon}
+          {route?.label}
         </NavLink>
       ))}
     </nav>
