@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Box, Footer, Grid, Grommet, Header, Main, Sidebar } from 'grommet';
 import Notification from 'components/Notification';
 import * as config from 'config';
-import styles from './AppShell.module.css';
 
 export default function AppShellContainer({ children, ...props }) {
   const isAuthenticated = true;
@@ -12,20 +12,30 @@ export default function AppShellContainer({ children, ...props }) {
   const authLabel = isAuthenticated ? 'logout' : 'login';
 
   return (
-    <div className={styles.Container} {...props}>
-      <AppShellNotifications />
-      <AppShellHeader
-        siteName={config?.site?.name}
-        authHandler={authHandler}
-        authLabel={authLabel}
-      />
-      <AppShellSidebar />
-      <AppShellMain>{children}</AppShellMain>
-      <AppShellFooter
-        copyrightYear={config?.site?.copyrightYear}
-        siteName={config?.site?.name}
-      />
-    </div>
+    <Grommet theme={config?.theme}>
+      <Grid
+        rows={['auto', 'auto', 'auto']}
+        columns={['1/4', '1/4', '1/4', '1/4']}
+        areas={[
+          ['header', 'header', 'header', 'header'],
+          ['sidebar', 'main', 'main', 'main'],
+          ['sidebar', 'footer', 'footer', 'footer'],
+        ]}
+      >
+        {/* <AppShellNotifications /> */}
+        <AppShellHeader
+          siteName={config?.site?.name}
+          authHandler={authHandler}
+          authLabel={authLabel}
+        />
+        <AppShellSidebar />
+        <AppShellMain>{children}</AppShellMain>
+        <AppShellFooter
+          copyrightYear={config?.site?.copyrightYear}
+          siteName={config?.site?.name}
+        />
+      </Grid>
+    </Grommet>
   );
 }
 
@@ -33,7 +43,7 @@ function AppShellNotifications() {
   const notifications = [];
 
   return (
-    <div className={styles.Notifications}>
+    <div>
       {notifications.map((notification) => {
         return <Notification key={notification.id} {...notification} />;
       })}
@@ -43,42 +53,54 @@ function AppShellNotifications() {
 
 function AppShellHeader({ siteName, authHandler = () => {}, authLabel }) {
   return (
-    <header className={styles.Header}>
-      <h1>{siteName}</h1>
-      <button onClick={authHandler}>{authLabel}</button>
-    </header>
+    <Header gridArea="header">
+      <Box direction="row" justify="between" fill>
+        <h1>{siteName}</h1>
+        <button onClick={authHandler}>{authLabel}</button>
+      </Box>
+    </Header>
   );
 }
 
 function AppShellMain({ children }) {
-  return <main className={styles.Main}>{children}</main>;
+  return (
+    <Main gridArea="main">
+      <Box direction="column">{children}</Box>
+    </Main>
+  );
 }
 
 function AppShellFooter({ copyrightYear, siteName }) {
   return (
-    <footer className={styles.Footer}>
-      &copy;{copyrightYear} {siteName}
-    </footer>
+    <Footer gridArea="footer">
+      <Box direction="row" fill>
+        &copy;{copyrightYear} {siteName}
+      </Box>
+    </Footer>
   );
 }
 
 function AppShellSidebar() {
   return (
-    <div className={styles.Sidebar}>
-      <AppShellNav />
-    </div>
+    <Sidebar gridArea="sidebar">
+      <Box direction="column">
+        <AppShellNav />
+      </Box>
+    </Sidebar>
   );
 }
 
 function AppShellNav() {
   return (
-    <nav className={styles.Nav}>
-      {config?.nav?.routes?.map((route) => (
-        <NavLink key={route.key} to={route.path}>
-          {route?.icon}
-          {route?.label}
-        </NavLink>
-      ))}
+    <nav>
+      <Box direction="column">
+        {config?.nav?.routes?.map((route) => (
+          <NavLink key={route.key} to={route.path}>
+            {route?.icon}
+            {route?.label}
+          </NavLink>
+        ))}
+      </Box>
     </nav>
   );
 }

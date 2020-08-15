@@ -5,8 +5,6 @@ import Router from 'Router';
 import AppShell from 'containers/AppShell';
 import ErrorBoundary from 'containers/ErrorBoundary';
 
-import './App.css';
-
 const history = createBrowserHistory();
 
 export default function App() {
