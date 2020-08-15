@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can render ErrorBoundary 1`] = `
+<div>
+  <div
+    class="ErrorBoundary"
+  >
+    <p>
+      Content for the ErrorBoundary
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can render Dashboard 1`] = `
+<div>
+  <div
+    class="Dashboard"
+  >
+    <h2>
+      Dashboard
+    </h2>
+    <p>
+      Content for the Dashboard
+    </p>
+  </div>
+</div>
+`;

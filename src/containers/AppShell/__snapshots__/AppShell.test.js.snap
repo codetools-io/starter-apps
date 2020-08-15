@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can render AppShell 1`] = `
+<div>
+  <div
+    class="AppShell"
+  >
+    <h1>
+      Starter App
+    </h1>
+    <p>
+      Content for the AppShell
+    </p>
+  </div>
+</div>
+`;
