@@ -5,10 +5,20 @@ import * as config from 'config';
 import styles from './AppShell.module.css';
 
 export default function AppShellContainer({ children, ...props }) {
+  const isAuthenticated = true;
+  const login = () => {};
+  const logout = () => {};
+  const authHandler = isAuthenticated ? logout : login;
+  const authLabel = isAuthenticated ? 'logout' : 'login';
+
   return (
     <div className={styles.Container} {...props}>
       <AppShellNotifications />
-      <AppShellHeader />
+      <AppShellHeader
+        siteName={config?.site?.name}
+        authHandler={authHandler}
+        authLabel={authLabel}
+      />
       <AppShellSidebar />
       <AppShellMain>{children}</AppShellMain>
       <AppShellFooter
@@ -31,17 +41,11 @@ function AppShellNotifications() {
   );
 }
 
-function AppShellHeader() {
-  const isAuthenticated = true;
-  const login = () => {};
-  const logout = () => {};
-  const onAuth = isAuthenticated ? logout : login;
-  const authLabel = isAuthenticated ? 'logout' : 'login';
-
+function AppShellHeader({ siteName, authHandler = () => {}, authLabel }) {
   return (
     <header className={styles.Header}>
-      <h1>Starter App</h1>
-      <button onClick={() => onAuth()}>{authLabel}</button>
+      <h1>{siteName}</h1>
+      <button onClick={authHandler}>{authLabel}</button>
     </header>
   );
 }
@@ -50,7 +54,7 @@ function AppShellMain({ children }) {
   return <main className={styles.Main}>{children}</main>;
 }
 
-function AppShellFooter({ siteName, copyrightYear }) {
+function AppShellFooter({ copyrightYear, siteName }) {
   return (
     <footer className={styles.Footer}>
       &copy;{copyrightYear} {siteName}
