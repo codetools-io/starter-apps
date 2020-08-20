@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
+  Avatar,
   Box,
+  Button,
+  DropButton,
   Footer,
+  Form,
+  FormField,
   Grid,
   Grommet,
   Header,
@@ -9,7 +14,10 @@ import {
   Main,
   Nav,
   Sidebar,
+  Text,
+  TextInput,
 } from 'grommet';
+import { Search } from 'grommet-icons';
 import NavLink from 'components/NavLink';
 import * as config from 'config';
 
@@ -48,7 +56,12 @@ export default function AppShell({ children, ...props }) {
   );
 }
 
-function AppShellHeader({ siteName, authHandler = () => {}, authLabel }) {
+function AppShellHeader({
+  siteName,
+  authHandler = () => {},
+  authLabel,
+  searchHandler = () => {},
+}) {
   return (
     <Header gridArea="header">
       <Grid
@@ -57,18 +70,84 @@ function AppShellHeader({ siteName, authHandler = () => {}, authLabel }) {
         align="center"
         fill
       >
-        <Box background="brand-3" gridArea="logo" pad="medium">
-          <Heading level="3" textAlign="center" color="white">
-            {siteName}
-          </Heading>
-        </Box>
-        <Box gridArea="menu" direction="row" justify="end" pad="medium">
-          <Box>
-            <button onClick={authHandler}>{authLabel}</button>
-          </Box>
-        </Box>
+        <AppShellLogo text={siteName} />
+        <AppShellMenu
+          authHandler={authHandler}
+          authLabel={authLabel}
+          searchHandler={searchHandler}
+        />
       </Grid>
     </Header>
+  );
+}
+
+function AppShellLogo({ text }) {
+  return (
+    <Box background="brand-3" gridArea="logo" pad="medium">
+      <Heading level="3" textAlign="center" color="white">
+        {text}
+      </Heading>
+    </Box>
+  );
+}
+
+function AppShellMenu({ authHandler, authLabel, searchHandler }) {
+  return (
+    <Box
+      gridArea="menu"
+      direction="row"
+      justify="end"
+      pad="medium"
+      gap="medium"
+    >
+      <AppShellSearch searchHandler={searchHandler} />
+      <AppShellUserMenu authHandler={authHandler} authLabel={authLabel} />
+    </Box>
+  );
+}
+
+function AppShellSearch({ searchHandler }) {
+  const searchInput = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => searchInput.current.focus(), 0);
+    }
+  }, [isOpen]);
+  return (
+    <DropButton
+      icon={<Search />}
+      dropAlign={{ top: 'top', right: 'left' }}
+      dropContent={
+        <Box direction="row" pad={{ vertical: 'small' }}>
+          <TextInput
+            ref={searchInput}
+            placeholder="Search…"
+            name="search"
+            type="search"
+          />
+        </Box>
+      }
+      dropProps={{
+        elevation: 'none',
+      }}
+      onClose={() => setIsOpen(false)}
+      onOpen={() => setIsOpen(true)}
+    />
+  );
+}
+
+function AppShellUserMenu({ authHandler, authLabel }) {
+  return (
+    <DropButton
+      icon={<Avatar background="brand">AP</Avatar>}
+      dropAlign={{ top: 'bottom', right: 'right' }}
+      dropContent={
+        <Box pad="medium">
+          <Text onClick={authHandler}>{authLabel}</Text>
+        </Box>
+      }
+    />
   );
 }
 

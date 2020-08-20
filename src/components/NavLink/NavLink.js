@@ -16,7 +16,6 @@ export default function NavLink({
   return (
     <ThemeContext.Consumer>
       {(theme) => {
-        console.log(theme);
         return (
           <RouterNavLink
             className="NavLink"
