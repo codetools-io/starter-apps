@@ -2,11 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   Avatar,
   Box,
-  Button,
   DropButton,
   Footer,
-  Form,
-  FormField,
   Grid,
   Grommet,
   Header,
@@ -153,7 +150,11 @@ function AppShellUserMenu({ authHandler, authLabel }) {
 
 function AppShellSidebar() {
   return (
-    <Sidebar gridArea="sidebar" background="brand" pad="none">
+    <Sidebar
+      gridArea="sidebar"
+      background="brand"
+      pad={{ horizontal: 'none', vertical: 'medium' }}
+    >
       <Box>
         <AppShellNav />
       </Box>
