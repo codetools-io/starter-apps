@@ -11,10 +11,11 @@ import {
   Main,
   Nav,
   Sidebar,
+  Stack,
   Text,
   TextInput,
 } from 'grommet';
-import { Search } from 'grommet-icons';
+import { Cart, ChatOption, Notification, Search } from 'grommet-icons';
 import NavLink from 'components/NavLink';
 import * as config from 'config';
 
@@ -98,6 +99,18 @@ function AppShellMenu({ authHandler, authLabel, searchHandler }) {
       gap="medium"
     >
       <AppShellSearch searchHandler={searchHandler} />
+      <AppShellNotifications
+        icon={<Notification size="medium" color="text" />}
+        notifications={[{}]}
+      />
+      <AppShellNotifications
+        icon={<ChatOption size="medium" color="text" />}
+        notifications={[{}]}
+      />
+      <AppShellNotifications
+        icon={<Cart size="medium" color="text" />}
+        notifications={[{}]}
+      />
       <AppShellUserMenu authHandler={authHandler} authLabel={authLabel} />
     </Box>
   );
@@ -113,7 +126,7 @@ function AppShellSearch({ searchHandler }) {
   }, [isOpen]);
   return (
     <DropButton
-      icon={<Search />}
+      icon={<Search color="text" />}
       dropAlign={{ top: 'top', right: 'left' }}
       dropContent={
         <Box direction="row" pad={{ vertical: 'small' }}>
@@ -144,6 +157,34 @@ function AppShellUserMenu({ authHandler, authLabel }) {
           <Text onClick={authHandler}>{authLabel}</Text>
         </Box>
       }
+    />
+  );
+}
+
+function AppShellNotifications({ icon, notifications = [] }) {
+  return (
+    <DropButton
+      icon={
+        <Box>
+          <Stack anchor="top-right">
+            {icon}
+            <Box
+              align="center"
+              justify="center"
+              background="brand-2"
+              pad={{ horizontal: 'xsmall' }}
+              width={{ min: '18px' }}
+              height={{ min: '18px' }}
+              margin={{ top: '-7px', right: '-7px' }}
+              round
+            >
+              <Text size="xsmall">{notifications?.length}</Text>
+            </Box>
+          </Stack>
+        </Box>
+      }
+      dropAlign={{ top: 'bottom', right: 'right' }}
+      dropContent={false}
     />
   );
 }

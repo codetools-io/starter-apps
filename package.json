@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
-    "grommet": "^2.14.0",
+    "grommet": "^2.15.0",
     "grommet-icons": "^4.4.0",
     "history": "^5.0.0",
     "inflection": "^1.12.0",
