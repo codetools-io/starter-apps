@@ -1,20 +1,18 @@
 import React from 'react';
-import { Router as ReactRouter } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter } from 'react-router-dom';
+
 import Router from 'Router';
 import AppShell from 'containers/AppShell';
 import ErrorBoundary from 'containers/ErrorBoundary';
 
-const history = createBrowserHistory();
-
 export default function App() {
   return (
     <ErrorBoundary>
-      <ReactRouter history={history}>
+      <BrowserRouter>
         <AppShell>
           <Router />
         </AppShell>
-      </ReactRouter>
+      </BrowserRouter>
     </ErrorBoundary>
   );
 }

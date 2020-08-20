@@ -11,6 +11,7 @@ import {
   GrTasks,
   GrUser,
 } from 'react-icons/gr';
+
 export const nav = {
   routes: [
     {
@@ -19,8 +20,18 @@ export const nav = {
       label: 'Calendar',
       path: '/calendar',
     },
-    { key: 'chat', icon: <GrChat />, label: 'Chat', path: '/chat' },
-    { key: 'commerce', icon: <GrShop />, label: 'Commerce', path: '/commerce' },
+    {
+      key: 'chat',
+      icon: <GrChat />,
+      label: 'Chat',
+      path: '/chat',
+    },
+    {
+      key: 'commerce',
+      icon: <GrShop />,
+      label: 'Commerce',
+      path: '/commerce',
+    },
     {
       key: 'contacts',
       icon: <GrContactInfo />,
@@ -33,15 +44,35 @@ export const nav = {
       label: 'Dashboard',
       path: '/dashboard',
     },
-    { key: 'email', icon: <GrMail />, label: 'Email', path: '/email' },
-    { key: 'notes', icon: <GrNotes />, label: 'Notes', path: '/notes' },
-    { key: 'profile', icon: <GrUser />, label: 'Profile', path: '/profile' },
+    {
+      key: 'email',
+      icon: <GrMail />,
+      label: 'Email',
+      path: '/email',
+    },
+    {
+      key: 'notes',
+      icon: <GrNotes />,
+      label: 'Notes',
+      path: '/notes',
+    },
+    {
+      key: 'profile',
+      icon: <GrUser />,
+      label: 'Profile',
+      path: '/profile',
+    },
     {
       key: 'projectManager',
       icon: <GrTasks />,
       label: 'Project Manager',
       path: '/project-manager',
     },
-    { key: 'tasks', icon: <GrTask />, label: 'Tasks', path: '/tasks' },
+    {
+      key: 'tasks',
+      icon: <GrTask />,
+      label: 'Tasks',
+      path: '/tasks',
+    },
   ],
 };

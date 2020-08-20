@@ -17,17 +17,17 @@ export default function Router() {
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>
         <Route path="/" exact />
-        <Router component={() => <div>login</div>} path="/login" />
-        <Router component={Calendar} path="/calendar" />
-        <Router component={Chat} path="/chat" />
-        <Router component={Commerce} path="/commerce" />
-        <Router component={Contacts} path="/contacts" />
-        <Router component={Dashboard} path="/dashboard" />
-        <Router component={Email} path="/email" />
-        <Router component={Notes} path="/notes" />
-        <Router component={Profile} path="/profile" />
-        <Router component={ProjectManager} path="/project-manager" />
-        <Router component={Tasks} path="/tasks" />
+        <Route component={() => <div>login</div>} path="/login" />
+        <Route component={Calendar} path="/calendar" />
+        <Route component={Chat} path="/chat" />
+        <Route component={Commerce} path="/commerce" />
+        <Route component={Contacts} path="/contacts" />
+        <Route component={Dashboard} path="/dashboard" />
+        <Route component={Email} path="/email" />
+        <Route component={Notes} path="/notes" />
+        <Route component={Profile} path="/profile" />
+        <Route component={ProjectManager} path="/project-manager" />
+        <Route component={Tasks} path="/tasks" />
       </Switch>
     </Suspense>
   );

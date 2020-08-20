@@ -1,0 +1,12 @@
+.NavLink {
+  opacity: 0.85;
+}
+.NavLink.active {
+  opacity: 1;
+}
+.NavLink:hover {
+  opacity: 1;
+}
+.NavLink svg path {
+  stroke: currentColor;
+}
