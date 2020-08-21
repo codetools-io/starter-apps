@@ -220,7 +220,7 @@ function AppShellNav() {
 
 function AppShellMain({ children }) {
   return (
-    <Main gridArea="main" align="start" pad="medium" background="light-1">
+    <Main gridArea="main" align="start" background="light-1">
       {children}
     </Main>
   );
