@@ -220,8 +220,8 @@ function AppShellNav() {
 
 function AppShellMain({ children }) {
   return (
-    <Main gridArea="main">
-      <Box direction="column">{children}</Box>
+    <Main gridArea="main" align="start" pad="medium" background="light-1">
+      {children}
     </Main>
   );
 }
@@ -229,7 +229,7 @@ function AppShellMain({ children }) {
 function AppShellFooter({ copyrightYear, siteName }) {
   return (
     <Footer gridArea="footer">
-      <Box direction="row" fill>
+      <Box direction="row" pad="medium" fill>
         &copy;{copyrightYear} {siteName}
       </Box>
     </Footer>
