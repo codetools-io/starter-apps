@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const calendar = (props) => {
   const isFill = props?.className?.split(' ')?.some((cn) => cn === 'fill');
-  console.log('calendar: ', props);
+
   return (
     isFill &&
     css`
@@ -23,7 +23,6 @@ const calendar = (props) => {
         height: ${100 / 6}%;
       }
       [class^='StyledCalendar__StyledDayContainer-'] {
-        border: 3px solid blue;
         width: ${100 / 7}%;
         box-sizing: border-box;
       }
@@ -41,17 +40,9 @@ const calendar = (props) => {
     `
   );
 };
-const day = (props) => {
-  return css`
-    // background-color: blue;
-  `;
-};
 
 export default {
   calendar: {
     extend: calendar,
-    day: {
-      extend: day,
-    },
   },
 };
