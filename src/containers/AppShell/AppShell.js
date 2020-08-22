@@ -8,6 +8,7 @@ import {
   Grommet,
   Header,
   Heading,
+  Image,
   Main,
   Nav,
   Sidebar,
@@ -39,9 +40,12 @@ export default function AppShell({ children, ...props }) {
         fill="vertical"
       >
         <AppShellHeader
-          siteName={config?.site?.name}
           authHandler={authHandler}
           authLabel={authLabel}
+          logo={config?.site?.logo}
+          userInitials={`${config?.user1?.firstName[0]}${config?.user1?.lastName[0]}`}
+          userProfile={config?.user1?.profile}
+          siteName={config?.site?.name}
         />
         <AppShellSidebar />
         <AppShellMain>{children}</AppShellMain>
@@ -55,10 +59,13 @@ export default function AppShell({ children, ...props }) {
 }
 
 function AppShellHeader({
-  siteName,
   authHandler = () => {},
   authLabel,
+  logo,
   searchHandler = () => {},
+  siteName,
+  userProfile,
+  userInitials,
 }) {
   return (
     <Header gridArea="header">
@@ -68,10 +75,17 @@ function AppShellHeader({
         align="center"
         fill
       >
-        <AppShellLogo text={siteName} />
+        <AppShellLogo
+          text={siteName}
+          logo={logo}
+          height={{ max: '100%' }}
+          width={{ max: '100%' }}
+        />
         <AppShellMenu
           authHandler={authHandler}
           authLabel={authLabel}
+          userInitials={userInitials}
+          userProfile={userProfile}
           searchHandler={searchHandler}
         />
       </Grid>
@@ -79,17 +93,33 @@ function AppShellHeader({
   );
 }
 
-function AppShellLogo({ text }) {
+function AppShellLogo({ text, logo, ...props }) {
+  const showText = !logo && text;
+
   return (
-    <Box background="brand-3" gridArea="logo" pad="medium">
-      <Heading level="3" textAlign="center" color="white">
-        {text}
-      </Heading>
+    <Box background="brand-3" gridArea="logo" pad="medium" {...props}>
+      {showText ? (
+        <Heading level="3" textAlign="center" color="white">
+          {text}
+        </Heading>
+      ) : (
+        <Image
+          src={logo}
+          fit="contain"
+          style={{ maxHeight: '100%', maxWidth: '100%' }}
+        />
+      )}
     </Box>
   );
 }
 
-function AppShellMenu({ authHandler, authLabel, searchHandler }) {
+function AppShellMenu({
+  authHandler,
+  authLabel,
+  searchHandler,
+  userInitials,
+  userProfile,
+}) {
   return (
     <Box
       gridArea="menu"
@@ -111,7 +141,12 @@ function AppShellMenu({ authHandler, authLabel, searchHandler }) {
         icon={<Cart size="medium" color="text" />}
         notifications={[{}]}
       />
-      <AppShellUserMenu authHandler={authHandler} authLabel={authLabel} />
+      <AppShellUserMenu
+        authHandler={authHandler}
+        authLabel={authLabel}
+        userInitials={userInitials}
+        userProfile={userProfile}
+      />
     </Box>
   );
 }
@@ -147,10 +182,19 @@ function AppShellSearch({ searchHandler }) {
   );
 }
 
-function AppShellUserMenu({ authHandler, authLabel }) {
+function AppShellUserMenu({
+  authHandler,
+  authLabel,
+  userInitials,
+  userProfile,
+}) {
   return (
     <DropButton
-      icon={<Avatar background="brand">AP</Avatar>}
+      icon={
+        <Avatar background="brand" src={userProfile}>
+          {userInitials}
+        </Avatar>
+      }
       dropAlign={{ top: 'bottom', right: 'right' }}
       dropContent={
         <Box pad="medium">
