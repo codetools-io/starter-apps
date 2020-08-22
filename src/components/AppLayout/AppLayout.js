@@ -1,16 +1,22 @@
 import React from 'react';
 import { Box, Grid } from 'grommet';
 
-export default function ChatLayout({ children }) {
+export default function AppLayout({ children, ...props }) {
   return (
-    <Box className="ChatLayout" background="white" border fill>
+    <Box
+      className="AppLayout"
+      background="white"
+      border="light-1"
+      fill
+      {...props}
+    >
       <Grid
         rows={['xsmall', 'flex', 'auto']}
         columns={['1/4', '1/4', '1/4', '1/4']}
         areas={[
-          ['search', 'header', 'header', 'header'],
+          ['sidebar-header', 'header', 'header', 'header'],
           ['sidebar', 'main', 'main', 'main'],
-          ['compose', 'footer', 'footer', 'footer'],
+          ['sidebar-footer', 'footer', 'footer', 'footer'],
         ]}
         fill
       >
