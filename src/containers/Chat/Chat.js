@@ -69,9 +69,7 @@ export default function Chat({ children }) {
     conversations,
     currentConversation,
     currentConversationId,
-    currentParticipants,
     currentParticipantsLabel,
-    currentMessages,
     user,
   } = useChat();
 

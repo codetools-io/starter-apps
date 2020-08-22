@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Avatar,
   Box,
@@ -16,7 +16,15 @@ import {
   Text,
   TextInput,
 } from 'grommet';
-import { Cart, ChatOption, Notification, Search } from 'grommet-icons';
+import {
+  Cart,
+  ChatOption,
+  Down,
+  Notification,
+  Search,
+  Up,
+} from 'grommet-icons';
+import { useLocalStorage } from 'react-use';
 import NavLink from 'components/NavLink';
 import * as config from 'config';
 
@@ -251,14 +259,59 @@ function AppShellNav() {
   return (
     <Nav gap="none">
       {config?.nav?.routes?.map((route) => (
-        <NavLink
-          key={route.key}
-          to={route.path}
-          icon={route.icon}
-          label={route.label}
-        />
+        <AppShellNavItem key={route.id} {...route} />
       ))}
     </Nav>
+  );
+}
+
+function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
+  const [nav, setNav] = useLocalStorage('nav', {});
+  const isExpanded = useMemo(() => {
+    return nav?.[id];
+  }, [id, nav]);
+
+  function toggleMenu() {
+    setNav({
+      ...nav,
+      [id]: !nav?.[id],
+    });
+  }
+
+  if (!routes) {
+    return <NavLink to={path} icon={icon} label={label} isNested={isNested} />;
+  }
+
+  return (
+    <Box gap="xsmall">
+      <Box>
+        <NavLink
+          icon={icon}
+          secondaryIcon={
+            isExpanded ? <Up size="small" /> : <Down size="small" />
+          }
+          label={label}
+          to={path}
+          onClick={(e) => {
+            e.preventDefault();
+            toggleMenu();
+          }}
+          isNested={isNested}
+        />
+      </Box>
+      {isExpanded && (
+        <Box
+          gap="xsmall"
+          pad={{ horizontal: 'none', vertical: 'xsmall' }}
+          background="brand-2"
+          fill="horizontal"
+        >
+          {routes.map((route) => {
+            return <AppShellNavItem key={route.id} {...route} isNested />;
+          })}
+        </Box>
+      )}
+    </Box>
   );
 }
 

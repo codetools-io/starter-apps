@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import * as config from 'config';
-const { PUBLIC_URL } = process.env;
+
 export default function useChat() {
   const [conversations] = useState([
     {

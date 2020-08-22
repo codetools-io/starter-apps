@@ -7,10 +7,13 @@ export default function NavLink({
   children,
   to,
   icon,
+  secondaryIcon,
   label,
   color,
   size = 'large',
   weight = 'normal',
+  onClick = (event) => {},
+  isNested,
   ...props
 }) {
   return (
@@ -26,29 +29,54 @@ export default function NavLink({
             }}
             activeStyle={{
               ...theme.anchor,
-              backgroundColor: theme.global.colors['brand-2'],
+              backgroundColor: theme.global.colors['brand-3'],
               color: theme.global.colors['brand-contrast'],
             }}
+            onClick={onClick}
+            exact
             strict
           >
             <Box
               direction="row"
               align="center"
-              pad={{ horizontal: 'medium', vertical: 'small' }}
+              pad={{
+                horizontal: 'medium',
+                vertical: 'small',
+              }}
             >
               {icon && (
-                <Text
-                  margin={{ right: 'medium' }}
-                  color={theme.global.colors['brand-contrast']}
-                >
-                  {icon}
-                </Text>
+                <Box>
+                  <Text
+                    margin={{ right: 'medium' }}
+                    color={theme.global.colors['brand-contrast']}
+                  >
+                    {icon}
+                  </Text>
+                </Box>
               )}
 
               {label && (
-                <Text color={color} size={size} weight={weight}>
-                  {label}
-                </Text>
+                <Box margin={{ left: isNested ? 'medium' : 'none' }} fill>
+                  <Text
+                    color={color}
+                    size={size}
+                    weight={weight}
+                    margin={{ left: isNested ? 'small' : 'none' }}
+                  >
+                    {label}
+                  </Text>
+                </Box>
+              )}
+
+              {secondaryIcon && (
+                <Box>
+                  <Text
+                    margin={{ left: 'medium' }}
+                    color={theme.global.colors['brand-contrast']}
+                  >
+                    {secondaryIcon}
+                  </Text>
+                </Box>
               )}
             </Box>
           </RouterNavLink>
