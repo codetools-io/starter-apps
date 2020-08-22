@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Button,
-  Form,
-  FormField,
-  Heading,
-  Image,
-  Text,
-  TextInput,
-  TextArea,
-} from 'grommet';
+import { Box, Button, Heading, Image, Text, TextInput } from 'grommet';
 import AppLayout from 'components/AppLayout';
 import useContacts from './useContacts';
 
@@ -94,6 +84,7 @@ export default function Contacts({ children, ...props }) {
           direction="row"
           justify="end"
           align="center"
+          border="bottom"
         >
           <Button label="Add Contact" primary />
         </Box>

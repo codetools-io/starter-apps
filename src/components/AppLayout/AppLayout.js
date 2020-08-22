@@ -6,7 +6,7 @@ export default function AppLayout({ children, ...props }) {
     <Box
       className="AppLayout"
       background="white"
-      border="light-1"
+      border={{ color: 'light-1' }}
       fill
       {...props}
     >

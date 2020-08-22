@@ -31,5 +31,15 @@ export const brand = {
       background: 'selected-background',
       color: 'selected-text',
     },
+    input: {
+      padding: '10px',
+      weight: 400,
+    },
+  },
+  formField: {
+    border: {},
+    label: {
+      weight: 600,
+    },
   },
 };

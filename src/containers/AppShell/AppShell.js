@@ -228,7 +228,7 @@ function AppShellNotifications({ icon, notifications = [] }) {
         </Box>
       }
       dropAlign={{ top: 'bottom', right: 'right' }}
-      dropContent={false}
+      dropContent={<Box></Box>}
     />
   );
 }
