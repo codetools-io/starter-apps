@@ -32,7 +32,7 @@ export const nav = {
       label: 'Commerce',
       path: '/commerce',
       routes: [
-        { id: 'commerce-shop', label: 'Shop', path: '/commerce/shop' },
+        { id: 'commerce-store', label: 'Store', path: '/commerce/store' },
         {
           id: 'commerce-checkout',
           label: 'Checkout',

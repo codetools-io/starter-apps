@@ -3,15 +3,9 @@ import { Box, Grid } from 'grommet';
 
 export default function AppLayout({ children, ...props }) {
   return (
-    <Box
-      className="AppLayout"
-      background="white"
-      border={{ color: 'light-1' }}
-      fill
-      {...props}
-    >
+    <Box className="AppLayout" fill {...props}>
       <Grid
-        rows={['xsmall', 'flex', 'auto']}
+        rows={['xsmall', 'auto', 'auto']}
         columns={['1/4', '1/4', '1/4', '1/4']}
         areas={[
           ['sidebar-header', 'header', 'header', 'header'],

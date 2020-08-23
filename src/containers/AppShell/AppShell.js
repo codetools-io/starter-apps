@@ -38,14 +38,12 @@ export default function AppShell({ children, ...props }) {
   return (
     <Grommet className="AppShell" theme={config?.theme} full>
       <Grid
-        rows={['xsmall', 'flex', 'auto']}
+        rows={['xsmall', 'auto']}
         columns={['1/4', '1/4', '1/4', '1/4']}
         areas={[
           ['header', 'header', 'header', 'header'],
           ['sidebar', 'main', 'main', 'main'],
-          ['sidebar', 'footer', 'footer', 'footer'],
         ]}
-        fill="vertical"
       >
         <AppShellHeader
           authHandler={authHandler}
@@ -57,10 +55,10 @@ export default function AppShell({ children, ...props }) {
         />
         <AppShellSidebar />
         <AppShellMain>{children}</AppShellMain>
-        <AppShellFooter
+        {/* <AppShellFooter
           copyrightYear={config?.site?.copyrightYear}
           siteName={config?.site?.name}
-        />
+        /> */}
       </Grid>
     </Grommet>
   );

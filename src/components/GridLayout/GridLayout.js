@@ -1,19 +1,22 @@
 import React, { useContext } from 'react';
 import { Box, Grid, ResponsiveContext } from 'grommet';
 
-export default function GridLayout({ children, gridProps = {}, ...props }) {
+export default function GridLayout({
+  children,
+  columnCount = 'fit',
+  columnSize = 'medium',
+  gridProps = {},
+  ...props
+}) {
   const size = useContext(ResponsiveContext);
 
   return (
-    <Box align="start" alignContent="start" justify="start" {...props}>
+    <Box {...props}>
       <Grid
-        columns={size !== 'small' ? 'small' : '100%'}
+        columns={{ count: columnCount, size: columnSize }}
         rows="auto"
-        align="start"
-        alignContent="start"
-        justify="start"
-        justifyContent="start"
         gap={size}
+        fill
         {...gridProps}
       >
         {children}
