@@ -57,6 +57,7 @@ export default function useNotes() {
       },
     ]);
     editNote(id);
+    // eslint-disable-next-line
   }, [_notes]);
 
   const saveNote = useCallback(

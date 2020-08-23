@@ -39,7 +39,6 @@ export const nav = {
           path: '/commerce/checkout',
         },
         { id: 'commerce-cart', label: 'Cart', path: '/commerce/cart' },
-        { id: 'commerce-cards', label: 'Cards', path: '/commerce/cards' },
       ],
     },
     {
