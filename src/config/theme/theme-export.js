@@ -175,8 +175,10 @@ export const themeExport = {
           light: 'status-critical',
         },
       },
-      position: 'outer',
+      position: 'inner',
       side: 'all',
+      style: 'solid',
+      size: 'xsmall',
     },
     content: {
       pad: 'small',
@@ -191,13 +193,14 @@ export const themeExport = {
       color: 'status-critical',
       margin: {
         vertical: 'xsmall',
-        horizontal: 'small',
+        horizontal: 'xsmall',
       },
     },
     help: {
       color: 'dark-3',
       margin: {
         start: 'small',
+        horizontal: 'xsmall',
       },
     },
     info: {
@@ -210,8 +213,9 @@ export const themeExport = {
     label: {
       margin: {
         vertical: 'xsmall',
-        horizontal: 'small',
+        horizontal: 'xsmall',
       },
+      weight: 'normal',
     },
     margin: {
       bottom: 'small',
