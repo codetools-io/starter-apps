@@ -1,14 +1,14 @@
 import { useMemo, useState } from 'react';
-import * as config from 'config';
+import * as data from 'data';
 
 export default function useContacts() {
   const [connections] = useState([
-    config.user2,
-    config.user3,
-    config.user4,
-    config.user5,
-    config.user6,
-    config.user7,
+    data?.users?.user2,
+    data?.users?.user3,
+    data?.users?.user4,
+    data?.users?.user5,
+    data?.users?.user6,
+    data?.users?.user7,
   ]);
   const [currentConnectionId] = useState(connections[0]?.id);
   const currentConnection = useMemo(() => {

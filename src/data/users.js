@@ -1,4 +1,5 @@
 const { PUBLIC_URL } = process.env;
+
 export const user1 = {
   id: 'user-1',
   username: 'johnd',

@@ -27,6 +27,7 @@ import {
 import { useLocalStorage } from 'react-use';
 import NavLink from 'components/NavLink';
 import * as config from 'config';
+import * as data from 'data';
 
 export default function AppShell({ children, ...props }) {
   const isAuthenticated = true;
@@ -49,8 +50,8 @@ export default function AppShell({ children, ...props }) {
           authHandler={authHandler}
           authLabel={authLabel}
           logo={config?.site?.logo}
-          userInitials={`${config?.user1?.firstName[0]}${config?.user1?.lastName[0]}`}
-          userProfile={config?.user1?.profile}
+          userInitials={`${data?.users?.user1?.firstName[0]}${data?.users?.user1?.lastName[0]}`}
+          userProfile={data?.users?.user1?.profile}
           siteName={config?.site?.name}
         />
         <AppShellSidebar />

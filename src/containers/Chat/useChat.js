@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
-import * as config from 'config';
+import * as data from 'data';
 
 export default function useChat() {
   const [conversations] = useState([
     {
       id: 'conversation-1',
-      participants: [config?.user1, config?.user2],
+      participants: [data?.users?.user1, data?.users?.user2],
       messages: [
         {
           id: 'conversation-1a',
@@ -23,7 +23,7 @@ export default function useChat() {
     },
     {
       id: 'conversation-2',
-      participants: [config?.user1, config?.user3],
+      participants: [data?.users?.user1, data?.users?.user3],
       messages: [
         {
           id: 'conversation-2a',
@@ -41,7 +41,7 @@ export default function useChat() {
     },
     {
       id: 'conversation-3',
-      participants: [config?.user1, config?.user4],
+      participants: [data?.users?.user1, data?.users?.user4],
       messages: [
         {
           id: 'conversation-3a',
@@ -58,7 +58,7 @@ export default function useChat() {
       ],
     },
   ]);
-  const [user] = useState(config?.user1);
+  const [user] = useState(data?.users?.user1);
   const [currentConversationId] = useState(conversations[0]?.id);
   const currentConversation = useMemo(() => {
     return conversations.find(

@@ -1,3 +1,22 @@
+const genericColors = {
+  aqua: '#7fdbff',
+  blue: '#0074d9',
+  lime: '#01ff70',
+  navy: '#001f3f',
+  teal: '#39cccc',
+  olive: '#3d9970',
+  green: '#2ecc40',
+  red: '#ff4136',
+  maroon: '#85144b',
+  orange: '#ff851b',
+  purple: '#b10dc9',
+  yellow: '#ffdc00',
+  fuchsia: '#f012be',
+  gray: '#aaaaaa',
+  white: '#ffffff',
+  black: '#111111',
+  silver: '#dddddd',
+};
 export const brand = {
   global: {
     colors: {
@@ -19,6 +38,7 @@ export const brand = {
       'text-weak': { light: 'brand-alt-2' },
       'text-xweak': { light: 'brand-alt-1' },
       border: { light: '#979DAC' },
+      ...genericColors,
     },
     font: {
       family: 'Montserrat',
@@ -41,13 +61,6 @@ export const brand = {
     input: {
       padding: '10px',
       weight: 400,
-    },
-  },
-
-  heading: {
-    extend: (props) => {
-      console.log(props.theme.global);
-      return {};
     },
   },
 };
