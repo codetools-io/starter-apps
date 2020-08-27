@@ -1,34 +1,34 @@
 import React from 'react';
 import {
-  GrCalendar,
-  GrChat,
-  GrContactInfo,
-  GrDashboard,
-  GrMail,
-  GrNotes,
-  GrShop,
-  GrTask,
-  GrTasks,
-  GrUser,
-} from 'react-icons/gr';
+  Calendar,
+  Chat,
+  ContactInfo,
+  Dashboard,
+  Mail,
+  Notes,
+  Shop,
+  Task,
+  Tasks,
+  User,
+} from 'grommet-icons';
 
 export const nav = {
   routes: [
     {
       id: 'calendar',
-      icon: <GrCalendar />,
+      icon: <Calendar size="16px" />,
       label: 'Calendar',
       path: '/calendar',
     },
     {
       id: 'chat',
-      icon: <GrChat />,
+      icon: <Chat size="16px" />,
       label: 'Chat',
       path: '/chat',
     },
     {
       id: 'commerce',
-      icon: <GrShop />,
+      icon: <Shop size="16px" />,
       label: 'Commerce',
       path: '/commerce',
       routes: [
@@ -43,43 +43,43 @@ export const nav = {
     },
     {
       id: 'contacts',
-      icon: <GrContactInfo />,
+      icon: <ContactInfo size="16px" />,
       label: 'Contacts',
       path: '/contacts',
     },
     {
       id: 'dashboard',
-      icon: <GrDashboard />,
+      icon: <Dashboard size="16px" />,
       label: 'Dashboard',
       path: '/dashboard',
     },
     {
       id: 'email',
-      icon: <GrMail />,
+      icon: <Mail size="16px" />,
       label: 'Email',
       path: '/email',
     },
     {
       id: 'notes',
-      icon: <GrNotes />,
+      icon: <Notes size="16px" />,
       label: 'Notes',
       path: '/notes',
     },
     {
       id: 'profile',
-      icon: <GrUser />,
+      icon: <User size="16px" />,
       label: 'Profile',
       path: '/profile',
     },
     {
       id: 'projectManager',
-      icon: <GrTasks />,
+      icon: <Tasks size="16px" />,
       label: 'Project Manager',
       path: '/project-manager',
     },
     {
       id: 'tasks',
-      icon: <GrTask />,
+      icon: <Task size="16px" />,
       label: 'Tasks',
       path: '/tasks',
     },
