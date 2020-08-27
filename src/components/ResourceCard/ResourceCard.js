@@ -12,7 +12,7 @@ export default function ResourceCard({
 }) {
   return (
     <Box pad="medium" align="start" {...props}>
-      <Card elevation="large" width="medium">
+      <Card elevation="none" width="medium">
         <CardBody height="small">
           <Image fit="cover" src={image} a11yTitle={imageTitle} />
         </CardBody>

@@ -22,7 +22,7 @@ export default function Cart({ children, ...props }) {
 
   return (
     <Box className="Cart" pad="medium" fill>
-      <Card background="white">
+      <Card background="white" pad="medium">
         <Table>
           <TableHeader>
             <TableRow>

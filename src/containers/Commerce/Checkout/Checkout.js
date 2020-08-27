@@ -32,103 +32,105 @@ export default function Checkout({ children, ...props }) {
 
   return (
     <Box pad="medium" fill>
-      <Heading level={1}>Order</Heading>
-      <Form
-        value={billing}
-        onChange={(updates) => {
-          updateBilling(updates);
-        }}
-      >
-        <Box direction="row" justify="start" gap="medium">
-          <Box gap="medium">
-            <Heading level={4} margin="none">
-              Billing Details
-            </Heading>
-            <Box direction="row" gap="small">
-              <FormField
-                component={TextInput}
-                name="firstName"
-                label="First Name"
-                required
-              />
-              <FormField
-                component={TextInput}
-                name="lastName"
-                label="Last Name"
-                required
-              />
+      <Card background="white" pad="medium">
+        <Heading level={1}>Order</Heading>
+        <Form
+          value={billing}
+          onChange={(updates) => {
+            updateBilling(updates);
+          }}
+        >
+          <Box direction="row" justify="start" gap="medium">
+            <Box gap="medium">
+              <Heading level={4} margin="none">
+                Billing Details
+              </Heading>
+              <Box direction="row" gap="small">
+                <FormField
+                  component={TextInput}
+                  name="firstName"
+                  label="First Name"
+                  required
+                />
+                <FormField
+                  component={TextInput}
+                  name="lastName"
+                  label="Last Name"
+                  required
+                />
+              </Box>
+              <Box gap="small">
+                <FormField
+                  component={TextInput}
+                  name="companyName"
+                  label="Company Name"
+                />
+              </Box>
+              <Box direction="row" gap="small">
+                <FormField component={TextInput} name="email" label="Email" />
+                <FormField component={TextInput} name="mobile" label="Mobile" />
+              </Box>
+              <Box direction="row" gap="small">
+                <FormField
+                  component={Select}
+                  name="country"
+                  label="Country"
+                  options={['United States']}
+                />
+                <FormField component={TextInput} name="city" label="City" />
+              </Box>
+              <Box gap="small">
+                <FormField
+                  component={TextInput}
+                  name="address1"
+                  label="Address"
+                />
+                <FormField component={TextInput} name="address2" label="" />
+              </Box>
+              <Box gap="small">
+                <CheckBox name="newAccount" label="Create an account?" />
+              </Box>
             </Box>
             <Box gap="small">
-              <FormField
-                component={TextInput}
-                name="companyName"
-                label="Company Name"
-              />
-            </Box>
-            <Box direction="row" gap="small">
-              <FormField component={TextInput} name="email" label="Email" />
-              <FormField component={TextInput} name="mobile" label="Mobile" />
-            </Box>
-            <Box direction="row" gap="small">
-              <FormField
-                component={Select}
-                name="country"
-                label="Country"
-                options={['United States']}
-              />
-              <FormField component={TextInput} name="city" label="City" />
-            </Box>
-            <Box gap="small">
-              <FormField
-                component={TextInput}
-                name="address1"
-                label="Address"
-              />
-              <FormField component={TextInput} name="address2" label="" />
-            </Box>
-            <Box gap="small">
-              <CheckBox name="newAccount" label="Create an account?" />
-            </Box>
-          </Box>
-          <Box gap="small">
-            <Heading level={4} margin="none">
-              Products
-            </Heading>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableCell scope="col">
-                    <Text weight="bold">Product</Text>
-                  </TableCell>
-                  <TableCell scope="col">
-                    <Text weight="bold">Total</Text>
-                  </TableCell>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {lineItems.map((lineItem) => (
-                  <TableRow key={lineItem.id}>
-                    <TableCell scope="row">
-                      {lineItem.title} ({lineItem.quantity})
+              <Heading level={4} margin="none">
+                Products
+              </Heading>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableCell scope="col">
+                      <Text weight="bold">Product</Text>
                     </TableCell>
-                    <TableCell scope="row">{lineItem.totalLabel}</TableCell>
+                    <TableCell scope="col">
+                      <Text weight="bold">Total</Text>
+                    </TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell scope="col">
-                    <Text weight="bold">Total</Text>
-                  </TableCell>
-                  <TableCell scope="col">
-                    <Text weight="bold">{totalLabel}</Text>
-                  </TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
+                </TableHeader>
+                <TableBody>
+                  {lineItems.map((lineItem) => (
+                    <TableRow key={lineItem.id}>
+                      <TableCell scope="row">
+                        {lineItem.title} ({lineItem.quantity})
+                      </TableCell>
+                      <TableCell scope="row">{lineItem.totalLabel}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+                <TableFooter>
+                  <TableRow>
+                    <TableCell scope="col">
+                      <Text weight="bold">Total</Text>
+                    </TableCell>
+                    <TableCell scope="col">
+                      <Text weight="bold">{totalLabel}</Text>
+                    </TableCell>
+                  </TableRow>
+                </TableFooter>
+              </Table>
+            </Box>
           </Box>
-        </Box>
-      </Form>
+        </Form>
+      </Card>
     </Box>
   );
 }

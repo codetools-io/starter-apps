@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Grid } from 'grommet';
 
-export default function CalendarLayout({ children }) {
+export default function CalendarLayout({ children, ...props }) {
   return (
-    <Box className="CalendarLayout" background="white" border fill>
+    <Box className="CalendarLayout" fill {...props}>
       <Grid
         rows={['xsmall', 'flex', 'auto']}
         columns={['1/4', '1/4', '1/4', '1/4']}

@@ -3,6 +3,7 @@ import {
   Avatar,
   Box,
   Button,
+  Card,
   CheckBox,
   DropButton,
   Grid,
@@ -96,7 +97,9 @@ function ProjectsDashboard() {
 export default function ProjectManager() {
   return (
     <Box className="ProjectManager" pad="medium" fill>
-      <ProjectsDashboard />
+      <Card background="white">
+        <ProjectsDashboard />
+      </Card>
     </Box>
   );
 }

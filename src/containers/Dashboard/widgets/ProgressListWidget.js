@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Meter, Paragraph } from 'grommet';
+import { Box, Card, Heading, Meter, Paragraph } from 'grommet';
 
 function Progress({ value, color, label }) {
   return (
@@ -27,7 +27,7 @@ export default function ProgressListWidget({
   ...props
 }) {
   return (
-    <Box background="white" pad="medium" gap="medium" border {...props}>
+    <Card background="white" pad="medium" gap="medium" {...props}>
       {title && (
         <Heading level="4" margin="none">
           {title}
@@ -45,6 +45,6 @@ export default function ProgressListWidget({
           {description}
         </Paragraph>
       )}
-    </Box>
+    </Card>
   );
 }

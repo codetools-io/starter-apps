@@ -36,7 +36,7 @@ function StoreProducts({ products }) {
 
 function StoreProduct({ id, price, image, title, ...props }) {
   return (
-    <Card elevation="large" {...props}>
+    <Card background="white" {...props}>
       <Stack anchor="top-right" fit>
         <Image fit="cover" src={image} fill />
         <Box
@@ -59,7 +59,7 @@ function StoreProduct({ id, price, image, title, ...props }) {
 function StoreSidebar() {
   return (
     <Box gap="medium">
-      <Card pad="medium" gap="medium">
+      <Card elevation="none" background="white" pad="medium" gap="medium">
         <Heading level={5} margin="none">
           Price
         </Heading>
@@ -74,7 +74,7 @@ function StoreSidebar() {
           ]}
         />
       </Card>
-      <Card pad="medium" gap="medium">
+      <Card elevation="none" background="white" pad="medium" gap="medium">
         <Heading level={5} margin="none">
           Category
         </Heading>
@@ -83,7 +83,7 @@ function StoreSidebar() {
           options={['Automotive', 'Electronics', 'Home', 'Lawn', 'Any']}
         />
       </Card>
-      <Card pad="medium" gap="medium">
+      <Card elevation="none" background="white" pad="medium" gap="medium">
         <Heading level={5} margin="none">
           Brand
         </Heading>
@@ -102,7 +102,7 @@ function StoreSidebar() {
           ]}
         />
       </Card>
-      <Card pad="medium" gap="medium">
+      <Card elevation="none" background="white" pad="medium" gap="medium">
         <Heading level={5} margin="none">
           Rating
         </Heading>

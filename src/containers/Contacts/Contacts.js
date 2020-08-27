@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Heading, Image, Text, TextInput } from 'grommet';
+import { Box, Card, Button, Heading, Image, Text, TextInput } from 'grommet';
 import AppLayout from 'components/AppLayout';
 import useContacts from './useContacts';
 
@@ -70,34 +70,36 @@ export default function Contacts({ children, ...props }) {
 
   return (
     <Box pad="medium" fill>
-      <AppLayout>
-        <Box
-          gridArea="sidebar-header"
-          pad="medium"
-          border={[{ side: 'right' }, { side: 'bottom' }]}
-        >
-          <TextInput placeholder="Search contacts" />
-        </Box>
-        <Box
-          gridArea="header"
-          pad="medium"
-          direction="row"
-          justify="end"
-          align="center"
-          border="bottom"
-        >
-          <Button label="Add Contact" primary />
-        </Box>
-        <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
-          <Connections
-            connections={connections}
-            currentConnectionId={currentConnectionId}
-          />
-        </Box>
-        <Box gridArea="main" pad="medium">
-          <Connection {...currentConnection} />
-        </Box>
-      </AppLayout>
+      <Card background="white">
+        <AppLayout>
+          <Box
+            gridArea="sidebar-header"
+            pad="medium"
+            border={[{ side: 'right' }, { side: 'bottom' }]}
+          >
+            <TextInput placeholder="Search contacts" />
+          </Box>
+          <Box
+            gridArea="header"
+            pad="medium"
+            direction="row"
+            justify="end"
+            align="center"
+            border="bottom"
+          >
+            <Button label="Add Contact" primary />
+          </Box>
+          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+            <Connections
+              connections={connections}
+              currentConnectionId={currentConnectionId}
+            />
+          </Box>
+          <Box gridArea="main" pad="medium">
+            <Connection {...currentConnection} />
+          </Box>
+        </AppLayout>
+      </Card>
     </Box>
   );
 }

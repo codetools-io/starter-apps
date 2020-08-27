@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import {
   Box,
+  Card,
   Button,
   Form,
   Heading,
@@ -135,61 +136,67 @@ export default function Notes({ children, ...props }) {
 
   return (
     <Box pad="medium" fill>
-      <AppLayout>
-        <Box
-          gridArea="sidebar-header"
-          pad="medium"
-          border={[{ side: 'right' }, { side: 'bottom' }]}
-        >
-          <TextInput placeholder="Search notes" />
-        </Box>
+      <Card background="white">
+        <AppLayout>
+          <Box
+            gridArea="sidebar-header"
+            pad="medium"
+            border={[{ side: 'right' }, { side: 'bottom' }]}
+          >
+            <TextInput placeholder="Search notes" />
+          </Box>
 
-        <Box
-          gridArea="header"
-          pad="medium"
-          direction="row"
-          justify="end"
-          align="center"
-        >
-          {currentNoteId && !isEditMode ? (
+          <Box
+            gridArea="header"
+            pad="medium"
+            direction="row"
+            justify="end"
+            align="center"
+          >
+            {currentNoteId && !isEditMode ? (
+              <Button
+                label="Edit"
+                onClick={() => editNote(currentNoteId)}
+                primary
+              />
+            ) : null}
+          </Box>
+
+          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+            <NoteList
+              notes={notes}
+              currentNoteId={currentNoteId}
+              openNote={openNote}
+            />
+          </Box>
+          <Box
+            gridArea="sidebar-footer"
+            pad="medium"
+            border={[{ side: 'right' }, { side: 'top' }]}
+          >
             <Button
-              label="Edit"
-              onClick={() => editNote(currentNoteId)}
+              label="New"
+              onClick={() => addNote(currentNoteId)}
               primary
             />
-          ) : null}
-        </Box>
-
-        <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
-          <NoteList
-            notes={notes}
-            currentNoteId={currentNoteId}
-            openNote={openNote}
-          />
-        </Box>
-        <Box
-          gridArea="sidebar-footer"
-          pad="medium"
-          border={[{ side: 'right' }, { side: 'top' }]}
-        >
-          <Button label="New" onClick={() => addNote(currentNoteId)} primary />
-        </Box>
-        <Box gridArea="main" pad="medium">
-          {isEditMode ? (
-            <NoteForm
-              {...currentNote}
-              saveNote={saveNote}
-              cancelEditNote={cancelEditNote}
-            />
-          ) : (
-            <Note
-              {...currentNote}
-              editNote={editNote}
-              currentNoteId={currentNoteId}
-            />
-          )}
-        </Box>
-      </AppLayout>
+          </Box>
+          <Box gridArea="main" pad="medium">
+            {isEditMode ? (
+              <NoteForm
+                {...currentNote}
+                saveNote={saveNote}
+                cancelEditNote={cancelEditNote}
+              />
+            ) : (
+              <Note
+                {...currentNote}
+                editNote={editNote}
+                currentNoteId={currentNoteId}
+              />
+            )}
+          </Box>
+        </AppLayout>
+      </Card>
     </Box>
   );
 }

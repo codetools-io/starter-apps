@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Meter, Paragraph } from 'grommet';
+import { Box, Card, Heading, Meter, Paragraph } from 'grommet';
 
 function Progress({ value, color, label }) {
   return (
@@ -23,12 +23,11 @@ function Progress({ value, color, label }) {
 export default function ProgressWidget({ title, icon, data, ...props }) {
   const Icon = icon ? icon : null;
   return (
-    <Box
+    <Card
       background="white"
       pad="medium"
       gap="medium"
       direction="row"
-      border
       {...props}
     >
       <Box gap="medium" flex>
@@ -44,6 +43,6 @@ export default function ProgressWidget({ title, icon, data, ...props }) {
           <Icon />
         </Box>
       )}
-    </Box>
+    </Card>
   );
 }

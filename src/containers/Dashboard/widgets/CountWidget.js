@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from 'grommet';
+import { Box, Card, Text } from 'grommet';
 import useContrast from 'hooks/useContrast';
 import useDarken from 'hooks/useDarken';
 
@@ -23,7 +23,7 @@ export default function CountWidget({
   const offsetColor = useDarken(color, 20);
 
   return (
-    <Box direction="row" background={color} {...props}>
+    <Card direction="row" background={color} {...props}>
       {icon && (
         <Box justify="center" background={offsetColor} pad="medium">
           <Icon icon={icon} color={contrast} />
@@ -39,6 +39,6 @@ export default function CountWidget({
           </Text>
         )}
       </Box>
-    </Box>
+    </Card>
   );
 }

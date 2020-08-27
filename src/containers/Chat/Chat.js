@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Avatar,
   Box,
+  Card,
   Button,
   Heading,
   Markdown,
@@ -75,47 +76,49 @@ export default function Chat({ children }) {
 
   return (
     <Box pad="medium" fill>
-      <AppLayout>
-        <Box
-          gridArea="sidebar-header"
-          pad="medium"
-          border={[{ side: 'right' }, { side: 'bottom' }]}
-        >
-          <TextInput placeholder="Search chats" />
-        </Box>
-        <Box gridArea="header" pad="medium" border="bottom" justify="center">
-          <Heading level={4} margin="none">
-            {currentParticipantsLabel}
-          </Heading>
-        </Box>
-        <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
-          <ChatConversations
-            conversations={conversations}
-            user={user}
-            currentConversationId={currentConversationId}
-          />
-        </Box>
-        <Box
-          gridArea="sidebar-footer"
-          pad="medium"
-          border="right"
-          justify="end"
-        >
-          <Button label="Compose" primary />
-        </Box>
-        <Box gridArea="main" pad="medium">
-          <ChatConversation user={user} {...currentConversation} />
-        </Box>
-        <Box gridArea="footer" pad="medium">
-          <TextArea
-            placeholder="Type your message"
-            value={''}
-            onChange={(event) => {}}
-            resize={false}
-            fill
-          />
-        </Box>
-      </AppLayout>
+      <Card background="white">
+        <AppLayout>
+          <Box
+            gridArea="sidebar-header"
+            pad="medium"
+            border={[{ side: 'right' }, { side: 'bottom' }]}
+          >
+            <TextInput placeholder="Search chats" />
+          </Box>
+          <Box gridArea="header" pad="medium" border="bottom" justify="center">
+            <Heading level={4} margin="none">
+              {currentParticipantsLabel}
+            </Heading>
+          </Box>
+          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+            <ChatConversations
+              conversations={conversations}
+              user={user}
+              currentConversationId={currentConversationId}
+            />
+          </Box>
+          <Box
+            gridArea="sidebar-footer"
+            pad="medium"
+            border="right"
+            justify="end"
+          >
+            <Button label="Compose" primary />
+          </Box>
+          <Box gridArea="main" pad="medium">
+            <ChatConversation user={user} {...currentConversation} />
+          </Box>
+          <Box gridArea="footer" pad="medium">
+            <TextArea
+              placeholder="Type your message"
+              value={''}
+              onChange={(event) => {}}
+              resize={false}
+              fill
+            />
+          </Box>
+        </AppLayout>
+      </Card>
     </Box>
   );
 }

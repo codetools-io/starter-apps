@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Paragraph, WorldMap } from 'grommet';
+import { Box, Card, Heading, Paragraph, WorldMap } from 'grommet';
 function Map({ continents = [], places = [] }) {
   return (
     <WorldMap color="light-6" continents={continents} places={places} fill />
@@ -7,7 +7,7 @@ function Map({ continents = [], places = [] }) {
 }
 export default function MapWidget({ title, description, data, ...props }) {
   return (
-    <Box background="white" pad="medium" gap="medium" border {...props}>
+    <Card background="white" pad="medium" gap="medium" {...props}>
       {title && (
         <Heading level="4" margin="none">
           {title}
@@ -19,6 +19,6 @@ export default function MapWidget({ title, description, data, ...props }) {
           {description}
         </Paragraph>
       )}
-    </Box>
+    </Card>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Box,
+  Card,
   Heading,
   Paragraph,
   Table,
@@ -19,7 +20,7 @@ export default function TableWidget({
   ...props
 }) {
   return (
-    <Box background="white" pad="medium" gap="medium" border {...props}>
+    <Card background="white" pad="medium" gap="medium" {...props}>
       {title && (
         <Heading level="4" margin="none">
           {title}
@@ -65,6 +66,6 @@ export default function TableWidget({
           {description}
         </Paragraph>
       )}
-    </Box>
+    </Card>
   );
 }
