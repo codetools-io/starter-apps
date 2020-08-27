@@ -37,7 +37,7 @@ export const brand = {
       'text-strong': { light: 'brand-alt-4' },
       'text-weak': { light: 'brand-alt-2' },
       'text-xweak': { light: 'brand-alt-1' },
-      border: { light: '#979DAC' },
+      border: { light: '#eee' },
       ...genericColors,
     },
     font: {
