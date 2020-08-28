@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Avatar,
   Box,
+  Collapsible,
   DropButton,
-  Footer,
   Grid,
   Grommet,
   Header,
@@ -11,6 +11,7 @@ import {
   Image,
   Main,
   Nav,
+  ResponsiveContext,
   Sidebar,
   Stack,
   Text,
@@ -45,21 +46,19 @@ export default function AppShell({ children, ...props }) {
           ['header', 'header', 'header', 'header'],
           ['sidebar', 'main', 'main', 'main'],
         ]}
+        height={{ min: '100vh' }}
       >
         <AppShellHeader
           authHandler={authHandler}
           authLabel={authLabel}
-          logo={config?.site?.logo}
+          logo={config.site.logo}
+          logoSmall={config.site.logoSmall}
           userInitials={`${data?.users?.user1?.firstName[0]}${data?.users?.user1?.lastName[0]}`}
           userProfile={data?.users?.user1?.profile}
           siteName={config?.site?.name}
         />
         <AppShellSidebar />
         <AppShellMain>{children}</AppShellMain>
-        {/* <AppShellFooter
-          copyrightYear={config?.site?.copyrightYear}
-          siteName={config?.site?.name}
-        /> */}
       </Grid>
     </Grommet>
   );
@@ -69,6 +68,7 @@ function AppShellHeader({
   authHandler = () => {},
   authLabel,
   logo,
+  logoSmall,
   searchHandler = () => {},
   siteName,
   userProfile,
@@ -85,6 +85,7 @@ function AppShellHeader({
         <AppShellLogo
           text={siteName}
           logo={logo}
+          logoSmall={logoSmall}
           height={{ max: '100%' }}
           width={{ max: '100%' }}
         />
@@ -100,20 +101,33 @@ function AppShellHeader({
   );
 }
 
-function AppShellLogo({ text, logo, ...props }) {
+function AppShellLogo({ text, logo, logoSmall, ...props }) {
   const showText = !logo && text;
-
+  const size = useContext(ResponsiveContext);
+  const style = useMemo(() => {
+    if (size === 'small') {
+      return { maxHeight: '32px', maxWidth: '100%' };
+    }
+    return { maxHeight: '100%', maxWidth: '100%' };
+  }, [size]);
   return (
-    <Box background="brand-3" gridArea="logo" pad="medium" {...props}>
+    <Box
+      background="brand-3"
+      gridArea="logo"
+      pad="medium"
+      justify="center"
+      fill
+      {...props}
+    >
       {showText ? (
         <Heading level="3" textAlign="center" color="white">
           {text}
         </Heading>
       ) : (
         <Image
-          src={logo}
+          src={size === 'small' ? logoSmall : logo}
           fit="contain"
-          style={{ maxHeight: '100%', maxWidth: '100%' }}
+          style={style}
         />
       )}
     </Box>
@@ -265,10 +279,15 @@ function AppShellNav() {
 }
 
 function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
+  const size = useContext(ResponsiveContext);
   const [nav, setNav] = useLocalStorage('nav', {});
   const isExpanded = useMemo(() => {
+    if (size === 'small') {
+      return true;
+    }
+
     return nav?.[id];
-  }, [id, nav]);
+  }, [id, nav, size]);
 
   function toggleMenu() {
     setNav({
@@ -298,7 +317,7 @@ function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
           isNested={isNested}
         />
       </Box>
-      {isExpanded && (
+      <Collapsible direction="vertical" open={isExpanded}>
         <Box
           gap="xsmall"
           pad={{ horizontal: 'none', vertical: 'xsmall' }}
@@ -309,7 +328,7 @@ function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
             return <AppShellNavItem key={route.id} {...route} isNested />;
           })}
         </Box>
-      )}
+      </Collapsible>
     </Box>
   );
 }
@@ -324,15 +343,5 @@ function AppShellMain({ children }) {
     >
       {children}
     </Main>
-  );
-}
-
-function AppShellFooter({ copyrightYear, siteName }) {
-  return (
-    <Footer gridArea="footer">
-      <Box direction="row" pad="medium" fill>
-        &copy;{copyrightYear} {siteName}
-      </Box>
-    </Footer>
   );
 }
