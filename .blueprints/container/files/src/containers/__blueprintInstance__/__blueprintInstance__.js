@@ -1,11 +1,12 @@
 import React from 'react';
+import { Box, Card } from 'grommet';
 
-import styles from './{{blueprintInstance}}.module.css';
+export default function {{blueprintInstance}}({ ...props }) {
+  return (
+    <Box className="{{blueprintInstance}}" pad="medium" fill {...props}>
+      <Card background="white" pad="medium">
 
-export default function {{blueprintInstance}} ({ children, ...props }) {
-
-  return <div className={styles.{{blueprintInstance}}} {...props}>{children}</div>;
-};
-
-
-
+      </Card>
+    </Box>
+  );
+}

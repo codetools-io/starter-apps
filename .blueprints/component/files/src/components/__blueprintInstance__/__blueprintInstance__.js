@@ -1,10 +1,9 @@
 import React from 'react';
-
-import styles from './{{blueprintInstance}}.module.css';
+import { Box } from 'grommet';
 
 export default function {{blueprintInstance}} ({ children, ...props }) {
 
-  return <div className={styles.{{blueprintInstance}}} {...props}>{children}</div>;
+  return <Box className="{{blueprintInstance}}" {...props}>{children}</Box>;
 };
 
 
