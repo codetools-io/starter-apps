@@ -6,6 +6,7 @@
     "accounting": "^0.4.1",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "dot-prop-immutable": "^2.1.0",
     "grommet": "^2.15.0",
     "grommet-icons": "^4.4.0",
     "history": "^5.0.0",
@@ -13,6 +14,7 @@
     "lodash": "^4.17.20",
     "moment": "^2.27.0",
     "money": "^0.2.0",
+    "rambda": "^5.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
@@ -27,6 +29,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/user-event": "^7.1.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.18.0",

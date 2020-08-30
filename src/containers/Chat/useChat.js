@@ -1,104 +1,82 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import * as data from 'data';
 
 export default function useChat() {
-  const [conversations] = useState([
-    {
-      id: 'conversation-1',
-      participants: [data?.users?.user1, data?.users?.user2],
-      messages: [
-        {
-          id: 'conversation-1a',
-          body: 'Hi!',
-          sentAt: 1598102268116,
-          authorId: 'user-1',
-        },
-        {
-          id: 'conversation-1a',
-          body: 'Hi! How are you?',
-          sentAt: 1598102365284,
-          authorId: 'user-2',
-        },
-      ],
-    },
-    {
-      id: 'conversation-2',
-      participants: [data?.users?.user1, data?.users?.user3],
-      messages: [
-        {
-          id: 'conversation-2a',
-          body: 'Hello!',
-          sentAt: 1598102268116,
-          authorId: 'user-1',
-        },
-        {
-          id: 'conversation-2a',
-          body: 'Hello! How are you?',
-          sentAt: 1598102365284,
-          authorId: 'user-3',
-        },
-      ],
-    },
-    {
-      id: 'conversation-3',
-      participants: [data?.users?.user1, data?.users?.user4],
-      messages: [
-        {
-          id: 'conversation-3a',
-          body: 'Hey!',
-          sentAt: 1598102268116,
-          authorId: 'user-1',
-        },
-        {
-          id: 'conversation-3a',
-          body: 'Hey! How are you?',
-          sentAt: 1598102365284,
-          authorId: 'user-4',
-        },
-      ],
-    },
-  ]);
+  const [conversations, setConversations] = useState(data?.conversations.user1);
   const [user] = useState(data?.users?.user1);
-  const [currentConversationId] = useState(conversations[0]?.id);
-  const currentConversation = useMemo(() => {
+  const [conversationId, setConversationId] = useState(conversations[0]?.id);
+  const [message, setMessage] = useState();
+
+  const conversation = useMemo(() => {
     return conversations.find(
-      (conversation) => conversation?.id === currentConversationId
+      (conversation) => conversation?.id === conversationId
     );
-  }, [conversations, currentConversationId]);
-  const currentParticipants = useMemo(() => currentConversation?.participants, [
-    currentConversation,
+  }, [conversations, conversationId]);
+  const participants = useMemo(() => conversation?.participants, [
+    conversation,
   ]);
-  const currentParticipantsLabel = useMemo(
+  const participantsLabel = useMemo(
     () =>
-      currentParticipants
+      participants
         ?.filter((participant) => participant.id !== user.id)
         ?.map(
           (participant) => `${participant.firstName} ${participant.lastName}`
         )
         .join(', '),
-    [currentParticipants, user]
+    [participants, user]
   );
-  const currentMessages = useMemo(() => currentConversation?.messages, [
-    currentConversation,
-  ]);
+  const currentMessages = useMemo(() => conversation?.messages, [conversation]);
+  const updateMessage = useCallback(function updateMessage(value) {
+    setMessage(value);
+  }, []);
+  const sendMessage = useCallback(
+    (payload) => {
+      setConversations(
+        conversations.map((conversation) => {
+          if (conversation.id !== conversationId) {
+            return conversation;
+          }
+
+          return {
+            ...conversation,
+            messages: [...conversation.messages, payload],
+          };
+        })
+      );
+      setMessage('');
+    },
+    [conversations, conversationId]
+  );
+  const selectConversation = useCallback((id) => {
+    setConversationId(id);
+  }, []);
+
   const chat = useMemo(() => {
     return {
       conversations,
       user,
-      currentConversation,
-      currentConversationId,
+      conversation,
+      conversationId,
       currentMessages,
-      currentParticipants,
-      currentParticipantsLabel,
+      participants,
+      participantsLabel,
+      message,
+      updateMessage,
+      sendMessage,
+      selectConversation,
     };
   }, [
     conversations,
     user,
-    currentConversation,
-    currentConversationId,
+    conversation,
+    conversationId,
     currentMessages,
-    currentParticipants,
-    currentParticipantsLabel,
+    participants,
+    participantsLabel,
+    message,
+    updateMessage,
+    sendMessage,
+    selectConversation,
   ]);
 
   return chat;

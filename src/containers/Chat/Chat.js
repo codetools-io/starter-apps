@@ -4,24 +4,30 @@ import {
   Box,
   Card,
   Button,
+  Grid,
   Heading,
+  InfiniteScroll,
+  Keyboard,
   Markdown,
   Text,
   TextArea,
   TextInput,
 } from 'grommet';
-import AppLayout from 'components/AppLayout';
+import { v4 as uuid } from 'uuid';
 import useChat from './useChat';
 
 function ChatConversation({ participants, messages, user }) {
   return (
-    <Box gap="small">
-      {messages
-        .sort((a, b) => a.sentAt - b.sentAt)
-        .map((message) => {
+    <Box height="100%" overflow="auto">
+      <InfiniteScroll
+        step={5}
+        items={messages.sort((a, b) => a.sentAt - b.sentAt)}
+        show={messages?.length - 1}
+      >
+        {(message) => {
           const sender = participants.find((p) => p.id === message.authorId);
           return (
-            <Box direction="row" gap="small">
+            <Box direction="row" gap="small" pad="small" flex={false}>
               <Box>
                 <Avatar src={sender.profile}>
                   {sender.firstName[0]}
@@ -36,30 +42,39 @@ function ChatConversation({ participants, messages, user }) {
               </Box>
             </Box>
           );
-        })}
+        }}
+      </InfiniteScroll>
     </Box>
   );
 }
 
-function ChatConversations({ conversations, user, currentConversationId }) {
+function ChatConversations({
+  conversations,
+  user,
+  conversationId,
+  selectConversation,
+}) {
   return (
     <Box gap="medium">
       {conversations.map((conversation) => {
         return (
-          <Box
-            background={
-              currentConversationId === conversation.id ? 'light-1' : null
-            }
-            pad={{ vertical: 'small', horizontal: 'medium' }}
+          <Button
+            key={conversation.id}
+            onClick={() => selectConversation(conversation.id)}
           >
-            {conversation.participants
-              ?.filter((participant) => participant.id !== user.id)
-              ?.map(
-                (participant) =>
-                  `${participant.firstName} ${participant.lastName}`
-              )
-              .join(', ')}
-          </Box>
+            <Box
+              background={conversationId === conversation.id ? 'light-1' : null}
+              pad={{ vertical: 'small', horizontal: 'medium' }}
+            >
+              {conversation.participants
+                ?.filter((participant) => participant.id !== user.id)
+                ?.map(
+                  (participant) =>
+                    `${participant.firstName} ${participant.lastName}`
+                )
+                .join(', ')}
+            </Box>
+          </Button>
         );
       })}
     </Box>
@@ -68,56 +83,84 @@ function ChatConversations({ conversations, user, currentConversationId }) {
 export default function Chat({ children }) {
   const {
     conversations,
-    currentConversation,
-    currentConversationId,
-    currentParticipantsLabel,
+    conversation,
+    conversationId,
+    participantsLabel,
     user,
+    message,
+    updateMessage,
+    sendMessage,
+    selectConversation,
   } = useChat();
 
   return (
-    <Box pad="medium" fill>
-      <Card background="white">
-        <AppLayout>
-          <Box
-            gridArea="sidebar-header"
-            pad="medium"
-            border={[{ side: 'right' }, { side: 'bottom' }]}
-          >
-            <TextInput placeholder="Search chats" />
+    <Box className="Chat" pad="medium" fill>
+      <Card background="white" fill>
+        <Grid
+          columns={['1/4', '1/4', '1/4', '1/4']}
+          rows={['auto', 'flex', 'auto']}
+          areas={[
+            ['ChatSearch', 'ChatHeader', 'ChatHeader', 'ChatHeader'],
+            ['ChatSidebar', 'ChatMain', 'ChatMain', 'ChatMain'],
+            ['ChatCompose', 'ChatMessage', 'ChatMessage', 'ChatMessage'],
+          ]}
+          fill
+        >
+          <Box gridArea="ChatSearch" pad="small" border="right">
+            <TextInput placeholder="Search chats" plain />
           </Box>
-          <Box gridArea="header" pad="medium" border="bottom" justify="center">
+
+          <Box
+            gridArea="ChatHeader"
+            pad="small"
+            justify="center"
+            border="bottom"
+          >
             <Heading level={4} margin="none">
-              {currentParticipantsLabel}
+              {participantsLabel}
             </Heading>
           </Box>
-          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+          <Box gridArea="ChatSidebar" fill="vertical" border="right">
             <ChatConversations
               conversations={conversations}
               user={user}
-              currentConversationId={currentConversationId}
+              conversationId={conversationId}
+              selectConversation={selectConversation}
             />
           </Box>
-          <Box
-            gridArea="sidebar-footer"
-            pad="medium"
-            border="right"
-            justify="end"
-          >
+          <Box gridArea="ChatCompose" pad="medium" border="right" justify="end">
             <Button label="Compose" primary />
           </Box>
-          <Box gridArea="main" pad="medium">
-            <ChatConversation user={user} {...currentConversation} />
+          <Box
+            gridArea="ChatMain"
+            pad="medium"
+            overflow="auto"
+            height={{ max: '100%' }}
+          >
+            <ChatConversation user={user} {...conversation} />
           </Box>
-          <Box gridArea="footer" pad="medium">
-            <TextArea
-              placeholder="Type your message"
-              value={''}
-              onChange={(event) => {}}
-              resize={false}
-              fill
-            />
+          <Box gridArea="ChatMessage" pad="medium" border="top">
+            <Keyboard
+              onEnter={(event) => {
+                event.preventDefault();
+                sendMessage({
+                  id: uuid(),
+                  body: message,
+                  sentAt: Date.now(),
+                  authorId: user?.id,
+                });
+              }}
+            >
+              <TextArea
+                placeholder="Type your message"
+                value={message}
+                onChange={(event) => updateMessage(event.target.value)}
+                resize={false}
+                fill
+              />
+            </Keyboard>
           </Box>
-        </AppLayout>
+        </Grid>
       </Card>
     </Box>
   );
