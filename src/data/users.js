@@ -7,12 +7,11 @@ export const user1 = {
   lastName: 'D',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/guy1.jpg`,
   company: 'That Company Inc.',
-  contactInfo: {
-    email: 'johnd@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'johnd@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user2 = {
@@ -22,12 +21,11 @@ export const user2 = {
   lastName: 'D',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/girl1.jpg`,
   company: 'Some Company Inc.',
-  contactInfo: {
-    email: 'janed@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'janed@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user3 = {
@@ -37,12 +35,11 @@ export const user3 = {
   lastName: 'S',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/guy2.jpg`,
   company: 'Another Company Inc.',
-  contactInfo: {
-    email: 'bills@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'bills@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user4 = {
@@ -52,12 +49,11 @@ export const user4 = {
   lastName: 'Q',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/girl2.jpg`,
   company: 'Not A Company Inc.',
-  contactInfo: {
-    email: 'suzyq@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'suzyq@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user5 = {
@@ -67,12 +63,11 @@ export const user5 = {
   lastName: 'S',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/guy3.jpg`,
   company: 'Same Company Inc.',
-  contactInfo: {
-    email: 'mikes@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'mikes@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user6 = {
@@ -82,12 +77,11 @@ export const user6 = {
   lastName: 'T',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/girl3.jpg`,
   company: 'Should Be A Company Inc.',
-  contactInfo: {
-    email: 'saraht@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'saraht@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
 
 export const user7 = {
@@ -97,10 +91,9 @@ export const user7 = {
   lastName: 'W',
   profile: `${PUBLIC_URL}/placeholder/img/avatars/guy4.jpg`,
   company: 'Was A Company Inc.',
-  contactInfo: {
-    email: 'markw@example.com',
-    mobile: '(555) 555-1234',
-    home: '(555) 555-5678',
-    work: '(555) 555-1000',
-  },
+
+  email: 'markw@example.com',
+  mobile: '(555) 555-1234',
+  home: '(555) 555-5678',
+  work: '(555) 555-1000',
 };
