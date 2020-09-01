@@ -23,7 +23,7 @@ export default function CountWidget({
   const offsetColor = useDarken(color, 20);
 
   return (
-    <Card direction="row" background={color} {...props}>
+    <Card className="CountWidget" direction="row" background={color} {...props}>
       {icon && (
         <Box justify="center" background={offsetColor} pad="medium">
           <Icon icon={icon} color={contrast} />

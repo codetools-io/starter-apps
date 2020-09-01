@@ -18,7 +18,7 @@ function DashboardWidget({ type, ...props }) {
 
 function DashboardSection({ id, title, widgets }) {
   return (
-    <Box direction="row" gap="medium" justify="stretch">
+    <Box direction="row" gap="medium" justify="stretch" flex={false}>
       {widgets?.map((widget) => {
         return <DashboardWidget key={widget?.id} {...widget} />;
       })}

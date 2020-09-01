@@ -1,0 +1,15 @@
+{
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-codetoolsadmin-master-71709-authRole",
+      "UnauthRoleArn": "arn:aws:iam::714022322010:role/amplify-codetoolsadmin-master-71709-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::714022322010:role/amplify-codetoolsadmin-master-71709-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-codetoolsadmin-master-71709-deployment",
+      "UnauthRoleName": "amplify-codetoolsadmin-master-71709-unauthRole",
+      "StackName": "amplify-codetoolsadmin-master-71709",
+      "StackId": "arn:aws:cloudformation:us-east-1:714022322010:stack/amplify-codetoolsadmin-master-71709/ae4ffb70-ec44-11ea-99f2-0e6b90c5010d",
+      "AmplifyAppId": "diq98pm9bifor"
+    }
+  }
+}
