@@ -55,7 +55,7 @@ function ChatConversations({
   selectConversation,
 }) {
   return (
-    <Box gap="medium">
+    <Box>
       {conversations.map((conversation) => {
         return (
           <Button
@@ -133,7 +133,7 @@ export default function Chat({ children }) {
           </Box>
           <Box
             gridArea="ChatMain"
-            pad="medium"
+            pad={{ horizontal: 'medium' }}
             overflow="auto"
             height={{ max: '100%' }}
           >

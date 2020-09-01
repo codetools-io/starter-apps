@@ -62,5 +62,10 @@ export const brand = {
       padding: '10px',
       weight: 400,
     },
+    focus: {
+      outline: {
+        color: 'transparent',
+      },
+    },
   },
 };

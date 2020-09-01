@@ -270,11 +270,26 @@ function AppShellSidebar() {
 
 function AppShellNav() {
   return (
-    <Nav gap="none">
-      {config?.nav?.routes?.map((route) => (
-        <AppShellNavItem key={route.id} {...route} />
+    <Nav className="AppShellNav" gap="medium">
+      {config?.nav?.sections?.map((section) => (
+        <AppShellNavSection key={section.id} {...section} />
       ))}
     </Nav>
+  );
+}
+
+function AppShellNavSection({ id, name, routes }) {
+  return (
+    <Box className="AppShellNavSection" gap="small">
+      <Box pad={{ horizontal: 'medium' }}>
+        <Text weight="bold">{name}</Text>
+      </Box>
+      <Box gap="none">
+        {routes?.map((route) => (
+          <AppShellNavItem key={route.id} {...route} />
+        ))}
+      </Box>
+    </Box>
   );
 }
 

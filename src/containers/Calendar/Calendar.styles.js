@@ -4,7 +4,6 @@ const calendar = ({ className, theme, ...props }) => {
   const currentMode = theme?.dark ? 'dark' : 'light';
   const isFill = className?.split(' ')?.some((cn) => cn === 'fill');
 
-  console.log(theme.global);
   return (
     isFill &&
     css`
