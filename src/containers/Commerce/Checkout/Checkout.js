@@ -40,8 +40,8 @@ export default function Checkout({ children, ...props }) {
             updateBilling(updates);
           }}
         >
-          <Box direction="row" justify="start" gap="medium">
-            <Box gap="medium">
+          <Box direction="row" gap="medium">
+            <Box gap="medium" width="1/2" flex>
               <Heading level={4} margin="none">
                 Billing Details
               </Heading>
@@ -91,7 +91,7 @@ export default function Checkout({ children, ...props }) {
                 <CheckBox name="newAccount" label="Create an account?" />
               </Box>
             </Box>
-            <Box gap="small">
+            <Box gap="small" width="1/2" flex>
               <Heading level={4} margin="none">
                 Products
               </Heading>
