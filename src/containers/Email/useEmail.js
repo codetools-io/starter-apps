@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { chain } from 'lodash';
-import * as data from 'data';
+import { email } from 'data';
 
 export default function useEmail() {
-  const [emails] = useState(data.emails.user1.emails);
-  const [labels] = useState(data.emails.user1.labels);
+  const [emails] = useState(email.emails);
+  const [labels] = useState(email.labels);
   const [activeEmailId, setActiveEmailId] = useState();
   const [activeFolder, updateActiveFolder] = useState('Inbox');
 
@@ -50,7 +50,7 @@ export default function useEmail() {
     return chain(labels).keyBy('id').value();
   }, [labels]);
 
-  const email = useMemo(() => {
+  return useMemo(() => {
     return {
       emails,
       inbox,
@@ -85,6 +85,4 @@ export default function useEmail() {
     updateActiveFolder,
     labelsById,
   ]);
-
-  return email;
 }

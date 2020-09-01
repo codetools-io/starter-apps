@@ -18,7 +18,7 @@ import { FormClose } from 'grommet-icons';
 import useCart from './useCart';
 
 export default function Cart({ children, ...props }) {
-  const { lineItems, totalLabel } = useCart();
+  const { lineItems, totalLabel, removeProduct, updateProduct } = useCart();
 
   return (
     <Box className="Cart" pad="medium" fill>
@@ -42,11 +42,14 @@ export default function Cart({ children, ...props }) {
               </TableCell>
             </TableRow>
           </TableHeader>
-          <TableBody overflow="auto">
+          <TableBody>
             {lineItems.map((lineItem) => (
-              <TableRow>
+              <TableRow key={`cart-line-item-${lineItem.id}`}>
                 <TableCell scope="row">
-                  <Button icon={<FormClose />} />
+                  <Button
+                    icon={<FormClose />}
+                    onClick={() => removeProduct(lineItem.id)}
+                  />
                 </TableCell>
                 <TableCell scope="row">
                   <Box height="small" width="small">
@@ -62,7 +65,16 @@ export default function Cart({ children, ...props }) {
                 </TableCell>
                 <TableCell scope="row">
                   <Box width="xsmall">
-                    <TextInput value={lineItem.quantity} />
+                    <TextInput
+                      type="number"
+                      value={lineItem.quantity}
+                      onChange={(event) => {
+                        updateProduct({
+                          id: lineItem.id,
+                          quantity: event.target.value,
+                        });
+                      }}
+                    />
                   </Box>
                 </TableCell>
                 <TableCell scope="row">
