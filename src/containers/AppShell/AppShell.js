@@ -333,12 +333,7 @@ function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
         />
       </Box>
       <Collapsible direction="vertical" open={isExpanded}>
-        <Box
-          gap="xsmall"
-          pad={{ horizontal: 'none', vertical: 'xsmall' }}
-          background="brand-2"
-          fill="horizontal"
-        >
+        <Box gap="xsmall" background="brand-2" fill="horizontal">
           {routes.map((route) => {
             return <AppShellNavItem key={route.id} {...route} isNested />;
           })}
