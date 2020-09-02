@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Box, Paragraph } from 'grommet';
+import { Box, Heading, Paragraph } from 'grommet';
 
 import useDashboard from './useDashboard';
 
@@ -18,17 +18,24 @@ function DashboardWidget({ type, ...props }) {
 
 function DashboardSection({ id, title, widgets }) {
   return (
-    <Box direction="row" gap="medium" justify="stretch" flex={false}>
-      {widgets?.map((widget) => {
-        return <DashboardWidget key={widget?.id} {...widget} />;
-      })}
+    <Box flex={false} gap="medium">
+      {title && (
+        <Heading level={3} margin="none">
+          {title}
+        </Heading>
+      )}
+      <Box direction="row" gap="medium" justify="stretch">
+        {widgets?.map((widget) => {
+          return <DashboardWidget key={widget?.id} {...widget} />;
+        })}
+      </Box>
     </Box>
   );
 }
 export default function Dashboard() {
   const { widgetsBySection, sections } = useDashboard();
   return (
-    <Box className="Dashboard" pad="medium" gap="medium">
+    <Box className="Dashboard" pad="medium" gap="large">
       {sections.map((section) => {
         return (
           <DashboardSection
