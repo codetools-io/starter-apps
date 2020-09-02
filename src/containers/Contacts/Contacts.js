@@ -5,13 +5,14 @@ import {
   Button,
   Form,
   FormField,
+  Grid,
   Heading,
   Image,
   List,
   Text,
   TextInput,
 } from 'grommet';
-import AppLayout from 'components/AppLayout';
+
 import useContacts from './useContacts';
 
 function Connections({ connections, connectionId, openConnection }) {
@@ -68,18 +69,26 @@ function Connection({
         <List
           primaryKey="label"
           secondaryKey="value"
+          border={{ size: '0px' }}
           data={[
-            { label: 'id', value: id },
             { label: 'First Name', value: firstName },
             { label: 'Last Name', value: lastName },
             { label: 'Company', value: company },
-
             { label: 'Email', value: email },
             { label: 'Mobile', value: mobile },
             { label: 'Home', value: home },
             { label: 'Work', value: work },
           ]}
-        />
+        >
+          {(datum, index) => (
+            <Box direction="row" gap="small">
+              <Box width="small">
+                <Text weight="bold">{datum.label}</Text>
+              </Box>
+              <Box>{datum.value}</Box>
+            </Box>
+          )}
+        </List>
       </Box>
     </Box>
   );
@@ -127,17 +136,31 @@ export default function Contacts({ children, ...props }) {
 
   return (
     <Box pad="medium" fill>
-      <Card background="white">
-        <AppLayout>
+      <Card background="white" fill>
+        <Grid
+          columns={['1/4', '1/4', '1/4', '1/4']}
+          rows={['auto', 'flex', 'auto']}
+          areas={[
+            [
+              'ContactsSearch',
+              'ContactsHeader',
+              'ContactsHeader',
+              'ContactsHeader',
+            ],
+            ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
+            ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
+          ]}
+          fill
+        >
           <Box
-            gridArea="sidebar-header"
+            gridArea="ContactsSearch"
             pad="medium"
             border={[{ side: 'right' }, { side: 'bottom' }]}
           >
             <TextInput placeholder="Search contacts" />
           </Box>
           <Box
-            gridArea="header"
+            gridArea="ContactsHeader"
             pad="medium"
             direction="row"
             justify="end"
@@ -161,14 +184,18 @@ export default function Contacts({ children, ...props }) {
               />
             )}
           </Box>
-          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+          <Box
+            gridArea="ContactsSidebar"
+            pad="none"
+            border={[{ side: 'right' }]}
+          >
             <Connections
               connections={connections}
               connectionId={connectionId}
               openConnection={openConnection}
             />
           </Box>
-          <Box gridArea="main" pad="medium">
+          <Box gridArea="ContactsMain" pad="medium">
             {isEditMode ? (
               <ConnectionForm
                 fields={connectionUpdates}
@@ -178,7 +205,7 @@ export default function Contacts({ children, ...props }) {
               <Connection {...connection} />
             )}
           </Box>
-        </AppLayout>
+        </Grid>
       </Card>
     </Box>
   );
