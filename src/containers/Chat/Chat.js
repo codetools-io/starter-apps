@@ -27,7 +27,13 @@ function ChatConversation({ participants, messages, user }) {
         {(message) => {
           const sender = participants.find((p) => p.id === message.authorId);
           return (
-            <Box direction="row" gap="small" pad="small" flex={false}>
+            <Box
+              key={`chat-conversation-${message?.id}`}
+              direction="row"
+              gap="small"
+              pad="small"
+              flex={false}
+            >
               <Box>
                 <Avatar src={sender.profile}>
                   {sender.firstName[0]}

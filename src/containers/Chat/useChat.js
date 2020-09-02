@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 import * as data from 'data';
 
 export default function useChat() {
-  const [conversations, setConversations] = useState(data?.conversations.user1);
+  const [conversations, setConversations] = useState(data?.chat?.conversations);
   const [user] = useState(data?.users?.user1);
   const [conversationId, setConversationId] = useState(conversations[0]?.id);
   const [message, setMessage] = useState();
@@ -51,7 +51,7 @@ export default function useChat() {
     setConversationId(id);
   }, []);
 
-  const chat = useMemo(() => {
+  return useMemo(() => {
     return {
       conversations,
       user,
@@ -78,6 +78,4 @@ export default function useChat() {
     sendMessage,
     selectConversation,
   ]);
-
-  return chat;
 }

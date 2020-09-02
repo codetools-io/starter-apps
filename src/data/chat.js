@@ -1,6 +1,6 @@
-import { users } from 'data';
+import * as users from './users';
 
-export const user1 = [
+export const conversations = [
   {
     id: 'conversation-1',
     participants: [users?.user1, users?.user2],
