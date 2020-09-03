@@ -40,7 +40,6 @@ export default function useStore() {
   }, [products, filters]);
   const store = useMemo(() => {
     function updateFilters(updates) {
-      console.log(updates);
       setFilters(updates);
     }
 

@@ -53,7 +53,6 @@ function StoreProduct({ id, price, image, title, ...props }) {
 }
 
 function StoreSidebar({ categories, brands, updateFilters, filters }) {
-  console.log(filters);
   return (
     <Form onChange={updateFilters} value={filters}>
       <Box gap="medium">

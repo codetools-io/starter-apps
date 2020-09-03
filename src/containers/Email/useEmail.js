@@ -5,84 +5,124 @@ import { email } from 'data';
 export default function useEmail() {
   const [emails] = useState(email.emails);
   const [labels] = useState(email.labels);
+  const [folders] = useState(email.folders);
+  const [activeLabelIds, setActiveLabelIds] = useState([]);
   const [activeEmailId, setActiveEmailId] = useState();
-  const [activeFolder, updateActiveFolder] = useState('Inbox');
-
-  const inbox = useMemo(
-    () => emails.filter((email) => email?.folder === 'Inbox'),
-    [emails]
+  const [activeFolderId, setActiveFolderId] = useState(
+    email?.settings?.defaultFolder
   );
-  const sent = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Sent'),
-    [emails]
-  );
-  const drafts = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Draft'),
-    [emails]
-  );
-  const trash = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Trash'),
-    [emails]
-  );
-  const important = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Important'),
-    [emails]
-  );
-  const spam = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Starred'),
-    [emails]
-  );
-  const starred = useMemo(
-    () => () => emails.filter((email) => email?.folder === 'Spam'),
-    [emails]
-  );
-
-  const activeEmail = useMemo(
-    () => emails.find((email) => email.id === activeEmailId),
-    [emails, activeEmailId]
-  );
-
-  const emailsByFolder = useMemo(() => {
-    return chain(emails).groupBy('folder').value();
-  }, [emails]);
-
   const labelsById = useMemo(() => {
     return chain(labels).keyBy('id').value();
   }, [labels]);
+  const foldersById = useMemo(() => {
+    return chain(folders).keyBy('id').value();
+  }, [folders]);
+  const emailsByFolderId = useMemo(() => {
+    return chain(emails).groupBy('folderId').value();
+  }, [emails]);
+  const activeFolder = useMemo(
+    () => folders.find((folder) => folder.id === activeFolderId),
+    [folders, activeFolderId]
+  );
+  const activeFolderEmails = useMemo(() => {
+    return emailsByFolderId[activeFolderId]?.map((email) => {
+      return {
+        ...email,
+        labels: email?.labelIds.length
+          ? email.labelIds.map((labelId) => labelsById[labelId])
+          : [],
+      };
+    });
+  }, [emailsByFolderId, activeFolderId, labelsById]);
+  const activeEmail = useMemo(
+    () => activeFolderEmails.find((email) => email.id === activeEmailId),
+    [activeFolderEmails, activeEmailId]
+  );
+  const activeLabels = useMemo(() => {
+    return activeLabelIds.map((labelId) => labelsById[labelId]);
+  }, [labelsById, activeLabelIds]);
+  const activeLabelEmails = useMemo(() => {
+    return emails
+      .filter((email) =>
+        email?.labelIds?.some((labelId) => activeLabelIds?.includes(labelId))
+      )
+      ?.map((email) => {
+        return {
+          ...email,
+          labels: email?.labelIds.length
+            ? email.labelIds.map((labelId) => labelsById[labelId])
+            : [],
+        };
+      });
+  }, [emails, activeLabelIds, labelsById]);
+  const unreadEmails = useMemo(() => {
+    return emails.filter((email) => !email?.viewed);
+  }, [emails]);
+  const unreadEmailsByFolderId = useMemo(() => {
+    return chain(unreadEmails).groupBy('folderId').value();
+  }, [unreadEmails]);
 
   return useMemo(() => {
+    function composeEmail(folderId) {}
+
+    function openEmail(emailId) {
+      setActiveEmailId(emailId);
+    }
+
+    function openFolder(folderId) {
+      setActiveFolderId(folderId);
+    }
+
+    function filterByLabel(labelId) {
+      setActiveLabelIds([...activeLabelIds, labelId]);
+    }
+
+    function searchEmails(labelId) {}
+
+    function clearLabelFilters() {
+      setActiveLabelIds([]);
+    }
+
     return {
-      emails,
-      inbox,
-      sent,
-      drafts,
-      trash,
-      important,
-      spam,
-      starred,
-      labels,
-      activeEmailId,
       activeEmail,
-      emailsByFolder,
+      activeEmailId,
       activeFolder,
-      updateActiveFolder,
+      activeFolderEmails,
+      activeLabelEmails,
+      activeFolderId,
+      activeLabels,
+      activeLabelIds,
+      clearLabelFilters,
+      composeEmail,
+      emails,
+      emailsByFolderId,
+      filterByLabel,
+      folders,
+      foldersById,
+      labels,
       labelsById,
+      openEmail,
+      openFolder,
+      searchEmails,
+      unreadEmails,
+      unreadEmailsByFolderId,
     };
   }, [
     emails,
-    inbox,
-    sent,
-    drafts,
-    trash,
-    important,
-    spam,
-    starred,
     labels,
+    folders,
     activeEmailId,
     activeEmail,
-    emailsByFolder,
     activeFolder,
-    updateActiveFolder,
+    activeFolderId,
+    activeFolderEmails,
+    activeLabels,
+    activeLabelIds,
+    activeLabelEmails,
+    emailsByFolderId,
     labelsById,
+    foldersById,
+    unreadEmails,
+    unreadEmailsByFolderId,
   ]);
 }
