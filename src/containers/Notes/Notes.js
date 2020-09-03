@@ -4,13 +4,14 @@ import {
   Card,
   Button,
   Form,
+  Grid,
   Heading,
   Markdown,
   Text,
   TextInput,
   TextArea,
 } from 'grommet';
-import AppLayout from 'components/AppLayout';
+
 import useNotes from './useNotes';
 
 function NoteList({ notes, currentNoteId, openNote }) {
@@ -135,11 +136,20 @@ export default function Notes({ children, ...props }) {
   } = useNotes();
 
   return (
-    <Box pad="medium" fill>
-      <Card background="white">
-        <AppLayout>
+    <Box className="Notes" pad="medium" fill>
+      <Card background="white" fill>
+        <Grid
+          columns={['1/4', '1/4', '1/4', '1/4']}
+          rows={['auto', 'flex', 'auto']}
+          areas={[
+            ['NotesSearch', 'NotesHeader', 'NotesHeader', 'NotesHeader'],
+            ['NotesSidebar', 'NotesMain', 'NotesMain', 'NotesMain'],
+            ['NotesNew', 'NotesMain', 'NotesMain', 'NotesMain'],
+          ]}
+          fill
+        >
           <Box
-            gridArea="sidebar-header"
+            gridArea="NotesSearch"
             pad="medium"
             border={[{ side: 'right' }, { side: 'bottom' }]}
           >
@@ -147,7 +157,7 @@ export default function Notes({ children, ...props }) {
           </Box>
 
           <Box
-            gridArea="header"
+            gridArea="NotesHeader"
             pad="medium"
             direction="row"
             justify="end"
@@ -162,7 +172,7 @@ export default function Notes({ children, ...props }) {
             ) : null}
           </Box>
 
-          <Box gridArea="sidebar" pad="none" border={[{ side: 'right' }]}>
+          <Box gridArea="NotesSidebar" pad="none" border={[{ side: 'right' }]}>
             <NoteList
               notes={notes}
               currentNoteId={currentNoteId}
@@ -170,7 +180,7 @@ export default function Notes({ children, ...props }) {
             />
           </Box>
           <Box
-            gridArea="sidebar-footer"
+            gridArea="NotesNew"
             pad="medium"
             border={[{ side: 'right' }, { side: 'top' }]}
           >
@@ -180,7 +190,7 @@ export default function Notes({ children, ...props }) {
               primary
             />
           </Box>
-          <Box gridArea="main" pad="medium">
+          <Box gridArea="NotesMain" pad="medium">
             {isEditMode ? (
               <NoteForm
                 {...currentNote}
@@ -195,7 +205,7 @@ export default function Notes({ children, ...props }) {
               />
             )}
           </Box>
-        </AppLayout>
+        </Grid>
       </Card>
     </Box>
   );
