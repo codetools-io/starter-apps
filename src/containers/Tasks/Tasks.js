@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Heading, Paragraph, Text } from 'grommet';
+import { Box, Card, Text } from 'grommet';
 import { Next } from 'grommet-icons';
 import useTasks from './useTasks';
 

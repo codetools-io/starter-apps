@@ -43,22 +43,25 @@ export default function useContacts() {
     setIsEditMode(false);
     setConnectionUpdates({});
   }, []);
-  const saveChanges = useCallback((payload) => {
-    setConnections(
-      connections.map((connection) => {
-        if (connection.id !== payload.id) {
-          return connection;
-        }
+  const saveChanges = useCallback(
+    (payload) => {
+      setConnections(
+        connections.map((connection) => {
+          if (connection.id !== payload.id) {
+            return connection;
+          }
 
-        return {
-          ...connection,
-          ...payload,
-        };
-      })
-    );
-    setIsEditMode(false);
-    setConnectionUpdates({});
-  }, []);
+          return {
+            ...connection,
+            ...payload,
+          };
+        })
+      );
+      setIsEditMode(false);
+      setConnectionUpdates({});
+    },
+    [connections]
+  );
   const contacts = useMemo(() => {
     return {
       connections,

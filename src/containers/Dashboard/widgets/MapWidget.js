@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Heading, Paragraph, WorldMap } from 'grommet';
+import { Card, Heading, Paragraph, WorldMap } from 'grommet';
 function Map({ continents = [], places = [] }) {
   return (
     <WorldMap color="light-6" continents={continents} places={places} fill />

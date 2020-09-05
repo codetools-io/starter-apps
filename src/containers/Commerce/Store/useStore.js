@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { inRange, intersectionBy } from 'lodash';
+import { inRange } from 'lodash';
 import * as data from 'data';
 
 export default function useStore() {

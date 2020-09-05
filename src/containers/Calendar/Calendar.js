@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Card, Calendar as GrommetCalendar, ThemeContext } from 'grommet';
-import useCalendar from './useCalendar';
+// import useCalendar from './useCalendar';
 import styles from './Calendar.styles';
 export default function Calendar({ children }) {
-  const { events } = useCalendar();
+  // const { events } = useCalendar();
 
   return (
     <Box pad="medium" fill>

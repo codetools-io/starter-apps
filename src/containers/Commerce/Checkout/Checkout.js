@@ -2,10 +2,8 @@ import React from 'react';
 
 import {
   Box,
-  Button,
   Card,
   CheckBox,
-  Grid,
   Form,
   FormField,
   Heading,
@@ -22,13 +20,7 @@ import {
 import useCheckout from './useCheckout';
 
 export default function Checkout({ children, ...props }) {
-  const {
-    products,
-    lineItems,
-    totalLabel,
-    billing,
-    updateBilling,
-  } = useCheckout();
+  const { lineItems, totalLabel, billing, updateBilling } = useCheckout();
 
   return (
     <Box pad="medium" fill>
