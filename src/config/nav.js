@@ -7,7 +7,6 @@ import {
   Mail,
   Notes,
   Shop,
-  Task,
   Tasks,
   User,
 } from 'grommet-icons';
@@ -81,12 +80,12 @@ export const nav = {
           label: 'Project Manager',
           path: '/project-manager',
         },
-        {
-          id: 'tasks',
-          icon: <Task size="16px" />,
-          label: 'Tasks',
-          path: '/tasks',
-        },
+        // {
+        //   id: 'tasks',
+        //   icon: <Task size="16px" />,
+        //   label: 'Tasks',
+        //   path: '/tasks',
+        // },
       ],
     },
     {

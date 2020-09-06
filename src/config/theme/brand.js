@@ -20,6 +20,8 @@ const genericColors = {
 export const brand = {
   global: {
     colors: {
+      brand: '#0466C8',
+      'brand-alt': '#979DAC',
       'brand-0': '#057AF0',
       'brand-1': '#0466C8',
       'brand-2': '#0353A4',

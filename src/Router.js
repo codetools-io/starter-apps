@@ -11,7 +11,7 @@ export default function Router() {
   const Notes = lazy(() => import('./containers/Notes'));
   const Profile = lazy(() => import('./containers/Profile'));
   const ProjectManager = lazy(() => import('./containers/ProjectManager'));
-  const Tasks = lazy(() => import('./containers/Tasks'));
+  // const Tasks = lazy(() => import('./containers/Tasks'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
@@ -27,7 +27,7 @@ export default function Router() {
         <Route component={Notes} path="/notes" />
         <Route component={Profile} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />
-        <Route component={Tasks} path="/tasks" />
+        {/* <Route component={Tasks} path="/tasks" /> */}
       </Switch>
     </Suspense>
   );
