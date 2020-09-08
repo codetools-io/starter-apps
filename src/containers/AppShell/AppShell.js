@@ -2,6 +2,10 @@ import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Avatar,
   Box,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
   Collapsible,
   DropButton,
   Grid,
@@ -17,25 +21,23 @@ import {
   Text,
   TextInput,
 } from 'grommet';
-import {
-  Cart,
-  ChatOption,
-  Down,
-  Notification,
-  Search,
-  Up,
-} from 'grommet-icons';
+import { Down, Search, Up } from 'grommet-icons';
 import { useLocalStorage } from 'react-use';
 import NavLink from 'components/NavLink';
+import useAppShell from './useAppShell';
 import * as config from 'config';
-import * as data from 'data';
+
+function Icon({ icon, color = 'text', size = 'medium', ...props }) {
+  const Component = icon;
+  return (
+    <Box {...props}>
+      <Component color={color} size={size} />
+    </Box>
+  );
+}
 
 export default function AppShell({ children, ...props }) {
-  const isAuthenticated = true;
-  const login = () => {};
-  const logout = () => {};
-  const authHandler = isAuthenticated ? logout : login;
-  const authLabel = isAuthenticated ? 'logout' : 'login';
+  const { authHandler, authLabel, user, userInitials } = useAppShell();
 
   return (
     <Grommet className="AppShell" theme={config?.theme} full>
@@ -53,8 +55,8 @@ export default function AppShell({ children, ...props }) {
           authLabel={authLabel}
           logo={config.site.logo}
           logoSmall={config.site.logoSmall}
-          userInitials={`${data?.users?.user1?.firstName[0]}${data?.users?.user1?.lastName[0]}`}
-          userProfile={data?.users?.user1?.profile}
+          userInitials={userInitials}
+          userProfile={user?.profile}
           siteName={config?.site?.name}
         />
         <AppShellSidebar />
@@ -141,6 +143,7 @@ function AppShellMenu({
   userInitials,
   userProfile,
 }) {
+  const { categories, notificationsByCategoryId } = useAppShell();
   return (
     <Box
       gridArea="menu"
@@ -150,18 +153,15 @@ function AppShellMenu({
       gap="medium"
     >
       <AppShellSearch searchHandler={searchHandler} />
-      <AppShellNotifications
-        icon={<Notification size="medium" color="text" />}
-        notifications={[{}]}
-      />
-      <AppShellNotifications
-        icon={<ChatOption size="medium" color="text" />}
-        notifications={[{}]}
-      />
-      <AppShellNotifications
-        icon={<Cart size="medium" color="text" />}
-        notifications={[{}]}
-      />
+      {categories.map((category) => {
+        return (
+          <AppShellNotification
+            key={category?.id}
+            category={category}
+            notifications={notificationsByCategoryId[category?.id]}
+          />
+        );
+      })}
       <AppShellUserMenu
         authHandler={authHandler}
         authLabel={authLabel}
@@ -226,31 +226,100 @@ function AppShellUserMenu({
   );
 }
 
-function AppShellNotifications({ icon, notifications = [] }) {
+function AppShellNotification({ category, notifications = [] }) {
   return (
     <DropButton
       icon={
-        <Box>
-          <Stack anchor="top-right">
-            {icon}
-            <Box
-              align="center"
-              justify="center"
-              background="brand-2"
-              pad={{ horizontal: 'xsmall' }}
-              width={{ min: '18px' }}
-              height={{ min: '18px' }}
-              margin={{ top: '-7px', right: '-7px' }}
-              round
-            >
-              <Text size="xsmall">{notifications?.length}</Text>
-            </Box>
-          </Stack>
-        </Box>
+        <AppShellNotificationIndicator
+          icon={category?.icon}
+          count={notifications?.length}
+        />
       }
       dropAlign={{ top: 'bottom', right: 'right' }}
-      dropContent={<Box></Box>}
+      dropContent={
+        <AppShellNotificationMenu
+          category={category}
+          notifications={notifications}
+        />
+      }
     />
+  );
+}
+
+function AppShellNotificationIndicator({ icon, count }) {
+  return (
+    <Box>
+      <Stack anchor="top-right">
+        <Icon icon={icon} />
+        <Box
+          align="center"
+          justify="center"
+          background="brand-2"
+          pad={{ horizontal: 'xsmall' }}
+          width={{ min: '18px' }}
+          height={{ min: '18px' }}
+          margin={{ top: '-7px', right: '-7px' }}
+          round
+        >
+          <Text size="xsmall">{count}</Text>
+        </Box>
+      </Stack>
+    </Box>
+  );
+}
+
+function AppShellNotificationMenu({ category, notifications }) {
+  return (
+    <Card width="medium">
+      <CardHeader pad="small" background="white">
+        <Heading level={5} margin="none">
+          {category?.name}
+        </Heading>
+      </CardHeader>
+      <CardBody pad="small" background="light-1">
+        {notifications.map((notification) => {
+          return (
+            <AppShellNotificationMenuItem
+              key={notification.id}
+              {...notification}
+            />
+          );
+        })}
+      </CardBody>
+    </Card>
+  );
+}
+
+function AppShellNotificationMenuItem({
+  description,
+  id,
+  image,
+  metadata,
+  title,
+}) {
+  return (
+    <Box direction="row" align="start" gap="small">
+      {image ? <Avatar src={image} /> : null}
+      <Box gap="xsmall" flex>
+        <Box direction="row" align="center" justify="between" gap="xsmall">
+          {title ? (
+            <Heading level={6} margin="none">
+              {title}
+            </Heading>
+          ) : null}
+          {metadata ? (
+            <Text size="xsmall" color="dark-6">
+              {metadata}
+            </Text>
+          ) : null}
+        </Box>
+        {description ? (
+          <Text size="small" color="dark-3">
+            {description}
+          </Text>
+        ) : null}
+      </Box>
+    </Box>
   );
 }
 
