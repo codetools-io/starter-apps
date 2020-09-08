@@ -5,8 +5,8 @@ import { chain } from 'lodash';
 export default function useAppShell() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [user, setUser] = useState(appShell?.user);
-  const [notifications, setNotifications] = useState(appShell?.notifications);
-  const [categories, setCategories] = useState(appShell?.categories);
+  const [notifications] = useState(appShell?.notifications);
+  const [categories] = useState(appShell?.categories);
 
   const authLabel = useMemo(() => {
     return isAuthenticated ? 'logout' : 'login';

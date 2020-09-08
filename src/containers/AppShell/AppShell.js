@@ -4,7 +4,6 @@ import {
   Box,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Collapsible,
   DropButton,
@@ -183,7 +182,7 @@ function AppShellSearch({ searchHandler }) {
   return (
     <DropButton
       icon={<Search color="text" />}
-      dropAlign={{ top: 'top', right: 'left' }}
+      dropAlign={{ right: 'left' }}
       dropContent={
         <Box direction="row" pad={{ vertical: 'small' }}>
           <TextInput
