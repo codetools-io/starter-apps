@@ -1,12 +1,12 @@
 import React from 'react'
-import Link from './Link'
+import Tooltip from './Tooltip'
 
-describe('Link', () => {
+describe('Tooltip', () => {
   test('can render', () => {
     const { container } = renderComponent(
-      <Link>
-        <p>Content for the Link</p>
-      </Link>
+      <Tooltip>
+        <p>Content for the Tooltip</p>
+      </Tooltip>
     )
 
     expect(container).toMatchSnapshot()

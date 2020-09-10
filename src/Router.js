@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import LayoutExplorer from 'containers/LayoutExplorer';
 
 export default function Router() {
   const Calendar = lazy(() => import('./containers/Calendar'));
@@ -27,6 +28,9 @@ export default function Router() {
         <Route component={Notes} path="/notes" />
         <Route component={Profile} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />
+
+        <Route component={ProjectManager} path="/project-manager" />
+        <Route component={LayoutExplorer} path="/layout-explorer" />
         {/* <Route component={Tasks} path="/tasks" /> */}
       </Switch>
     </Suspense>

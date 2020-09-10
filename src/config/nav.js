@@ -8,6 +8,7 @@ import {
   Notes,
   Shop,
   Tasks,
+  Template,
   User,
 } from 'grommet-icons';
 
@@ -92,6 +93,20 @@ export const nav = {
       id: 'section-2',
       name: 'Components',
       routes: [],
+    },
+    {
+      id: 'section-3',
+      name: 'Tools',
+      routes: [
+        {
+          id: 'LayoutExplorer',
+          icon: <Template size="16px" />,
+          label: 'Layout Explorer',
+          path: '/layout-explorer',
+          title: 'working',
+          exact: false,
+        },
+      ],
     },
   ],
 };

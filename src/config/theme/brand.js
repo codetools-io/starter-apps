@@ -40,6 +40,10 @@ export const brand = {
       'text-weak': { light: 'brand-alt-2' },
       'text-xweak': { light: 'brand-alt-1' },
       border: { light: '#eee' },
+      icon: {
+        dark: 'currentColor',
+        light: 'currentColor',
+      },
       ...genericColors,
     },
     font: {

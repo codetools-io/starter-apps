@@ -1,41 +1,45 @@
-import React from 'react';
-import { Box, Text } from 'grommet';
-import { Link as RouterLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Anchor, ThemeContext } from 'grommet';
+import { NavLink as RouterLink } from 'react-router-dom';
+
+import './Link.css';
 
 export default function Link({
   children,
+  className = '',
+  to,
+  href,
   path,
-  icon,
-  label,
-  color,
-  size,
   ...props
 }) {
+  const theme = useContext(ThemeContext);
+
+  if (href) {
+    return (
+      <Anchor
+        className={`Link ${className}`}
+        href={href}
+        label={children}
+        {...props}
+      />
+    );
+  }
+
   return (
-    <RouterLink to={path}>
-      <Box direction="row" align="center" gap="medium" {...props}>
-        {icon && (
-          <Box>
-            <Text color={color} size={size}>
-              {icon}
-            </Text>
-          </Box>
-        )}
-        {children && (
-          <Box>
-            <Text color={color} size={size}>
-              {children}
-            </Text>
-          </Box>
-        )}
-        {label && (
-          <Box>
-            <Text color={color} size={size}>
-              {label}
-            </Text>
-          </Box>
-        )}
-      </Box>
+    <RouterLink
+      className={`Link ${className}`}
+      to={to || path}
+      style={{
+        ...theme.anchor,
+        color: theme.global.colors['brand-alt'],
+      }}
+      activeStyle={{
+        ...theme.anchor,
+        color: theme.global.colors['brand'],
+      }}
+      {...props}
+    >
+      {children}
     </RouterLink>
   );
 }

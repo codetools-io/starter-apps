@@ -1,39 +1,21 @@
-import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Avatar,
   Box,
-  Card,
-  CardBody,
-  CardHeader,
-  Collapsible,
   DropButton,
   Grid,
   Grommet,
-  Header,
-  Heading,
-  Image,
-  Main,
-  Nav,
-  ResponsiveContext,
-  Sidebar,
-  Stack,
   Text,
   TextInput,
 } from 'grommet';
-import { Down, Search, Up } from 'grommet-icons';
-import { useLocalStorage } from 'react-use';
-import NavLink from 'components/NavLink';
+import { Search } from 'grommet-icons';
 import useAppShell from './useAppShell';
 import * as config from 'config';
+import AppShellHeader from './AppShellHeader';
+import AppShellMain from './AppShellMain';
+import AppShellSidebar from './AppShellSidebar';
 
-function Icon({ icon, color = 'text', size = 'medium', ...props }) {
-  const Component = icon;
-  return (
-    <Box {...props}>
-      <Component color={color} size={size} />
-    </Box>
-  );
-}
+import './AppShell.css';
 
 export default function AppShell({ children, ...props }) {
   const { authHandler, authLabel, user, userInitials } = useAppShell();
@@ -41,6 +23,7 @@ export default function AppShell({ children, ...props }) {
   return (
     <Grommet className="AppShell" theme={config?.theme} full>
       <Grid
+        className="AppShellContainer"
         rows={['xsmall', 'auto']}
         columns={['1/4', '1/4', '1/4', '1/4']}
         areas={[
@@ -62,112 +45,6 @@ export default function AppShell({ children, ...props }) {
         <AppShellMain>{children}</AppShellMain>
       </Grid>
     </Grommet>
-  );
-}
-
-function AppShellHeader({
-  authHandler = () => {},
-  authLabel,
-  logo,
-  logoSmall,
-  searchHandler = () => {},
-  siteName,
-  userProfile,
-  userInitials,
-}) {
-  return (
-    <Header gridArea="header">
-      <Grid
-        columns={['1/4', '3/4']}
-        areas={[['logo', 'menu']]}
-        align="center"
-        fill
-      >
-        <AppShellLogo
-          text={siteName}
-          logo={logo}
-          logoSmall={logoSmall}
-          height={{ max: '100%' }}
-          width={{ max: '100%' }}
-        />
-        <AppShellMenu
-          authHandler={authHandler}
-          authLabel={authLabel}
-          userInitials={userInitials}
-          userProfile={userProfile}
-          searchHandler={searchHandler}
-        />
-      </Grid>
-    </Header>
-  );
-}
-
-function AppShellLogo({ text, logo, logoSmall, ...props }) {
-  const showText = !logo && text;
-  const size = useContext(ResponsiveContext);
-  const style = useMemo(() => {
-    if (size === 'small') {
-      return { maxHeight: '32px', maxWidth: '100%' };
-    }
-    return { maxHeight: '100%', maxWidth: '100%' };
-  }, [size]);
-  return (
-    <Box
-      background="brand-3"
-      gridArea="logo"
-      pad="medium"
-      justify="center"
-      fill
-      {...props}
-    >
-      {showText ? (
-        <Heading level="3" textAlign="center" color="white">
-          {text}
-        </Heading>
-      ) : (
-        <Image
-          src={size === 'small' ? logoSmall : logo}
-          fit="contain"
-          style={style}
-        />
-      )}
-    </Box>
-  );
-}
-
-function AppShellMenu({
-  authHandler,
-  authLabel,
-  searchHandler,
-  userInitials,
-  userProfile,
-}) {
-  const { categories, notificationsByCategoryId } = useAppShell();
-  return (
-    <Box
-      gridArea="menu"
-      direction="row"
-      justify="end"
-      pad="medium"
-      gap="medium"
-    >
-      <AppShellSearch searchHandler={searchHandler} />
-      {categories.map((category) => {
-        return (
-          <AppShellNotification
-            key={category?.id}
-            category={category}
-            notifications={notificationsByCategoryId[category?.id]}
-          />
-        );
-      })}
-      <AppShellUserMenu
-        authHandler={authHandler}
-        authLabel={authLabel}
-        userInitials={userInitials}
-        userProfile={userProfile}
-      />
-    </Box>
   );
 }
 
@@ -202,12 +79,7 @@ function AppShellSearch({ searchHandler }) {
   );
 }
 
-function AppShellUserMenu({
-  authHandler,
-  authLabel,
-  userInitials,
-  userProfile,
-}) {
+function AppShellMenu({ authHandler, authLabel, userInitials, userProfile }) {
   return (
     <DropButton
       icon={
@@ -222,204 +94,5 @@ function AppShellUserMenu({
         </Box>
       }
     />
-  );
-}
-
-function AppShellNotification({ category, notifications = [] }) {
-  return (
-    <DropButton
-      icon={
-        <AppShellNotificationIndicator
-          icon={category?.icon}
-          count={notifications?.length}
-        />
-      }
-      dropAlign={{ top: 'bottom', right: 'right' }}
-      dropContent={
-        <AppShellNotificationMenu
-          category={category}
-          notifications={notifications}
-        />
-      }
-    />
-  );
-}
-
-function AppShellNotificationIndicator({ icon, count }) {
-  return (
-    <Box>
-      <Stack anchor="top-right">
-        <Icon icon={icon} />
-        <Box
-          align="center"
-          justify="center"
-          background="brand-2"
-          pad={{ horizontal: 'xsmall' }}
-          width={{ min: '18px' }}
-          height={{ min: '18px' }}
-          margin={{ top: '-7px', right: '-7px' }}
-          round
-        >
-          <Text size="xsmall">{count}</Text>
-        </Box>
-      </Stack>
-    </Box>
-  );
-}
-
-function AppShellNotificationMenu({ category, notifications }) {
-  return (
-    <Card width="medium">
-      <CardHeader pad="small" background="white">
-        <Heading level={5} margin="none">
-          {category?.name}
-        </Heading>
-      </CardHeader>
-      <CardBody pad="small" background="light-1">
-        {notifications.map((notification) => {
-          return (
-            <AppShellNotificationMenuItem
-              key={notification.id}
-              {...notification}
-            />
-          );
-        })}
-      </CardBody>
-    </Card>
-  );
-}
-
-function AppShellNotificationMenuItem({
-  description,
-  id,
-  image,
-  metadata,
-  title,
-}) {
-  return (
-    <Box direction="row" align="start" gap="small">
-      {image ? <Avatar src={image} /> : null}
-      <Box gap="xsmall" flex>
-        <Box direction="row" align="center" justify="between" gap="xsmall">
-          {title ? (
-            <Heading level={6} margin="none">
-              {title}
-            </Heading>
-          ) : null}
-          {metadata ? (
-            <Text size="xsmall" color="dark-6">
-              {metadata}
-            </Text>
-          ) : null}
-        </Box>
-        {description ? (
-          <Text size="small" color="dark-3">
-            {description}
-          </Text>
-        ) : null}
-      </Box>
-    </Box>
-  );
-}
-
-function AppShellSidebar() {
-  return (
-    <Sidebar
-      gridArea="sidebar"
-      background="brand"
-      pad={{ horizontal: 'none', vertical: 'medium' }}
-    >
-      <Box>
-        <AppShellNav />
-      </Box>
-    </Sidebar>
-  );
-}
-
-function AppShellNav() {
-  return (
-    <Nav className="AppShellNav" gap="medium">
-      {config?.nav?.sections?.map((section) => (
-        <AppShellNavSection key={section.id} {...section} />
-      ))}
-    </Nav>
-  );
-}
-
-function AppShellNavSection({ id, name, routes }) {
-  return (
-    <Box className="AppShellNavSection" gap="small">
-      <Box pad={{ horizontal: 'medium' }}>
-        <Text weight="bold">{name}</Text>
-      </Box>
-      <Box gap="none">
-        {routes?.map((route) => (
-          <AppShellNavItem key={route.id} {...route} />
-        ))}
-      </Box>
-    </Box>
-  );
-}
-
-function AppShellNavItem({ id, path, icon, label, routes, isNested = false }) {
-  const size = useContext(ResponsiveContext);
-  const [nav, setNav] = useLocalStorage('nav', {});
-  const isExpanded = useMemo(() => {
-    if (size === 'small') {
-      return true;
-    }
-
-    return nav?.[id];
-  }, [id, nav, size]);
-
-  function toggleMenu() {
-    setNav({
-      ...nav,
-      [id]: !nav?.[id],
-    });
-  }
-
-  if (!routes) {
-    return <NavLink to={path} icon={icon} label={label} isNested={isNested} />;
-  }
-
-  return (
-    <Box gap="xsmall">
-      <Box>
-        <NavLink
-          icon={icon}
-          secondaryIcon={
-            isExpanded ? <Up size="small" /> : <Down size="small" />
-          }
-          label={label}
-          to={path}
-          onClick={(e) => {
-            e.preventDefault();
-            toggleMenu();
-          }}
-          isNested={isNested}
-        />
-      </Box>
-      <Collapsible direction="vertical" open={isExpanded}>
-        <Box gap="xsmall" background="brand-2" fill="horizontal">
-          {routes.map((route) => {
-            return <AppShellNavItem key={route.id} {...route} isNested />;
-          })}
-        </Box>
-      </Collapsible>
-    </Box>
-  );
-}
-
-function AppShellMain({ children }) {
-  return (
-    <Main
-      gridArea="main"
-      align="start"
-      background="light-1"
-      pad={{ horizontal: 'medium', vertical: 'medium' }}
-    >
-      {children}
-    </Main>
   );
 }
