@@ -70,4 +70,13 @@ export const brand = {
       },
     },
   },
+  icon: {
+    size: {
+      small: '18px',
+      medium: '22px',
+      large: '48px',
+      xlarge: '96px',
+    },
+    extend: undefined,
+  },
 };
