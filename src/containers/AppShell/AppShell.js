@@ -30,7 +30,9 @@ export default function AppShell({ children, ...props }) {
           ['header', 'header', 'header', 'header'],
           ['sidebar', 'main', 'main', 'main'],
         ]}
-        style={{ height: '100vh' }}
+        style={{
+          height: '100vh',
+        }}
       >
         <AppShellHeader
           authHandler={authHandler}

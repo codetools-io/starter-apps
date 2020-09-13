@@ -9,6 +9,7 @@ export default function AppShellSidebar() {
       gridArea="sidebar"
       background="brand"
       pad={{ horizontal: 'none', vertical: 'medium' }}
+      overflow={{ vertical: 'auto' }}
     >
       <Box>
         <AppShellNav />

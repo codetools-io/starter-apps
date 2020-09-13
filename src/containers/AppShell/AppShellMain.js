@@ -9,6 +9,7 @@ export default function AppShellMain({ children }) {
       align="start"
       background="light-1"
       pad={{ horizontal: 'medium', vertical: 'medium' }}
+      overflow={{ vertical: 'auto' }}
     >
       {children}
     </Main>
