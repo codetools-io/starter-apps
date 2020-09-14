@@ -1,7 +1,13 @@
 import React, { useContext, useMemo } from 'react';
 import { Box, Heading, Image, ResponsiveContext } from 'grommet';
 
-export default function AppShellLogo({ text, logo, logoSmall, ...props }) {
+export default function AppShellLogo({
+  background = 'brand-3',
+  text,
+  logo,
+  logoSmall,
+  ...props
+}) {
   const showText = !logo && text;
   const size = useContext(ResponsiveContext);
   const style = useMemo(() => {
@@ -13,7 +19,7 @@ export default function AppShellLogo({ text, logo, logoSmall, ...props }) {
   return (
     <Box
       className="AppShellLogo"
-      background="brand-3"
+      background={background}
       gridArea="logo"
       pad="medium"
       justify="center"

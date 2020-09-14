@@ -87,17 +87,17 @@ export const widgets = [
         {
           name: 'Washington, D.C.',
           location: [38.898748, -77.037684],
-          color: 'brand-1',
+          color: 'brand-2',
         },
         {
           name: 'Cape Town',
           location: [33.9249, 18.4241],
-          color: 'brand-1',
+          color: 'brand-2',
         },
         {
           name: 'Sydney',
           location: [-33.8830555556, 151.216666667],
-          color: 'brand-1',
+          color: 'brand-2',
         },
       ],
     },

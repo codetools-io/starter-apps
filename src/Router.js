@@ -13,8 +13,6 @@ export default function Router() {
   const ProjectManager = lazy(() => import('./containers/ProjectManager'));
   const LayoutExplorer = lazy(() => import('./containers/LayoutExplorer'));
 
-  // const Tasks = lazy(() => import('./containers/Tasks'));
-
   return (
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>

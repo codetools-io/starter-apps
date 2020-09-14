@@ -33,6 +33,7 @@ function AppShellNavItem({
   path,
   icon,
   label,
+  menuBackground = 'brand-3',
   routes,
   isNested = false,
   ...rest
@@ -85,7 +86,7 @@ function AppShellNavItem({
         />
       </Box>
       <Collapsible direction="vertical" open={isExpanded}>
-        <Box gap="xsmall" background="brand-2" fill="horizontal">
+        <Box gap="xsmall" background={menuBackground} fill="horizontal">
           {routes.map((route) => {
             return <AppShellNavItem key={route.id} {...route} isNested />;
           })}
@@ -96,6 +97,7 @@ function AppShellNavItem({
 }
 
 function AppShellNavLink({
+  activeBackground = 'brand-4',
   children,
   to,
   icon,
@@ -124,7 +126,7 @@ function AppShellNavLink({
       }}
       activeStyle={{
         ...theme.anchor,
-        backgroundColor: theme.global.colors['brand-3'],
+        backgroundColor: theme.global.colors[activeBackground],
         color: theme.global.colors['brand-contrast'],
       }}
       onClick={onClick}
@@ -157,7 +159,7 @@ function AppShellNavLink({
               color={color}
               size={size}
               weight={weight}
-              margin={{ left: isNested ? 'small' : 'none' }}
+              margin={{ left: isNested ? 'medium' : 'none' }}
               truncate
             >
               {label}

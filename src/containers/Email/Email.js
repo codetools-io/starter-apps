@@ -28,7 +28,7 @@ function EmailFolders({
         <Button key={folder.id} onClick={() => onClick(folder.id)} plain>
           <Box direction="row" justify="between">
             <Text
-              color={folder?.id === activeFolderId ? 'brand-0' : null}
+              color={folder?.id === activeFolderId ? 'brand' : null}
               weight={folder?.id === activeFolderId ? 'bold' : null}
             >
               {folder?.name}
