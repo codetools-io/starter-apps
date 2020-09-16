@@ -88,13 +88,18 @@ function ChatConversations({
 }
 export default function Chat({ children }) {
   const {
+    clearContactSearch,
+    contactSearch,
+    contactSearchResults,
     conversations,
     conversation,
     conversationId,
     participantsLabel,
     user,
     message,
+    startConversation,
     updateMessage,
+    searchContacts,
     sendMessage,
     selectConversation,
   } = useChat();
@@ -106,14 +111,24 @@ export default function Chat({ children }) {
           columns={['1/4', '1/4', '1/4', '1/4']}
           rows={['auto', 'flex', 'auto']}
           areas={[
-            ['ChatSearch', 'ChatHeader', 'ChatHeader', 'ChatHeader'],
+            ['ChatContactSearch', 'ChatHeader', 'ChatHeader', 'ChatHeader'],
             ['ChatSidebar', 'ChatMain', 'ChatMain', 'ChatMain'],
             ['ChatCompose', 'ChatMessage', 'ChatMessage', 'ChatMessage'],
           ]}
           fill
         >
-          <Box gridArea="ChatSearch" pad="small" border="right">
-            <TextInput placeholder="Search chats" plain />
+          <Box gridArea="ChatContactSearch" pad="small" border="right">
+            <TextInput
+              onChange={(e) => searchContacts(e.target.value)}
+              onSelect={(e) => {
+                startConversation(e.suggestion.value);
+                clearContactSearch();
+              }}
+              placeholder="Search contacts"
+              suggestions={contactSearchResults}
+              value={contactSearch}
+              plain
+            />
           </Box>
 
           <Box

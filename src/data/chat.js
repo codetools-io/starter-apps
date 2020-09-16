@@ -1,9 +1,16 @@
 import * as users from './users';
 
+const {user1, ...otherUsers} = users
+
+export const contacts = Object.values(otherUsers)
+
+export const currentUser = user1
+
 export const conversations = [
   {
     id: 'conversation-1',
-    participants: [users?.user1, users?.user2],
+    participantsIds: [currentUser?.id, users?.user2?.id],
+    participants: [currentUser, users?.user2],
     messages: [
       1,
       2,
@@ -40,7 +47,8 @@ export const conversations = [
   },
   {
     id: 'conversation-2',
-    participants: [users?.user1, users?.user3],
+    participants: [currentUser, users?.user3],
+    participantsIds: [currentUser?.id, users?.user3?.id],
     messages: [
       {
         id: 'conversation-2a',
@@ -58,7 +66,8 @@ export const conversations = [
   },
   {
     id: 'conversation-3',
-    participants: [users?.user1, users?.user4],
+    participants: [currentUser, users?.user4],
+    participantsIds: [currentUser?.id, users?.user4?.id],
     messages: [
       {
         id: 'conversation-3a',
