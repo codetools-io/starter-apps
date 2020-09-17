@@ -1,8 +1,8 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import * as data from 'data';
 
 export default function useContacts() {
-  const [connections, setConnections] = useState([
+  const [contacts, setContacts] = useState([
     data?.users?.user2,
     data?.users?.user3,
     data?.users?.user4,
@@ -10,83 +10,103 @@ export default function useContacts() {
     data?.users?.user6,
     data?.users?.user7,
   ]);
-  const [connectionId, setConnectionId] = useState(connections[0]?.id);
-  const [connectionUpdates, setConnectionUpdates] = useState({});
+  const [contactSearch, setContactSearch] = useState();
+  const [contactId, setContactId] = useState(contacts[0]?.id);
+  const [contactUpdates, setContactUpdates] = useState({});
   const [isEditMode, setIsEditMode] = useState(false);
-  const connection = useMemo(() => {
-    return connections.find((connection) => connection.id === connectionId);
-  }, [connections, connectionId]);
-  const updateConnection = useCallback(
-    (payload) => {
-      setConnectionUpdates({
-        ...connectionUpdates,
+  const contact = useMemo(() => {
+    return contacts.find((contact) => contact.id === contactId);
+  }, [contacts, contactId]);
+  const contactSearchResults = useMemo(() => {
+    const queryValue = contactSearch?.trim?.()?.toLowerCase?.();
+    const searchableFields = ['username', 'firstName', 'lastName', 'company'];
+
+    if (!queryValue) {
+      return [];
+    }
+
+    return contacts
+      ?.filter((contact) => {
+        return searchableFields.some((searchableField) => {
+          return contact?.[searchableField]
+            ?.toLowerCase?.()
+            ?.includes?.(queryValue);
+        });
+      })
+      .map((result) => {
+        return {
+          label: `${result?.firstName} ${result?.lastName}`,
+          value: result?.id,
+        };
+      });
+  }, [contacts, contactSearch]);
+
+  return useMemo(() => {
+    function updateContact(payload) {
+      setContactUpdates({
+        ...contactUpdates,
         ...payload,
       });
-    },
-    [connectionUpdates]
-  );
-  const openConnection = useCallback((id) => {
-    setConnectionId(id);
-    setIsEditMode(false);
-  }, []);
-  const editConnection = useCallback(
-    (id) => {
-      setConnectionId(id);
-      setConnectionUpdates(
-        connections.find((connection) => connection.id === id)
-      );
+    }
+    function openContact(id) {
+      setContactId(id);
+      setIsEditMode(false);
+    }
+    function editContact(id) {
+      setContactId(id);
+      setContactUpdates(contacts.find((contact) => contact.id === id));
       setIsEditMode(true);
-    },
-    [connections]
-  );
-  const cancelEdit = useCallback(() => {
-    setIsEditMode(false);
-    setConnectionUpdates({});
-  }, []);
-  const saveChanges = useCallback(
-    (payload) => {
-      setConnections(
-        connections.map((connection) => {
-          if (connection.id !== payload.id) {
-            return connection;
+    }
+    function cancelEdit() {
+      setIsEditMode(false);
+      setContactUpdates({});
+    }
+    function saveChanges(payload) {
+      setContacts(
+        contacts.map((contact) => {
+          if (contact.id !== payload.id) {
+            return contact;
           }
 
           return {
-            ...connection,
+            ...contact,
             ...payload,
           };
         })
       );
       setIsEditMode(false);
-      setConnectionUpdates({});
-    },
-    [connections]
-  );
-  const contacts = useMemo(() => {
+      setContactUpdates({});
+    }
+    function searchContacts(value) {
+      setContactSearch(value);
+    }
+    function clearContactSearch() {
+      setContactSearch('');
+    }
+
     return {
-      connections,
-      connection,
-      connectionId,
-      updateConnection,
-      openConnection,
-      editConnection,
+      contacts,
+      contact,
+      contactSearch,
+      contactId,
+      updateContact,
+      openContact,
+      editContact,
       cancelEdit,
       saveChanges,
       isEditMode,
-      connectionUpdates,
+      contactUpdates,
+      searchContacts,
+      clearContactSearch,
+      contactSearchResults,
     };
   }, [
-    connections,
-    connection,
-    connectionId,
-    updateConnection,
-    openConnection,
-    editConnection,
-    cancelEdit,
-    saveChanges,
+    contacts,
+    contact,
+    contactId,
     isEditMode,
-    connectionUpdates,
+    contactUpdates,
+    contactSearch,
+    contactSearchResults,
   ]);
-
-  return contacts;
 }

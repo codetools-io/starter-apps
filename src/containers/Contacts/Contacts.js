@@ -15,25 +15,25 @@ import {
 
 import useContacts from './useContacts';
 
-function Connections({ connections, connectionId, openConnection }) {
+function ContactsList({ contacts, contactId, openContact }) {
   return (
     <Box gap="medium">
-      {connections.map((connection) => {
+      {contacts.map((contact) => {
         return (
           <Button
-            key={`connection-${connection.id}`}
-            onClick={() => openConnection(connection.id)}
+            key={`contact-${contact.id}`}
+            onClick={() => openContact(contact.id)}
           >
             <Box
-              background={connectionId === connection.id ? 'light-1' : null}
+              background={contactId === contact.id ? 'light-1' : null}
               pad={{ vertical: 'small', horizontal: 'medium' }}
             >
               <Text>
-                {connection.firstName} {connection.lastName}
+                {contact.firstName} {contact.lastName}
               </Text>
 
               <Text size="small" color="dark-6">
-                {connection.company}
+                {contact.company}
               </Text>
             </Box>
           </Button>
@@ -43,7 +43,7 @@ function Connections({ connections, connectionId, openConnection }) {
   );
 }
 
-function Connection({
+function Contact({
   id,
   firstName,
   lastName,
@@ -94,7 +94,7 @@ function Connection({
   );
 }
 
-function ConnectionForm({ fields, update }) {
+function ContactForm({ fields, update }) {
   return (
     <Form value={fields} onChange={(changes) => update(changes)}>
       <Box direction="row" gap="medium">
@@ -122,16 +122,20 @@ function ConnectionForm({ fields, update }) {
 }
 export default function Contacts({ children, ...props }) {
   const {
-    connections,
-    connection,
-    connectionId,
-    updateConnection,
-    openConnection,
-    editConnection,
+    contacts,
+    contact,
+    contactId,
+    updateContact,
+    openContact,
+    editContact,
     cancelEdit,
     saveChanges,
     isEditMode,
-    connectionUpdates,
+    contactUpdates,
+    searchContacts,
+    clearContactSearch,
+    contactSearchResults,
+    contactSearch,
   } = useContacts();
 
   return (
@@ -157,7 +161,17 @@ export default function Contacts({ children, ...props }) {
             pad="medium"
             border={[{ side: 'right' }, { side: 'bottom' }]}
           >
-            <TextInput placeholder="Search contacts" />
+            <TextInput
+              onChange={(e) => searchContacts(e.target.value)}
+              onSelect={(e) => {
+                openContact(e.suggestion.value);
+                clearContactSearch();
+              }}
+              placeholder="Search contacts"
+              suggestions={contactSearchResults}
+              value={contactSearch}
+              plain
+            />
           </Box>
           <Box
             gridArea="ContactsHeader"
@@ -173,14 +187,14 @@ export default function Contacts({ children, ...props }) {
                 <Button
                   label="Save"
                   primary
-                  onClick={() => saveChanges({ ...connectionUpdates })}
+                  onClick={() => saveChanges({ ...contactUpdates })}
                 />
               </Box>
             ) : (
               <Button
                 label="Edit"
                 primary
-                onClick={() => editConnection(connectionId)}
+                onClick={() => editContact(contactId)}
               />
             )}
           </Box>
@@ -189,20 +203,17 @@ export default function Contacts({ children, ...props }) {
             pad="none"
             border={[{ side: 'right' }]}
           >
-            <Connections
-              connections={connections}
-              connectionId={connectionId}
-              openConnection={openConnection}
+            <ContactsList
+              contacts={contacts}
+              contactId={contactId}
+              openContact={openContact}
             />
           </Box>
           <Box gridArea="ContactsMain" pad="medium">
             {isEditMode ? (
-              <ConnectionForm
-                fields={connectionUpdates}
-                update={updateConnection}
-              />
+              <ContactForm fields={contactUpdates} update={updateContact} />
             ) : (
-              <Connection {...connection} />
+              <Contact {...contact} />
             )}
           </Box>
         </Grid>
