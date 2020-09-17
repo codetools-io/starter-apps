@@ -21,11 +21,12 @@ function ChatConversation({ participants, messages, user }) {
     <Box height="100%" overflow="auto">
       <InfiniteScroll
         step={5}
-        items={messages.sort((a, b) => a.sentAt - b.sentAt)}
-        show={messages?.length - 1}
+        items={messages?.sort((a, b) => a.sentAt - b.sentAt)}
+        show={messages?.length ? messages?.length - 1 : 0}
       >
         {(message) => {
           const sender = participants.find((p) => p.id === message.authorId);
+
           return (
             <Box
               key={`chat-conversation-${message?.id}`}
@@ -86,22 +87,53 @@ function ChatConversations({
     </Box>
   );
 }
+
+function ChatNewConversation({
+  clearRecipientSearch,
+  recipientSearch,
+  recipientSearchResults,
+  searchRecipients,
+  startConversation,
+}) {
+  return (
+    <Box>
+      <TextInput
+        onChange={(e) => searchRecipients(e.target.value)}
+        onSelect={(e) => {
+          startConversation(e.suggestion.value);
+          clearRecipientSearch();
+        }}
+        placeholder="Type the name of a contact"
+        suggestions={recipientSearchResults}
+        value={recipientSearch}
+        plain
+      />
+    </Box>
+  );
+}
 export default function Chat({ children }) {
   const {
     clearContactSearch,
+    clearRecipientSearch,
     contactSearch,
     contactSearchResults,
     conversations,
     conversation,
     conversationId,
+    composeConversation,
+    composingConversation,
     participantsLabel,
     user,
     message,
+    recipientSearch,
+    recipientSearchResults,
     startConversation,
     updateMessage,
     searchContacts,
+    searchRecipients,
     sendMessage,
     selectConversation,
+    stopComposingConversation,
   } = useChat();
 
   return (
@@ -138,7 +170,7 @@ export default function Chat({ children }) {
             border="bottom"
           >
             <Heading level={4} margin="none">
-              {participantsLabel}
+              {composingConversation ? 'New message' : participantsLabel}
             </Heading>
           </Box>
           <Box gridArea="ChatSidebar" fill="vertical" border="right">
@@ -146,11 +178,18 @@ export default function Chat({ children }) {
               conversations={conversations}
               user={user}
               conversationId={conversationId}
-              selectConversation={selectConversation}
+              selectConversation={(conversationId) => {
+                stopComposingConversation();
+                selectConversation(conversationId);
+              }}
             />
           </Box>
           <Box gridArea="ChatCompose" pad="medium" border="right" justify="end">
-            <Button label="Compose" primary />
+            <Button
+              label="New Message"
+              onClick={() => composeConversation()}
+              primary
+            />
           </Box>
           <Box
             gridArea="ChatMain"
@@ -158,7 +197,17 @@ export default function Chat({ children }) {
             overflow="auto"
             height={{ max: '100%' }}
           >
-            <ChatConversation user={user} {...conversation} />
+            {composingConversation ? (
+              <ChatNewConversation
+                recipientSearch={recipientSearch}
+                recipientSearchResults={recipientSearchResults}
+                searchRecipients={searchRecipients}
+                startConversation={startConversation}
+                clearRecipientSearch={clearRecipientSearch}
+              />
+            ) : (
+              <ChatConversation user={user} {...conversation} />
+            )}
           </Box>
           <Box gridArea="ChatMessage" pad="medium" border="top">
             <Keyboard

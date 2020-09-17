@@ -6,9 +6,11 @@ export default function useChat() {
   const [conversations, setConversations] = useState(data?.chat?.conversations);
   const [contacts] = useState(data?.chat?.contacts);
   const [contactSearch, setContactSearch] = useState();
+  const [recipientSearch, setRecipientSearch] = useState();
   const [user] = useState(data?.chat?.currentUser);
   const [conversationId, setConversationId] = useState(conversations[0]?.id);
   const [message, setMessage] = useState();
+  const [composingConversation, setComposingConversation] = useState(false);
 
   const contactsById = useMemo(() => keyBy(contacts, 'id'), [contacts]);
   const contactSearchResults = useMemo(() => {
@@ -39,9 +41,32 @@ export default function useChat() {
       (conversation) => conversation?.id === conversationId
     );
   }, [conversations, conversationId]);
-  const conversationsById = useMemo(() => keyBy(conversations, 'id'), [
-    conversations,
-  ]);
+  const conversationsById = useMemo(() => {
+    return keyBy(conversations, 'id');
+  }, [conversations]);
+  const recipientSearchResults = useMemo(() => {
+    const queryValue = recipientSearch?.trim?.()?.toLowerCase?.();
+    const searchableFields = ['username', 'firstName', 'lastName', 'company'];
+
+    if (!queryValue) {
+      return [];
+    }
+
+    return contacts
+      ?.filter((contact) => {
+        return searchableFields.some((searchableField) => {
+          return contact?.[searchableField]
+            ?.toLowerCase?.()
+            ?.includes?.(queryValue);
+        });
+      })
+      .map((result) => {
+        return {
+          label: `${result?.firstName} ${result?.lastName}`,
+          value: result?.id,
+        };
+      });
+  }, [contacts, recipientSearch]);
   const participants = useMemo(() => conversation?.participants, [
     conversation,
   ]);
@@ -64,6 +89,12 @@ export default function useChat() {
     function searchContacts(value) {
       setContactSearch(value);
     }
+    function clearRecipientSearch() {
+      setRecipientSearch('');
+    }
+    function searchRecipients(value) {
+      setRecipientSearch(value);
+    }
     function selectConversation(conversationId) {
       setConversationId(conversationId);
     }
@@ -74,6 +105,7 @@ export default function useChat() {
 
       if (existing) {
         selectConversation(existing?.id);
+        stopComposingConversation();
       } else {
         const id = uuid();
         setConversations([
@@ -86,6 +118,7 @@ export default function useChat() {
           },
         ]);
         selectConversation(id);
+        stopComposingConversation();
       }
     }
     function sendMessage(payload) {
@@ -106,16 +139,25 @@ export default function useChat() {
     function updateMessage(value) {
       setMessage(value);
     }
+    function composeConversation() {
+      setComposingConversation(true);
+    }
+    function stopComposingConversation() {
+      setComposingConversation(false);
+      clearRecipientSearch();
+    }
 
     return {
       clearContactSearch,
+      clearRecipientSearch,
       contacts,
       contactsById,
       contactSearch,
       contactSearchResults,
       conversations,
       conversationsById,
-      user,
+      composeConversation,
+      composingConversation,
       conversation,
       conversationId,
       currentMessages,
@@ -123,10 +165,15 @@ export default function useChat() {
       participantsLabel,
       message,
       updateMessage,
+      recipientSearch,
+      recipientSearchResults,
       searchContacts,
+      searchRecipients,
       startConversation,
+      stopComposingConversation,
       sendMessage,
       selectConversation,
+      user,
     };
   }, [
     contacts,
@@ -141,6 +188,9 @@ export default function useChat() {
     currentMessages,
     participants,
     participantsLabel,
+    recipientSearch,
+    recipientSearchResults,
     message,
+    composingConversation,
   ]);
 }
