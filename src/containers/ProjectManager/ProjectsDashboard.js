@@ -1,6 +1,7 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import {
+  Anchor,
   Avatar,
   Box,
   Button,
@@ -9,7 +10,6 @@ import {
   Grid,
   Heading,
   Meter,
-  RoutedAnchor,
   Select,
   Text,
   TextInput,
@@ -19,8 +19,9 @@ import useProjectManager from './useProjectManager';
 
 function ProjectShort({ id, name, type, category, progress, ...props }) {
   const location = useLocation();
+  const history = useHistory();
   return (
-    <Box {...props}>
+    <Box flex={false} {...props}>
       <Grid
         pad="medium"
         gap="medium"
@@ -33,9 +34,15 @@ function ProjectShort({ id, name, type, category, progress, ...props }) {
           </Avatar>
         </Box>
         <Box>
-          <RoutedAnchor path={`${location.pathname}/${id}`}>
+          <Anchor
+            href={`${location.pathname}/${id}`}
+            onClick={(event) => {
+              event.preventDefault();
+              history.push(`${location.pathname}/${id}`);
+            }}
+          >
             <Text weight="bold">{name}</Text>
-          </RoutedAnchor>
+          </Anchor>
         </Box>
         <Box>
           <Meter type="bar" values={[{ value: progress }]} />
@@ -61,13 +68,19 @@ export default function ProjectDashboard() {
     <Box className="ProjectManager" pad="medium" fill>
       <Card background="white">
         <Box>
-          <Box direction="row" justify="between" align="center" pad="medium">
+          <Box
+            direction="row"
+            justify="between"
+            align="center"
+            pad="medium"
+            flex={false}
+          >
             <Heading level={4} margin="none">
               Projects
             </Heading>
             <Button label="Create" onClick={onCreate} primary />
           </Box>
-          <Box direction="row" justify="between" pad="medium">
+          <Box direction="row" justify="between" pad="medium" flex={false}>
             <Box flex>
               <TextInput placeholder="Search…" icon={<Search />} plain />
             </Box>
@@ -75,7 +88,7 @@ export default function ProjectDashboard() {
               <Select options={['All', ...projectTypes]} value={currentType} />
             </Box>
           </Box>
-          <Box>
+          <Box overflow="auto">
             {projects.map((project, index) => {
               return (
                 <ProjectShort
