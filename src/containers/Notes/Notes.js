@@ -133,6 +133,10 @@ export default function Notes({ children, ...props }) {
     editNote,
     addNote,
     saveNote,
+    searchNotes,
+    clearNoteSearch,
+    noteSearchResults,
+    noteSearch,
   } = useNotes();
 
   return (
@@ -153,7 +157,17 @@ export default function Notes({ children, ...props }) {
             pad="medium"
             border={[{ side: 'right' }, { side: 'bottom' }]}
           >
-            <TextInput placeholder="Search notes" />
+            <TextInput
+              onChange={(e) => searchNotes(e.target.value)}
+              onSelect={(e) => {
+                openNote(e.suggestion.value);
+                clearNoteSearch();
+              }}
+              placeholder="Search notes"
+              suggestions={noteSearchResults}
+              value={noteSearch}
+              plain
+            />
           </Box>
 
           <Box

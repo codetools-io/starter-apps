@@ -1,69 +1,76 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-
+import { notes as data } from 'data';
 export default function useNotes() {
+  const [notes, setNotes] = useState(data?.notes);
+  const [noteSearch, setNoteSearch] = useState();
   const [isEditMode, setIsEditMode] = useState(false);
-  const [_notes, setNotes] = useState([
-    {
-      id: 'note-1',
-      authorId: 'user-1',
-      title: 'Example Note',
-      body: 'Content for the note',
-      category: 'General',
-    },
-    {
-      id: 'note-2',
-      authorId: 'user-1',
-      title: 'Another Example Note',
-      body: 'Content for the note',
-      category: 'Work',
-    },
-  ]);
   const [currentNoteId, setCurrentNoteId] = useState();
   const currentNote = useMemo(() => {
-    return _notes.find((note) => note.id === currentNoteId);
-  }, [_notes, currentNoteId]);
+    return notes.find((note) => note.id === currentNoteId);
+  }, [notes, currentNoteId]);
+  const noteSearchResults = useMemo(() => {
+    const queryValue = noteSearch?.trim?.()?.toLowerCase?.();
+    const searchableFields = ['title', 'body', 'category'];
 
-  const openNote = useCallback((id) => {
-    setCurrentNoteId(id);
-    setIsEditMode(false);
-  }, []);
+    if (!queryValue) {
+      return [];
+    }
 
-  const editNote = useCallback((id) => {
-    setCurrentNoteId(id);
-    setIsEditMode(true);
-  }, []);
+    return notes
+      ?.filter((note) => {
+        return searchableFields.some((searchableField) => {
+          return note?.[searchableField]
+            ?.toLowerCase?.()
+            ?.includes?.(queryValue);
+        });
+      })
+      .map((result) => {
+        return {
+          label: `${result?.title}`,
+          value: result?.id,
+        };
+      });
+  }, [notes, noteSearch]);
+  return useMemo(() => {
+    function openNote(id) {
+      setCurrentNoteId(id);
+      setIsEditMode(false);
+    }
 
-  const cancelEditNote = useCallback((id) => {
-    setCurrentNoteId(id);
-    setIsEditMode(false);
-  }, []);
+    function editNote(id) {
+      setCurrentNoteId(id);
+      setIsEditMode(true);
+    }
 
-  const closeNote = useCallback((id) => {
-    setCurrentNoteId(null);
-    setIsEditMode(false);
-  }, []);
+    function cancelEditNote(id) {
+      setCurrentNoteId(id);
+      setIsEditMode(false);
+    }
 
-  const addNote = useCallback(() => {
-    const id = uuid();
-    setNotes([
-      ..._notes,
-      {
-        id,
-        authorId: 'user-1',
-        title: 'Untitled Note',
-        body: '',
-        category: 'General',
-      },
-    ]);
-    editNote(id);
-    // eslint-disable-next-line
-  }, [_notes]);
+    function closeNote(id) {
+      setCurrentNoteId(null);
+      setIsEditMode(false);
+    }
 
-  const saveNote = useCallback(
-    (note) => {
+    function addNote() {
+      const id = uuid();
+      setNotes([
+        ...notes,
+        {
+          id,
+          authorId: 'user-1',
+          title: 'Untitled Note',
+          body: '',
+          category: 'General',
+        },
+      ]);
+      editNote(id);
+    }
+
+    function saveNote(note) {
       setNotes(
-        _notes.map((n) => {
+        notes.map((n) => {
           if (n.id !== note.id) {
             return n;
           }
@@ -72,13 +79,15 @@ export default function useNotes() {
         })
       );
       setIsEditMode(false);
-    },
-    [_notes]
-  );
-
-  const notes = useMemo(() => {
+    }
+    function searchNotes(value) {
+      setNoteSearch(value);
+    }
+    function clearNoteSearch() {
+      setNoteSearch('');
+    }
     return {
-      notes: _notes,
+      notes: notes,
       currentNote,
       currentNoteId,
       isEditMode,
@@ -88,19 +97,17 @@ export default function useNotes() {
       closeNote,
       addNote,
       saveNote,
+      noteSearch,
+      searchNotes,
+      clearNoteSearch,
+      noteSearchResults,
     };
   }, [
-    _notes,
+    notes,
     currentNote,
     currentNoteId,
     isEditMode,
-    openNote,
-    editNote,
-    cancelEditNote,
-    closeNote,
-    addNote,
-    saveNote,
+    noteSearch,
+    noteSearchResults,
   ]);
-
-  return notes;
 }
