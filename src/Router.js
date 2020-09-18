@@ -2,16 +2,16 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 export default function Router() {
-  const Calendar = lazy(() => import('./containers/Calendar'));
-  const Chat = lazy(() => import('./containers/Chat'));
-  const Commerce = lazy(() => import('./containers/Commerce'));
-  const Contacts = lazy(() => import('./containers/Contacts'));
-  const Dashboard = lazy(() => import('./containers/Dashboard'));
-  const Email = lazy(() => import('./containers/Email'));
-  const Notes = lazy(() => import('./containers/Notes'));
-  const Profile = lazy(() => import('./containers/Profile'));
-  const ProjectManager = lazy(() => import('./containers/ProjectManager'));
-  const LayoutExplorer = lazy(() => import('./containers/LayoutExplorer'));
+  const Calendar = lazy(() => import('./apps/Calendar'));
+  const Chat = lazy(() => import('./apps/Chat'));
+  const Commerce = lazy(() => import('./apps/Commerce'));
+  const Contacts = lazy(() => import('./apps/Contacts'));
+  const Dashboard = lazy(() => import('./apps/Dashboard'));
+  const Email = lazy(() => import('./apps/Email'));
+  const Notes = lazy(() => import('./apps/Notes'));
+  const Profile = lazy(() => import('./apps/Profile'));
+  const ProjectManager = lazy(() => import('./apps/ProjectManager'));
+  const LayoutExplorer = lazy(() => import('./apps/LayoutExplorer'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>

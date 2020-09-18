@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Router from 'Router';
-import AppShell from 'containers/AppShell';
-import ErrorBoundary from 'containers/ErrorBoundary';
+import AppShell from 'components/AppShell';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 export default function App() {
   return (
