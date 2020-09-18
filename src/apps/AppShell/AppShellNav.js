@@ -11,7 +11,8 @@ import {
   ThemeContext,
 } from 'grommet';
 import { Down, Up } from 'grommet-icons';
-import * as config from 'config';
+
+import { appShell } from 'data';
 
 function AppShellNavSection({ id, name, routes }) {
   return (
@@ -182,7 +183,7 @@ function AppShellNavLink({
 export default function AppShellNav() {
   return (
     <Nav className="AppShellNav" gap="medium">
-      {config?.nav?.sections?.map((section) => (
+      {appShell?.nav?.sections?.map((section) => (
         <AppShellNavSection key={section.id} {...section} />
       ))}
     </Nav>

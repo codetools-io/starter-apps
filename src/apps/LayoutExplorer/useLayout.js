@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { keyBy, merge } from 'lodash';
 import { v4 as uuid } from 'uuid';
-import { layout as config } from './config';
 import { useParams } from 'react-router-dom';
+import { appShell } from 'data';
 
 export default ({
   childComponent: ChildComponent,
@@ -17,7 +17,7 @@ export default ({
   match,
 }) => {
   const { layoutId } = useParams();
-  const [layouts] = useState(config?.layouts);
+  const [layouts] = useState(appShell?.layouts);
   const [rootKey, setRootKey] = useState(uuid());
   const layoutsById = useMemo(() => keyBy(layouts, 'id'), [layouts]);
   const layout = useMemo(() => layoutsById[layoutId], [layoutId, layoutsById]);

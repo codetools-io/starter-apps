@@ -1,7 +1,13 @@
-import * as users from './users';
+import * as users from '../users';
 import accounting from 'accounting';
 import moment from 'moment';
 import { Cart, ChatOption, Notification } from 'grommet-icons';
+export * from './nav';
+export * from './site';
+export * from './theme';
+
+const currentDate = new Date();
+
 const { PUBLIC_URL } = process.env;
 
 export const user = users?.user1;
@@ -38,3 +44,10 @@ export const categories = [
   { id: 'chat', name: 'Chat', icon: ChatOption },
   { id: 'chart', name: 'Cart', icon: Cart },
 ];
+
+export const site = {
+  name: 'Placeholder Company',
+  copyrightYear: currentDate.getFullYear(),
+  logo: `${PUBLIC_URL}/placeholder/img/logos/logo-white.png`,
+  logoSmall: `${PUBLIC_URL}/placeholder/img/logos/picmark-white.png`,
+};
