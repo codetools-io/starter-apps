@@ -98,7 +98,7 @@ function AppShellNavItem({
 }
 
 function AppShellNavLink({
-  activeBackground = 'brand-3',
+  activeBackground = 'brand-4',
   children,
   to,
   icon,
@@ -123,11 +123,12 @@ function AppShellNavLink({
       to={to}
       style={{
         ...theme.anchor,
+        fontWeight: 'normal',
         color: theme.global.colors['brand-contrast'],
       }}
       activeStyle={{
         ...theme.anchor,
-        backgroundColor: theme.global.colors[activeBackground],
+        fontWeight: 'bold',
         color: theme.global.colors['brand-contrast'],
       }}
       onClick={onClick}
@@ -159,7 +160,6 @@ function AppShellNavLink({
             <Text
               color={color}
               size={size}
-              weight={weight}
               margin={{ left: isNested ? 'medium' : 'none' }}
               truncate
             >
