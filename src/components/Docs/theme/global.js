@@ -19,7 +19,7 @@ export default {
     'brand-alt-3': '#61dafb',
     'brand-alt-4': '#61dafb',
     'brand-contrast': '#EEE',
-    focus: 'brand-1',
+    focus: 'brand-alt',
     text: { light: 'brand-3' },
     'text-strong': { light: 'brand-2' },
     'text-weak': { light: 'brand-alt-4' },
