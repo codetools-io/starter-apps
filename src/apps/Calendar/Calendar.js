@@ -5,7 +5,7 @@ import { DocsCard } from 'components/Docs';
 import styles from './Calendar.styles';
 export default function Calendar({ children }) {
   // const { events } = useCalendar();
-
+  // Once custom days feature is released, this should be rewritten without the ThemeContext.Extend
   return (
     <DocsCard fill>
       <ThemeContext.Extend value={styles}>

@@ -24,7 +24,7 @@ export default {
     'text-strong': { light: 'brand-2' },
     'text-weak': { light: 'brand-alt-4' },
     'text-xweak': { light: 'brand-alt-5' },
-    border: { light: 'brand-8' },
+    border: { light: 'brand-8', dark: 'brand-8' },
     icon: {
       dark: 'currentColor',
       light: 'currentColor',
