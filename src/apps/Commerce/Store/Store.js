@@ -15,6 +15,7 @@ import {
 } from 'grommet';
 import accounting from 'accounting';
 import { titleize } from 'inflection';
+import { DocsTheme } from 'components/Docs';
 import Rating from 'components/Rating';
 import useStore from './useStore';
 
@@ -203,26 +204,28 @@ export default function Store() {
     filters,
   } = useStore();
   return (
-    <Box className="Chat" pad="medium" fill>
-      <Grid
-        className="Store"
-        columns={['1/4', '3/4']}
-        areas={[['StoreSidebar', 'StoreListing']]}
-        fill
-      >
-        <Box gridArea="StoreSidebar">
-          <StoreSidebar
-            categories={categories}
-            brands={brands}
-            filters={filters}
-            updateFilters={updateFilters}
-          />
-        </Box>
+    <DocsTheme>
+      <Box className="Chat" pad="medium" fill>
+        <Grid
+          className="Store"
+          columns={['1/4', '3/4']}
+          areas={[['StoreSidebar', 'StoreListing']]}
+          fill
+        >
+          <Box gridArea="StoreSidebar">
+            <StoreSidebar
+              categories={categories}
+              brands={brands}
+              filters={filters}
+              updateFilters={updateFilters}
+            />
+          </Box>
 
-        <Box gridArea="StoreListing" pad={{ horizontal: 'medium' }}>
-          <StoreProducts products={filteredProducts} />
-        </Box>
-      </Grid>
-    </Box>
+          <Box gridArea="StoreListing" pad={{ horizontal: 'medium' }}>
+            <StoreProducts products={filteredProducts} />
+          </Box>
+        </Grid>
+      </Box>
+    </DocsTheme>
   );
 }

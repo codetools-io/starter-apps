@@ -11,7 +11,7 @@ import {
   TextInput,
   TextArea,
 } from 'grommet';
-
+import { DocsCard } from 'components/Docs';
 import useNotes from './useNotes';
 
 function NoteList({ notes, currentNoteId, openNote }) {
@@ -140,87 +140,81 @@ export default function Notes({ children, ...props }) {
   } = useNotes();
 
   return (
-    <Box className="Notes" pad="medium" fill>
-      <Card background="white" fill>
-        <Grid
-          columns={['1/4', '1/4', '1/4', '1/4']}
-          rows={['auto', 'flex', 'auto']}
-          areas={[
-            ['NotesSearch', 'NotesHeader', 'NotesHeader', 'NotesHeader'],
-            ['NotesSidebar', 'NotesMain', 'NotesMain', 'NotesMain'],
-            ['NotesNew', 'NotesMain', 'NotesMain', 'NotesMain'],
-          ]}
-          fill
+    <DocsCard fill>
+      <Grid
+        columns={['1/4', '1/4', '1/4', '1/4']}
+        rows={['auto', 'flex', 'auto']}
+        areas={[
+          ['NotesSearch', 'NotesHeader', 'NotesHeader', 'NotesHeader'],
+          ['NotesSidebar', 'NotesMain', 'NotesMain', 'NotesMain'],
+          ['NotesNew', 'NotesMain', 'NotesMain', 'NotesMain'],
+        ]}
+        fill
+      >
+        <Box
+          gridArea="NotesSearch"
+          pad="medium"
+          border={[{ side: 'right' }, { side: 'bottom' }]}
         >
-          <Box
-            gridArea="NotesSearch"
-            pad="medium"
-            border={[{ side: 'right' }, { side: 'bottom' }]}
-          >
-            <TextInput
-              onChange={(e) => searchNotes(e.target.value)}
-              onSelect={(e) => {
-                openNote(e.suggestion.value);
-                clearNoteSearch();
-              }}
-              placeholder="Search notes"
-              suggestions={noteSearchResults}
-              value={noteSearch}
-              plain
-            />
-          </Box>
+          <TextInput
+            onChange={(e) => searchNotes(e.target.value)}
+            onSelect={(e) => {
+              openNote(e.suggestion.value);
+              clearNoteSearch();
+            }}
+            placeholder="Search notes"
+            suggestions={noteSearchResults}
+            value={noteSearch}
+            plain
+          />
+        </Box>
 
-          <Box
-            gridArea="NotesHeader"
-            pad="medium"
-            direction="row"
-            justify="end"
-            align="center"
-          >
-            {currentNoteId && !isEditMode ? (
-              <Button
-                label="Edit"
-                onClick={() => editNote(currentNoteId)}
-                primary
-              />
-            ) : null}
-          </Box>
-
-          <Box gridArea="NotesSidebar" pad="none" border={[{ side: 'right' }]}>
-            <NoteList
-              notes={notes}
-              currentNoteId={currentNoteId}
-              openNote={openNote}
-            />
-          </Box>
-          <Box
-            gridArea="NotesNew"
-            pad="medium"
-            border={[{ side: 'right' }, { side: 'top' }]}
-          >
+        <Box
+          gridArea="NotesHeader"
+          pad="medium"
+          direction="row"
+          justify="end"
+          align="center"
+        >
+          {currentNoteId && !isEditMode ? (
             <Button
-              label="New"
-              onClick={() => addNote(currentNoteId)}
+              label="Edit"
+              onClick={() => editNote(currentNoteId)}
               primary
             />
-          </Box>
-          <Box gridArea="NotesMain" pad="medium">
-            {isEditMode ? (
-              <NoteForm
-                {...currentNote}
-                saveNote={saveNote}
-                cancelEditNote={cancelEditNote}
-              />
-            ) : (
-              <Note
-                {...currentNote}
-                editNote={editNote}
-                currentNoteId={currentNoteId}
-              />
-            )}
-          </Box>
-        </Grid>
-      </Card>
-    </Box>
+          ) : null}
+        </Box>
+
+        <Box gridArea="NotesSidebar" pad="none" border={[{ side: 'right' }]}>
+          <NoteList
+            notes={notes}
+            currentNoteId={currentNoteId}
+            openNote={openNote}
+          />
+        </Box>
+        <Box
+          gridArea="NotesNew"
+          pad="medium"
+          border={[{ side: 'right' }, { side: 'top' }]}
+        >
+          <Button label="New" onClick={() => addNote(currentNoteId)} primary />
+        </Box>
+        <Box gridArea="NotesMain" pad="medium">
+          {isEditMode ? (
+            <NoteForm
+              {...currentNote}
+              saveNote={saveNote}
+              cancelEditNote={cancelEditNote}
+            />
+          ) : (
+            <Note
+              {...currentNote}
+              editNote={editNote}
+              currentNoteId={currentNoteId}
+            />
+          )}
+        </Box>
+      </Grid>
+    </DocsCard>
   );
 }

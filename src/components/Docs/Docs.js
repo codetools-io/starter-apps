@@ -11,8 +11,22 @@ export default function Docs({ children, ...props }) {
 
 export function DocsCard({ children, ...props }) {
   return (
-    <Card className="DocsCard" background="white" fill="horizontal">
-      <ThemeContext.Extend value={theme}>{children}</ThemeContext.Extend>
+    <Card
+      className="DocsCard"
+      background="white"
+      fill="horizontal"
+      flex={false}
+      {...props}
+    >
+      <DocsTheme>{children}</DocsTheme>
     </Card>
+  );
+}
+
+export function DocsTheme({ children, ...props }) {
+  return (
+    <ThemeContext.Extend value={theme} {...props}>
+      {children}
+    </ThemeContext.Extend>
   );
 }

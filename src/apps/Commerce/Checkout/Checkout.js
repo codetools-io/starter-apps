@@ -1,8 +1,6 @@
 import React from 'react';
-
 import {
   Box,
-  Card,
   CheckBox,
   Form,
   FormField,
@@ -17,15 +15,18 @@ import {
   Text,
   TextInput,
 } from 'grommet';
+import { DocsCard } from 'components/Docs';
 import useCheckout from './useCheckout';
 
-export default function Checkout({ children, ...props }) {
+export default function Checkout({ children }) {
   const { lineItems, totalLabel, billing, updateBilling } = useCheckout();
 
   return (
-    <Box pad="medium" fill>
-      <Card background="white" pad="medium">
-        <Heading level={1}>Order</Heading>
+    <DocsCard>
+      <Box pad="medium">
+        <Heading level={1} margin={{ top: 'none' }}>
+          Order
+        </Heading>
         <Form
           value={billing}
           onChange={(updates) => {
@@ -122,7 +123,7 @@ export default function Checkout({ children, ...props }) {
             </Box>
           </Box>
         </Form>
-      </Card>
-    </Box>
+      </Box>
+    </DocsCard>
   );
 }

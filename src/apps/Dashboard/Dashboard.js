@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Box, Heading, Paragraph } from 'grommet';
-
+import { DocsTheme } from 'components/Docs';
 import useDashboard from './useDashboard';
 
 function DashboardWidget({ type, ...props }) {
@@ -35,16 +35,18 @@ function DashboardSection({ id, title, widgets }) {
 export default function Dashboard() {
   const { widgetsBySection, sections } = useDashboard();
   return (
-    <Box className="Dashboard" pad="medium" gap="large">
-      {sections.map((section) => {
-        return (
-          <DashboardSection
-            key={section?.id}
-            {...section}
-            widgets={widgetsBySection[section?.id]}
-          />
-        );
-      })}
-    </Box>
+    <DocsTheme>
+      <Box className="Dashboard" pad="medium" gap="large">
+        {sections.map((section) => {
+          return (
+            <DashboardSection
+              key={section?.id}
+              {...section}
+              widgets={widgetsBySection[section?.id]}
+            />
+          );
+        })}
+      </Box>
+    </DocsTheme>
   );
 }

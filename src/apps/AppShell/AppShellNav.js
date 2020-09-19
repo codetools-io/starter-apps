@@ -34,7 +34,7 @@ function AppShellNavItem({
   path,
   icon,
   label,
-  menuBackground = 'brand-3',
+  menuBackground = 'brand-2',
   routes,
   isNested = false,
   ...rest
@@ -98,7 +98,7 @@ function AppShellNavItem({
 }
 
 function AppShellNavLink({
-  activeBackground = 'brand-4',
+  activeBackground = 'brand-3',
   children,
   to,
   icon,
