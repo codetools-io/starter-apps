@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'grommet';
 import { DocsCard } from 'components/Docs';
-import { appShell as data } from 'data';
+import * as config from './config';
 import useAppShell from './useAppShell';
 import AppShellHeader from './AppShellHeader';
 import AppShellMain from './AppShellMain';
@@ -26,11 +26,11 @@ export default function AppShell({ children, ...props }) {
         <AppShellHeader
           authHandler={authHandler}
           authLabel={authLabel}
-          logo={data.site.logo}
-          logoSmall={data.site.logoSmall}
+          logo={config?.site.logo}
+          logoSmall={config?.site.logoSmall}
           userInitials={userInitials}
           userProfile={user?.profile}
-          siteName={data?.site?.name}
+          siteName={config?.site?.name}
         />
         <AppShellSidebar />
         <AppShellMain>{children}</AppShellMain>

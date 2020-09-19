@@ -137,7 +137,7 @@ export default function Chat({ children }) {
   } = useChat();
 
   return (
-    <DocsCard>
+    <DocsCard fill>
       <Grid
         columns={['1/4', '1/4', '1/4', '1/4']}
         rows={['auto', 'flex', 'auto']}
@@ -148,7 +148,7 @@ export default function Chat({ children }) {
         ]}
         fill
       >
-        <Box gridArea="ChatContactSearch" pad="small" border="right">
+        <Box gridArea="ChatContactSearch" pad="medium" border="right">
           <TextInput
             onChange={(e) => searchContacts(e.target.value)}
             onSelect={(e) => {
@@ -158,7 +158,6 @@ export default function Chat({ children }) {
             placeholder="Search contacts"
             suggestions={contactSearchResults}
             value={contactSearch}
-            plain
           />
         </Box>
 

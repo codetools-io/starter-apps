@@ -12,7 +12,6 @@ export default function Router() {
   const Notes = lazy(() => import('./apps/Notes'));
   const Profile = lazy(() => import('./apps/Profile'));
   const ProjectManager = lazy(() => import('./apps/ProjectManager'));
-  const LayoutExplorer = lazy(() => import('./apps/LayoutExplorer'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
@@ -29,9 +28,6 @@ export default function Router() {
         <Route component={Notes} path="/notes" />
         <Route component={Profile} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />
-        <Route component={LayoutExplorer} path="/layout-explorer" />
-
-        {/* <Route component={Tasks} path="/tasks" /> */}
       </Switch>
     </Suspense>
   );

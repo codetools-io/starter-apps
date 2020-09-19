@@ -1,4 +1,4 @@
-import * as users from '../users';
+import * as users from './users';
 import accounting from 'accounting';
 import moment from 'moment';
 import { Cart, ChatOption, Notification } from 'grommet-icons';

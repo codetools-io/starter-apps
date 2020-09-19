@@ -1,4 +1,3 @@
-import * as appShell from './app-shell';
 import * as cart from './cart';
 import * as checkout from './checkout';
 import * as chat from './chat';
@@ -11,7 +10,6 @@ import * as tasks from './tasks';
 import * as users from './users';
 
 export {
-  appShell,
   cart,
   checkout,
   chat,

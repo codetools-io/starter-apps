@@ -1,4 +1,4 @@
-const genericColors = {
+export default {
   aqua: '#7fdbff',
   blue: '#0074d9',
   lime: '#01ff70',
@@ -17,5 +17,3 @@ const genericColors = {
   black: '#111111',
   silver: '#dddddd',
 };
-
-export default genericColors;

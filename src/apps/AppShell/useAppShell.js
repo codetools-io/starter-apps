@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
-import { appShell } from 'data';
+import * as config from './config';
 import { chain } from 'lodash';
 
 export default function useAppShell() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-  const [user, setUser] = useState(appShell?.user);
-  const [notifications] = useState(appShell?.notifications);
-  const [categories] = useState(appShell?.categories);
+  const [user, setUser] = useState(config?.user);
+  const [notifications] = useState(config?.notifications);
+  const [categories] = useState(config?.categories);
 
   const authLabel = useMemo(() => {
     return isAuthenticated ? 'logout' : 'login';
@@ -36,7 +36,7 @@ export default function useAppShell() {
 
     function login() {
       setIsAuthenticated(true);
-      setUser(appShell?.user);
+      setUser(config?.user);
     }
 
     function logout() {
