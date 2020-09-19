@@ -148,7 +148,7 @@ export default function Chat({ children }) {
         ]}
         fill
       >
-        <Box gridArea="ChatContactSearch" pad="medium" border="right">
+        <Box gridArea="ChatContactSearch" pad="small" border="right">
           <TextInput
             onChange={(e) => searchContacts(e.target.value)}
             onSelect={(e) => {

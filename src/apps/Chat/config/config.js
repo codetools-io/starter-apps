@@ -1,10 +1,10 @@
 import * as users from './users';
 
-const {user1, ...otherUsers} = users
+const { user1, ...otherUsers } = users;
 
-export const contacts = Object.values(otherUsers)
+export const contacts = Object.values(otherUsers);
 
-export const currentUser = user1
+export const currentUser = user1;
 
 export const conversations = [
   {

@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react';
-import * as data from 'data';
+import * as config from './config';
 import { keyBy } from 'lodash';
 import { v4 as uuid } from 'uuid';
 export default function useChat() {
-  const [conversations, setConversations] = useState(data?.chat?.conversations);
-  const [contacts] = useState(data?.chat?.contacts);
+  const [conversations, setConversations] = useState(config?.conversations);
+  const [contacts] = useState(config?.contacts);
   const [contactSearch, setContactSearch] = useState();
   const [recipientSearch, setRecipientSearch] = useState();
-  const [user] = useState(data?.chat?.currentUser);
+  const [user] = useState(config?.currentUser);
   const [conversationId, setConversationId] = useState(conversations[0]?.id);
   const [message, setMessage] = useState();
   const [composingConversation, setComposingConversation] = useState(false);
