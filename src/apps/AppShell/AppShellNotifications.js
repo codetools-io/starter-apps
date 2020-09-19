@@ -37,6 +37,10 @@ function AppShellNotification({ category, notifications = [] }) {
           notifications={notifications}
         />
       }
+      dropProps={{
+        plain: true,
+        overflow: 'visible',
+      }}
     />
   );
 }
@@ -45,18 +49,20 @@ function AppShellNotificationIndicator({ icon, count }) {
   return (
     <Box>
       <Stack anchor="top-right">
-        <Icon icon={icon} />
+        <Icon icon={icon} color="brand-3" />
         <Box
           align="center"
           justify="center"
-          background="brand-2"
+          background="brand-alt"
           pad={{ horizontal: 'xsmall' }}
           width={{ min: '18px' }}
           height={{ min: '18px' }}
           margin={{ top: '-7px', right: '-7px' }}
           round
         >
-          <Text size="xsmall">{count}</Text>
+          <Text size="xsmall" color="brand-contrast">
+            {count}
+          </Text>
         </Box>
       </Stack>
     </Box>

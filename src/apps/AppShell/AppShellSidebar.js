@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Sidebar } from 'grommet';
 import AppShellNav from './AppShellNav.js';
 
-export default function AppShellSidebar({ background = 'brand-1' }) {
+export default function AppShellSidebar({ background = 'brand-3' }) {
   return (
     <Sidebar
       className="AppShellSidebar"
