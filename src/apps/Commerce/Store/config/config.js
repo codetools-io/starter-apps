@@ -1,4 +1,5 @@
 const { PUBLIC_URL } = process.env;
+
 export const products = [
   {
     id: 'store-product-1',

@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
 import accounting from 'accounting';
-import { cart } from 'data';
+import * as config from './config';
 
 export default function useCart() {
-  const [products, setProducts] = useState(cart.products);
+  const [products, setProducts] = useState(config?.products);
 
   const lineItems = useMemo(() => {
     return products.map((product) => {

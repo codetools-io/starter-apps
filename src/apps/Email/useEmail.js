@@ -1,15 +1,15 @@
 import { useMemo, useState } from 'react';
 import { chain } from 'lodash';
-import { email } from 'data';
+import * as config from './config';
 
 export default function useEmail() {
-  const [emails] = useState(email.emails);
-  const [labels] = useState(email.labels);
-  const [folders] = useState(email.folders);
+  const [emails] = useState(config?.emails);
+  const [labels] = useState(config?.labels);
+  const [folders] = useState(config?.folders);
   const [activeLabelIds, setActiveLabelIds] = useState([]);
   const [activeEmailId, setActiveEmailId] = useState();
   const [activeFolderId, setActiveFolderId] = useState(
-    email?.settings?.defaultFolder
+    config?.settings?.defaultFolder
   );
   const labelsById = useMemo(() => {
     return chain(labels).keyBy('id').value();

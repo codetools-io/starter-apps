@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from 'react';
 import accounting from 'accounting';
-import { checkout } from 'data';
+import * as config from './config';
 export default function useCheckout() {
-  const [products] = useState(checkout.products);
+  const [products] = useState(config.products);
   const [billing, setBilling] = useState({
     firstName: '',
     lastName: '',

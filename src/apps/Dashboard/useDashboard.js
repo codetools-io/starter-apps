@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { groupBy } from 'lodash';
-import * as data from 'data';
+import * as config from './config';
 
 export default function useDashboard() {
-  const [widgets] = useState(data.dashboard.widgets);
-  const [sections] = useState(data.dashboard.sections);
+  const [widgets] = useState(config?.widgets);
+  const [sections] = useState(config?.sections);
   const widgetsBySection = useMemo(() => {
     return groupBy(widgets, 'section');
   }, [widgets]);

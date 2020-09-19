@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import { chain } from 'lodash';
-import * as data from 'data';
+import * as config from './config';
 export default function useDashboard() {
-  const [projects] = useState(data.projectManager.projects);
-  const [categories] = useState(data.projectManager.categories);
-  const [statuses] = useState(data.projectManager.statuses);
-  const [tasks] = useState(data.projectManager.tasks);
+  const [projects] = useState(config?.projects);
+  const [categories] = useState(config?.categories);
+  const [statuses] = useState(config?.statuses);
+  const [tasks] = useState(config?.tasks);
   const [projectId, setProjectId] = useState();
   const projectTypes = useMemo(() => {
     return chain(projects).uniqBy('type').map('type').value();

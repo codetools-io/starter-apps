@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import { inRange } from 'lodash';
-import * as data from 'data';
+import * as config from './config';
 
 export default function useStore() {
-  const [products] = useState(data?.store?.products);
-  const [categories] = useState(data?.store?.categories);
-  const [brands] = useState(data?.store?.brands);
+  const [products] = useState(config?.products);
+  const [categories] = useState(config?.categories);
+  const [brands] = useState(config?.brands);
   const [filters, setFilters] = useState();
 
   const filteredProducts = useMemo(() => {

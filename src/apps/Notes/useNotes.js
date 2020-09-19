@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { notes as data } from 'data';
+import * as config from './config';
 export default function useNotes() {
-  const [notes, setNotes] = useState(data?.notes);
+  const [notes, setNotes] = useState(config?.notes);
   const [noteSearch, setNoteSearch] = useState();
   const [isEditMode, setIsEditMode] = useState(false);
   const [currentNoteId, setCurrentNoteId] = useState();

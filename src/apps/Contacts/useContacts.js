@@ -1,15 +1,8 @@
 import { useMemo, useState } from 'react';
-import * as data from 'data';
+import * as config from './config';
 
 export default function useContacts() {
-  const [contacts, setContacts] = useState([
-    data?.users?.user2,
-    data?.users?.user3,
-    data?.users?.user4,
-    data?.users?.user5,
-    data?.users?.user6,
-    data?.users?.user7,
-  ]);
+  const [contacts, setContacts] = useState(config?.contacts);
   const [contactSearch, setContactSearch] = useState();
   const [contactId, setContactId] = useState(contacts[0]?.id);
   const [contactUpdates, setContactUpdates] = useState({});

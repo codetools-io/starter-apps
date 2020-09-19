@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Calendar as GrommetCalendar, ThemeContext } from 'grommet';
+import { Box, Calendar as GrommetCalendar, ThemeContext } from 'grommet';
 import { DocsCard } from 'components/Docs';
 // import useCalendar from './useCalendar';
 import styles from './Calendar.styles';

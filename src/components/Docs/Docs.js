@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Grid, ThemeContext } from 'grommet';
+import { Box, Card, ThemeContext } from 'grommet';
 import theme from './theme';
 export default function Docs({ children, ...props }) {
   return (
