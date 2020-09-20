@@ -71,7 +71,7 @@ export function DocsExample({ children, usage }) {
         </Tabs>
       </Box>
       {showPreview && (
-        <DocsCard height="large" flex={false}>
+        <DocsCard height="large" flex={false} overflow="auto">
           {children}
         </DocsCard>
       )}
