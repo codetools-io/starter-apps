@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 export default function Router() {
   const AppShellDocs = lazy(() => import('./apps/AppShell/docs'));
-  const Calendar = lazy(() => import('./apps/Calendar'));
+  const CalendarDocs = lazy(() => import('./apps/Calendar/docs'));
   const ChatDocs = lazy(() => import('./apps/Chat/docs'));
   const Commerce = lazy(() => import('./apps/Commerce'));
   const Contacts = lazy(() => import('./apps/Contacts'));
@@ -19,7 +19,7 @@ export default function Router() {
         <Route path="/" exact />
 
         <Route component={AppShellDocs} path="/app-shell" />
-        <Route component={Calendar} path="/calendar" />
+        <Route component={CalendarDocs} path="/calendar" />
         <Route component={ChatDocs} path="/chat" />
         <Route component={Commerce} path="/commerce" />
         <Route component={Contacts} path="/contacts" />
