@@ -11,7 +11,7 @@ export default function Router() {
   const ContactsDocs = lazy(() => import('./apps/Contacts/docs'));
   const DashboardDocs = lazy(() => import('./apps/Dashboard/docs'));
   const EmailDocs = lazy(() => import('./apps/Email/docs'));
-  const Notes = lazy(() => import('./apps/Notes'));
+  const NotesDocs = lazy(() => import('./apps/Notes/docs'));
   const Profile = lazy(() => import('./apps/Profile'));
   const ProjectManager = lazy(() => import('./apps/ProjectManager'));
 
@@ -29,7 +29,7 @@ export default function Router() {
         <Route component={ContactsDocs} path="/contacts" />
         <Route component={DashboardDocs} path="/dashboard" />
         <Route component={EmailDocs} path="/email" />
-        <Route component={Notes} path="/notes" />
+        <Route component={NotesDocs} path="/notes" />
         <Route component={Profile} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />
       </Switch>
