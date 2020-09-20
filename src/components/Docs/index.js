@@ -1,1 +1,1 @@
-export { default, DocsCard, DocsTheme } from './Docs';
+export * from './Docs';

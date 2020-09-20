@@ -29,7 +29,7 @@ function ProjectShort({ id, name, type, category, progress, ...props }) {
         align="center"
       >
         <Box>
-          <Avatar background="brand-alt-1" height="12px" width="24px">
+          <Avatar background="brand" height="12px" width="24px">
             {name[0]}
           </Avatar>
         </Box>

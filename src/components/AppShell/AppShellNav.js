@@ -33,11 +33,12 @@ function AppShellNavItem({
   path,
   icon,
   label,
-  menuBackground = 'brand-3',
+  menuBackground,
   routes,
   isNested = false,
   ...rest
 }) {
+  const theme = useContext(ThemeContext);
   const size = useContext(ResponsiveContext);
   const [nav, setNav] = useLocalStorage('nav', {});
   const isExpanded = useMemo(() => {
@@ -86,7 +87,12 @@ function AppShellNavItem({
         />
       </Box>
       <Collapsible direction="vertical" open={isExpanded}>
-        <Box gap="xsmall" background={menuBackground} fill="horizontal">
+        <Box
+          className="AppShellNavMenu"
+          gap="xsmall"
+          background={menuBackground || theme?.appShell?.nav?.menu?.background}
+          fill="horizontal"
+        >
           {routes.map((route) => {
             return <AppShellNavItem key={route.id} {...route} isNested />;
           })}
@@ -97,15 +103,13 @@ function AppShellNavItem({
 }
 
 function AppShellNavLink({
-  activeBackground = 'brand-4',
+  activeBackground,
   children,
   to,
   icon,
   secondaryIcon,
   label,
-  color,
   size = 'large',
-  weight = 'normal',
   onClick = (event) => {},
   isNested,
   ...props
@@ -116,18 +120,20 @@ function AppShellNavLink({
     AppShellNavLink: true,
     'is-small': screenSize === 'small',
   });
+
   return (
     <RouterNavLink
       className={className}
       to={to}
       style={{
         ...theme.anchor,
-        color: theme.global.colors['brand-contrast'],
+        ...theme?.appShell?.nav?.link,
+        fontWeight: 'normal',
       }}
       activeStyle={{
         ...theme.anchor,
-        backgroundColor: theme.global.colors[activeBackground],
-        color: theme.global.colors['brand-contrast'],
+        ...theme?.appShell?.nav?.active,
+        fontWeight: 'bold',
       }}
       onClick={onClick}
       exact
@@ -145,7 +151,7 @@ function AppShellNavLink({
       >
         {icon && (
           <Box className="NavLink__icon">
-            <Text color={theme.global.colors['brand-contrast']}>{icon}</Text>
+            <Text color={theme?.appShell?.nav?.icon?.color}>{icon}</Text>
           </Box>
         )}
 
@@ -156,9 +162,8 @@ function AppShellNavLink({
             flex
           >
             <Text
-              color={color}
               size={size}
-              weight={weight}
+              color={theme?.appShell?.nav?.link?.color}
               margin={{ left: isNested ? 'medium' : 'none' }}
               truncate
             >
@@ -169,7 +174,7 @@ function AppShellNavLink({
 
         {secondaryIcon && (
           <Box className="NavLink__secondaryIcon">
-            <Text color={theme.global.colors['brand-contrast']}>
+            <Text color={theme?.appShell?.nav?.icon?.color}>
               {secondaryIcon}
             </Text>
           </Box>

@@ -21,7 +21,7 @@ export default function Cart({ children, ...props }) {
   const { lineItems, totalLabel, removeProduct, updateProduct } = useCart();
 
   return (
-    <DocsCard pad="medium">
+    <DocsCard pad="medium" fill>
       <Table>
         <TableHeader>
           <TableRow>

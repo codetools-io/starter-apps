@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Grommet } from 'grommet';
+import { Box, Grid, Grommet } from 'grommet';
 import * as config from 'config';
 import AppShellMain from './AppShellMain';
 import AppShellSidebar from './AppShellSidebar';
@@ -11,12 +11,9 @@ export default function AppShell({ children, ...props }) {
     <Grommet className="AppShell" theme={config?.theme} full>
       <Grid
         className="AppShellContainer"
-        rows={['xsmall', 'auto']}
+        rows={['auto']}
         columns={['1/4', '3/4']}
-        areas={[
-          ['sidebar', 'main', 'main', 'main'],
-          ['sidebar', 'main', 'main', 'main'],
-        ]}
+        areas={[['sidebar', 'main', 'main', 'main']]}
         style={{
           height: '100vh',
         }}

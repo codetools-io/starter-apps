@@ -11,7 +11,7 @@ export default function AppShellMenu({
     <DropButton
       className="AppShellMenu"
       icon={
-        <Avatar background="brand-alt" src={userProfile}>
+        <Avatar background="brand" src={userProfile}>
           {userInitials}
         </Avatar>
       }

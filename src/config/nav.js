@@ -95,11 +95,11 @@ export const nav = {
         // },
       ],
     },
-    {
-      id: 'section-2',
-      name: 'Components',
-      routes: [],
-    },
+    // {
+    //   id: 'section-2',
+    //   name: 'Components',
+    //   routes: [],
+    // },
     // {
     //   id: 'section-3',
     //   name: 'Tools',

@@ -20,11 +20,11 @@ export default {
     'brand-alt-4': '#61dafb',
     'brand-contrast': '#EEE',
     focus: 'brand-alt',
-    text: { light: 'brand-3' },
-    'text-strong': { light: 'brand-2' },
-    'text-weak': { light: 'brand-alt-4' },
-    'text-xweak': { light: 'brand-alt-5' },
-    border: { light: 'brand-8', dark: 'brand-8' },
+    text: { light: 'shade-7' },
+    'text-strong': { light: 'shade-8' },
+    'text-weak': { light: 'shade-6' },
+    'text-xweak': { light: 'shade-5' },
+    border: { light: 'shade-2' },
     icon: {
       dark: 'currentColor',
       light: 'currentColor',
@@ -52,7 +52,7 @@ export default {
   },
   control: {
     border: {
-      color: 'brand-7',
+      color: 'shade-3',
     },
   },
   input: {

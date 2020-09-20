@@ -10,7 +10,7 @@ export default function ButtonGroup({
   ...props
 }) {
   const theme = useContext(ThemeContext);
-  console.log(theme);
+
   return (
     <Box className="ButtonGroup" direction="row" align="center" {...props}>
       React.Children.map(children, function () {})

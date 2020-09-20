@@ -1,16 +1,18 @@
-import React from 'react';
-import { Box, Header, Sidebar } from 'grommet';
-import { ReactComponent as Logo } from './img/logo.svg';
+import React, { useContext } from 'react';
+import { Box, Header, Sidebar, ThemeContext } from 'grommet';
+import { ReactComponent as Logo } from './img/logo-1.svg';
 
 import AppShellNav from './AppShellNav.js';
 
-export default function AppShellSidebar({ background = 'brand-3' }) {
+export default function AppShellSidebar({ background }) {
+  const theme = useContext(ThemeContext);
+
   return (
     <Sidebar
       className="AppShellSidebar"
       gridArea="sidebar"
-      background={background}
-      pad={{ horizontal: 'none', vertical: 'medium' }}
+      background={background || theme?.appShell?.sidebar?.background}
+      pad={{ horizontal: 'none', vertical: 'large' }}
       overflow={{ vertical: 'auto' }}
     >
       <Box gap="large">
@@ -26,7 +28,7 @@ export default function AppShellSidebar({ background = 'brand-3' }) {
               height: '100%',
               maxWidth: '100%',
               maxHeight: '100%',
-              color: 'white',
+              color: '#fff',
             }}
           />
         </Header>

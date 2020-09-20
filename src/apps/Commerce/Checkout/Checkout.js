@@ -22,7 +22,7 @@ export default function Checkout({ children }) {
   const { lineItems, totalLabel, billing, updateBilling } = useCheckout();
 
   return (
-    <DocsCard>
+    <DocsCard fill>
       <Box pad="medium">
         <Heading level={1} margin={{ top: 'none' }}>
           Order

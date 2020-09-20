@@ -13,7 +13,6 @@ import {
   TextInput,
 } from 'grommet';
 import { v4 as uuid } from 'uuid';
-import { DocsCard } from 'components/Docs';
 import useChat from './useChat';
 
 function ChatConversation({ participants, messages, user }) {
@@ -137,93 +136,91 @@ export default function Chat({ children }) {
   } = useChat();
 
   return (
-    <DocsCard fill>
-      <Grid
-        columns={['1/4', '1/4', '1/4', '1/4']}
-        rows={['auto', 'flex', 'auto']}
-        areas={[
-          ['ChatContactSearch', 'ChatHeader', 'ChatHeader', 'ChatHeader'],
-          ['ChatSidebar', 'ChatMain', 'ChatMain', 'ChatMain'],
-          ['ChatCompose', 'ChatMessage', 'ChatMessage', 'ChatMessage'],
-        ]}
-        fill
-      >
-        <Box gridArea="ChatContactSearch" pad="small" border="right">
-          <TextInput
-            onChange={(e) => searchContacts(e.target.value)}
-            onSelect={(e) => {
-              startConversation(e.suggestion.value);
-              clearContactSearch();
-            }}
-            placeholder="Search contacts"
-            suggestions={contactSearchResults}
-            value={contactSearch}
-          />
-        </Box>
+    <Grid
+      columns={['1/4', '1/4', '1/4', '1/4']}
+      rows={['auto', 'flex', 'auto']}
+      areas={[
+        ['ChatContactSearch', 'ChatHeader', 'ChatHeader', 'ChatHeader'],
+        ['ChatSidebar', 'ChatMain', 'ChatMain', 'ChatMain'],
+        ['ChatCompose', 'ChatMessage', 'ChatMessage', 'ChatMessage'],
+      ]}
+      fill
+    >
+      <Box gridArea="ChatContactSearch" pad="small" border="right">
+        <TextInput
+          onChange={(e) => searchContacts(e.target.value)}
+          onSelect={(e) => {
+            startConversation(e.suggestion.value);
+            clearContactSearch();
+          }}
+          placeholder="Search contacts"
+          suggestions={contactSearchResults}
+          value={contactSearch}
+        />
+      </Box>
 
-        <Box gridArea="ChatHeader" pad="small" justify="center" border="bottom">
-          <Heading level={4} margin="none">
-            {composingConversation ? 'New message' : participantsLabel}
-          </Heading>
-        </Box>
-        <Box gridArea="ChatSidebar" fill="vertical" border="right">
-          <ChatConversations
-            conversations={conversations}
-            user={user}
-            conversationId={conversationId}
-            selectConversation={(conversationId) => {
-              stopComposingConversation();
-              selectConversation(conversationId);
-            }}
+      <Box gridArea="ChatHeader" pad="small" justify="center" border="bottom">
+        <Heading level={4} margin="none">
+          {composingConversation ? 'New message' : participantsLabel}
+        </Heading>
+      </Box>
+      <Box gridArea="ChatSidebar" fill="vertical" border="right">
+        <ChatConversations
+          conversations={conversations}
+          user={user}
+          conversationId={conversationId}
+          selectConversation={(conversationId) => {
+            stopComposingConversation();
+            selectConversation(conversationId);
+          }}
+        />
+      </Box>
+      <Box gridArea="ChatCompose" pad="medium" border="right" justify="end">
+        <Button
+          label="New Message"
+          onClick={() => composeConversation()}
+          primary
+        />
+      </Box>
+      <Box
+        gridArea="ChatMain"
+        pad={{ horizontal: 'medium' }}
+        overflow="auto"
+        height={{ max: '100%' }}
+      >
+        {composingConversation ? (
+          <ChatNewConversation
+            recipientSearch={recipientSearch}
+            recipientSearchResults={recipientSearchResults}
+            searchRecipients={searchRecipients}
+            startConversation={startConversation}
+            clearRecipientSearch={clearRecipientSearch}
           />
-        </Box>
-        <Box gridArea="ChatCompose" pad="medium" border="right" justify="end">
-          <Button
-            label="New Message"
-            onClick={() => composeConversation()}
-            primary
-          />
-        </Box>
-        <Box
-          gridArea="ChatMain"
-          pad={{ horizontal: 'medium' }}
-          overflow="auto"
-          height={{ max: '100%' }}
+        ) : (
+          <ChatConversation user={user} {...conversation} />
+        )}
+      </Box>
+      <Box gridArea="ChatMessage" pad="medium" border="top">
+        <Keyboard
+          onEnter={(event) => {
+            event.preventDefault();
+            sendMessage({
+              id: uuid(),
+              body: message,
+              sentAt: Date.now(),
+              authorId: user?.id,
+            });
+          }}
         >
-          {composingConversation ? (
-            <ChatNewConversation
-              recipientSearch={recipientSearch}
-              recipientSearchResults={recipientSearchResults}
-              searchRecipients={searchRecipients}
-              startConversation={startConversation}
-              clearRecipientSearch={clearRecipientSearch}
-            />
-          ) : (
-            <ChatConversation user={user} {...conversation} />
-          )}
-        </Box>
-        <Box gridArea="ChatMessage" pad="medium" border="top">
-          <Keyboard
-            onEnter={(event) => {
-              event.preventDefault();
-              sendMessage({
-                id: uuid(),
-                body: message,
-                sentAt: Date.now(),
-                authorId: user?.id,
-              });
-            }}
-          >
-            <TextArea
-              placeholder="Type your message"
-              value={message}
-              onChange={(event) => updateMessage(event.target.value)}
-              resize={false}
-              fill
-            />
-          </Keyboard>
-        </Box>
-      </Grid>
-    </DocsCard>
+          <TextArea
+            placeholder="Type your message"
+            value={message}
+            onChange={(event) => updateMessage(event.target.value)}
+            resize={false}
+            fill
+          />
+        </Keyboard>
+      </Box>
+    </Grid>
   );
 }

@@ -53,7 +53,7 @@ function AppShellNotificationIndicator({ icon, count }) {
         <Box
           align="center"
           justify="center"
-          background="brand-alt"
+          background="brand"
           pad={{ horizontal: 'xsmall' }}
           width={{ min: '18px' }}
           height={{ min: '18px' }}

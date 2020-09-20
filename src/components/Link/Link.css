@@ -1,9 +1,0 @@
-.Link {
-  opacity: 0.85;
-}
-.Link.active {
-  opacity: 1;
-}
-.Link:hover {
-  opacity: 1;
-}

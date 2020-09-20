@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'grommet';
+import { Box, Grid } from 'grommet';
 import { DocsCard } from 'components/Docs';
 import * as config from './config';
 import useAppShell from './useAppShell';
@@ -13,7 +13,7 @@ export default function AppShell({ children, ...props }) {
   const { authHandler, authLabel, user, userInitials } = useAppShell();
 
   return (
-    <DocsCard>
+    <DocsCard fill>
       <Grid
         className="AppShellContainer"
         rows={['xsmall', 'auto']}
@@ -22,6 +22,7 @@ export default function AppShell({ children, ...props }) {
           ['header', 'header', 'header', 'header'],
           ['sidebar', 'main', 'main', 'main'],
         ]}
+        fill
       >
         <AppShellHeader
           authHandler={authHandler}

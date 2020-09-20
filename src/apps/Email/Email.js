@@ -276,7 +276,7 @@ export default function () {
   } = useEmail();
 
   return (
-    <DocsCard>
+    <DocsCard fill>
       <Grid
         columns={['1/4', '1/4', '1/4', '1/4']}
         rows={['auto', 'flex', 'auto']}

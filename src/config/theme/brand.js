@@ -1,33 +1,25 @@
 import genericColors from './generic-colors';
-
+import brandColors from './brand-colors-blues';
+import shades from './shades';
+import components from './components';
 export const brand = {
   global: {
     colors: {
-      brand: '#0466C8',
-      'brand-1': '#057AF0',
-      'brand-2': '#0466C8',
-      'brand-3': '#0353A4',
-      'brand-4': '#023E7D',
-      'brand-5': '#002855',
-      'brand-6': '#001845',
-      'brand-7': '#001233',
-      'brand-alt': '#979DAC',
-      'brand-alt-1': '#979DAC',
-      'brand-alt-2': '#7D8597',
-      'brand-alt-3': '#5C677D',
-      'brand-alt-4': '#33415C',
-      'brand-contrast': '#EEE',
-      focus: 'brand-1',
-      text: { light: 'brand-alt-3' },
-      'text-strong': { light: 'brand-alt-4' },
-      'text-weak': { light: 'brand-alt-2' },
-      'text-xweak': { light: 'brand-alt-1' },
-      border: { light: '#eee' },
+      ...brandColors,
+      ...genericColors,
+      ...shades,
+      focus: 'brand-alt',
+      text: { light: 'shade-7' },
+      'text-strong': { light: 'shade-8' },
+      'text-weak': { light: 'shade-6' },
+      'text-xweak': { light: 'shade-5' },
+      border: { light: 'shade-2' },
       icon: {
         dark: 'currentColor',
         light: 'currentColor',
       },
-      ...genericColors,
+      'selected-text': 'red',
+      'active-text': 'brand-1',
     },
     font: {
       family: 'Montserrat',
@@ -66,4 +58,17 @@ export const brand = {
     },
     extend: undefined,
   },
+  tab: {
+    color: 'text',
+    active: {
+      color: 'active-text',
+    },
+    border: {
+      color: 'text',
+      active: {
+        color: 'active-text',
+      },
+    },
+  },
+  ...components,
 };

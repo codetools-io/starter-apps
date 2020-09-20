@@ -138,7 +138,7 @@ export default function Contacts({ children, ...props }) {
   } = useContacts();
 
   return (
-    <DocsCard>
+    <DocsCard fill>
       <Grid
         columns={['1/4', '1/4', '1/4', '1/4']}
         rows={['auto', 'flex', 'auto']}
