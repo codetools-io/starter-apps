@@ -66,42 +66,40 @@ export default function ProjectDashboard() {
   const onCreate = () => {};
   return (
     <Box className="ProjectManager" pad="medium" fill>
-      <Card background="white">
-        <Box>
-          <Box
-            direction="row"
-            justify="between"
-            align="center"
-            pad="medium"
-            flex={false}
-          >
-            <Heading level={4} margin="none">
-              Projects
-            </Heading>
-            <Button label="Create" onClick={onCreate} primary />
+      <Box>
+        <Box
+          direction="row"
+          justify="between"
+          align="center"
+          pad="medium"
+          flex={false}
+        >
+          <Heading level={4} margin="none">
+            Projects
+          </Heading>
+          <Button label="Create" onClick={onCreate} primary />
+        </Box>
+        <Box direction="row" justify="between" pad="medium" flex={false}>
+          <Box flex>
+            <TextInput placeholder="Search…" icon={<Search />} plain />
           </Box>
-          <Box direction="row" justify="between" pad="medium" flex={false}>
-            <Box flex>
-              <TextInput placeholder="Search…" icon={<Search />} plain />
-            </Box>
-            <Box direction="row">
-              <Select options={['All', ...projectTypes]} value={currentType} />
-            </Box>
-          </Box>
-          <Box overflow="auto">
-            {projects.map((project, index) => {
-              return (
-                <ProjectShort
-                  key={project.id}
-                  {...project}
-                  category={categoriesById[project?.category]}
-                  border={index ? { side: 'top' } : null}
-                />
-              );
-            })}
+          <Box direction="row">
+            <Select options={['All', ...projectTypes]} value={currentType} />
           </Box>
         </Box>
-      </Card>
+        <Box overflow="auto">
+          {projects.map((project, index) => {
+            return (
+              <ProjectShort
+                key={project.id}
+                {...project}
+                category={categoriesById[project?.category]}
+                border={index ? { side: 'top' } : null}
+              />
+            );
+          })}
+        </Box>
+      </Box>
     </Box>
   );
 }

@@ -13,13 +13,12 @@ export default function Router() {
   const EmailDocs = lazy(() => import('./apps/Email/docs'));
   const NotesDocs = lazy(() => import('./apps/Notes/docs'));
   const ProfileDocs = lazy(() => import('./apps/Profile/docs'));
-  const ProjectManager = lazy(() => import('./apps/ProjectManager'));
+  const ProjectManagerDocs = lazy(() => import('./apps/ProjectManager/docs'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>
         <Route path="/" exact />
-
         <Route component={AppShellDocs} path="/app-shell" />
         <Route component={CalendarDocs} path="/calendar" />
         <Route component={ChatDocs} path="/chat" />
@@ -31,7 +30,7 @@ export default function Router() {
         <Route component={EmailDocs} path="/email" />
         <Route component={NotesDocs} path="/notes" />
         <Route component={ProfileDocs} path="/profile" />
-        <Route component={ProjectManager} path="/project-manager" />
+        <Route component={ProjectManagerDocs} path="/project-manager" />
       </Switch>
     </Suspense>
   );
