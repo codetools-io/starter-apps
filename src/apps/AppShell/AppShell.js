@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Grid } from 'grommet';
-import { DocsCard } from 'components/Docs';
+import { Grid } from 'grommet';
 import * as config from './config';
 import useAppShell from './useAppShell';
 import AppShellHeader from './AppShellHeader';
@@ -13,29 +12,27 @@ export default function AppShell({ children, ...props }) {
   const { authHandler, authLabel, user, userInitials } = useAppShell();
 
   return (
-    <DocsCard fill>
-      <Grid
-        className="AppShellContainer"
-        rows={['xsmall', 'auto']}
-        columns={['1/4', '1/4', '1/4', '1/4']}
-        areas={[
-          ['header', 'header', 'header', 'header'],
-          ['sidebar', 'main', 'main', 'main'],
-        ]}
-        fill
-      >
-        <AppShellHeader
-          authHandler={authHandler}
-          authLabel={authLabel}
-          logo={config?.site.logo}
-          logoSmall={config?.site.logoSmall}
-          userInitials={userInitials}
-          userProfile={user?.profile}
-          siteName={config?.site?.name}
-        />
-        <AppShellSidebar />
-        <AppShellMain>{children}</AppShellMain>
-      </Grid>
-    </DocsCard>
+    <Grid
+      className="AppShellContainer"
+      rows={['xsmall', 'auto']}
+      columns={['1/4', '1/4', '1/4', '1/4']}
+      areas={[
+        ['header', 'header', 'header', 'header'],
+        ['sidebar', 'main', 'main', 'main'],
+      ]}
+      fill
+    >
+      <AppShellHeader
+        authHandler={authHandler}
+        authLabel={authLabel}
+        logo={config?.site.logo}
+        logoSmall={config?.site.logoSmall}
+        userInitials={userInitials}
+        userProfile={user?.profile}
+        siteName={config?.site?.name}
+      />
+      <AppShellSidebar />
+      <AppShellMain>{children}</AppShellMain>
+    </Grid>
   );
 }

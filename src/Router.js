@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 export default function Router() {
-  const AppShell = lazy(() => import('./apps/AppShell'));
+  const AppShellDocs = lazy(() => import('./apps/AppShell/docs'));
   const Calendar = lazy(() => import('./apps/Calendar'));
   const ChatDocs = lazy(() => import('./apps/Chat/docs'));
   const Commerce = lazy(() => import('./apps/Commerce'));
@@ -18,7 +18,7 @@ export default function Router() {
       <Switch>
         <Route path="/" exact />
 
-        <Route component={AppShell} path="/app-shell" />
+        <Route component={AppShellDocs} path="/app-shell" />
         <Route component={Calendar} path="/calendar" />
         <Route component={ChatDocs} path="/chat" />
         <Route component={Commerce} path="/commerce" />

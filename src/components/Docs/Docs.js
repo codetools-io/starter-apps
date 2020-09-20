@@ -107,16 +107,19 @@ export function DocsProps({ properties }) {
             const formatAppend = args
               ? `(${args?.map((a) => a?.name)?.join(', ')})`
               : ``;
+            const areas = [
+              ['name', 'format', 'description'],
+              args ? ['properties', 'properties', 'properties'] : null,
+              returnValue
+                ? ['returnValue', 'returnValue', 'returnValue']
+                : null,
+            ]?.filter((area) => area);
             return (
               <Box background={isAlternate ? 'light-1' : 'white'}>
                 <Grid
                   columns={['auto', 'flex', '1/2']}
                   rows={['auto']}
-                  areas={[
-                    ['name', 'format', 'description'],
-                    ['properties', 'properties', 'properties'],
-                    ['returnValue', 'returnValue', 'returnValue'],
-                  ]}
+                  areas={areas}
                   pad="medium"
                   gap={{ row: 'medium', column: 'small' }}
                   align="baseline"
