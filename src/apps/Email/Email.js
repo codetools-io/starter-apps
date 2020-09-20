@@ -13,7 +13,7 @@ import {
 } from 'grommet';
 import { StatusGoodSmall } from 'grommet-icons';
 import Tag from 'components/Tag';
-import { DocsCard } from 'components/Docs';
+
 import useEmail from './useEmail';
 
 function EmailFolders({
@@ -255,7 +255,7 @@ function AppliedFilters({ labels, onClear }) {
   );
 }
 
-export default function () {
+export default function Email() {
   const {
     activeEmail,
     activeFolder,
@@ -276,101 +276,99 @@ export default function () {
   } = useEmail();
 
   return (
-    <DocsCard fill>
-      <Grid
-        columns={['1/4', '1/4', '1/4', '1/4']}
-        rows={['auto', 'flex', 'auto']}
-        areas={[
-          [
-            'EmailCompose',
-            'EmailThreadsHeader',
-            'EmailThreadHeader',
-            'EmailThreadHeader',
-          ],
-          ['EmailSidebar', 'EmailThreads', 'EmailThread', 'EmailThread'],
-          ['EmailSidebar', 'EmailThreads', 'EmailThread', 'EmailThread'],
-        ]}
-        fill
+    <Grid
+      columns={['1/4', '1/4', '1/4', '1/4']}
+      rows={['auto', 'flex', 'auto']}
+      areas={[
+        [
+          'EmailCompose',
+          'EmailThreadsHeader',
+          'EmailThreadHeader',
+          'EmailThreadHeader',
+        ],
+        ['EmailSidebar', 'EmailThreads', 'EmailThread', 'EmailThread'],
+        ['EmailSidebar', 'EmailThreads', 'EmailThread', 'EmailThread'],
+      ]}
+      fill
+    >
+      <Box
+        gridArea="EmailCompose"
+        pad="medium"
+        border={[{ side: 'bottom' }, { side: 'right' }]}
+        height="xsmall"
+        justify="center"
       >
-        <Box
-          gridArea="EmailCompose"
-          pad="medium"
-          border={[{ side: 'bottom' }, { side: 'right' }]}
-          height="xsmall"
-          justify="center"
-        >
-          <Button label="Compose" primary onClick={() => composeEmail()} />
-        </Box>
-        <Box gridArea="EmailSidebar" border="right" overflow="auto">
-          <EmailFolders
-            activeFolderId={activeFolderId}
-            folders={folders}
-            unreadEmails={unreadEmailsByFolderId}
-            onClick={(id) => openFolder(id)}
+        <Button label="Compose" primary onClick={() => composeEmail()} />
+      </Box>
+      <Box gridArea="EmailSidebar" border="right" overflow="auto">
+        <EmailFolders
+          activeFolderId={activeFolderId}
+          folders={folders}
+          unreadEmails={unreadEmailsByFolderId}
+          onClick={(id) => openFolder(id)}
+        />
+        <EmailLabels labels={labels} onClick={(id) => filterByLabel(id)} />
+      </Box>
+      <Box
+        gridArea="EmailThreadsHeader"
+        direction="row"
+        pad="medium"
+        border={[{ side: 'bottom' }, { side: 'right' }]}
+        height="xsmall"
+        align="center"
+        justify="between"
+      >
+        {activeLabels.length ? (
+          <AppliedFilters
+            emails={activeLabelEmails}
+            labels={activeLabels}
+            onClick={openEmail}
+            onClear={clearLabelFilters}
           />
-          <EmailLabels labels={labels} onClick={(id) => filterByLabel(id)} />
-        </Box>
-        <Box
-          gridArea="EmailThreadsHeader"
-          direction="row"
-          pad="medium"
-          border={[{ side: 'bottom' }, { side: 'right' }]}
-          height="xsmall"
-          align="center"
-          justify="between"
-        >
-          {activeLabels.length ? (
-            <AppliedFilters
-              emails={activeLabelEmails}
-              labels={activeLabels}
-              onClick={openEmail}
-              onClear={clearLabelFilters}
-            />
-          ) : (
-            <Heading level="4" margin="none">
-              {activeFolder?.name}
-            </Heading>
-          )}
-        </Box>
+        ) : (
+          <Heading level="4" margin="none">
+            {activeFolder?.name}
+          </Heading>
+        )}
+      </Box>
 
-        <Box gridArea="EmailThreads" border="right">
-          {activeLabels.length ? (
-            <EmailsByLabel
-              emails={activeLabelEmails}
-              labels={activeLabels}
-              onClick={openEmail}
-              onClear={clearLabelFilters}
-            />
-          ) : (
-            <EmailsByFolder
-              emails={activeFolderEmails}
-              onClick={openEmail}
-              onSearch={(value) => searchEmails(value)}
-            />
-          )}
-        </Box>
-        <Box
-          gridArea="EmailThreadHeader"
-          direction="row"
-          justify="between"
-          height="xsmall"
-          pad="medium"
-          border="bottom"
-        >
-          <Box>actions</Box>
-          <Box>toolbar</Box>
-        </Box>
-        <Box gridArea="EmailThread">
-          {activeEmail && (
-            <EmailThread
-              {...activeEmail}
-              labels={activeEmail.labelIds.map((labelId) => {
-                return labelsById[labelId];
-              })}
-            />
-          )}
-        </Box>
-      </Grid>
-    </DocsCard>
+      <Box gridArea="EmailThreads" border="right">
+        {activeLabels.length ? (
+          <EmailsByLabel
+            emails={activeLabelEmails}
+            labels={activeLabels}
+            onClick={openEmail}
+            onClear={clearLabelFilters}
+          />
+        ) : (
+          <EmailsByFolder
+            emails={activeFolderEmails}
+            onClick={openEmail}
+            onSearch={(value) => searchEmails(value)}
+          />
+        )}
+      </Box>
+      <Box
+        gridArea="EmailThreadHeader"
+        direction="row"
+        justify="between"
+        height="xsmall"
+        pad="medium"
+        border="bottom"
+      >
+        <Box>actions</Box>
+        <Box>toolbar</Box>
+      </Box>
+      <Box gridArea="EmailThread">
+        {activeEmail && (
+          <EmailThread
+            {...activeEmail}
+            labels={activeEmail.labelIds.map((labelId) => {
+              return labelsById[labelId];
+            })}
+          />
+        )}
+      </Box>
+    </Grid>
   );
 }

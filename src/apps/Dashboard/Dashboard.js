@@ -35,18 +35,16 @@ function DashboardSection({ id, title, widgets }) {
 export default function Dashboard() {
   const { widgetsBySection, sections } = useDashboard();
   return (
-    <DocsTheme>
-      <Box className="Dashboard" pad="medium" gap="large">
-        {sections.map((section) => {
-          return (
-            <DashboardSection
-              key={section?.id}
-              {...section}
-              widgets={widgetsBySection[section?.id]}
-            />
-          );
-        })}
-      </Box>
-    </DocsTheme>
+    <Box className="Dashboard" pad="medium" gap="large">
+      {sections.map((section) => {
+        return (
+          <DashboardSection
+            key={section?.id}
+            {...section}
+            widgets={widgetsBySection[section?.id]}
+          />
+        );
+      })}
+    </Box>
   );
 }

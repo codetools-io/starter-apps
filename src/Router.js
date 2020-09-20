@@ -9,8 +9,8 @@ export default function Router() {
   const CheckoutDocs = lazy(() => import('./apps/Commerce/Checkout/docs'));
   const CartDocs = lazy(() => import('./apps/Commerce/Cart/docs'));
   const ContactsDocs = lazy(() => import('./apps/Contacts/docs'));
-  const Dashboard = lazy(() => import('./apps/Dashboard'));
-  const Email = lazy(() => import('./apps/Email'));
+  const DashboardDocs = lazy(() => import('./apps/Dashboard/docs'));
+  const EmailDocs = lazy(() => import('./apps/Email/docs'));
   const Notes = lazy(() => import('./apps/Notes'));
   const Profile = lazy(() => import('./apps/Profile'));
   const ProjectManager = lazy(() => import('./apps/ProjectManager'));
@@ -27,8 +27,8 @@ export default function Router() {
         <Route component={CheckoutDocs} path="/commerce/checkout" />
         <Route component={CartDocs} path="/commerce/cart" />
         <Route component={ContactsDocs} path="/contacts" />
-        <Route component={Dashboard} path="/dashboard" />
-        <Route component={Email} path="/email" />
+        <Route component={DashboardDocs} path="/dashboard" />
+        <Route component={EmailDocs} path="/email" />
         <Route component={Notes} path="/notes" />
         <Route component={Profile} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />

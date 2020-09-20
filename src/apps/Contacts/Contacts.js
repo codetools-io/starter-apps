@@ -11,7 +11,7 @@ import {
   Text,
   TextInput,
 } from 'grommet';
-import { DocsCard } from 'components/Docs';
+
 import useContacts from './useContacts';
 
 function ContactsList({ contacts, contactId, openContact }) {
@@ -138,79 +138,73 @@ export default function Contacts({ children, ...props }) {
   } = useContacts();
 
   return (
-    <DocsCard fill>
-      <Grid
-        columns={['1/4', '1/4', '1/4', '1/4']}
-        rows={['auto', 'flex', 'auto']}
-        areas={[
-          [
-            'ContactsSearch',
-            'ContactsHeader',
-            'ContactsHeader',
-            'ContactsHeader',
-          ],
-          ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
-          ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
-        ]}
-        fill
+    <Grid
+      columns={['1/4', '1/4', '1/4', '1/4']}
+      rows={['auto', 'flex', 'auto']}
+      areas={[
+        [
+          'ContactsSearch',
+          'ContactsHeader',
+          'ContactsHeader',
+          'ContactsHeader',
+        ],
+        ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
+        ['ContactsSidebar', 'ContactsMain', 'ContactsMain', 'ContactsMain'],
+      ]}
+      fill
+    >
+      <Box
+        gridArea="ContactsSearch"
+        pad="medium"
+        border={[{ side: 'right' }, { side: 'bottom' }]}
       >
-        <Box
-          gridArea="ContactsSearch"
-          pad="medium"
-          border={[{ side: 'right' }, { side: 'bottom' }]}
-        >
-          <TextInput
-            onChange={(e) => searchContacts(e.target.value)}
-            onSelect={(e) => {
-              openContact(e.suggestion.value);
-              clearContactSearch();
-            }}
-            placeholder="Search contacts"
-            suggestions={contactSearchResults}
-            value={contactSearch}
-            plain
-          />
-        </Box>
-        <Box
-          gridArea="ContactsHeader"
-          pad="medium"
-          direction="row"
-          justify="end"
-          align="center"
-          border="bottom"
-        >
-          {isEditMode ? (
-            <Box direction="row" gap="small">
-              <Button label="Cancel" onClick={cancelEdit} />
-              <Button
-                label="Save"
-                primary
-                onClick={() => saveChanges({ ...contactUpdates })}
-              />
-            </Box>
-          ) : (
+        <TextInput
+          onChange={(e) => searchContacts(e.target.value)}
+          onSelect={(e) => {
+            openContact(e.suggestion.value);
+            clearContactSearch();
+          }}
+          placeholder="Search contacts"
+          suggestions={contactSearchResults}
+          value={contactSearch}
+          plain
+        />
+      </Box>
+      <Box
+        gridArea="ContactsHeader"
+        pad="medium"
+        direction="row"
+        justify="end"
+        align="center"
+        border="bottom"
+      >
+        {isEditMode ? (
+          <Box direction="row" gap="small">
+            <Button label="Cancel" onClick={cancelEdit} />
             <Button
-              label="Edit"
+              label="Save"
               primary
-              onClick={() => editContact(contactId)}
+              onClick={() => saveChanges({ ...contactUpdates })}
             />
-          )}
-        </Box>
-        <Box gridArea="ContactsSidebar" pad="none" border={[{ side: 'right' }]}>
-          <ContactsList
-            contacts={contacts}
-            contactId={contactId}
-            openContact={openContact}
-          />
-        </Box>
-        <Box gridArea="ContactsMain" pad="medium">
-          {isEditMode ? (
-            <ContactForm fields={contactUpdates} update={updateContact} />
-          ) : (
-            <Contact {...contact} />
-          )}
-        </Box>
-      </Grid>
-    </DocsCard>
+          </Box>
+        ) : (
+          <Button label="Edit" primary onClick={() => editContact(contactId)} />
+        )}
+      </Box>
+      <Box gridArea="ContactsSidebar" pad="none" border={[{ side: 'right' }]}>
+        <ContactsList
+          contacts={contacts}
+          contactId={contactId}
+          openContact={openContact}
+        />
+      </Box>
+      <Box gridArea="ContactsMain" pad="medium">
+        {isEditMode ? (
+          <ContactForm fields={contactUpdates} update={updateContact} />
+        ) : (
+          <Contact {...contact} />
+        )}
+      </Box>
+    </Grid>
   );
 }
