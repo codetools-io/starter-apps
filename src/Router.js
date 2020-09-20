@@ -12,7 +12,7 @@ export default function Router() {
   const DashboardDocs = lazy(() => import('./apps/Dashboard/docs'));
   const EmailDocs = lazy(() => import('./apps/Email/docs'));
   const NotesDocs = lazy(() => import('./apps/Notes/docs'));
-  const Profile = lazy(() => import('./apps/Profile'));
+  const ProfileDocs = lazy(() => import('./apps/Profile/docs'));
   const ProjectManager = lazy(() => import('./apps/ProjectManager'));
 
   return (
@@ -30,7 +30,7 @@ export default function Router() {
         <Route component={DashboardDocs} path="/dashboard" />
         <Route component={EmailDocs} path="/email" />
         <Route component={NotesDocs} path="/notes" />
-        <Route component={Profile} path="/profile" />
+        <Route component={ProfileDocs} path="/profile" />
         <Route component={ProjectManager} path="/project-manager" />
       </Switch>
     </Suspense>
