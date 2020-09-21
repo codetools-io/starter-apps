@@ -11,6 +11,8 @@ const ProfileWithSchema = describe(Profile)
   .description('An app for showing social information about a person.')
   .usage(usage);
 
+ProfileWithSchema.displayName = 'Profile';
+
 ProfileWithSchema.propTypes = {
   children: PropTypes.element.description(
     'The components to show inside of the main area of the Profile.'

@@ -19,6 +19,7 @@ export default function AppShellHeader({
     <Header gridArea="header" className="AppShellHeader">
       <Grid
         columns={['1/4', '3/4']}
+        rows={['auto']}
         areas={[['logo', 'menu']]}
         align="center"
         fill

@@ -23,6 +23,8 @@ const ChatWithSchema = describe(Chat)
   .description('An app for facilitating real-time text communication.')
   .usage(usage);
 
+ChatWithSchema.displayName = 'Chat';
+
 ChatWithSchema.propTypes = {
   createRecord: PropTypes.func.description({
     overview: 'Creates a single record at the external source.',

@@ -12,7 +12,8 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
-import MonacoEditor from 'react-monaco-editor';
+// import MonacoEditor from 'react-monaco-editor';
+import MonacoEditor from '@monaco-editor/react';
 import theme from './theme';
 
 const options = {
@@ -20,6 +21,7 @@ const options = {
   minimap: {
     enabled: false,
   },
+  readOnly: true,
 };
 export default function Docs({ children, ...props }) {
   return (
@@ -71,7 +73,7 @@ export function DocsExample({ children, usage }) {
         </Tabs>
       </Box>
       {showPreview && (
-        <DocsCard height="large" flex={false} overflow="auto">
+        <DocsCard height={{ min: 'large' }} flex={false} overflow="auto">
           {children}
         </DocsCard>
       )}
@@ -79,12 +81,10 @@ export function DocsExample({ children, usage }) {
         <DocsCard height="large" pad="medium" flex={false}>
           <MonacoEditor
             language="javascript"
-            theme="vs-light"
-            height="600"
+            theme="light"
+            height="100%"
             value={usage?.trim()}
             options={options}
-            onChange={() => {}}
-            editorDidMount={() => {}}
           />
         </DocsCard>
       )}
@@ -122,12 +122,14 @@ export function DocsProps({ properties }) {
                   areas={areas}
                   pad="medium"
                   gap={{ row: 'medium', column: 'small' }}
-                  align="baseline"
+                  align="center"
                 >
                   <Box gridArea="name" direction="row" gap="small">
                     <Text weight="bold">{name}</Text>
                   </Box>
-                  <Markdown gridArea="format">{`\`${format}${formatAppend}\``}</Markdown>
+                  <Box gridArea="format">
+                    <Markdown>{`\`${format}${formatAppend}\``}</Markdown>
+                  </Box>
                   <Paragraph
                     gridArea="description"
                     margin="none"

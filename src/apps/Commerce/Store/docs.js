@@ -11,6 +11,8 @@ const StoreWithSchema = describe(Store)
   .description('An app for showing products to a customer.')
   .usage(usage);
 
+StoreWithSchema.displayName = 'Store';
+
 StoreWithSchema.propTypes = {
   children: PropTypes.element.description(
     'The components to show inside of the main area of the Store.'

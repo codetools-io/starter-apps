@@ -11,6 +11,8 @@ const CartWithSchema = describe(Cart)
   .description('An app for showing items that a customer intends to purchase.')
   .usage(usage);
 
+CartWithSchema.displayName = 'Cart';
+
 CartWithSchema.propTypes = {
   children: PropTypes.element.description(
     'The components to show inside of the main area of the Cart.'

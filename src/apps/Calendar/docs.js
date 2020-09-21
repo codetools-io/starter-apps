@@ -17,6 +17,8 @@ CalendarWithSchema.propTypes = {
   ),
 };
 
+CalendarWithSchema.displayName = 'Calendar';
+
 export default () => {
   return <DocsPage component={CalendarWithSchema} />;
 };

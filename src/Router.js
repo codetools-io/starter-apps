@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 export default function Router() {
   const AppShellDocs = lazy(() => import('./apps/AppShell/docs'));
@@ -18,7 +18,7 @@ export default function Router() {
   return (
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>
-        <Route path="/" exact />
+        <Redirect from="/" to="/app-shell" exact />
         <Route component={AppShellDocs} path="/app-shell" />
         <Route component={CalendarDocs} path="/calendar" />
         <Route component={ChatDocs} path="/chat" />

@@ -11,6 +11,8 @@ const ProjectManagerWithSchema = describe(ProjectManager)
   .description('An app for managing team projects.')
   .usage(usage);
 
+ProjectManagerWithSchema.displayName = 'ProjectManager';
+
 ProjectManagerWithSchema.propTypes = {
   children: PropTypes.element.description(
     'The components to show inside of the main area of the ProjectManager.'

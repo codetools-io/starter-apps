@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Grommet } from 'grommet';
+import { Grid, Grommet } from 'grommet';
 import * as config from 'config';
 import AppShellMain from './AppShellMain';
 import AppShellSidebar from './AppShellSidebar';

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Header, Sidebar, ThemeContext } from 'grommet';
 import { ReactComponent as Logo } from './img/logo-1.svg';
 
@@ -23,14 +24,23 @@ export default function AppShellSidebar({ background }) {
           align="center"
           justify="center"
         >
-          <Logo
+          <Link
+            to="/"
             style={{
               height: '100%',
               maxWidth: '100%',
               maxHeight: '100%',
               color: '#fff',
             }}
-          />
+          >
+            <Logo
+              style={{
+                height: '100%',
+                maxWidth: '100%',
+                maxHeight: '100%',
+              }}
+            />
+          </Link>
         </Header>
         <AppShellNav />
       </Box>

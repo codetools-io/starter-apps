@@ -19,6 +19,8 @@ AppShellWithSchema.propTypes = {
   ),
 };
 
+AppShellWithSchema.displayName = 'AppShell';
+
 export default () => {
   return <DocsPage component={AppShellWithSchema} />;
 };

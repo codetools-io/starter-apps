@@ -13,6 +13,8 @@ const DashboardWithSchema = describe(Dashboard)
   )
   .usage(usage);
 
+DashboardWithSchema.displayName = 'Dashboard';
+
 DashboardWithSchema.propTypes = {
   children: PropTypes.element.description(
     'The components to show inside of the main area of the Dashboard.'

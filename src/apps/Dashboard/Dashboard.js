@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { Box, Heading, Paragraph } from 'grommet';
-import { DocsTheme } from 'components/Docs';
 import useDashboard from './useDashboard';
 
 function DashboardWidget({ type, ...props }) {
