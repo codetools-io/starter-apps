@@ -10,4 +10,24 @@ export const brand = {
     },
     extend: undefined,
   },
+  table: {
+    header: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
+    },
+    body: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
+    },
+    footer: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
+    },
+  },
 };
