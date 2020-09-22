@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
+  Button,
   Card,
   CheckBoxGroup,
   Form,
@@ -13,26 +14,41 @@ import {
   Stack,
   Text,
 } from 'grommet';
+import { FormClose } from 'grommet-icons';
 import accounting from 'accounting';
 import { titleize } from 'inflection';
 import Rating from 'components/Rating';
 import useStore from './useStore';
 
-function StoreProducts({ products }) {
+function StoreProducts({ products, addProductToCart }) {
   return (
-    <Grid columns="medium" gap="medium">
+    <Grid columns="medium" gap="medium" pad={{ vertical: 'medium' }}>
       <InfiniteScroll step={10} items={products}>
         {(product) => {
-          return <StoreProduct key={product.id} {...product} />;
+          return (
+            <StoreProduct
+              key={product.id}
+              addProductToCart={addProductToCart}
+              {...product}
+            />
+          );
         }}
       </InfiniteScroll>
     </Grid>
   );
 }
 
-function StoreProduct({ id, price, image, title, ...props }) {
+function StoreProduct({
+  id,
+  price,
+  image,
+  title,
+  description,
+  addProductToCart,
+  ...props
+}) {
   return (
-    <Card background="white" {...props}>
+    <Card background="white" elevation="none" border {...props}>
       <Stack anchor="top-right" fit>
         <Image fit="cover" src={image} fill />
         <Box
@@ -43,10 +59,19 @@ function StoreProduct({ id, price, image, title, ...props }) {
           <Text>{accounting.formatMoney(price)}</Text>
         </Box>
       </Stack>
-      <Box pad="small">
+      <Box pad="small" gap="small">
         <Heading level={4} margin="none">
           {title}
         </Heading>
+
+        <Text truncate>{description}</Text>
+        <Button
+          label="Add to Cart"
+          onClick={() =>
+            addProductToCart({ id, price, image, title, description })
+          }
+          primary
+        />
       </Box>
     </Card>
   );
@@ -194,6 +219,56 @@ function StoreSidebar({ categories, brands, updateFilters, filters }) {
     </Form>
   );
 }
+
+function StoreNotification({ id, icon, message, onDismiss }) {
+  const Icon = icon;
+  const [animation, setAnimation] = useState('fadeIn');
+  function dismissNotification() {
+    setAnimation('fadeOut');
+    setTimeout(() => onDismiss(id), 1000);
+  }
+  useEffect(() => {
+    const timeoutId = setTimeout(() => dismissNotification(), 3000);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+  return (
+    <Box
+      direction="row"
+      align="center"
+      justify="between"
+      gap="small"
+      round="medium"
+      elevation="medium"
+      height={{ min: 'xxsmall' }}
+      pad={{ vertical: 'xsmall', horizontal: 'small' }}
+      background="brand"
+      animation={animation}
+    >
+      <Box align="center" direction="row" gap="small">
+        <Icon />
+        <Text>{message}</Text>
+      </Box>
+      <Button icon={<FormClose />} onClick={dismissNotification} plain />
+    </Box>
+  );
+}
+
+function StoreNotifications({ notifications, onDismiss, ...props }) {
+  return (
+    <Box align="center" justify="start" gap="small" {...props}>
+      {notifications?.map?.((notification) => {
+        return (
+          <StoreNotification
+            key={notification?.id}
+            onDismiss={onDismiss}
+            {...notification}
+          />
+        );
+      })}
+    </Box>
+  );
+}
 export default function Store() {
   const {
     filteredProducts,
@@ -201,26 +276,46 @@ export default function Store() {
     brands,
     updateFilters,
     filters,
+    addProductToCart,
+    notifications,
+    dismissNotification,
   } = useStore();
-  return (
-    <Grid
-      className="Store"
-      columns={['1/4', '3/4']}
-      areas={[['StoreSidebar', 'StoreListing']]}
-      fill
-    >
-      <Box gridArea="StoreSidebar">
-        <StoreSidebar
-          categories={categories}
-          brands={brands}
-          filters={filters}
-          updateFilters={updateFilters}
-        />
-      </Box>
 
-      <Box gridArea="StoreListing" pad={{ horizontal: 'medium' }}>
-        <StoreProducts products={filteredProducts} />
-      </Box>
-    </Grid>
+  return (
+    <Box>
+      <Grid
+        className="Store"
+        columns={['1/4', '3/4']}
+        rows={['auto']}
+        areas={[['StoreSidebar', 'StoreListing']]}
+        fill
+      >
+        <Box gridArea="StoreSidebar">
+          <StoreSidebar
+            categories={categories}
+            brands={brands}
+            filters={filters}
+            updateFilters={updateFilters}
+          />
+        </Box>
+
+        <Box
+          gridArea="StoreListing"
+          pad={{ horizontal: 'medium' }}
+          style={{ position: 'relative', transform: 'scale(1)' }}
+        >
+          <StoreProducts
+            products={filteredProducts}
+            addProductToCart={addProductToCart}
+          />
+
+          <StoreNotifications
+            notifications={notifications}
+            onDismiss={dismissNotification}
+            style={{ position: 'sticky', bottom: '95%' }}
+          />
+        </Box>
+      </Grid>
+    </Box>
   );
 }

@@ -1,3 +1,5 @@
+import { StatusGood } from 'grommet-icons';
+
 const { PUBLIC_URL } = process.env;
 
 export const products = [
@@ -110,3 +112,7 @@ export const brands = [
     name: 'New Food Company',
   },
 ];
+
+export const cart = [];
+
+export const notifications = [];

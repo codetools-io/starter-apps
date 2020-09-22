@@ -1,8 +1,11 @@
 import { useMemo, useState } from 'react';
 import { inRange } from 'lodash';
-import * as config from './config';
+import { StatusGood } from 'grommet-icons';
+import * as config from '../config';
 
 export default function useStore() {
+  const [cart, setCart] = useState(config?.cart);
+  const [notifications, setNotifications] = useState(config?.notifications);
   const [products] = useState(config?.products);
   const [categories] = useState(config?.categories);
   const [brands] = useState(config?.brands);
@@ -38,11 +41,29 @@ export default function useStore() {
 
     return filteredProducts;
   }, [products, filters]);
-  const store = useMemo(() => {
+
+  return useMemo(() => {
     function updateFilters(updates) {
       setFilters(updates);
     }
-
+    function addProductToCart(product) {
+      setCart([...cart, { ...product }]);
+      notifyUser({
+        id: `notification-${cart?.length}-${product?.id}`,
+        icon: StatusGood,
+        message: `${product?.title} was added to your cart`,
+      });
+    }
+    function notifyUser({ id, icon, message }) {
+      setNotifications([...notifications, { id, icon, message }]);
+    }
+    function dismissNotification(notificationId) {
+      setNotifications(
+        notifications?.filter(
+          (notification) => notification?.id !== notificationId
+        )
+      );
+    }
     return {
       products,
       categories,
@@ -50,8 +71,10 @@ export default function useStore() {
       filters,
       updateFilters,
       filteredProducts,
+      addProductToCart,
+      notifications,
+      notifyUser,
+      dismissNotification,
     };
-  }, [products, categories, brands, filters, filteredProducts]);
-
-  return store;
+  }, [products, categories, brands, filters, filteredProducts, notifications]);
 }
