@@ -1,5 +1,3 @@
-import { StatusGood } from 'grommet-icons';
-
 const { PUBLIC_URL } = process.env;
 
 export const products = [

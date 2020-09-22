@@ -69,6 +69,7 @@ export default function useStore() {
     }
     return {
       products,
+      cart,
       categories,
       brands,
       filters,
@@ -79,5 +80,13 @@ export default function useStore() {
       notifyUser,
       dismissNotification,
     };
-  }, [products, categories, brands, filters, filteredProducts, notifications]);
+  }, [
+    cart,
+    products,
+    categories,
+    brands,
+    filters,
+    filteredProducts,
+    notifications,
+  ]);
 }
