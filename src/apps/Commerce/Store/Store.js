@@ -220,18 +220,9 @@ function StoreSidebar({ categories, brands, updateFilters, filters }) {
   );
 }
 
-function StoreNotification({ id, icon, message, onDismiss }) {
+function StoreNotification({ id, icon, message, expiration, onDismiss }) {
   const Icon = icon;
-  const [animation, setAnimation] = useState('fadeIn');
-  function dismissNotification() {
-    setAnimation('fadeOut');
-    setTimeout(() => onDismiss(id), 1000);
-  }
-  useEffect(() => {
-    const timeoutId = setTimeout(() => dismissNotification(), 3000);
 
-    return () => clearTimeout(timeoutId);
-  }, []);
   return (
     <Box
       direction="row"
@@ -242,21 +233,27 @@ function StoreNotification({ id, icon, message, onDismiss }) {
       elevation="medium"
       height={{ min: 'xxsmall' }}
       pad={{ vertical: 'xsmall', horizontal: 'small' }}
+      animation="fadeIn"
       background="brand"
-      animation={animation}
     >
       <Box align="center" direction="row" gap="small">
         <Icon />
         <Text>{message}</Text>
       </Box>
-      <Button icon={<FormClose />} onClick={dismissNotification} plain />
+      <Button icon={<FormClose />} onClick={() => onDismiss(id)} plain />
     </Box>
   );
 }
 
 function StoreNotifications({ notifications, onDismiss, ...props }) {
   return (
-    <Box align="center" justify="start" gap="small" {...props}>
+    <Box
+      align="center"
+      justify="start"
+      gap="small"
+      style={{ position: 'sticky', bottom: '98%' }}
+      {...props}
+    >
       {notifications?.map?.((notification) => {
         return (
           <StoreNotification
@@ -312,7 +309,6 @@ export default function Store() {
           <StoreNotifications
             notifications={notifications}
             onDismiss={dismissNotification}
-            style={{ position: 'sticky', bottom: '95%' }}
           />
         </Box>
       </Grid>

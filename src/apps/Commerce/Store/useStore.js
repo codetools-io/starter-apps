@@ -47,15 +47,18 @@ export default function useStore() {
       setFilters(updates);
     }
     function addProductToCart(product) {
-      setCart([...cart, { ...product }]);
-      notifyUser({
+      const notification = {
         id: `notification-${cart?.length}-${product?.id}`,
         icon: StatusGood,
         message: `${product?.title} was added to your cart`,
-      });
+        expiration: Date.now() + 5000,
+      };
+
+      setCart([...cart, { ...product }]);
+      notifyUser(notification);
     }
-    function notifyUser({ id, icon, message }) {
-      setNotifications([...notifications, { id, icon, message }]);
+    function notifyUser({ id, icon, message, expiration }) {
+      setNotifications([...notifications, { id, icon, message, expiration }]);
     }
     function dismissNotification(notificationId) {
       setNotifications(
