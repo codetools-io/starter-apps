@@ -39,7 +39,7 @@ export function find(collection, payload) {
   return _find(collection, payload);
 }
 
-export function insertAfterIndex(collection, index, payload) {
+export function insertAfterIndex(collection, payload, index) {
   return [
     ...collection.slice(0, index + 1),
     payload,
@@ -47,13 +47,13 @@ export function insertAfterIndex(collection, index, payload) {
   ];
 }
 
-export function insertBeforeIndex(collection, index, payload) {
+export function insertBeforeIndex(collection, payload, index) {
   return [...collection.slice(0, index), payload, ...collection.slice(index)];
 }
 
-export function insertAfterMatch(collection, props, payload) {
+export function insertAfterMatch(collection, payload, selector) {
   const matchIndex = collection.findIndex((item) => {
-    return Object.entries(props).every(([key, value]) => {
+    return Object.entries(selector).every(([key, value]) => {
       return item[key] === value;
     });
   });
@@ -64,9 +64,9 @@ export function insertAfterMatch(collection, props, payload) {
   ];
 }
 
-export function insertBeforeMatch(collection, props, payload) {
+export function insertBeforeMatch(collection, payload, selector) {
   const matchIndex = collection.findIndex((item) => {
-    return Object.entries(props).every(([key, value]) => {
+    return Object.entries(selector).every(([key, value]) => {
       return item[key] === value;
     });
   });
@@ -76,20 +76,16 @@ export function insertBeforeMatch(collection, props, payload) {
     ...collection.slice(matchIndex),
   ];
 }
-export function insertBefore(collection, criteria, payload) {
-  if (typeof criteria === 'number') {
-    insertBeforeIndex(collection, criteria, payload);
-  } else {
-    insertBeforeMatch(collection, criteria, payload);
-  }
+export function insertBefore(collection, payload, selector) {
+  return typeof criteria === 'number'
+    ? insertBeforeIndex(collection, payload, selector)
+    : insertBeforeMatch(collection, payload, selector);
 }
 
-export function insertAfter(collection, criteria, payload) {
-  if (typeof criteria === 'number') {
-    insertAfterIndex(collection, criteria, payload);
-  } else {
-    insertAfterMatch(collection, criteria, payload);
-  }
+export function insertAfter(collection, payload, selector) {
+  return typeof selector === 'number'
+    ? insertAfterIndex(collection, payload, selector)
+    : insertAfterMatch(collection, payload, selector);
 }
 
 export function moveAfter(collection, sourceSelector, targetSelector) {
@@ -176,7 +172,7 @@ export function toCollection(object) {
   });
 }
 
-export function collection(c) {
+export function collection(c, options = {}) {
   return {
     pipe(...fns) {
       const [fn, ...rest] = fns;

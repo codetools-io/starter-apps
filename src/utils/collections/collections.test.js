@@ -68,20 +68,28 @@ describe('collections', () => {
     expect(item).toEqual({ id: 4, name: 'Watermelon' });
   });
   test('can insert an item after another item by index', () => {
-    const collection = collections.insertAfterIndex(fruits, 3, {
-      id: 13,
-      name: 'Blackberry',
-    });
+    const collection = collections.insertAfterIndex(
+      fruits,
+      {
+        id: 13,
+        name: 'Blackberry',
+      },
+      3
+    );
 
     expect(collection[3].id).toEqual(3);
     expect(collection[4].id).toEqual(13);
     expect(collection[5].id).toEqual(4);
   });
   test('can insert an item before another item by index', () => {
-    const collection = collections.insertBeforeIndex(fruits, 3, {
-      id: 13,
-      name: 'Blackberry',
-    });
+    const collection = collections.insertBeforeIndex(
+      fruits,
+      {
+        id: 13,
+        name: 'Blackberry',
+      },
+      3
+    );
 
     expect(collection[1].id).toEqual(1);
     expect(collection[2].id).toEqual(2);
@@ -91,11 +99,11 @@ describe('collections', () => {
   test('can insert an item after another item by property match', () => {
     const collection = collections.insertAfterMatch(
       fruits,
-      { name: 'Blueberry' },
       {
         id: 13,
         name: 'Blackberry',
-      }
+      },
+      { name: 'Blueberry' }
     );
 
     expect(collection[10]).toEqual({
@@ -110,11 +118,11 @@ describe('collections', () => {
   test('can insert an item before another item by property match', () => {
     const collection = collections.insertBeforeMatch(
       fruits,
-      { name: 'Blueberry' },
       {
         id: 13,
         name: 'Blackberry',
-      }
+      },
+      { name: 'Blueberry' }
     );
 
     expect(collection[10]).toEqual({
