@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { reject, orderBy, keyBy } from 'lodash';
-import * as util from 'utils/collection';
+import * as collections from 'utils/collections';
 
 export default function useStore(initialState = []) {
   const [state, setState] = useState(initialState);
@@ -16,21 +16,22 @@ export default function useStore(initialState = []) {
   const load = useCallback((payload) => setState(payload), []);
 
   const create = useCallback(
-    (payload) => setState(util.create(state, payload)),
+    (payload) => setState(collections.append(state, payload)),
     [state]
   );
 
   const update = useCallback(
-    (payload) => setState(util.update(state, payload)),
+    (payload) => setState(collections.update(state, payload)),
     [state]
   );
 
-  const patch = useCallback((payload) => setState(util.patch(state, payload)), [
-    state,
-  ]);
+  const patch = useCallback(
+    (payload) => setState(collections.patch(state, payload)),
+    [state]
+  );
 
   const remove = useCallback(
-    (payload) => setState(util.remove(state, payload)),
+    (payload) => setState(collections.remove(state, payload)),
     [state]
   );
 
@@ -38,10 +39,10 @@ export default function useStore(initialState = []) {
     (payload) => {
       return {
         before(index) {
-          setState(util.insertBefore(state, index, payload));
+          setState(collections.insertBefore(state, index, payload));
         },
         after(index) {
-          setState(util.insertAfter(state, index, payload));
+          setState(collections.insertAfter(state, index, payload));
         },
       };
     },
@@ -52,10 +53,10 @@ export default function useStore(initialState = []) {
     (payload) => {
       return {
         before(index) {
-          setState(util.moveBefore(state, index, payload));
+          setState(collections.moveBefore(state, index, payload));
         },
         after(index) {
-          setState(util.moveAfter(state, index, payload));
+          setState(collections.moveAfter(state, index, payload));
         },
       };
     },
