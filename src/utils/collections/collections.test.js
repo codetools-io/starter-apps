@@ -131,7 +131,6 @@ describe('collections', () => {
     });
     expect(collection[11]).toEqual({ id: 10, name: 'Blueberry' });
   });
-
   test('can move an item after another item', () => {
     const collection = collections.moveAfter(fruits, { id: 0 }, { id: 3 });
 
@@ -144,7 +143,6 @@ describe('collections', () => {
       { id: 5, name: 'Kiwi' },
     ]);
   });
-
   test('can move an item before another item', () => {
     const collection = collections.moveBefore(fruits, { id: 3 }, { id: 2 });
 
@@ -155,7 +153,6 @@ describe('collections', () => {
       { id: 2, name: 'Pear' },
     ]);
   });
-
   test('can pipe through functions', () => {
     const result = collections.collection(fruits).pipe(
       (c) => {

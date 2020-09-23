@@ -74,7 +74,9 @@ export function DocsExample({ children, usage }) {
       </Box>
       {showPreview && (
         <DocsCard height="large" flex={false}>
-          <Box overflow="auto">{children}</Box>
+          <Box overflow="auto" fill>
+            {children}
+          </Box>
         </DocsCard>
       )}
       {showCode && (
