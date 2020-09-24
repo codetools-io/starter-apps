@@ -66,7 +66,9 @@ export function DocsExample({ children, usage }) {
   return (
     <Box gap="small" flex={false}>
       <Box direction="row" justify="between">
-        <Heading level={4} margin="none"></Heading>
+        <Heading level={4} margin="none">
+          Demo
+        </Heading>
         <Tabs activeIndex={active} onActive={(next) => setActive(next)}>
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
