@@ -20,7 +20,14 @@ export default function TableWidget({
   ...props
 }) {
   return (
-    <Card background="white" pad="medium" gap="medium" {...props}>
+    <Card
+      background="white"
+      pad="medium"
+      gap="medium"
+      elevation="none"
+      border
+      {...props}
+    >
       {title && (
         <Heading level="4" margin="none">
           {title}

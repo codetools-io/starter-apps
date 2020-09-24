@@ -28,6 +28,8 @@ export default function ProgressWidget({ title, icon, data, ...props }) {
       pad="medium"
       gap="medium"
       direction="row"
+      elevation="none"
+      border
       {...props}
     >
       <Box gap="medium" flex>
