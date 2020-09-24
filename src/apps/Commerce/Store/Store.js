@@ -14,11 +14,27 @@ import {
   Stack,
   Text,
 } from 'grommet';
-import { FormClose } from 'grommet-icons';
+import { FormClose, Star } from 'grommet-icons';
 import accounting from 'accounting';
 import { titleize } from 'inflection';
-import Rating from 'components/Rating';
+
 import useStore from './useStore';
+
+function StoreProductRating({ total = 5, selected = 0 }) {
+  const stars = Array(total).fill(Star);
+
+  return (
+    <Box direction="row">
+      {stars.map((Star, index) => {
+        if (index < selected) {
+          return <Star key={`rating-star-${index}`} color="#FFC95E" />;
+        }
+
+        return <Star key={`rating-star-${index}`} />;
+      })}
+    </Box>
+  );
+}
 
 function StoreProducts({ products, addProductToCart }) {
   return (
@@ -183,27 +199,27 @@ function StoreSidebar({ categories, brands, updateFilters, filters }) {
               options={[
                 {
                   id: 'rating-5',
-                  label: <Rating selected={5} />,
+                  label: <StoreProductRating selected={5} />,
                   value: 5,
                 },
                 {
                   id: 'rating-4',
-                  label: <Rating selected={4} />,
+                  label: <StoreProductRating selected={4} />,
                   value: 4,
                 },
                 {
                   id: 'rating-3',
-                  label: <Rating selected={3} />,
+                  label: <StoreProductRating selected={3} />,
                   value: 3,
                 },
                 {
                   id: 'rating-2',
-                  label: <Rating selected={2} />,
+                  label: <StoreProductRating selected={2} />,
                   value: 2,
                 },
                 {
                   id: 'rating-1',
-                  label: <Rating selected={1} />,
+                  label: <StoreProductRating selected={1} />,
                   value: 1,
                 },
                 {
