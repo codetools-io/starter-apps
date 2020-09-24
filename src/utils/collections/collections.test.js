@@ -42,12 +42,14 @@ describe('collections', () => {
     expect(collection[0].name).toEqual('Blackberry');
   });
   test('can remove an item', () => {
-    const nextName = fruits[1].name;
-    const collection = collections.remove(fruits, {
-      id: 0,
+    const collection1 = collections.remove(fruits, {
+      id: 2,
     });
-    expect(collection.length).toEqual(11);
-    expect(collection[0].name).toEqual(nextName);
+    const collection2 = collections.remove(fruits, 4);
+    expect(collection1.length).toEqual(11);
+    expect(collection1[2].name).not.toEqual('Pear');
+    expect(collection2.length).toEqual(11);
+    expect(collection2[4].name).not.toEqual('Watermelon');
   });
   test('can update item properties', () => {
     const collection = collections.patch(fruits, {

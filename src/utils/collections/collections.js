@@ -1,6 +1,3 @@
-import { find as _find, keyBy, reject, orderBy } from 'lodash';
-import dotProp from 'dot-prop-immutable';
-
 // Collection Operations
 export function append(collection, payload) {
   return [...collection, payload];
@@ -19,8 +16,14 @@ export function update(collection, payload) {
     return payload;
   });
 }
-export function remove(collection, payload) {
-  return reject(collection, payload);
+export function remove(collection, selector) {
+  const index =
+    typeof selector === 'number'
+      ? selector
+      : collection.findIndex((item) =>
+          Object.entries(selector).every(([key, value]) => item[key] === value)
+        );
+  return [...collection.slice(0, index), ...collection.slice(index + 1)];
 }
 export function patch(collection, payload) {
   return collection.map((item) => {
@@ -35,8 +38,12 @@ export function patch(collection, payload) {
   });
 }
 
-export function find(collection, payload) {
-  return _find(collection, payload);
+export function find(collection, selector) {
+  return typeof selector === 'number'
+    ? collection[selector]
+    : collection.find((item) =>
+        Object.entries(selector).every(([key, value]) => item[key] === value)
+      );
 }
 
 export function insertAfterIndex(collection, payload, index) {
