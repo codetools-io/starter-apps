@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Box,
+  Button,
   Card,
   Grid,
   Heading,
@@ -23,11 +24,53 @@ const options = {
   },
   readOnly: true,
 };
+
 export default function Docs({ children, ...props }) {
   return (
     <Box className="Docs" {...props}>
       {children}
     </Box>
+  );
+}
+
+export function DocsCode({ files = [], options }) {
+  console.log(files);
+  const [activeFileIndex, setActiveFileIndex] = useState(0);
+  return (
+    <DocsCard height="large" pad="medium" flex={false}>
+      <Grid columns={['auto', 'flex']} rows={['full']} fill>
+        <Box border>
+          {files.map((file, index) => {
+            return (
+              <Box
+                key={`file-${file?.app}-${file?.filename}`}
+                background={index === activeFileIndex ? 'white' : 'shade-1'}
+                border="bottom"
+              >
+                <Button
+                  label={
+                    <Box direction="row" justify="center" pad="small">
+                      {file?.filename}
+                    </Box>
+                  }
+                  onClick={() => setActiveFileIndex(index)}
+                  plain
+                />
+              </Box>
+            );
+          })}
+        </Box>
+        <Box border>
+          <MonacoEditor
+            language="javascript"
+            theme="light"
+            height="100%"
+            value={files[activeFileIndex]?.content}
+            options={options}
+          />
+        </Box>
+      </Grid>
+    </DocsCard>
   );
 }
 
@@ -59,7 +102,7 @@ export function DocsOverview({ name, description }) {
   );
 }
 
-export function DocsExample({ children, usage }) {
+export function DocsExample({ children, files = [] }) {
   const [active, setActive] = useState(0);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
@@ -81,17 +124,7 @@ export function DocsExample({ children, usage }) {
           </Box>
         </DocsCard>
       )}
-      {showCode && (
-        <DocsCard height="large" pad="medium" flex={false}>
-          <MonacoEditor
-            language="javascript"
-            theme="light"
-            height="100%"
-            value={usage?.trim()}
-            options={options}
-          />
-        </DocsCard>
-      )}
+      {showCode && <DocsCode files={files} options={options} />}
     </Box>
   );
 }
@@ -198,12 +231,23 @@ export function DocsProps({ properties }) {
 }
 
 export function DocsPage({ component: Component, ...props }) {
+  const { PUBLIC_URL } = process.env;
   const { name, description, properties, usage } = Component.toJSON();
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch(`${PUBLIC_URL}/docs/${name}.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <Box className="DocsPage" gap="large" fill="horizontal" {...props}>
       <DocsOverview name={name} description={description} />
-      <DocsExample usage={usage}>
+      <DocsExample files={data?.files || []}>
         <Component />
       </DocsExample>
       <DocsProps properties={properties} />
