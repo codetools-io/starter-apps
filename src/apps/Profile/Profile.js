@@ -1,11 +1,44 @@
-import React from 'react';
-import { Box, Heading, Image, Tabs, Tab, Text } from 'grommet';
+import React, { useContext } from 'react';
+import {
+  Box,
+  Card,
+  CardBody,
+  Grid,
+  Heading,
+  Image,
+  Paragraph,
+  ResponsiveContext,
+  Stack,
+  Tabs,
+  Tab,
+  Text,
+} from 'grommet';
 
-import Gallery from 'components/Gallery';
-import GridLayout from 'components/GridLayout';
-import Masthead from 'components/Masthead';
-import ResourceCard from 'components/ResourceCard';
 import useProfile from './useProfile';
+
+function ProfileGrid({
+  children,
+  columnCount = 'fit',
+  columnSize = 'medium',
+  gridProps = {},
+  ...props
+}) {
+  const size = useContext(ResponsiveContext);
+
+  return (
+    <Box {...props}>
+      <Grid
+        columns={{ count: columnCount, size: columnSize }}
+        rows="auto"
+        gap={size}
+        fill
+        {...gridProps}
+      >
+        {children}
+      </Grid>
+    </Box>
+  );
+}
 
 function ProfileTab({ count, title, children }) {
   return (
@@ -24,6 +57,54 @@ function ProfileTab({ count, title, children }) {
     </Tab>
   );
 }
+
+function ProfileCard({
+  children,
+  title = '',
+  description = '',
+  image = '',
+  imageTitle = '',
+  ...props
+}) {
+  return (
+    <Box pad="medium" align="start" {...props}>
+      <Card elevation="none" width="medium" border>
+        <CardBody height="small">
+          <Image fit="cover" src={image} a11yTitle={imageTitle} />
+        </CardBody>
+        <Box pad={{ horizontal: 'medium' }} responsive={false}>
+          <Heading level="3" margin={{ vertical: 'medium' }}>
+            {title}
+          </Heading>
+          <Paragraph margin={{ top: 'none' }}>{description}</Paragraph>
+        </Box>
+      </Card>
+    </Box>
+  );
+}
+
+function ProfileGallery({ children, keyPrefix = 'galleryItem', ...props }) {
+  const galleryItems = React.Children.toArray(children);
+  return (
+    <ProfileGrid {...props}>
+      {galleryItems.map((galleryItem, index) => (
+        <Card key={`${keyPrefix}-${index}`} background="white" height="small">
+          {galleryItem}
+        </Card>
+      ))}
+    </ProfileGrid>
+  );
+}
+function ProfileMasthead({ imageSrc, contentLocation = 'center', children }) {
+  return (
+    <Box className="Masthead">
+      <Stack anchor={contentLocation} fill>
+        <Image src={imageSrc} fit="cover" fill />
+        {children}
+      </Stack>
+    </Box>
+  );
+}
 export default function Profile({ children }) {
   const {
     mastheadImage,
@@ -35,17 +116,17 @@ export default function Profile({ children }) {
   return (
     <Box>
       <Box height={{ max: 'medium' }}>
-        <Masthead imageSrc={mastheadImage} contentLocation="center">
+        <ProfileMasthead imageSrc={mastheadImage} contentLocation="center">
           <Heading level={1} color="white">
             {mastheadText}
           </Heading>
-        </Masthead>
+        </ProfileMasthead>
       </Box>
       <Box>
         <Tabs justify="start">
           <ProfileTab title="Posts" count={posts.length}>
             <Box pad="medium" margin={{ horizontal: 'auto' }}>
-              <Gallery>
+              <ProfileGallery>
                 {posts.map((post) => {
                   return (
                     <Box key={post.id} pad="none">
@@ -53,15 +134,15 @@ export default function Profile({ children }) {
                     </Box>
                   );
                 })}
-              </Gallery>
+              </ProfileGallery>
             </Box>
           </ProfileTab>
           <ProfileTab title="Followers" count={followers.length}>
             <Box pad="medium" margin={{ horizontal: 'auto' }}>
-              <GridLayout>
+              <ProfileGrid>
                 {followers.map((person) => {
                   return (
-                    <ResourceCard
+                    <ProfileCard
                       key={person.id}
                       image={person.profile}
                       title={`${person.firstName} ${person.lastName}`}
@@ -69,15 +150,15 @@ export default function Profile({ children }) {
                     />
                   );
                 })}
-              </GridLayout>
+              </ProfileGrid>
             </Box>
           </ProfileTab>
           <ProfileTab title="Following" count={following.length}>
             <Box pad="medium" margin={{ horizontal: 'auto' }}>
-              <GridLayout>
+              <ProfileGrid>
                 {following.map((person) => {
                   return (
-                    <ResourceCard
+                    <ProfileCard
                       key={person.id}
                       image={person.profile}
                       title={`${person.firstName} ${person.lastName}`}
@@ -85,7 +166,7 @@ export default function Profile({ children }) {
                     />
                   );
                 })}
-              </GridLayout>
+              </ProfileGrid>
             </Box>
           </ProfileTab>
         </Tabs>
