@@ -12,9 +12,23 @@ import {
   TextInput,
 } from 'grommet';
 import { StatusGoodSmall } from 'grommet-icons';
-import Tag from 'components/Tag';
 
 import useEmail from './useEmail';
+function EmailTag({ color, label, ...props }) {
+  return (
+    <Box
+      className="EmailTag"
+      background={color}
+      pad={{
+        horizontal: 'small',
+        vertical: 'xsmall',
+      }}
+      {...props}
+    >
+      <Text size="small">{label}</Text>
+    </Box>
+  );
+}
 
 function EmailFolders({
   folders = [],
@@ -108,7 +122,7 @@ function EmailThread({ id, body, labels, recipients, subject, sender, sent }) {
           {subject}
         </Heading>
         {labels.map((label) => (
-          <Tag key={label?.id} label={label?.name} color={label?.color} />
+          <EmailTag key={label?.id} label={label?.name} color={label?.color} />
         ))}
       </Box>
 
@@ -245,7 +259,7 @@ function AppliedFilters({ labels, onClear }) {
     >
       <Box direction="row" justify="start" gap="small" flex={false}>
         {labels.map((label) => (
-          <Tag key={label?.id} label={label?.name} color={label?.color} />
+          <EmailTag key={label?.id} label={label?.name} color={label?.color} />
         ))}
       </Box>
       <Button onClick={() => onClear()} plain>
