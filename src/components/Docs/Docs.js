@@ -136,7 +136,7 @@ export function DocsPreview({ children }) {
 }
 
 export function DocsMain({ children, files = [] }) {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
   return (
