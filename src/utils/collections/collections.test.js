@@ -14,6 +14,12 @@ const fruits = [
   { id: 10, name: 'Blueberry' },
   { id: 11, name: 'Raspberry' },
 ];
+const employees = [
+  { id: 0, name: 'Jane', department: 'Finance' },
+  { id: 1, name: 'John', department: 'Finance' },
+  { id: 2, name: 'Suzy', department: 'Engineering' },
+  { id: 3, name: 'Sam', department: 'Sales' },
+];
 describe('collections', () => {
   test('can add an item to the end', () => {
     const collection = collections.append(fruits, {
@@ -186,5 +192,17 @@ describe('collections', () => {
       { id: 8, name: 'Pineapple' },
       { id: 4, name: 'Watermelon' },
     ]);
+  });
+  test('can group items by property', () => {
+    const result = collections.groupBy(employees, 'department');
+
+    expect(result).toEqual({
+      Engineering: [{ department: 'Engineering', id: 2, name: 'Suzy' }],
+      Finance: [
+        { department: 'Finance', id: 0, name: 'Jane' },
+        { department: 'Finance', id: 1, name: 'John' },
+      ],
+      Sales: [{ department: 'Sales', id: 3, name: 'Sam' }],
+    });
   });
 });

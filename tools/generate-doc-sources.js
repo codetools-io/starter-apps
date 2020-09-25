@@ -2,7 +2,7 @@
 
 const path = require('path');
 const fs = require('fs-extra');
-
+const globby = require('globby');
 const PROJECT_ROOT = path.resolve(__dirname, '../');
 const APPS_DIR = path.resolve(PROJECT_ROOT, './src/apps');
 const DOCS_DIR = path.resolve(PROJECT_ROOT, './public/docs');
@@ -14,39 +14,39 @@ function getAppDirectories() {
     return path.resolve(APPS_DIR, `./${app}`);
   });
 }
-function getAppSources() {
-  const appDirectories = getAppDirectories();
+function getAppSources(appDirectories) {
   return appDirectories.map((appDirectory) => {
-    const filepaths = fs
-      .readdirSync(appDirectory, { withFileTypes: true })
+    const filepaths = globby.sync(appDirectory, { onlyFiles: true });
+    const allowed = ['.css', '.js'];
+    const excluded = ['.test.js', 'docs.js'];
+
+    return filepaths
+      .map((filepath) => {
+        const content = fs.readFileSync(filepath, { encoding: 'utf8' });
+        const relativeFilepath = path.relative(appDirectory, filepath);
+        return {
+          content,
+          filepath: relativeFilepath,
+          filename: path.basename(filepath),
+          directory: path.dirname(relativeFilepath),
+          app: path.basename(appDirectory),
+        };
+      })
       .filter((file) => {
         if (
-          !file.isFile() ||
-          !file.name.endsWith('.js') ||
-          file.name.endsWith('.test.js') ||
-          file.name.endsWith('docs.js')
+          allowed.some((ext) => file.filename.endsWith(ext)) &&
+          !excluded.some((ext) => file.filename.endsWith(ext))
         ) {
-          return false;
+          return true;
         }
-        return true;
-      })
-      .map((file) => {
-        return path.resolve(appDirectory, file.name);
+        return false;
       });
-    return filepaths.map((filepath) => {
-      const content = fs.readFileSync(filepath, { encoding: 'utf8' });
-      return {
-        content,
-        // filepath,
-        filename: path.basename(filepath),
-        // directory: appDirectory,
-        app: path.basename(appDirectory),
-      };
-    });
   });
 }
+
 function generateDocSources() {
-  const appSources = getAppSources();
+  const appDirectories = getAppDirectories();
+  const appSources = getAppSources(appDirectories);
 
   appSources.forEach((files) => {
     const firstSource = files[0];

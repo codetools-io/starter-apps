@@ -13,9 +13,11 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
-// import MonacoEditor from 'react-monaco-editor';
 import MonacoEditor from '@monaco-editor/react';
+
 import theme from './theme';
+
+const DOCS_BASE_PATH = `${process.env.PUBLIC_URL}/docs`;
 
 const options = {
   fontSize: 16,
@@ -34,42 +36,63 @@ export default function Docs({ children, ...props }) {
 }
 
 export function DocsCode({ files = [], options }) {
-  console.log(files);
-  const [activeFileIndex, setActiveFileIndex] = useState(0);
+  const [activeFileIndex, setActiveFileIndex] = useState(null);
+
+  useEffect(() => {
+    if (activeFileIndex === null && files?.length) {
+      setActiveFileIndex(
+        files?.findIndex((file) => file?.filename === `${file?.app}.js`)
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeFileIndex, files]);
+
   return (
     <DocsCard height="large" pad="medium" flex={false}>
-      <Grid columns={['auto', 'flex']} rows={['full']} fill>
-        <Box border>
-          {files.map((file, index) => {
-            return (
-              <Box
-                key={`file-${file?.app}-${file?.filename}`}
-                background={index === activeFileIndex ? 'white' : 'shade-1'}
-                border="bottom"
-              >
-                <Button
-                  label={
-                    <Box direction="row" justify="center" pad="small">
-                      {file?.filename}
-                    </Box>
-                  }
-                  onClick={() => setActiveFileIndex(index)}
-                  plain
-                />
-              </Box>
-            );
-          })}
-        </Box>
-        <Box border>
-          <MonacoEditor
-            language="javascript"
-            theme="light"
-            height="100%"
-            value={files[activeFileIndex]?.content}
-            options={options}
-          />
-        </Box>
-      </Grid>
+      <Box border fill>
+        <Grid columns={['auto', 'flex']} rows={['full']} fill>
+          <Box overflow={{ vertical: 'auto' }}>
+            {files.map((file, index) => {
+              return (
+                <Box
+                  key={`file-${file?.app}-${file?.filepath}`}
+                  background={index === activeFileIndex ? 'white' : 'shade-1'}
+                  border={[
+                    'bottom',
+                    {
+                      side: 'right',
+                      color:
+                        index === activeFileIndex ? 'transparent' : 'border',
+                    },
+                  ]}
+                  direction="row"
+                  justify="center"
+                  pad="small"
+                  flex={false}
+                >
+                  <Button
+                    label={file?.filepath}
+                    onClick={() => setActiveFileIndex(index)}
+                    size="large"
+                    fill
+                    plain
+                  />
+                </Box>
+              );
+            })}
+            <Box border="right" flex />
+          </Box>
+          <Box>
+            <MonacoEditor
+              language="javascript"
+              theme="light"
+              height="100%"
+              value={files[activeFileIndex]?.content}
+              options={options}
+            />
+          </Box>
+        </Grid>
+      </Box>
     </DocsCard>
   );
 }
@@ -102,28 +125,29 @@ export function DocsOverview({ name, description }) {
   );
 }
 
-export function DocsExample({ children, files = [] }) {
-  const [active, setActive] = useState(0);
+export function DocsPreview({ children }) {
+  return (
+    <DocsCard height="large" flex={false}>
+      <Box overflow="auto" fill>
+        {children}
+      </Box>
+    </DocsCard>
+  );
+}
+
+export function DocsMain({ children, files = [] }) {
+  const [active, setActive] = useState(1);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
   return (
     <Box gap="small" flex={false}>
-      <Box direction="row" justify="between">
-        <Heading level={4} margin="none">
-          Demo
-        </Heading>
+      <Box direction="row" justify="end">
         <Tabs activeIndex={active} onActive={(next) => setActive(next)}>
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
         </Tabs>
       </Box>
-      {showPreview && (
-        <DocsCard height="large" flex={false}>
-          <Box overflow="auto" fill>
-            {children}
-          </Box>
-        </DocsCard>
-      )}
+      {showPreview && <DocsPreview children={children} />}
       {showCode && <DocsCode files={files} options={options} />}
     </Box>
   );
@@ -231,12 +255,11 @@ export function DocsProps({ properties }) {
 }
 
 export function DocsPage({ component: Component, ...props }) {
-  const { PUBLIC_URL } = process.env;
-  const { name, description, properties, usage } = Component.toJSON();
+  const { name, description, properties } = Component.toJSON();
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`${PUBLIC_URL}/docs/${name}.json`)
+    fetch(`${DOCS_BASE_PATH}/${name}.json`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -247,9 +270,9 @@ export function DocsPage({ component: Component, ...props }) {
   return (
     <Box className="DocsPage" gap="large" fill="horizontal" {...props}>
       <DocsOverview name={name} description={description} />
-      <DocsExample files={data?.files || []}>
+      <DocsMain files={data?.files || []}>
         <Component />
-      </DocsExample>
+      </DocsMain>
       <DocsProps properties={properties} />
       <Box fill></Box>
     </Box>
