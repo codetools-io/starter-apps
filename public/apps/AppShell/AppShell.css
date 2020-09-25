@@ -1,0 +1,12 @@
+.AppShellNavLink {
+  opacity: 0.85;
+}
+.AppShellNavLink.active {
+  opacity: 1;
+}
+.AppShellNavLink:hover {
+  opacity: 1;
+}
+.AppShellNavLink svg path {
+  stroke: currentColor;
+}

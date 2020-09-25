@@ -1,0 +1,6 @@
+- implement ability to view events in day
+- implement ability to add events to day
+- implement ability to edit event for day
+- implement ability to remove event for day
+- implement sidebar model for crud operations above
+- implement buttons for navigating back to the current month and day
