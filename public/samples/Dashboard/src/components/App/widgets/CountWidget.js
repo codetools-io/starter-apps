@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Card, Text } from 'grommet';
-import useContrast from 'hooks/useContrast';
-import useDarken from 'hooks/useDarken';
+import useContrast from './hooks/useContrast';
+import useDarken from './hooks/useDarken';
 
 function Icon({ icon, color }) {
   const Component = icon;
