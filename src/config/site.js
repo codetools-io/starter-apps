@@ -1,6 +1,6 @@
 const currentDate = new Date();
 
 export const site = {
-  name: 'CodeTools',
+  name: 'StarterApps',
   copyrightYear: currentDate.getFullYear(),
 };

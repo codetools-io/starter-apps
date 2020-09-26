@@ -1,5 +1,5 @@
 export const themeExport = {
-  name: 'CodeTools',
+  name: 'StarterApps',
   rounding: 2,
   spacing: 20,
   defaultMode: 'light',
