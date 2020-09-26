@@ -30,7 +30,7 @@ test:
   phases:
     preTest:
       commands:
-        - yarn ci
+        - yarn
         - yarn add wait-on
         - yarn add pm2
         - yarn add mocha mochawesome mochawesome-merge mochawesome-report-generator
