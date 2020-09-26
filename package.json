@@ -34,6 +34,7 @@
     "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/user-event": "^7.1.2",
     "body-parser": "^1.19.0",
+    "cypress": "^5.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -48,10 +49,11 @@
     "react-test-renderer": "^16.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test-ci": "react-scripts test --watchAll=false",
+    "start": "react-scripts start",
+    "cypress": "cypress open",
+    "test": "react-scripts test --watchAll=false",
+    "test-dev": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.js",
     "lint": "eslint src/**/*.js",
@@ -64,7 +66,10 @@
     "globals": {
       "render": true,
       "renderContainer": true,
-      "renderComponent": true
+      "renderComponent": true,
+      "cy": true,
+      "context": true,
+      "Cypress": true
     }
   },
   "browserslist": {
