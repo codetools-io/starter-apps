@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
+  Anchor,
   Box,
   Button,
   Card,
@@ -13,11 +14,13 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
+import { CodeSandbox } from 'grommet-icons';
 import MonacoEditor from '@monaco-editor/react';
 
 import theme from './theme';
 
 const DOCS_BASE_PATH = `${process.env.PUBLIC_URL}/docs`;
+const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
 
 const options = {
   fontSize: 16,
@@ -135,17 +138,21 @@ export function DocsPreview({ children }) {
   );
 }
 
-export function DocsMain({ children, files = [] }) {
+export function DocsMain({ children, files = [], sandboxUrl }) {
   const [active, setActive] = useState(0);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
+
   return (
     <Box gap="small" flex={false}>
-      <Box direction="row" justify="end">
+      <Box direction="row" justify="between">
         <Tabs activeIndex={active} onActive={(next) => setActive(next)}>
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
         </Tabs>
+        <Box direction="row">
+          <Anchor icon={<CodeSandbox />} href={sandboxUrl} target="_blank" />
+        </Box>
       </Box>
       {showPreview && <DocsPreview children={children} />}
       {showCode && <DocsCode files={files} options={options} />}
@@ -272,7 +279,7 @@ export function DocsPage({ component: Component, ...props }) {
   return (
     <Box className="DocsPage" gap="large" fill="horizontal" {...props}>
       <DocsOverview name={name} description={description} />
-      <DocsMain files={data?.files || []}>
+      <DocsMain files={data?.files || []} sandboxUrl={`${SANDBOX_URL}${name}`}>
         <Component />
       </DocsMain>
       <DocsProps properties={properties} />
