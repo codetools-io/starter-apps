@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridLayout can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+  >
+    <div
+      class="StyledGrid-sc-1wofa1l-0 hxvnVW"
+    >
+      <p>
+        Content for the GridLayout
+      </p>
+    </div>
+  </div>
+</div>
+`;

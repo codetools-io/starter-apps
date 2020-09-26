@@ -259,13 +259,15 @@ export function DocsPage({ component: Component, ...props }) {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`${DOCS_BASE_PATH}/${name}.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+    if (name) {
+      fetch(`${DOCS_BASE_PATH}/${name}.json`)
+        .then((res) => res.json())
+        .then((data) => {
+          setData(data);
+        })
+        .catch((err) => console.error(err));
+    }
+  }, [name]);
 
   return (
     <Box className="DocsPage" gap="large" fill="horizontal" {...props}>

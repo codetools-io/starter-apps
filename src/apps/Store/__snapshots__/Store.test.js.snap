@@ -1,0 +1,1268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store can render 1`] = `
+<div>
+  <div
+    class="ErrorBoundary"
+  >
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+      >
+        <div
+          class="StyledGrid-sc-1wofa1l-0 fPKUzQ Store"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 eMeqtf"
+          >
+            <form>
+              <div
+                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iKsQBO"
+                >
+                  <h5
+                    class="StyledHeading-sc-1rdh4aw-0 ljQZpe"
+                  >
+                    Price
+                  </h5>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 CJhln FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                      >
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="price-1"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="price-1"
+                              name="price"
+                              type="radio"
+                              value="0.00-24.99"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            Under $25
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="price-2"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="price-2"
+                              name="price"
+                              type="radio"
+                              value="25.00-99.99"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            $25 - $100
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="price-3"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="price-3"
+                              name="price"
+                              type="radio"
+                              value="100.00-499.99"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            $100 - $500
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="price-4"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="price-4"
+                              name="price"
+                              type="radio"
+                              value="500.00-99999999999.99"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            Over $500
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="price-5"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              checked=""
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="price-5"
+                              name="price"
+                              type="radio"
+                              value="0.00-99999999999.99"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 fMtwNf StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            >
+                              <svg
+                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 fnHNQt"
+                                preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24"
+                              >
+                                <circle
+                                  cx="12"
+                                  cy="12"
+                                  r="6"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            Any
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iKsQBO"
+                >
+                  <h5
+                    class="StyledHeading-sc-1rdh4aw-0 ljQZpe"
+                  >
+                    Category
+                  </h5>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 CJhln FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                      >
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-category-1"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-category-1"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Fruits
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-category-2"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-category-2"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Vegetables
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-category-3"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-category-3"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Beverages
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-category-4"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-category-4"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Organic
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-category-5"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-category-5"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Breads
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iKsQBO"
+                >
+                  <h5
+                    class="StyledHeading-sc-1rdh4aw-0 ljQZpe"
+                  >
+                    Brand
+                  </h5>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 CJhln FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                      >
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-brand-1"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-brand-1"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Some Food Company
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-brand-2"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-brand-2"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            Another Food Company
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-brand-3"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-brand-3"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            That Food Company
+                          </span>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 PHOTu"
+                          for="store-brand-4"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 fuEVwc StyledCheckBox-sc-1dbk5ju-6 CBoMo"
+                          >
+                            <input
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ljjPfS"
+                              id="store-brand-4"
+                              type="checkbox"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 gDUCoH StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iEciRS"
+                            />
+                          </div>
+                          <span>
+                            New Food Company
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iKsQBO"
+                >
+                  <h5
+                    class="StyledHeading-sc-1rdh4aw-0 ljQZpe"
+                  >
+                    Rating
+                  </h5>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 CJhln FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                      >
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-5"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-5"
+                              name="rating"
+                              type="radio"
+                              value="5"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                          >
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-4"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-4"
+                              name="rating"
+                              type="radio"
+                              value="4"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                          >
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-3"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-3"
+                              name="rating"
+                              type="radio"
+                              value="3"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                          >
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-2"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-2"
+                              name="rating"
+                              type="radio"
+                              value="2"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                          >
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-1"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-1"
+                              name="rating"
+                              type="radio"
+                              value="1"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 hETYOr StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            />
+                          </div>
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                          >
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jotqCr"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                            <svg
+                              aria-label="Star"
+                              class="StyledIcon-ofa7kd-0 jXwebn"
+                              viewBox="0 0 24 24"
+                            >
+                              <polygon
+                                fill="#FFC95E"
+                                fill-rule="evenodd"
+                                points="12 16.667 5 22 8 14 2 9.5 9.5 9.5 12 2 14.5 9.5 22 9.5 16 14 19 22"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                        />
+                        <label
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 clVOLE"
+                          for="rating-any"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 haldyp StyledRadioButton-g1f6ld-5 dUxqYi"
+                          >
+                            <input
+                              checked=""
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hBCEfd"
+                              id="rating-any"
+                              name="rating"
+                              type="radio"
+                              value=""
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 fMtwNf StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 GRgRM"
+                            >
+                              <svg
+                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 fnHNQt"
+                                preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24"
+                              >
+                                <circle
+                                  cx="12"
+                                  cy="12"
+                                  r="6"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <span
+                            class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2 gMQgqV"
+                          >
+                            Any
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 hKMnVR"
+            style="position: relative; transform: scale(1);"
+          >
+            <div
+              class="StyledGrid-sc-1wofa1l-0 eWUhPe"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/coffee-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $10.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Coffee
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/honey-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $200.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Honey
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/onion-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $50.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Onions
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/strawberry-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $399.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Strawberries
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/tea-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $6,000.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Tea
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div
+                class="StyledBox-sc-13pk1d4-0 fIGmLF"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 liEjfH"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
+                  >
+                    <img
+                      class="StyledImage-ey4zx9-0 kdPbXO"
+                      src="/placeholder/img/food/raspberry-1200xauto.jpg"
+                    />
+                  </div>
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 hGKeOg"
+                    >
+                      <span
+                        class="StyledText-sc-1sadyjn-0 hUokoe"
+                      >
+                        $6,000.99
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 jqTrUE"
+                >
+                  <h4
+                    class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                  >
+                    Raspberries
+                  </h4>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <span
+                    class="StyledText-sc-1sadyjn-0 eGyAkH"
+                  >
+                    Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
+                  </span>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <button
+                    class="StyledButton-sc-323bzc-0 gLndZo"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 eIUQxE"
+              style="position: sticky; bottom: 98%;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

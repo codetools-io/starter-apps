@@ -5,7 +5,7 @@ export default function Router() {
   const AppShellDocs = lazy(() => import('./apps/AppShell/docs'));
   const CalendarDocs = lazy(() => import('./apps/Calendar/docs'));
   const ChatDocs = lazy(() => import('./apps/Chat/docs'));
-  const StoreDocs = lazy(() => import('./apps/Commerce/Store/docs'));
+  const StoreDocs = lazy(() => import('./apps/Store/docs'));
   const CheckoutDocs = lazy(() => import('./apps/Commerce/Checkout/docs'));
   const CartDocs = lazy(() => import('./apps/Commerce/Cart/docs'));
   const ContactsDocs = lazy(() => import('./apps/Contacts/docs'));

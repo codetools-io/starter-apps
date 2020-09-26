@@ -3,829 +3,709 @@
 exports[`Can render AppShell 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 gLnRNq AppShell"
+    class="ErrorBoundary"
   >
     <div
-      class="StyledGrid-sc-1wofa1l-0 jvuyLD"
-      style="height: 100vh;"
+      class="StyledGrommet-sc-19lkkz7-0 lcXYAf"
     >
-      <header
-        class="StyledBox-sc-13pk1d4-0 kWsDPM"
-      >
-        <div
-          class="StyledGrid-sc-1wofa1l-0 bQzRzz"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 ibVVqn"
-          >
-            <img
-              class="StyledImage-ey4zx9-0 cHpGKY"
-              src="/placeholder/img/logos/logo-white.png"
-              style="max-height: 100%; max-width: 100%;"
-            />
-          </div>
-          <div
-            class="StyledBox-sc-13pk1d4-0 hTUfPL"
-          >
-            <button
-              aria-label="Open Drop"
-              class="StyledButton-sc-323bzc-0 kzgbHY"
-              type="button"
-            >
-              <svg
-                aria-label="Search"
-                class="StyledIcon-ofa7kd-0 erQelf"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15,15 L22,22 L15,15 Z M9.5,17 C13.6421356,17 17,13.6421356 17,9.5 C17,5.35786438 13.6421356,2 9.5,2 C5.35786438,2 2,5.35786438 2,9.5 C2,13.6421356 5.35786438,17 9.5,17 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-            <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-            />
-            <button
-              aria-label="Open Drop"
-              class="StyledButton-sc-323bzc-0 kzgbHY"
-              type="button"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-              >
-                <div
-                  class="StyledStack-ajspsk-0 liEjfH"
-                >
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                    >
-                      <svg
-                        aria-label="Notification"
-                        class="StyledIcon-ofa7kd-0 erQelf"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 hpVVmJ"
-                    >
-                      <span
-                        class="StyledText-sc-1sadyjn-0 embPsE"
-                      >
-                        1
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-            />
-            <button
-              aria-label="Open Drop"
-              class="StyledButton-sc-323bzc-0 kzgbHY"
-              type="button"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-              >
-                <div
-                  class="StyledStack-ajspsk-0 liEjfH"
-                >
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                    >
-                      <svg
-                        aria-label="ChatOption"
-                        class="StyledIcon-ofa7kd-0 erQelf"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M9,7 L9,1 L23,1 L23,11 L20,11 L20,16 L15,12 M1,7 L15,7 L15,18 L9,18 L4,22 L4,18 L1,18 L1,7 Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 hpVVmJ"
-                    >
-                      <span
-                        class="StyledText-sc-1sadyjn-0 embPsE"
-                      >
-                        1
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-            />
-            <button
-              aria-label="Open Drop"
-              class="StyledButton-sc-323bzc-0 kzgbHY"
-              type="button"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-              >
-                <div
-                  class="StyledStack-ajspsk-0 liEjfH"
-                >
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                    >
-                      <svg
-                        aria-label="Cart"
-                        class="StyledIcon-ofa7kd-0 erQelf"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M5,5 L22,5 L20,14 L7,14 L4,2 L0,2 M7,14 L8,18 L21,18 M19,23 C18.4475,23 18,22.5525 18,22 C18,21.4475 18.4475,21 19,21 C19.5525,21 20,21.4475 20,22 C20,22.5525 19.5525,23 19,23 Z M9,23 C8.4475,23 8,22.5525 8,22 C8,21.4475 8.4475,21 9,21 C9.5525,21 10,21.4475 10,22 C10,22.5525 9.5525,23 9,23 Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 hpVVmJ"
-                    >
-                      <span
-                        class="StyledText-sc-1sadyjn-0 embPsE"
-                      >
-                        1
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-            />
-            <button
-              aria-label="Open Drop"
-              class="StyledButton-sc-323bzc-0 kzgbHY"
-              type="button"
-            >
-              <div
-                class="StyledBox-sc-13pk1d4-0 eQJNso StyledAvatar-sc-1suyamb-1 juEsgd"
-              />
-            </button>
-          </div>
-        </div>
-      </header>
       <div
-        class="StyledBox-sc-13pk1d4-0 joYsPB"
+        class="StyledGrid-sc-1wofa1l-0 gxRPID AppShellContainer"
       >
-        <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+        <header
+          class="StyledBox-sc-13pk1d4-0 kWsDPM AppShellHeader"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+            class="StyledGrid-sc-1wofa1l-0 JASlM"
           >
-            <nav
-              class="StyledBox-sc-13pk1d4-0 gzfjUM AppShellNav"
+            <div
+              class="StyledBox-sc-13pk1d4-0 cFlYPk AppShellLogo"
             >
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
+              <img
+                class="StyledImage-ey4zx9-0 cHpGKY"
+                src="/placeholder/img/logos/logo-white.png"
+                style="max-height: 100%; max-width: 100%;"
+              />
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 inhPKK"
+            >
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 fKcmhi AppShellSearch"
+                type="button"
               >
-                <div
-                  class="StyledBox-sc-13pk1d4-0 bwHqck"
+                <svg
+                  aria-label="Search"
+                  class="StyledIcon-ofa7kd-0 kfECiH"
+                  viewBox="0 0 24 24"
                 >
-                  <span
-                    class="StyledText-sc-1sadyjn-0 ifkfFt"
-                  >
-                    Apps
-                  </span>
-                </div>
-                <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKfIRO"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                  <path
+                    d="M15,15 L22,22 L15,15 Z M9.5,17 C13.6421356,17 17,13.6421356 17,9.5 C17,5.35786438 13.6421356,2 9.5,2 C5.35786438,2 2,5.35786438 2,9.5 C2,13.6421356 5.35786438,17 9.5,17 Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 gbzvTG AppShellNotifications"
+              >
+                <button
+                  aria-label="Open Drop"
+                  class="StyledButton-sc-323bzc-0 fKcmhi"
+                  type="button"
                 >
-                  <a
-                    class="NavLink"
-                    href="/calendar"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="Calendar"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M2,5 L22,5 L22,22 L2,22 L2,5 Z M18,5 L18,1 M6,5 L6,1 M2,10 L22,10"
-                              fill="none"
-                              stroke="#000"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Calendar
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/chat"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="Chat"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M5,1 L19,1 L19,1 C21.209139,1 23,2.790861 23,5 L23,13 L23,13 C23,15.209139 21.209139,17 19,17 L7,17 L1,22 L1,5 L1,5 C1,2.790861 2.790861,1 5,1 Z M5,7 L18,7 M5,11 L14,11"
-                              fill="none"
-                              stroke="#000000"
-                              stroke-width="2"
-                              transform="matrix(-1 0 0 1 24 0)"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Chat
-                        </span>
-                      </div>
-                    </div>
-                  </a>
                   <div
                     class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                    >
-                      <a
-                        class="NavLink"
-                        href="/commerce"
-                        style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                      >
-                        <div
-                          class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                        >
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                          >
-                            <span
-                              class="StyledText-sc-1sadyjn-0 cRKSWV"
-                            >
-                              <svg
-                                aria-label="Shop"
-                                class="StyledIcon-ofa7kd-0 igbPDn"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M4,7 L20,7 L20,23 L4,23 L4,7 Z M8,9 L8,5 C8,2.790861 9.79535615,1 12,1 L12,1 C14.209139,1 16,2.79535615 16,5 L16,9"
-                                  fill="none"
-                                  stroke="#000"
-                                  stroke-linecap="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                          <div
-                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                          />
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                          >
-                            <span
-                              class="StyledText-sc-1sadyjn-0 cYEaOO"
-                            >
-                              Commerce
-                            </span>
-                          </div>
-                          <div
-                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                          />
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__secondaryIcon"
-                          >
-                            <span
-                              class="StyledText-sc-1sadyjn-0 cRKSWV"
-                            >
-                              <svg
-                                aria-label="Down"
-                                class="StyledIcon-ofa7kd-0 cqmoZf"
-                                viewBox="0 0 24 24"
-                              >
-                                <polyline
-                                  fill="none"
-                                  points="7.086 3.174 17.086 13.174 7.086 23.174"
-                                  stroke="#000"
-                                  stroke-width="2"
-                                  transform="scale(1 -1) rotate(-89 -1.32 0)"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqug"
-                    />
-                    <div
-                      aria-hidden="true"
-                      class="StyledBox-sc-13pk1d4-0 bFwQzJ Collapsible__AnimatedBox-sc-15kniua-0 bEdCNR"
+                      class="StyledStack-ajspsk-0 liEjfH"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 gKYPTJ"
+                        class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
                       >
-                        <a
-                          class="NavLink"
-                          href="/commerce/store"
-                          style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                        >
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 dVjplb NavLink__label"
-                            >
-                              <span
-                                class="StyledText-sc-1sadyjn-0 czRRQb"
-                              >
-                                Store
-                              </span>
-                            </div>
-                          </div>
-                        </a>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqug"
-                        />
-                        <a
-                          class="NavLink"
-                          href="/commerce/checkout"
-                          style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                         >
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 fUHdFl"
+                          <svg
+                            aria-label="Notification"
+                            class="StyledIcon-ofa7kd-0 dkiGYz"
+                            viewBox="0 0 24 24"
                           >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 dVjplb NavLink__label"
-                            >
-                              <span
-                                class="StyledText-sc-1sadyjn-0 czRRQb"
-                              >
-                                Checkout
-                              </span>
-                            </div>
-                          </div>
-                        </a>
+                            <path
+                              d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
+                              fill="none"
+                              stroke="#000"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
+                      >
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqug"
-                        />
-                        <a
-                          class="NavLink"
-                          href="/commerce/cart"
-                          style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
+                          class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 fUHdFl"
+                          <span
+                            class="StyledText-sc-1sadyjn-0 jBgDoj"
                           >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 dVjplb NavLink__label"
-                            >
-                              <span
-                                class="StyledText-sc-1sadyjn-0 czRRQb"
-                              >
-                                Cart
-                              </span>
-                            </div>
-                          </div>
-                        </a>
+                            1
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <a
-                    class="NavLink"
-                    href="/contacts"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
+                </button>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                />
+                <button
+                  aria-label="Open Drop"
+                  class="StyledButton-sc-323bzc-0 fKcmhi"
+                  type="button"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
+                      class="StyledStack-ajspsk-0 liEjfH"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                         >
                           <svg
-                            aria-label="ContactInfo"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
+                            aria-label="ChatOption"
+                            class="StyledIcon-ofa7kd-0 dkiGYz"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M5,12 C3.343,12 2,10.657 2,9 C2,7.343 3.343,6 5,6 C6.657,6 8,7.343 8,9 C8,10.657 6.657,12 5,12 Z M9,18 L9,16 C9,13.7504 7.2128,12 4.964,12 L5.0184,12 C2.7688,12 1,13.7504 1,16 L1,18 M12,7 L24,7 M12,17 L22,17 M12,12 L19,12"
+                              d="M9,7 L9,1 L23,1 L23,11 L20,11 L20,16 L15,12 M1,7 L15,7 L15,18 L9,18 L4,22 L4,18 L1,18 L1,7 Z"
                               fill="none"
                               stroke="#000"
                               stroke-width="2"
                             />
                           </svg>
-                        </span>
+                        </div>
                       </div>
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
+                        class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
-                          Contacts
-                        </span>
+                          <span
+                            class="StyledText-sc-1sadyjn-0 jBgDoj"
+                          >
+                            1
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/dashboard"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
+                  </div>
+                </button>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                />
+                <button
+                  aria-label="Open Drop"
+                  class="StyledButton-sc-323bzc-0 fKcmhi"
+                  type="button"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
+                      class="StyledStack-ajspsk-0 liEjfH"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        class="StyledStack__StyledStackLayer-ajspsk-1 eFfYoG"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                         >
                           <svg
-                            aria-label="Dashboard"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
+                            aria-label="Cart"
+                            class="StyledIcon-ofa7kd-0 dkiGYz"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M15,16 C15,14.3431458 13.6568542,13 12,13 C10.3431458,13 9,14.3431458 9,16 M5,5 L7,7 M12,7 L12,13 M12,3 L12,5 M19,12 L21,12 M3,12 L5,12 M17,7 L19,5 M3,17 L21,17"
+                              d="M5,5 L22,5 L20,14 L7,14 L4,2 L0,2 M7,14 L8,18 L21,18 M19,23 C18.4475,23 18,22.5525 18,22 C18,21.4475 18.4475,21 19,21 C19.5525,21 20,21.4475 20,22 C20,22.5525 19.5525,23 19,23 Z M9,23 C8.4475,23 8,22.5525 8,22 C8,21.4475 8.4475,21 9,21 C9.5525,21 10,21.4475 10,22 C10,22.5525 9.5525,23 9,23 Z"
                               fill="none"
                               stroke="#000"
                               stroke-width="2"
                             />
                           </svg>
-                        </span>
+                        </div>
                       </div>
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
+                        class="StyledStack__StyledStackLayer-ajspsk-1 bhQrqd"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
-                          Dashboard
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/email"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="Mail"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
+                          <span
+                            class="StyledText-sc-1sadyjn-0 jBgDoj"
                           >
-                            <path
-                              d="M23,20 L23,6 L12,15 L1,6 L1,20 L23,20 Z M12,12 L22,4 L2,4 L12,12 Z"
-                              fill="#01A982"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Email
-                        </span>
+                            1
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/notes"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="Notes"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M3,1 L3,23 L16,23 L21,18 L21,1 L3,1 Z M6,17 L11,17 M6,13 L18,13 M6,9 L16,9 M3,5 L21,5 M21,17 L15,17 L15,23"
-                              fill="none"
-                              stroke="#000"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Notes
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/profile"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="User"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M8,24 L8,19 M16,24 L16,19 M3,24 L3,19 C3,14.0294373 7.02943725,11 12,11 C16.9705627,11 21,14.0294373 21,19 L21,24 M12,11 C14.7614237,11 17,8.76142375 17,6 C17,3.23857625 14.7614237,1 12,1 C9.23857625,1 7,3.23857625 7,6 C7,8.76142375 9.23857625,11 12,11 Z"
-                              fill="none"
-                              stroke="#000"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Profile
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="NavLink"
-                    href="/project-manager"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
-                  >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
-                    >
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
-                        >
-                          <svg
-                            aria-label="Tasks"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M1,3 L23,3 L23,7 L1,7 L1,3 Z M1,10 L23,10 L23,14 L1,14 L1,10 Z M1,17 L23,17 L23,21 L1,21 L1,17 Z M1,4 L16,4 L16,6 L1,6 L1,4 Z M1,11 L6,11 L6,13 L1,13 L1,11 Z M1,18 L11,18 L11,20 L1,20 L1,18 Z"
-                              fill="none"
-                              stroke="#000"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
-                      />
-                      <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
-                      >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
-                        >
-                          Project Manager
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                  </div>
+                </button>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bGbtOd"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
               />
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 fKcmhi AppShellMenu"
+                type="button"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 bwHqck"
-                >
-                  <span
-                    class="StyledText-sc-1sadyjn-0 ifkfFt"
-                  >
-                    Components
-                  </span>
-                </div>
-                <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKfIRO"
+                  class="StyledBox-sc-13pk1d4-0 eQJNso StyledAvatar-sc-1suyamb-1 juEsgd"
                 />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                />
-              </div>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bGbtOd"
-              />
-              <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
+              </button>
+            </div>
+          </div>
+        </header>
+        <div
+          class="StyledBox-sc-13pk1d4-0 hxwfqu AppShellSidebar"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+            >
+              <nav
+                class="StyledBox-sc-13pk1d4-0 gzfjUM AppShellNav"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 bwHqck"
+                  class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
                 >
-                  <span
-                    class="StyledText-sc-1sadyjn-0 ifkfFt"
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 ddwlHv"
                   >
-                    Tools
-                  </span>
-                </div>
-                <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKfIRO"
-                />
-                <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-                >
-                  <a
-                    class="NavLink"
-                    href="/layout-generator"
-                    style="text-decoration: none; font-weight: 600; color: rgb(238, 238, 238);"
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gmtNWw"
+                    >
+                      First Section
+                    </span>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
                   >
-                    <div
-                      class="StyledBox-sc-13pk1d4-0 fUHdFl"
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/home"
+                      style="text-decoration: none; font-weight: normal;"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cRKSWV"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
-                          <svg
-                            aria-label="Template"
-                            class="StyledIcon-ofa7kd-0 igbPDn"
-                            viewBox="0 0 24 24"
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
                           >
-                            <path
-                              d="M1,3 L23,3 L23,21 L1,21 L1,3 Z M1,8 L23,8 M7,8 L7,21"
-                              fill="none"
-                              stroke="#000"
-                              stroke-width="2"
+                            <svg
+                              aria-label="Home"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M1,11 L12,2 L23,11 M15,23 L15,15 L15,15 L9,15 L9,23 M4,23 L4,9 M20,23 L20,9"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Home
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/members"
+                      style="text-decoration: none; font-weight: normal;"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                          >
+                            <svg
+                              aria-label="Group"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12,13 C14.209139,13 16,11.209139 16,9 C16,6.790861 14.209139,5 12,5 C9.790861,5 8,6.790861 8,9 C8,11.209139 9.790861,13 12,13 Z M6,22 L6,19 C6,15.6862915 8.6862915,13 12,13 C15.3137085,13 18,15.6862915 18,19 L18,22 M13,5 C13.4037285,3.33566165 15.0151447,2 17,2 C19.172216,2 20.98052,3.790861 21,6 C20.98052,8.209139 19.172216,10 17,10 L16,10 L17,10 C20.287544,10 23,12.6862915 23,16 L23,18 M11,5 C10.5962715,3.33566165 8.98485529,2 7,2 C4.82778404,2 3.01948003,3.790861 3,6 C3.01948003,8.209139 4.82778404,10 7,10 L8,10 L7,10 C3.71245602,10 1,12.6862915 1,16 L1,18"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Members
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/orders"
+                      style="text-decoration: none; font-weight: normal;"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                          >
+                            <svg
+                              aria-label="Install"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M19,13.5 L19,17.5 L12,22 L5,17.5 L5,13.5 M12,22 L12,13.5 M18.5,8.5 L12,4.5 L15.5,2 L22,6 L18.5,8.5 L18.5,8.5 L18.5,8.5 Z M5.5,8.5 L12,4.5 L8.5,2 L2,6 L5.5,8.5 L5.5,8.5 L5.5,8.5 Z M18.5,9 L12,13 L15.5,15.5 L22,11.5 L18.5,9 L18.5,9 L18.5,9 Z M5.5,9 L12,13 L8.5,15.5 L2,11.5 L5.5,9 L5.5,9 Z"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Orders
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                      >
+                        <a
+                          class="AppShellNavLink"
+                          href="/app-shell/reports"
+                          style="text-decoration: none; font-weight: normal;"
+                        >
+                          <div
+                            class="StyledBox-sc-13pk1d4-0 dSulpR"
+                          >
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                            >
+                              <span
+                                class="StyledText-sc-1sadyjn-0 hUokoe"
+                              >
+                                <svg
+                                  aria-label="DocumentPerformance"
+                                  class="StyledIcon-ofa7kd-0 iGKWWb"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M4.99787498,8.99999999 L4.99787498,0.999999992 L19.4999998,0.999999992 L22.9999998,4.50000005 L23,23 L4,23 M18,1 L18,6 L23,6 M3,19 L8,14 L12,18 L18.5,11.5 M19,17.0003099 L19,11 L13,11"
+                                    fill="none"
+                                    stroke="#000"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </span>
+                            </div>
+                            <div
+                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
                             />
-                          </svg>
-                        </span>
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                            >
+                              <span
+                                class="StyledText-sc-1sadyjn-0 kAlwbY"
+                              >
+                                Reports
+                              </span>
+                            </div>
+                            <div
+                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                            />
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__secondaryIcon"
+                            >
+                              <span
+                                class="StyledText-sc-1sadyjn-0 hUokoe"
+                              >
+                                <svg
+                                  aria-label="Down"
+                                  class="StyledIcon-ofa7kd-0 cQVwrT"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <polyline
+                                    fill="none"
+                                    points="7.086 3.174 17.086 13.174 7.086 23.174"
+                                    stroke="#000"
+                                    stroke-width="2"
+                                    transform="scale(1 -1) rotate(-89 -1.32 0)"
+                                  />
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
                       </div>
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cFagND"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
                       />
                       <div
-                        class="StyledBox-sc-13pk1d4-0 cxEGQM NavLink__label"
+                        aria-hidden="true"
+                        class="StyledBox-sc-13pk1d4-0 bFwQzJ Collapsible__AnimatedBox-sc-15kniua-0 bEdCNR"
                       >
-                        <span
-                          class="StyledText-sc-1sadyjn-0 cYEaOO"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 ifbjep"
                         >
-                          Layout Generator
-                        </span>
+                          <a
+                            class="AppShellNavLink"
+                            href="/app-shell/reports/week"
+                            style="text-decoration: none; font-weight: normal;"
+                          >
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 dSulpR"
+                            >
+                              <div
+                                class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
+                              >
+                                <span
+                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                >
+                                  Weekly
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                          <div
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                          />
+                          <a
+                            class="AppShellNavLink"
+                            href="/app-shell/reports/month"
+                            style="text-decoration: none; font-weight: normal;"
+                          >
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 dSulpR"
+                            >
+                              <div
+                                class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
+                              >
+                                <span
+                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                >
+                                  Monthly
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                          <div
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                          />
+                          <a
+                            class="AppShellNavLink"
+                            href="/app-shell/reports/quarter"
+                            style="text-decoration: none; font-weight: normal;"
+                          >
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 dSulpR"
+                            >
+                              <div
+                                class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
+                              >
+                                <span
+                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                >
+                                  Quarterly
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                          <div
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                          />
+                          <a
+                            class="AppShellNavLink"
+                            href="/app-shell/reports/year"
+                            style="text-decoration: none; font-weight: normal;"
+                          >
+                            <div
+                              class="StyledBox-sc-13pk1d4-0 dSulpR"
+                            >
+                              <div
+                                class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
+                              >
+                                <span
+                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                >
+                                  Yearly
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
-              </div>
-            </nav>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                />
+                <div
+                  class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 ddwlHv"
+                  >
+                    <span
+                      class="StyledText-sc-1sadyjn-0 gmtNWw"
+                    >
+                      Second Section
+                    </span>
+                  </div>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                  >
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/alerts"
+                      style="text-decoration: none; font-weight: normal;"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                          >
+                            <svg
+                              aria-label="Alert"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12,17 L12,19 M12,10 L12,16 M12,3 L2,22 L22,22 L12,3 Z"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Alerts
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/locations"
+                      style="text-decoration: none; font-weight: normal;"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                          >
+                            <svg
+                              aria-label="Globe"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M2,8 C2,8 5.5,9 7,10 C8.5,11 7.56437103,12.4191614 8,13 C8.43562897,13.5808386 10,12 10,15 C10,18 13,16 13,19 C13,22 15.5,21.5 16,20 C16.5,18.5 18.2333023,16.8664183 18,15 C17.7666977,13.1335817 17,12 15,12 C13,12 11.5,11.5 11,10 C10.5,8.5 14,8 13,5 C12,2 13,1 13,1 M23,12 C23,18.075 18.075,23 12,23 C5.925,23 1,18.075 1,12 C1,5.925 5.925,1 12,1 C18.075,1 23,5.925 23,12 L23,12 Z"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Locations
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      class="AppShellNavLink"
+                      href="/app-shell/settings"
+                      style="text-decoration: none; font-weight: normal;"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dSulpR"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                          >
+                            <svg
+                              aria-label="SettingsOption"
+                              class="StyledIcon-ofa7kd-0 iGKWWb"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12,9 L12,0 M15,12 L24,12 M0,12 L9,12 M12,24 L12,15 M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M3.5,8.5 L1,7.5 M20.5,15.5 L23,16.5 M3,3 L5.5,5.5 M3,3 L5.5,5.5 M18,18 L20.5,20.5 M20.5,3 L18,5.5 M5.5,18 L3,20.5 M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z M20.5,8.5 L23,7.5 M15.5,3.5 L16.5,1 M15.5,20.5 L16.5,23 M8.5,20.5 L7.5,23 M3.5,15.5 L1,16.5 M8.5,3.5 L7.5,1"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                        />
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
+                        >
+                          <span
+                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                          >
+                            Settings
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
+        <main
+          class="StyledBox-sc-13pk1d4-0 lcOOub AppShellMain"
+        >
+          <p>
+            Content for the AppShell
+          </p>
+        </main>
       </div>
-      <main
-        class="StyledBox-sc-13pk1d4-0 dIlYHd"
-      >
-        <p>
-          Content for the AppShell
-        </p>
-      </main>
     </div>
   </div>
 </div>

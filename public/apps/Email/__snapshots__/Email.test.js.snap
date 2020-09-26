@@ -1,0 +1,929 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Email can render 1`] = `
+<div>
+  <div
+    class="ErrorBoundary"
+  >
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+    >
+      <div
+        class="StyledGrid-sc-1wofa1l-0 lchlXV"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 hyWSbu"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 gLndZo"
+            type="button"
+          >
+            Compose
+          </button>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 cJVSWF"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 hrelHl"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 fXihpF"
+                >
+                  Inbox
+                </span>
+                <span
+                  class="StyledText-sc-1sadyjn-0 bDBJwM"
+                >
+                  2
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Sent
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Drafts
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Trash
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Important
+                </span>
+                <span
+                  class="StyledText-sc-1sadyjn-0 bDBJwM"
+                >
+                  1
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Spam
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  Starred
+                </span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 hrelHl"
+          >
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 brVNGX"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  home
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 byTBaX"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  work
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 bJIUHT"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  church
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 dwDFaX"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  family
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 dnepYj"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  vacation
+                </span>
+              </div>
+            </button>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+            />
+            <button
+              class="StyledButton-sc-323bzc-0 jFJBys"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 dlZDBx"
+              >
+                <svg
+                  aria-label="StatusGoodSmall"
+                  class="StyledIcon-ofa7kd-0 dbLMkz"
+                  viewBox="0 0 12 12"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    fill-rule="evenodd"
+                    r="5"
+                    stroke="#000"
+                  />
+                </svg>
+                <span
+                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                >
+                  finance
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 bTFfDM"
+        >
+          <h4
+            class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+          >
+            Inbox
+          </h4>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 jrzkwI"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 fYAWkP"
+            >
+              <div
+                class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
+              >
+                <input
+                  autocomplete="off"
+                  class="StyledTextInput-sc-1x30a0s-0 fVbmbP"
+                  placeholder="Search Email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 gSqSKv"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 dRYvdr StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Jane
+                           
+                          D
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #1
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    />
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gvYOlP StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Bill
+                           
+                          S
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #2
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    />
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 ehSFRY StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Suzy
+                           
+                          Q
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #3
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    />
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mike
+                           
+                          S
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #4
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 pQXmZ"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 hBLLxb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 gSXPAN StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Sarah
+                           
+                          T
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #5
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 ikHrwq"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 dTfpun"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 epWjAl StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mark
+                           
+                          W
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #6
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 fwxlsh"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 bGHSXC"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 epWjAl StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mark
+                           
+                          W
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #7
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 pQXmZ"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mike
+                           
+                          S
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #13
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 pQXmZ"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 hBLLxb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mike
+                           
+                          S
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #14
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 pQXmZ"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 hBLLxb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jFJBys"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 dYagFh"
+                >
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
+                  />
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  />
+                  <div
+                    class="StyledBox-sc-13pk1d4-0 jwQkzn"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 JPuAi"
+                      >
+                        <span
+                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                        >
+                          Mike
+                           
+                          S
+                        </span>
+                        <span
+                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                        >
+                          Aug 26, 2020
+                        </span>
+                      </div>
+                      <span
+                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                      >
+                        subject for email #15
+                      </span>
+                    </div>
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 fktKkc"
+                    >
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 pQXmZ"
+                      />
+                      <div
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                      />
+                      <div
+                        class="StyledBox-sc-13pk1d4-0 hBLLxb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 eQxoQY"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+          >
+            actions
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+          >
+            toolbar
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 bQPtJQ"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masthead can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bFwQzJ Masthead"
+  >
+    <div
+      class="StyledStack-ajspsk-0 KTKTv"
+    >
+      <div
+        class="StyledStack__StyledStackLayer-ajspsk-1 bEYrkt"
+      >
+        <img
+          class="StyledImage-ey4zx9-0 kdPbXO"
+        />
+      </div>
+      <div
+        class="StyledStack__StyledStackLayer-ajspsk-1 ddIVvW"
+      >
+        <p>
+          Content for the Masthead
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

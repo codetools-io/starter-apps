@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+  >
+    <div
+      class="StyledGrid-sc-1wofa1l-0 hxvnVW"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 chfukR"
+      >
+        <p>
+          Content for the Gallery
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

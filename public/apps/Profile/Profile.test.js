@@ -1,15 +1,10 @@
-import React from 'react'
-import Profile from './Profile'
+import React from 'react';
+import Profile from './Profile';
 
 describe('Profile', () => {
   test('can render', () => {
-    const { container } = renderContainer(
-      <Profile>
-        <p>Content for the Profile</p>
-      </Profile>
-    )
+    const result = render(<Profile />);
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(result.toJSON()).toMatchSnapshot();
+  });
+});
