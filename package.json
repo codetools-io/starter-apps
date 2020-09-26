@@ -17,7 +17,6 @@
     "moment": "^2.27.0",
     "money": "^0.2.0",
     "prop-types": "^15.7.2",
-    "rambda": "^5.13.1",
     "react": "^16.13.1",
     "react-desc": "^4.1.2",
     "react-dom": "^16.13.1",
@@ -55,7 +54,10 @@
     "test-ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.js",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "generate": "yarn generate:docs && yarn generate:samples",
+    "generate:docs": "node tools/generate-docs.js",
+    "generate:samples": "node tools/generate-samples.js"
   },
   "eslintConfig": {
     "extends": "react-app",
