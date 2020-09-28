@@ -13,10 +13,10 @@ export default function AppShellSidebar({ background }) {
       className="AppShellSidebar"
       gridArea="sidebar"
       background={background || theme?.appShell?.sidebar?.background}
-      pad={{ horizontal: 'none', vertical: 'large' }}
+      pad={{ horizontal: 'none', vertical: 'medium' }}
       overflow={{ vertical: 'auto' }}
     >
-      <Box gap="large">
+      <Box gap="medium">
         <Header
           height="xsmall"
           width="100%"
