@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  Anchor,
   Box,
   Button,
   Card,
   Grid,
   Heading,
+  Layer,
   List,
   Markdown,
   Paragraph,
@@ -14,7 +14,7 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
-import { CodeSandbox } from 'grommet-icons';
+import { CodeSandbox, Close, Expand } from 'grommet-icons';
 import MonacoEditor from '@monaco-editor/react';
 
 import theme from './theme';
@@ -128,9 +128,54 @@ export function DocsOverview({ name, description }) {
   );
 }
 
-export function DocsPreview({ children }) {
+export function DocsPreviewModal({ children, onShrink = () => {} }) {
   return (
-    <DocsCard height="large" flex={false}>
+    <ThemeContext.Extend
+      value={{
+        layer: {
+          background: 'transparent',
+        },
+      }}
+    >
+      <Layer
+        onEsc={onShrink}
+        onClickOutside={onShrink}
+        margin={{
+          horizontal: 'large',
+          vertical: 'medium',
+        }}
+        full
+        modal
+      >
+        <Box
+          direction="row"
+          justify="end"
+          flex={false}
+          background="transparent"
+        >
+          <Button icon={<Close color="white" />} onClick={() => onShrink()} />
+        </Box>
+        <Box height="100%" pad={{ top: 'medium' }}>
+          <DocsPreview onShrink={onShrink} fill>
+            {children}
+          </DocsPreview>
+        </Box>
+      </Layer>
+    </ThemeContext.Extend>
+  );
+}
+export function DocsPreview({
+  children,
+  fullScreen = false,
+  onShrink = () => {},
+  ...props
+}) {
+  if (fullScreen) {
+    return <DocsPreviewModal onShrink={onShrink}>{children}</DocsPreviewModal>;
+  }
+
+  return (
+    <DocsCard height="large" flex={false} {...props}>
       <Box overflow="auto" fill>
         {children}
       </Box>
@@ -140,6 +185,7 @@ export function DocsPreview({ children }) {
 
 export function DocsMain({ children, files = [], sandboxUrl }) {
   const [active, setActive] = useState(0);
+  const [fullScreen, setFullScreen] = useState(false);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
 
@@ -150,11 +196,28 @@ export function DocsMain({ children, files = [], sandboxUrl }) {
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
         </Tabs>
-        <Box direction="row">
-          <Anchor icon={<CodeSandbox />} href={sandboxUrl} target="_blank" />
+        <Box direction="row" align="center" gap="small">
+          <Button
+            onClick={() => setFullScreen(true)}
+            icon={<Expand size="small" />}
+            color="control"
+            plain
+          />
+          <Button
+            icon={<CodeSandbox size="medium" />}
+            color="control"
+            href={sandboxUrl}
+            plain
+          />
         </Box>
       </Box>
-      {showPreview && <DocsPreview children={children} />}
+      {showPreview && (
+        <DocsPreview
+          children={children}
+          fullScreen={fullScreen}
+          onShrink={() => setFullScreen(false)}
+        />
+      )}
       {showCode && <DocsCode files={files} options={options} />}
     </Box>
   );
