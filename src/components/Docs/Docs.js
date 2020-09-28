@@ -16,6 +16,7 @@ import {
 } from 'grommet';
 import { CodeSandbox, Close, Expand } from 'grommet-icons';
 import MonacoEditor from '@monaco-editor/react';
+import Feature from 'components/Feature';
 
 import theme from './theme';
 
@@ -345,7 +346,9 @@ export function DocsPage({ component: Component, ...props }) {
       <DocsMain files={data?.files || []} sandboxUrl={`${SANDBOX_URL}${name}`}>
         <Component />
       </DocsMain>
-      <DocsProps properties={properties} />
+      <Feature name="DOC_PROPS">
+        <DocsProps properties={properties} />
+      </Feature>
       <Box fill></Box>
     </Box>
   );
