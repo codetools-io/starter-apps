@@ -20,7 +20,7 @@ export default function AppShellSidebar({ background }) {
         <Header
           height="xsmall"
           width="100%"
-          pad={{ horizontal: 'medium', vertical: 'small' }}
+          pad={{ horizontal: 'medium', vertical: 'medium' }}
           align="center"
           justify="center"
         >
