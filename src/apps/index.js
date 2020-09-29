@@ -6,8 +6,8 @@ export default function Router() {
   const CalendarDocs = lazy(() => import('./Calendar/docs'));
   const ChatDocs = lazy(() => import('./Chat/docs'));
   const StoreDocs = lazy(() => import('./Store/docs'));
-  const CheckoutDocs = lazy(() => import('./Commerce/Checkout/docs'));
-  const CartDocs = lazy(() => import('./Commerce/Cart/docs'));
+  const CheckoutDocs = lazy(() => import('./Checkout/docs'));
+  const CartDocs = lazy(() => import('./Cart/docs'));
   const ContactsDocs = lazy(() => import('./Contacts/docs'));
   const DashboardDocs = lazy(() => import('./Dashboard/docs'));
   const EmailDocs = lazy(() => import('./Email/docs'));
