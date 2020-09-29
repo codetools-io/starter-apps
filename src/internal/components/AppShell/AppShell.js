@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Grommet } from 'grommet';
-import * as config from 'config';
+import * as config from 'internal/config';
 import AppShellMain from './AppShellMain';
 import AppShellSidebar from './AppShellSidebar';
 

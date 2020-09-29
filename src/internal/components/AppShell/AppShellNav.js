@@ -11,7 +11,7 @@ import {
   ThemeContext,
 } from 'grommet';
 import { Down, Up } from 'grommet-icons';
-import * as config from 'config';
+import * as config from 'internal/config';
 
 function AppShellNavSection({ id, name, routes }) {
   return (
