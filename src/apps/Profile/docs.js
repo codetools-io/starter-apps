@@ -20,5 +20,5 @@ ProfileWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={ProfileWithSchema} />;
+  return <DocsPage category="apps" component={ProfileWithSchema} />;
 };

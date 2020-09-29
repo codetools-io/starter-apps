@@ -20,5 +20,5 @@ StoreWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={StoreWithSchema} />;
+  return <DocsPage category="apps" component={StoreWithSchema} />;
 };

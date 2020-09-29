@@ -79,5 +79,5 @@ ChatWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={ChatWithSchema} />;
+  return <DocsPage category="apps" component={ChatWithSchema} />;
 };

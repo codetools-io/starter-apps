@@ -20,5 +20,5 @@ CheckoutWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={CheckoutWithSchema} />;
+  return <DocsPage category="apps" component={CheckoutWithSchema} />;
 };

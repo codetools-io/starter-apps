@@ -22,5 +22,5 @@ DashboardWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={DashboardWithSchema} />;
+  return <DocsPage category="apps" component={DashboardWithSchema} />;
 };

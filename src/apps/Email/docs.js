@@ -20,5 +20,5 @@ EmailWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={EmailWithSchema} />;
+  return <DocsPage category="apps" component={EmailWithSchema} />;
 };

@@ -45,7 +45,7 @@ export function DocsCode({ files = [], options }) {
   useEffect(() => {
     if (activeFileIndex === null && files?.length) {
       setActiveFileIndex(
-        files?.findIndex((file) => file?.filename === `${file?.app}.js`)
+        files?.findIndex((file) => file?.filename === `${file?.context}.js`)
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,7 +59,7 @@ export function DocsCode({ files = [], options }) {
             {files.map((file, index) => {
               return (
                 <Box
-                  key={`file-${file?.app}-${file?.filepath}`}
+                  key={`file-${file?.context}-${file?.filepath}`}
                   background={index === activeFileIndex ? 'white' : 'shade-1'}
                   border={[
                     'bottom',
@@ -325,25 +325,28 @@ export function DocsProps({ properties }) {
   );
 }
 
-export function DocsPage({ component: Component, ...props }) {
+export function DocsPage({ component: Component, category, ...props }) {
   const { name, description, properties } = Component.toJSON();
   const [data, setData] = useState();
 
   useEffect(() => {
     if (name) {
-      fetch(`${DOCS_BASE_PATH}/${name}.json`)
+      fetch(`${DOCS_BASE_PATH}/${category}/${name}.json`)
         .then((res) => res.json())
         .then((data) => {
           setData(data);
         })
         .catch((err) => console.error(err));
     }
-  }, [name]);
+  }, [category, name]);
 
   return (
     <Box className="DocsPage" gap="large" fill="horizontal" {...props}>
       <DocsOverview name={name} description={description} />
-      <DocsMain files={data?.files || []} sandboxUrl={`${SANDBOX_URL}${name}`}>
+      <DocsMain
+        files={data?.files || []}
+        sandboxUrl={`${SANDBOX_URL}${category}/${name}`}
+      >
         <Component />
       </DocsMain>
       <Feature name="DOC_PROPS">

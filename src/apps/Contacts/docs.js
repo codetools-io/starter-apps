@@ -20,5 +20,5 @@ ContactsWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={ContactsWithSchema} />;
+  return <DocsPage category="apps" component={ContactsWithSchema} />;
 };

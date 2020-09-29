@@ -20,5 +20,5 @@ NotesWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={NotesWithSchema} />;
+  return <DocsPage category="apps" component={NotesWithSchema} />;
 };

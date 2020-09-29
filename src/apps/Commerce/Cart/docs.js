@@ -20,5 +20,5 @@ CartWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={CartWithSchema} />;
+  return <DocsPage category="apps" component={CartWithSchema} />;
 };

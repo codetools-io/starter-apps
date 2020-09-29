@@ -3,45 +3,71 @@
 const path = require('path');
 const fs = require('fs-extra');
 const PROJECT_ROOT = path.resolve(__dirname, '../');
-const APPS_DIR = path.resolve(PROJECT_ROOT, './src/apps');
-const SAMPLES_DIR = path.resolve(PROJECT_ROOT, './public/samples');
 const TEMPLATE_DIR = path.resolve(__dirname, './templates/sample');
+const APPS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/apps');
+const SHELLS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/shells');
+const SAMPLES_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples');
+const APPS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples/apps');
+const SHELLS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples/shells');
 
 function getAppDirectories() {
-  const apps = fs.readdirSync(APPS_DIR);
+  const apps = fs
+    .readdirSync(APPS_SRC_DIR, { withFileTypes: false })
+    .filter((resource) => resource !== 'index.js');
 
   return apps.map((app) => {
-    return path.resolve(APPS_DIR, `./${app}`);
+    return path.resolve(APPS_SRC_DIR, `./${app}`);
   });
 }
 
-function saveNewSamples(appDirectories) {
-  appDirectories.forEach((appDirectory) => {
-    const appName = path.basename(appDirectory);
-    const targetSampleDir = path.resolve(SAMPLES_DIR, appName);
+function getShellDirectories() {
+  const shells = fs
+    .readdirSync(SHELLS_SRC_DIR, { withFileTypes: false })
+    .filter((resource) => resource !== 'index.js');
+
+  return shells.map((shell) => {
+    return path.resolve(SHELLS_SRC_DIR, `./${shell}`);
+  });
+}
+
+function saveNewSamples(directories, outputDir) {
+  directories.forEach((directory) => {
+    const name = path.basename(directory);
+    const targetSampleDir = path.resolve(outputDir, name);
     const targetAppDir = path.resolve(targetSampleDir, './src/components/App');
     const snapshotsDir = path.resolve(targetAppDir, './__snapshots__');
     const docsPath = path.resolve(targetAppDir, './docs.js');
 
     fs.copySync(TEMPLATE_DIR, targetSampleDir);
-    fs.copySync(appDirectory, targetAppDir);
+    fs.copySync(directory, targetAppDir);
     fs.removeSync(snapshotsDir);
     fs.removeSync(docsPath);
   });
 }
 
 function removeExistingSamples() {
-  fs.removeSync(SAMPLES_DIR);
+  fs.removeSync(SAMPLES_OUTPUT_DIR);
+}
+
+function generateAppSamples() {
+  const appDirectories = getAppDirectories();
+
+  saveNewSamples(appDirectories, APPS_OUTPUT_DIR);
+}
+
+function generateShellSamples() {
+  const shellDirectories = getShellDirectories();
+
+  saveNewSamples(shellDirectories, SHELLS_OUTPUT_DIR);
 }
 
 function generateSamples() {
-  const appDirectories = getAppDirectories();
-
-  removeExistingSamples();
-  saveNewSamples(appDirectories);
+  generateAppSamples();
+  generateShellSamples();
 }
 
 function init() {
+  removeExistingSamples();
   generateSamples();
 }
 

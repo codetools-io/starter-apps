@@ -20,5 +20,5 @@ ProjectManagerWithSchema.propTypes = {
 };
 
 export default () => {
-  return <DocsPage component={ProjectManagerWithSchema} />;
+  return <DocsPage category="apps" component={ProjectManagerWithSchema} />;
 };

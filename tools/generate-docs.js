@@ -4,14 +4,29 @@ const path = require('path');
 const fs = require('fs-extra');
 const globby = require('globby');
 const PROJECT_ROOT = path.resolve(__dirname, '../');
-const APPS_DIR = path.resolve(PROJECT_ROOT, './src/apps');
-const DOCS_DIR = path.resolve(PROJECT_ROOT, './public/docs');
+const APPS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/apps');
+const SHELLS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/shells');
+const DOCS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs');
+const APPS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs/apps');
+const SHELLS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs/shells');
 
 function getAppDirectories() {
-  const apps = fs.readdirSync(APPS_DIR);
+  const apps = fs
+    .readdirSync(APPS_SRC_DIR, { withFileTypes: false })
+    .filter((resource) => resource !== 'index.js');
 
   return apps.map((app) => {
-    return path.resolve(APPS_DIR, `./${app}`);
+    return path.resolve(APPS_SRC_DIR, `./${app}`);
+  });
+}
+
+function getShellDirectories() {
+  const shells = fs
+    .readdirSync(SHELLS_SRC_DIR, { withFileTypes: false })
+    .filter((resource) => resource !== 'index.js');
+
+  return shells.map((shell) => {
+    return path.resolve(SHELLS_SRC_DIR, `./${shell}`);
   });
 }
 
@@ -30,7 +45,7 @@ function getAppSources(appDirectories) {
           filepath: relativeFilepath,
           filename: path.basename(filepath),
           directory: path.dirname(relativeFilepath),
-          app: path.basename(appDirectory),
+          context: path.basename(appDirectory),
         };
       })
       .filter((file) => {
@@ -45,10 +60,40 @@ function getAppSources(appDirectories) {
   });
 }
 
-function saveNewDocs(docs) {
+function getShellSources(shellDirectories) {
+  return shellDirectories.map((shellDirectory) => {
+    const filepaths = globby.sync(shellDirectory, { onlyFiles: true });
+    const allowed = ['.css', '.js'];
+    const excluded = ['.test.js', 'docs.js'];
+
+    return filepaths
+      .map((filepath) => {
+        const content = fs.readFileSync(filepath, { encoding: 'utf8' });
+        const relativeFilepath = path.relative(shellDirectory, filepath);
+        return {
+          content,
+          filepath: relativeFilepath,
+          filename: path.basename(filepath),
+          directory: path.dirname(relativeFilepath),
+          context: path.basename(shellDirectory),
+        };
+      })
+      .filter((file) => {
+        if (
+          allowed.some((ext) => file.filename.endsWith(ext)) &&
+          !excluded.some((ext) => file.filename.endsWith(ext))
+        ) {
+          return true;
+        }
+        return false;
+      });
+  });
+}
+
+function saveNewDocs(docs, outputDir) {
   docs.forEach((files) => {
     const firstSource = files[0];
-    const outputPath = path.resolve(DOCS_DIR, `./${firstSource.app}.json`);
+    const outputPath = path.resolve(outputDir, `./${firstSource.context}.json`);
     fs.outputJSON(outputPath, {
       files,
     });
@@ -56,17 +101,30 @@ function saveNewDocs(docs) {
 }
 
 function removeExistingDocs() {
-  fs.removeSync(DOCS_DIR);
+  fs.removeSync(DOCS_OUTPUT_DIR);
+}
+
+function generateAppDocs() {
+  const appDirectories = getAppDirectories();
+  const appSources = getAppSources(appDirectories);
+
+  saveNewDocs(appSources, APPS_OUTPUT_DIR);
+}
+
+function generateShellDocs() {
+  const shellDirectories = getShellDirectories();
+  const shellSources = getShellSources(shellDirectories);
+
+  saveNewDocs(shellSources, SHELLS_OUTPUT_DIR);
 }
 
 function generateDocs() {
-  const appDirectories = getAppDirectories();
-  const appSources = getAppSources(appDirectories);
-  removeExistingDocs();
-  saveNewDocs(appSources);
+  generateAppDocs();
+  generateShellDocs();
 }
 
 function init() {
+  removeExistingDocs();
   generateDocs();
 }
 
