@@ -4,6 +4,7 @@ import {
   Avatar,
   Box,
   Button,
+  DropButton,
   Grid,
   Heading,
   InfiniteScroll,
@@ -11,9 +12,18 @@ import {
   Text,
   TextInput,
 } from 'grommet';
-import { StatusGoodSmall } from 'grommet-icons';
+import {
+  Flag,
+  Folder,
+  Next,
+  Previous,
+  StatusGoodSmall,
+  Tag,
+  Trash,
+} from 'grommet-icons';
 
 import useEmail from './useEmail';
+
 function EmailTag({ color, label, ...props }) {
   return (
     <Box
@@ -58,6 +68,7 @@ function EmailFolders({
     </Box>
   );
 }
+
 function EmailShort({
   subject,
   sender,
@@ -269,6 +280,90 @@ function AppliedFilters({ labels, onClear }) {
   );
 }
 
+function EmailActions({
+  reportAsSpam,
+  moveToFolder,
+  applyLabel,
+  deleteEmail,
+  folders,
+  labels,
+  email,
+}) {
+  return (
+    <Box direction="row" gap="medium" align="center">
+      <Button
+        icon={<Flag size="small" />}
+        onClick={() => reportAsSpam(email?.id)}
+        plain
+      />
+      <DropButton
+        icon={<Folder size="small" />}
+        dropAlign={{ top: 'bottom' }}
+        dropContent={
+          <Box pad={{ vertical: 'small' }} gap="small">
+            <Box pad={{ horizontal: 'small' }}>
+              <Text weight="bold">Folders</Text>
+            </Box>
+            {folders?.map?.((folder) => (
+              <Box key={folder?.id} pad={{ horizontal: 'small' }}>
+                <Button
+                  label={folder?.name}
+                  onClick={() => moveToFolder(email?.id, folder?.id)}
+                  plain
+                />
+              </Box>
+            ))}
+          </Box>
+        }
+        plain
+      />
+      <DropButton
+        icon={<Tag size="small" />}
+        dropAlign={{ top: 'bottom' }}
+        dropContent={
+          <Box pad={{ vertical: 'small' }} gap="small">
+            <Box pad={{ horizontal: 'small' }}>
+              <Text weight="bold">Labels</Text>
+            </Box>
+            {labels?.map?.((label) => (
+              <Box key={label?.id} pad={{ horizontal: 'small' }}>
+                <Button
+                  label={label?.name}
+                  onClick={() => applyLabel(email?.id, label?.id)}
+                  plain
+                />
+              </Box>
+            ))}
+          </Box>
+        }
+        plain
+      />
+      <Button
+        icon={<Trash size="small" />}
+        onClick={() => deleteEmail(email?.id)}
+        plain
+      />
+    </Box>
+  );
+}
+
+function EmailPrevNext({ goToNextEmail, goToPreviousEmail, email }) {
+  return (
+    <Box direction="row" gap="medium" align="center">
+      <Button
+        icon={<Previous size="small" />}
+        onClick={() => goToPreviousEmail(email?.id)}
+        plain
+      />
+      <Button
+        icon={<Next size="small" />}
+        onClick={() => goToNextEmail(email?.id)}
+        plain
+      />
+    </Box>
+  );
+}
+
 export default function Email() {
   const {
     activeEmail,
@@ -277,14 +372,20 @@ export default function Email() {
     activeFolderEmails,
     activeLabelEmails,
     activeLabels,
+    applyLabel,
     clearLabelFilters,
     composeEmail,
+    deleteEmail,
     folders,
     filterByLabel,
+    goToNextEmail,
+    goToPreviousEmail,
     labels,
     labelsById,
+    moveToFolder,
     openEmail,
     openFolder,
+    reportAsSpam,
     searchEmails,
     unreadEmailsByFolderId,
   } = useEmail();
@@ -370,8 +471,24 @@ export default function Email() {
         pad="medium"
         border="bottom"
       >
-        <Box>actions</Box>
-        <Box>toolbar</Box>
+        {activeEmail && (
+          <EmailActions
+            reportAsSpam={reportAsSpam}
+            applyLabel={applyLabel}
+            deleteEmail={deleteEmail}
+            moveToFolder={moveToFolder}
+            email={activeEmail}
+            folders={folders}
+            labels={labels}
+          />
+        )}
+        {activeEmail && (
+          <EmailPrevNext
+            goToNextEmail={goToNextEmail}
+            goToPreviousEmail={goToPreviousEmail}
+            email={activeEmail}
+          />
+        )}
       </Box>
       <Box gridArea="EmailThread">
         {activeEmail && (

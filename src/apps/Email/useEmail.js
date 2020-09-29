@@ -83,26 +83,44 @@ export default function useEmail() {
       setActiveLabelIds([]);
     }
 
+    function reportAsSpam() {}
+
+    function moveToFolder() {}
+
+    function applyLabel() {}
+
+    function deleteEmail() {}
+
+    function goToNextEmail() {}
+
+    function goToPreviousEmail() {}
+
     return {
       activeEmail,
       activeEmailId,
       activeFolder,
       activeFolderEmails,
-      activeLabelEmails,
       activeFolderId,
-      activeLabels,
+      activeLabelEmails,
       activeLabelIds,
+      activeLabels,
+      applyLabel,
       clearLabelFilters,
       composeEmail,
+      deleteEmail,
       emails,
       emailsByFolderId,
       filterByLabel,
       folders,
       foldersById,
+      goToNextEmail,
+      goToPreviousEmail,
       labels,
       labelsById,
+      moveToFolder,
       openEmail,
       openFolder,
+      reportAsSpam,
       searchEmails,
       unreadEmails,
       unreadEmailsByFolderId,
