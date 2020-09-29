@@ -37,6 +37,7 @@ export const nav = {
           icon: <Shop size="16px" />,
           label: 'Commerce',
           path: '/apps/commerce',
+          feature: 'APP_COMMERCE',
           routes: [
             {
               id: 'commerce-store',
