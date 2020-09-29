@@ -1,4 +1,4 @@
-import useColor from 'hooks/useColor';
+import useColor from 'internal/hooks/useColor';
 export default function useLighten(color, amount = 10) {
   const hexColor = useColor(color);
   let [r, g, b] = hexColor.replace('#', '').match(/.{2}/g);

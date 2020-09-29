@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, PropTypes } from 'react-desc';
-import { DocsPage } from 'components/Docs';
+import { DocsPage } from 'internal/components/Docs';
 import Email from './Email';
 const usage = `
 <Email>

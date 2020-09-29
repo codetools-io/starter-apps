@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'grommet';
-import useColor from 'hooks/useColor';
+import useColor from 'internal/hooks/useColor';
 export default function useContrast(color) {
   const theme = useContext(ThemeContext);
   const { dark, light } = theme.global.colors.text;

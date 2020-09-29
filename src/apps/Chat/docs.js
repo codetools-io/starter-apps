@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, PropTypes } from 'react-desc';
-import { DocsPage } from 'components/Docs';
+import { DocsPage } from 'internal/components/Docs';
 import Chat from './Chat';
 const usage = `
 const createRecord = (payload) => fetch(\`https://api.codetools.io/messages/\${id}\`)
