@@ -12,6 +12,7 @@ import {
 } from 'grommet';
 import { Down, Up } from 'grommet-icons';
 import * as config from 'internal/config';
+import Feature from 'internal/components/Feature';
 
 function AppShellNavSection({ id, name, routes }) {
   return (
@@ -21,7 +22,9 @@ function AppShellNavSection({ id, name, routes }) {
       </Box>
       <Box gap="none">
         {routes?.map((route) => (
-          <AppShellNavItem key={route.id} {...route} />
+          <Feature name={route?.feature}>
+            <AppShellNavItem key={route.id} {...route} />
+          </Feature>
         ))}
       </Box>
     </Box>
