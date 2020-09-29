@@ -907,18 +907,7 @@ exports[`Email can render 1`] = `
         </div>
         <div
           class="StyledBox-sc-13pk1d4-0 eQxoQY"
-        >
-          <div
-            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-          >
-            actions
-          </div>
-          <div
-            class="StyledBox-sc-13pk1d4-0 bFwQzJ"
-          >
-            toolbar
-          </div>
-        </div>
+        />
         <div
           class="StyledBox-sc-13pk1d4-0 bQPtJQ"
         />
