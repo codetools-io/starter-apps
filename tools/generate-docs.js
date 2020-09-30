@@ -100,6 +100,11 @@ function saveNewDocs(docs, outputDir) {
   });
 }
 
+function saveOverviewDocs(docs) {
+  const outputPath = path.resolve(DOCS_OUTPUT_DIR, `./overview.json`);
+  fs.outputJSON(outputPath, docs);
+}
+
 function removeExistingDocs() {
   fs.removeSync(DOCS_OUTPUT_DIR);
 }
@@ -118,9 +123,22 @@ function generateShellDocs() {
   saveNewDocs(shellSources, SHELLS_OUTPUT_DIR);
 }
 
+function generateOverviewDocs() {
+  const appDirectories = getAppDirectories();
+  const appSources = getAppSources(appDirectories);
+  const shellDirectories = getShellDirectories();
+  const shellSources = getShellSources(shellDirectories);
+
+  saveOverviewDocs({
+    apps: appSources,
+    shells: shellSources,
+  });
+}
+
 function generateDocs() {
   generateAppDocs();
   generateShellDocs();
+  generateOverviewDocs();
 }
 
 function init() {
