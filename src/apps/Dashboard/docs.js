@@ -2,16 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Dashboard from './Dashboard';
-const usage = `
-<Dashboard>
-  // ...rest of the app.
-<Dashboard>
-`;
-const DashboardWithSchema = describe(Dashboard)
-  .description(
-    'An app for viewing high-level information about systems and organizations.'
-  )
-  .usage(usage);
+
+const DashboardWithSchema = describe(Dashboard).description(
+  'An app for viewing high-level information about systems and organizations.'
+);
 
 DashboardWithSchema.displayName = 'Dashboard';
 

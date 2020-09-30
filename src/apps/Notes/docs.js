@@ -2,14 +2,8 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Notes from './Notes';
-const usage = `
-<Notes>
-  // ...rest of the app.
-<Notes>
-`;
-const NotesWithSchema = describe(Notes)
-  .description('An app for taking notes.')
-  .usage(usage);
+
+const NotesWithSchema = describe(Notes).description('An app for taking notes.');
 
 NotesWithSchema.displayName = 'Notes';
 

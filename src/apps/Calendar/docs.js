@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Calendar from './Calendar';
-const usage = `
-<Calendar>
-  // ...rest of the app.
-<Calendar>
-`;
-const CalendarWithSchema = describe(Calendar)
-  .description('An app for managing dates, events, and reminders.')
-  .usage(usage);
+
+const CalendarWithSchema = describe(Calendar).description(
+  'An app for managing dates, events, and reminders.'
+);
 
 CalendarWithSchema.propTypes = {
   children: PropTypes.element.description(

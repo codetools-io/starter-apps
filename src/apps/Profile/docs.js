@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Profile from './Profile';
-const usage = `
-<Profile>
-  // ...rest of the app.
-<Profile>
-`;
-const ProfileWithSchema = describe(Profile)
-  .description('An app for showing social information about a person.')
-  .usage(usage);
+
+const ProfileWithSchema = describe(Profile).description(
+  'An app for showing social information about a person.'
+);
 
 ProfileWithSchema.displayName = 'Profile';
 

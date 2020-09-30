@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Contacts from './Contacts';
-const usage = `
-<Contacts>
-  // ...rest of the app.
-<Contacts>
-`;
-const ContactsWithSchema = describe(Contacts)
-  .description('An app for managing information about lists of people.')
-  .usage(usage);
+
+const ContactsWithSchema = describe(Contacts).description(
+  'An app for managing information about lists of people.'
+);
 
 ContactsWithSchema.displayName = 'Contacts';
 

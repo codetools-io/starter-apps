@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Email from './Email';
-const usage = `
-<Email>
-  // ...rest of the app.
-<Email>
-`;
-const EmailWithSchema = describe(Email)
-  .description('An app for managing email.')
-  .usage(usage);
+
+const EmailWithSchema = describe(Email).description(
+  'An app for managing email.'
+);
 
 EmailWithSchema.displayName = 'Email';
 

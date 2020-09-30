@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import ProjectManager from './ProjectManager';
-const usage = `
-<ProjectManager>
-  // ...rest of the app.
-<ProjectManager>
-`;
-const ProjectManagerWithSchema = describe(ProjectManager)
-  .description('An app for managing team projects.')
-  .usage(usage);
+
+const ProjectManagerWithSchema = describe(ProjectManager).description(
+  'An app for managing team projects.'
+);
 
 ProjectManagerWithSchema.displayName = 'ProjectManager';
 

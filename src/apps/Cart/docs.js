@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Cart from './Cart';
-const usage = `
-<Cart>
-  // ...rest of the app.
-<Cart>
-`;
-const CartWithSchema = describe(Cart)
-  .description('An app for showing items that a customer intends to purchase.')
-  .usage(usage);
+
+const CartWithSchema = describe(Cart).description(
+  'An app for showing items that a customer intends to purchase.'
+);
 
 CartWithSchema.displayName = 'Cart';
 

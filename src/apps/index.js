@@ -14,6 +14,7 @@ export default function Router() {
   const NotesDocs = lazy(() => import('./Notes/docs'));
   const ProfileDocs = lazy(() => import('./Profile/docs'));
   const ProjectManagerDocs = lazy(() => import('./ProjectManager/docs'));
+  const FeedDocs = lazy(() => import('./Feed/docs'));
 
   return (
     <Suspense fallback={<p>loading app…</p>}>
@@ -27,7 +28,8 @@ export default function Router() {
         <Route component={DashboardDocs} path={`${path}/dashboard`} />
         <Route component={EmailDocs} path={`${path}/email`} />
         <Route component={NotesDocs} path={`${path}/notes`} />
-        <Route component={ProfileDocs} path={`${path}/profile`} />
+        <Route component={ProfileDocs} path={`${path}/social-media/profile`} />
+        <Route component={FeedDocs} path={`${path}/social-media/feed`} />
         <Route
           component={ProjectManagerDocs}
           path={`${path}/project-manager`}

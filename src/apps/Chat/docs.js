@@ -2,26 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Chat from './Chat';
-const usage = `
-const createRecord = (payload) => fetch(\`https://api.codetools.io/messages/\${id}\`)
-const findRecord = (id) => fetch(\`https://api.codetools.io/messages/\${id}\`)
-const updateRecord = (id, payload) => fetch(\`https://api.codetools.io/messages/\${id}\`)
-const deleteRecord = (id) => fetch(\`https://api.codetools.io/messages/\${id}\`)
-const serialize = (payload) => JSON.stringify(payload)
-const deserialize = (payload) => payload
 
-<Chat
-  createRecord={createRecord}
-  findRecord={findRecord}
-  updateRecord={updateRecord}
-  deleteRecord={deleteRecord}
-  serialize={serialize}
-  deserialize={deserialize}
-/>
-`;
-const ChatWithSchema = describe(Chat)
-  .description('An app for facilitating real-time text communication.')
-  .usage(usage);
+const ChatWithSchema = describe(Chat).description(
+  'An app for facilitating real-time text communication.'
+);
 
 ChatWithSchema.displayName = 'Chat';
 

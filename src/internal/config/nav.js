@@ -6,10 +6,10 @@ import {
   Dashboard,
   Mail,
   Notes,
+  Group,
   Shop,
   Tasks,
   Template,
-  User,
 } from 'grommet-icons';
 
 export const nav = {
@@ -43,19 +43,19 @@ export const nav = {
               id: 'commerce-store',
               label: 'Store',
               path: '/apps/commerce/store',
-              feature: 'APP_STORE',
+              feature: 'APP_COMMERCE_STORE',
             },
             {
               id: 'commerce-checkout',
               label: 'Checkout',
               path: '/apps/commerce/checkout',
-              feature: 'APP_CHECKOUT',
+              feature: 'APP_COMMERCE_CHECKOUT',
             },
             {
               id: 'commerce-cart',
               label: 'Cart',
               path: '/apps/commerce/cart',
-              feature: 'APP_CART',
+              feature: 'APP_COMMERCE_CART',
             },
           ],
         },
@@ -87,19 +87,34 @@ export const nav = {
           path: '/apps/notes',
           feature: 'APP_NOTES',
         },
-        {
-          id: 'profile',
-          icon: <User size="16px" />,
-          label: 'Profile',
-          path: '/apps/profile',
-          feature: 'APP_PROFILE',
-        },
+
         {
           id: 'projectManager',
           icon: <Tasks size="16px" />,
           label: 'Project Manager',
           path: '/apps/project-manager',
           feature: 'APP_PROJECT_MANAGER',
+        },
+        {
+          id: 'socialMedia',
+          icon: <Group size="16px" />,
+          label: 'Social Media',
+          path: '/apps/social-media',
+          feature: 'APP_SOCIAL_MEDIA',
+          routes: [
+            {
+              id: 'socialMedia-profile',
+              label: 'Profile',
+              path: '/apps/social-media/profile',
+              feature: 'APP_SOCIAL_MEDIA_PROFILE',
+            },
+            {
+              id: 'socialMedia-feed',
+              label: 'Feed',
+              path: '/apps/social-media/feed',
+              feature: 'APP_SOCIAL_MEDIA_FEED',
+            },
+          ],
         },
       ],
     },

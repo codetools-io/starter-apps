@@ -2,14 +2,10 @@ import React from 'react';
 import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Store from './Store';
-const usage = `
-<Store>
-  // ...rest of the app.
-<Store>
-`;
-const StoreWithSchema = describe(Store)
-  .description('An app for showing products to a customer.')
-  .usage(usage);
+
+const StoreWithSchema = describe(Store).description(
+  'An app for showing products to a customer.'
+);
 
 StoreWithSchema.displayName = 'Store';
 

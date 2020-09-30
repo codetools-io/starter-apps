@@ -22,8 +22,8 @@ function AppShellNavSection({ id, name, routes }) {
       </Box>
       <Box gap="none">
         {routes?.map((route) => (
-          <Feature name={route?.feature}>
-            <AppShellNavItem key={route.id} {...route} />
+          <Feature key={route.id} name={route?.feature}>
+            <AppShellNavItem {...route} />
           </Feature>
         ))}
       </Box>
