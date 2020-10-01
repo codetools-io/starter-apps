@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Dashboard from './Dashboard';
 
 const DashboardWithSchema = describe(Dashboard).description(
-  'An app for viewing high-level information about systems and organizations.'
+  'A feature for viewing high-level information about systems and organizations.'
 );
 
 DashboardWithSchema.displayName = 'Dashboard';

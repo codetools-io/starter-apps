@@ -16,7 +16,7 @@ export const nav = {
   sections: [
     {
       id: 'section-1',
-      name: 'Apps',
+      name: 'Features',
       routes: [
         {
           id: 'calendar',
@@ -89,27 +89,27 @@ export const nav = {
         },
 
         {
-          id: 'projectManager',
+          id: 'project-manager',
           icon: <Tasks size="16px" />,
           label: 'Project Manager',
           path: '/apps/project-manager',
           feature: 'APP_PROJECT_MANAGER',
         },
         {
-          id: 'socialMedia',
+          id: 'social-media',
           icon: <Group size="16px" />,
           label: 'Social Media',
           path: '/apps/social-media',
           feature: 'APP_SOCIAL_MEDIA',
           routes: [
             {
-              id: 'socialMedia-profile',
+              id: 'social-media-profile',
               label: 'Profile',
               path: '/apps/social-media/profile',
               feature: 'APP_SOCIAL_MEDIA_PROFILE',
             },
             {
-              id: 'socialMedia-feed',
+              id: 'social-media-feed',
               label: 'Feed',
               path: '/apps/social-media/feed',
               feature: 'APP_SOCIAL_MEDIA_FEED',
@@ -123,7 +123,7 @@ export const nav = {
       name: 'Shells',
       routes: [
         {
-          id: 'appShell',
+          id: 'app-shell',
           icon: <Template size="16px" />,
           label: 'App Shell',
           path: '/shells/app-shell',

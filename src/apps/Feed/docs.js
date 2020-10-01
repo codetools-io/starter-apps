@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Feed from './Feed';
 
 const FeedWithSchema = describe(Feed).description(
-  'An app for displaying a stream of live social media posts'
+  'A feature for displaying a stream of live social media posts'
 );
 
 FeedWithSchema.displayName = 'Feed';

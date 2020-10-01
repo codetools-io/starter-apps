@@ -331,7 +331,7 @@ export function DocsPage({ component: Component, category, ...props }) {
 
   useEffect(() => {
     if (name) {
-      fetch(`${DOCS_BASE_PATH}/${category}/${name}.json`)
+      fetch(`${DOCS_BASE_PATH}/${category}/${name}/files.json`)
         .then((res) => res.json())
         .then((data) => {
           setData(data);

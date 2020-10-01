@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Chat from './Chat';
 
 const ChatWithSchema = describe(Chat).description(
-  'An app for facilitating real-time text communication.'
+  'A feature for facilitating real-time text communication.'
 );
 
 ChatWithSchema.displayName = 'Chat';

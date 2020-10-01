@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Calendar from './Calendar';
 
 const CalendarWithSchema = describe(Calendar).description(
-  'An app for managing dates, events, and reminders.'
+  'A feature for managing dates, events, and reminders.'
 );
 
 CalendarWithSchema.propTypes = {

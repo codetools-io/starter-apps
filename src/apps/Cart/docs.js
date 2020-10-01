@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Cart from './Cart';
 
 const CartWithSchema = describe(Cart).description(
-  'An app for showing items that a customer intends to purchase.'
+  'A feature for showing items that a customer intends to purchase.'
 );
 
 CartWithSchema.displayName = 'Cart';

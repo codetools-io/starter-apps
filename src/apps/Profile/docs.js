@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Profile from './Profile';
 
 const ProfileWithSchema = describe(Profile).description(
-  'An app for showing social information about a person.'
+  'A feature for showing social information about a person.'
 );
 
 ProfileWithSchema.displayName = 'Profile';

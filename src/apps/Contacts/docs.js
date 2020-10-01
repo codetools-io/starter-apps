@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Contacts from './Contacts';
 
 const ContactsWithSchema = describe(Contacts).description(
-  'An app for managing information about lists of people.'
+  'A feature for managing information about lists of people.'
 );
 
 ContactsWithSchema.displayName = 'Contacts';

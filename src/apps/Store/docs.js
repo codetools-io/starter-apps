@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Store from './Store';
 
 const StoreWithSchema = describe(Store).description(
-  'An app for showing products to a customer.'
+  'A feature for showing products to a customer.'
 );
 
 StoreWithSchema.displayName = 'Store';

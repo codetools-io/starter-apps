@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Boilerplate from './Boilerplate';
 
 const BoilerplateWithSchema = describe(Boilerplate).description(
-  'An app for showing live social media Boilerplates.'
+  'A feature for showing live social media Boilerplates.'
 );
 
 BoilerplateWithSchema.displayName = 'Boilerplate';

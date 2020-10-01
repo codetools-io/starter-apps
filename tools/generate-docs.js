@@ -4,11 +4,13 @@ const path = require('path');
 const fs = require('fs-extra');
 const globby = require('globby');
 const PROJECT_ROOT = path.resolve(__dirname, '../');
-const APPS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/apps');
-const SHELLS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/shells');
-const DOCS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs');
-const APPS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs/apps');
-const SHELLS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/docs/shells');
+const PROJECT_SRC_DIR = path.resolve(PROJECT_ROOT, './src');
+const PROJECT_PUBLIC_DIR = path.resolve(PROJECT_ROOT, './public');
+const APPS_SRC_DIR = path.resolve(PROJECT_SRC_DIR, './apps');
+const SHELLS_SRC_DIR = path.resolve(PROJECT_SRC_DIR, './shells');
+const DOCS_OUTPUT_DIR = path.resolve(PROJECT_PUBLIC_DIR, './docs');
+const APPS_OUTPUT_DIR = path.resolve(DOCS_OUTPUT_DIR, './apps');
+const SHELLS_OUTPUT_DIR = path.resolve(DOCS_OUTPUT_DIR, './shells');
 
 function getAppDirectories() {
   const apps = fs
@@ -93,16 +95,14 @@ function getShellSources(shellDirectories) {
 function saveNewDocs(docs, outputDir) {
   docs.forEach((files) => {
     const firstSource = files[0];
-    const outputPath = path.resolve(outputDir, `./${firstSource.context}.json`);
+    const outputPath = path.resolve(
+      outputDir,
+      `./${firstSource.context}/files.json`
+    );
     fs.outputJSON(outputPath, {
       files,
     });
   });
-}
-
-function saveOverviewDocs(docs) {
-  const outputPath = path.resolve(DOCS_OUTPUT_DIR, `./overview.json`);
-  fs.outputJSON(outputPath, docs);
 }
 
 function removeExistingDocs() {
@@ -123,22 +123,22 @@ function generateShellDocs() {
   saveNewDocs(shellSources, SHELLS_OUTPUT_DIR);
 }
 
-function generateOverviewDocs() {
-  const appDirectories = getAppDirectories();
-  const appSources = getAppSources(appDirectories);
-  const shellDirectories = getShellDirectories();
-  const shellSources = getShellSources(shellDirectories);
-
-  saveOverviewDocs({
-    apps: appSources,
-    shells: shellSources,
+async function generatePublicDocs() {
+  const docPaths = await globby([
+    `${APPS_SRC_DIR}/**/*.mdx`,
+    `${SHELLS_SRC_DIR}/**/*.mdx`,
+  ]);
+  docPaths.forEach((docPath) => {
+    const relativePath = path.relative(PROJECT_SRC_DIR, docPath);
+    const outputPath = path.resolve(DOCS_OUTPUT_DIR, `./${relativePath}`);
+    fs.copySync(docPath, outputPath);
   });
 }
 
 function generateDocs() {
   generateAppDocs();
   generateShellDocs();
-  generateOverviewDocs();
+  generatePublicDocs();
 }
 
 function init() {

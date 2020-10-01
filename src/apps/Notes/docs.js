@@ -3,7 +3,9 @@ import { describe, PropTypes } from 'react-desc';
 import { DocsPage } from 'internal/components/Docs';
 import Notes from './Notes';
 
-const NotesWithSchema = describe(Notes).description('An app for taking notes.');
+const NotesWithSchema = describe(Notes).description(
+  'A feature for taking notes.'
+);
 
 NotesWithSchema.displayName = 'Notes';
 

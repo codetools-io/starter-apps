@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Email from './Email';
 
 const EmailWithSchema = describe(Email).description(
-  'An app for managing email.'
+  'A feature for managing email.'
 );
 
 EmailWithSchema.displayName = 'Email';

@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import Checkout from './Checkout';
 
 const CheckoutWithSchema = describe(Checkout).description(
-  'An app for showing items that a customer is about to purchase.'
+  'A feature for showing items that a customer is about to purchase.'
 );
 CheckoutWithSchema.displayName = 'Checkout';
 

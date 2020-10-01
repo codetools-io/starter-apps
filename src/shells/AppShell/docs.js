@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import AppShell from './AppShell';
 
 const AppShellWithSchema = describe(AppShell).description(
-  'A global shell to wrap applications with. Configurable subcomponents include a logo, navigation, router, notification system, search, and user menu.'
+  'A wrapper with a logo, navigation, router, notification system, search, and user menu.'
 );
 
 AppShellWithSchema.propTypes = {

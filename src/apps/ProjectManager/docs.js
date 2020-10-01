@@ -4,7 +4,7 @@ import { DocsPage } from 'internal/components/Docs';
 import ProjectManager from './ProjectManager';
 
 const ProjectManagerWithSchema = describe(ProjectManager).description(
-  'An app for managing team projects.'
+  'A feature for managing team projects.'
 );
 
 ProjectManagerWithSchema.displayName = 'ProjectManager';
