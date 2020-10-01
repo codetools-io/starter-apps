@@ -24,7 +24,7 @@ function ComponentSection({ components, description, title }) {
       <Grid
         columns={size !== 'small' ? 'medium' : '100%'}
         rows={['small']}
-        gap="medium"
+        gap="large"
       >
         {components?.map((component) => {
           return (
