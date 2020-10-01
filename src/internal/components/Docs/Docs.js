@@ -205,7 +205,7 @@ export function DocsMain({ children, files = [], sandboxUrl }) {
             plain
           />
           <Button
-            icon={<CodeSandbox size="medium" />}
+            icon={<CodeSandbox size="22px" />}
             color="control"
             href={sandboxUrl}
             plain
