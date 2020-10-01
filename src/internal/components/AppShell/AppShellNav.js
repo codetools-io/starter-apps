@@ -17,7 +17,7 @@ import Feature from 'internal/components/Feature';
 function AppShellNavSection({ id, name, routes }) {
   return (
     <Box className="AppShellNavSection" gap="small">
-      <Box pad={{ horizontal: 'medium' }}>
+      <Box pad={{ horizontal: 'large' }}>
         <Text weight="bold">{name}</Text>
       </Box>
       <Box gap="none">
@@ -147,7 +147,7 @@ function AppShellNavLink({
         direction="row"
         align="center"
         pad={{
-          horizontal: 'medium',
+          horizontal: 'large',
           vertical: 'small',
         }}
         gap="medium"
