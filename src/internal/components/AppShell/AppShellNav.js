@@ -187,9 +187,9 @@ function AppShellNavLink({
   );
 }
 
-export default function AppShellNav() {
+export default function AppShellNav({ ...props }) {
   return (
-    <Nav className="AppShellNav" gap="medium">
+    <Nav className="AppShellNav" gap="medium" {...props}>
       {config?.nav?.sections?.map((section) => (
         <AppShellNavSection key={section.id} {...section} />
       ))}

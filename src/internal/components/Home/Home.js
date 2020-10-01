@@ -9,6 +9,7 @@ import {
 } from 'grommet';
 import { Link } from 'react-router-dom';
 import * as config from 'internal/config';
+import Socials from 'internal/components/Socials';
 
 function ComponentSection({ components, description, title }) {
   const size = useContext(ResponsiveContext);
@@ -45,9 +46,10 @@ function ComponentSection({ components, description, title }) {
     </Box>
   );
 }
-export default function Home({ children, ...props }) {
+
+function HomeHeader() {
   return (
-    <Box className="Home" gap="large" {...props} flex={false} fill="horizontal">
+    <Box direction="row" justify="between">
       <Box gap="small" flex={false}>
         <Heading level={1} margin="none">
           Starter Apps
@@ -55,7 +57,15 @@ export default function Home({ children, ...props }) {
         <Paragraph margin="none" fill>
           Grommet based UI solutions for various application types.
         </Paragraph>
+        <Socials margin={{ top: 'small' }} />
       </Box>
+    </Box>
+  );
+}
+export default function Home({ children, ...props }) {
+  return (
+    <Box className="Home" gap="large" {...props} flex={false} fill="horizontal">
+      <HomeHeader />
       <Box gap="large">
         <ComponentSection
           title="Features"

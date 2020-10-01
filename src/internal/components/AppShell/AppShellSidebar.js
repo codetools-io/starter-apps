@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Header, Sidebar, ThemeContext } from 'grommet';
-import { ReactComponent as Logo } from './img/logo-1.svg';
 
+import { ReactComponent as Logo } from './img/logo-1.svg';
 import AppShellNav from './AppShellNav.js';
 
 export default function AppShellSidebar({ background }) {
@@ -42,6 +42,7 @@ export default function AppShellSidebar({ background }) {
             />
           </Link>
         </Header>
+
         <AppShellNav />
       </Box>
     </Sidebar>
