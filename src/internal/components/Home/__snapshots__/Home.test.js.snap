@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 kYvUof Home"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 gzfjUM"
+    >
+      <h1
+        class="StyledHeading-sc-1rdh4aw-0 bGlFVF"
+      >
+        Starter Apps
+      </h1>
+      <div
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+      />
+      <p
+        class="StyledParagraph-tbetod-0 dTCtkV"
+      >
+        Grommet based UI solutions for various application types.
+      </p>
+    </div>
+    <div
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDebtf"
+    />
+    <div
+      class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 jPjyPf"
+      >
+        <h2
+          class="StyledHeading-sc-1rdh4aw-0 jXxrrh"
+        >
+          Features
+        </h2>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        />
+        <p
+          class="StyledParagraph-tbetod-0 dTCtkV"
+        >
+          Components that implement a complete product feature in the application.
+        </p>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        />
+        <div
+          class="StyledGrid-sc-1wofa1l-0 jHTOBO"
+        >
+          <a
+            href="/apps/calendar"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Calendar
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for managing dates, events, and reminders.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/commerce/cart"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Cart
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for showing items that a customer intends to purchase.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/chat"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Chat
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for facilitating real-time text communication.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/commerce/checkout"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Checkout
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for showing items that a customer is about to purchase.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/contacts"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Contacts
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for managing information about lists of people.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/dashboard"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Dashboard
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for viewing high-level information about systems and organizations.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/email"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Email
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for managing email.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/social-media/feed"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Feed
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for displaying a stream of live social media posts
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/notes"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Notes
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for taking notes.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/social-media/profile"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Profile
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for showing social information about a person.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/project-manager"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Project Manager
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for managing team projects.
+              </p>
+            </div>
+          </a>
+          <a
+            href="/apps/commerce/store"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                Store
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A feature for showing products to a customer.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDebtf"
+      />
+      <div
+        class="StyledBox-sc-13pk1d4-0 jPjyPf"
+      >
+        <h2
+          class="StyledHeading-sc-1rdh4aw-0 jXxrrh"
+        >
+          Shells
+        </h2>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        />
+        <p
+          class="StyledParagraph-tbetod-0 dTCtkV"
+        >
+          Components that wrap an application globally.
+        </p>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        />
+        <div
+          class="StyledGrid-sc-1wofa1l-0 jHTOBO"
+        >
+          <a
+            href="/shells/app-shell"
+            style="text-decoration: none;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bDlKMv"
+            >
+              <h4
+                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+              >
+                App Shell
+              </h4>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              />
+              <p
+                class="StyledParagraph-tbetod-0 hFElNu"
+              >
+                A wrapper with a logo, navigation, router, notification system, search, and user menu.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
