@@ -112,7 +112,7 @@ function AppShellNavLink({
   icon,
   secondaryIcon,
   label,
-  size = 'large',
+  size = 'medium',
   onClick = (event) => {},
   isNested,
   ...props
