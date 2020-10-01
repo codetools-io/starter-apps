@@ -6,9 +6,10 @@ const PROJECT_ROOT = path.resolve(__dirname, '../');
 const TEMPLATE_DIR = path.resolve(__dirname, './templates/sample');
 const APPS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/apps');
 const SHELLS_SRC_DIR = path.resolve(PROJECT_ROOT, './src/shells');
-const SAMPLES_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples');
-const APPS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples/apps');
-const SHELLS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './public/samples/shells');
+
+const SAMPLES_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './samples');
+const SAMPLE_APPS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './samples/apps');
+const SAMPLE_SHELLS_OUTPUT_DIR = path.resolve(PROJECT_ROOT, './samples/shells');
 
 function getAppDirectories() {
   const apps = fs
@@ -52,13 +53,13 @@ function removeExistingSamples() {
 function generateAppSamples() {
   const appDirectories = getAppDirectories();
 
-  saveNewSamples(appDirectories, APPS_OUTPUT_DIR);
+  saveNewSamples(appDirectories, SAMPLE_APPS_OUTPUT_DIR);
 }
 
 function generateShellSamples() {
   const shellDirectories = getShellDirectories();
 
-  saveNewSamples(shellDirectories, SHELLS_OUTPUT_DIR);
+  saveNewSamples(shellDirectories, SAMPLE_SHELLS_OUTPUT_DIR);
 }
 
 function generateSamples() {
