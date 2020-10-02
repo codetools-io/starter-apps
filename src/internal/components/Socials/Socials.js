@@ -1,6 +1,6 @@
 import React from 'react';
 import { Anchor, Box, Text } from 'grommet';
-import { Github, Twitter } from 'grommet-icons';
+import { Github } from 'grommet-icons';
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 

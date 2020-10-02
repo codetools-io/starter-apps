@@ -16,7 +16,6 @@ import {
 } from 'grommet';
 import { CodeSandbox, Close, Expand, Github } from 'grommet-icons';
 import MonacoEditor from '@monaco-editor/react';
-import Feature from 'internal/components/Feature';
 
 import theme from './theme';
 
