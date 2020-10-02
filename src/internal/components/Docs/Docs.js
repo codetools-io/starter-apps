@@ -14,7 +14,7 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
-import { CodeSandbox, Close, Expand } from 'grommet-icons';
+import { CodeSandbox, Close, Expand, Github } from 'grommet-icons';
 import MonacoEditor from '@monaco-editor/react';
 import Feature from 'internal/components/Feature';
 
@@ -22,6 +22,7 @@ import theme from './theme';
 
 const DOCS_BASE_PATH = `${process.env.PUBLIC_URL}/docs`;
 const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
+const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 
 const options = {
   fontSize: 16,
@@ -184,7 +185,7 @@ export function DocsPreview({
   );
 }
 
-export function DocsMain({ children, files = [], sandboxUrl }) {
+export function DocsMain({ children, files = [], sandboxUrl, githubUrl }) {
   const [active, setActive] = useState(0);
   const [fullScreen, setFullScreen] = useState(false);
   const showPreview = useMemo(() => active === 0, [active]);
@@ -197,7 +198,7 @@ export function DocsMain({ children, files = [], sandboxUrl }) {
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
         </Tabs>
-        <Box direction="row" align="center" gap="small">
+        <Box direction="row" align="center" gap="medium">
           <Button
             onClick={() => setFullScreen(true)}
             icon={<Expand size="small" />}
@@ -208,6 +209,12 @@ export function DocsMain({ children, files = [], sandboxUrl }) {
             icon={<CodeSandbox size="22px" />}
             color="control"
             href={sandboxUrl}
+            plain
+          />
+          <Button
+            icon={<Github size="22px" />}
+            color="control"
+            href={githubUrl}
             plain
           />
         </Box>
@@ -356,10 +363,15 @@ export function DocsPage({ component: Component, site, path }) {
 
   return (
     <Box className="DocsPage" gap="large" fill="horizontal">
-      <DocsOverview name={data?.displayName} description={data?.short} />
+      <DocsOverview
+        name={data?.displayName}
+        description={data?.short}
+        content={content}
+      />
       <DocsMain
         files={files || []}
-        sandboxUrl={`${SANDBOX_URL}${data?.category}/${data?.category?.name}`}
+        sandboxUrl={`${SANDBOX_URL}/${data?.category}/${data?.componentName}`}
+        githubUrl={`${GITHUB_URL}/tree/master/src/${data?.category}/${data?.componentName}`}
       >
         <Component />
       </DocsMain>
