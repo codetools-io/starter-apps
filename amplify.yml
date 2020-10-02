@@ -9,13 +9,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm use $VERSION_NODE_14
+        - nvm use $VERSION_NODE_12
         - yarn install
         - node tools/generate-docs.js
         - node tools/generate-samples.js
     build:
       commands:
-        - nvm use $VERSION_NODE_14
+        - nvm use $VERSION_NODE_12
         - yarn run build
   artifacts:
     baseDirectory: build
