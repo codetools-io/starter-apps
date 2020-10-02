@@ -5,13 +5,10 @@ import {
   Button,
   Card,
   Grid,
-  Heading,
   InfiniteScroll,
-  Keyboard,
   Markdown,
   Text,
   TextArea,
-  TextInput,
 } from 'grommet';
 import { Chat, Like, Share } from 'grommet-icons';
 import { format } from 'timeago.js';

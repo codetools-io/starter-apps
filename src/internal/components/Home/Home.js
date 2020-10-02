@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { groupBy } from 'lodash';
 import {
   Box,
   Card,
@@ -8,11 +9,11 @@ import {
   ResponsiveContext,
 } from 'grommet';
 import { Link } from 'react-router-dom';
-import * as config from 'internal/config';
 import Socials from 'internal/components/Socials';
 
 function ComponentSection({ components, description, title }) {
   const size = useContext(ResponsiveContext);
+
   return (
     <Box gap="medium" pad={{ vertical: 'medium' }}>
       <Heading level={2} margin="none">
@@ -29,15 +30,15 @@ function ComponentSection({ components, description, title }) {
         {components?.map((component) => {
           return (
             <Link
-              key={component?.id}
-              to={component?.link?.path}
+              key={`${component?.data?.category}-${component?.data?.slug}`}
+              to={`/${component?.data?.category}/${component?.data?.slug}`}
               style={{ textDecoration: 'none' }}
             >
               <Card background="white" pad="medium" gap="small" fill>
                 <Heading level={4} margin="none">
-                  {component?.displayName}
+                  {component?.data?.displayName}
                 </Heading>
-                <Paragraph margin="none">{component?.description}</Paragraph>
+                <Paragraph margin="none">{component?.data?.short}</Paragraph>
               </Card>
             </Link>
           );
@@ -62,21 +63,23 @@ function HomeHeader() {
     </Box>
   );
 }
-export default function Home({ children, ...props }) {
+export default function Home({ site, ...props }) {
+  const docs = groupBy(site?.docs, 'data.category');
+
   return (
-    <Box className="Home" gap="large" {...props} flex={false} fill="horizontal">
+    <Box className="Home" gap="large" flex={false} fill="horizontal" {...props}>
       <HomeHeader />
       <Box gap="large">
         <ComponentSection
           title="Features"
           description="Components that implement a complete product feature in the application."
-          components={config?.appOverviews}
+          components={docs?.apps}
         />
 
         <ComponentSection
           title="Shells"
           description="Components that wrap an application globally."
-          components={config?.shellOverviews}
+          components={docs?.shells}
         />
       </Box>
     </Box>

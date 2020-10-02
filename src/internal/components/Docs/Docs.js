@@ -325,33 +325,44 @@ export function DocsProps({ properties }) {
   );
 }
 
-export function DocsPage({ component: Component, category, ...props }) {
-  const { name, description, properties } = Component.toJSON();
+export function DocsPage({ component: Component, site, path }) {
+  const [files, setFiles] = useState();
+  const [content, setContent] = useState();
   const [data, setData] = useState();
+  const [category, setCategory] = useState();
+  const [slug, setSlug] = useState();
 
   useEffect(() => {
-    if (name) {
-      fetch(`${DOCS_BASE_PATH}/${category}/${name}/files.json`)
-        .then((res) => res.json())
-        .then((data) => {
-          setData(data);
-        })
-        .catch((err) => console.error(err));
-    }
-  }, [category, name]);
+    const docs = site?.docs?.find((doc) => {
+      return (
+        path?.startsWith(`/${doc?.data?.category}`) &&
+        path?.endsWith(`/${doc?.data?.slug}`)
+      );
+    });
+    setContent(docs?.content);
+    setData(docs?.data);
+    setCategory(docs?.data?.category);
+    setSlug(docs?.data?.slug);
+  }, [path, site]);
+
+  useEffect(() => {
+    fetch(`${DOCS_BASE_PATH}/${category}/${slug}/files.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFiles(data?.files);
+      })
+      .catch((err) => console.error(err));
+  }, [path, category, slug]);
 
   return (
-    <Box className="DocsPage" gap="large" fill="horizontal" {...props}>
-      <DocsOverview name={name} description={description} />
+    <Box className="DocsPage" gap="large" fill="horizontal">
+      <DocsOverview name={data?.displayName} description={data?.short} />
       <DocsMain
-        files={data?.files || []}
-        sandboxUrl={`${SANDBOX_URL}${category}/${name}`}
+        files={files || []}
+        sandboxUrl={`${SANDBOX_URL}${data?.category}/${data?.category?.name}`}
       >
         <Component />
       </DocsMain>
-      <Feature name="DOC_PROPS">
-        <DocsProps properties={properties} />
-      </Feature>
       <Box fill></Box>
     </Box>
   );
