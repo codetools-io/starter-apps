@@ -10,21 +10,18 @@ import {
   Text,
   ThemeContext,
 } from 'grommet';
-import { Down, Up } from 'grommet-icons';
-import * as config from 'internal/config';
-import Feature from 'internal/components/Feature';
+import Icon from 'internal/components/Icon';
+import { Up, Down } from 'grommet-icons';
 
-function AppShellNavSection({ id, name, routes }) {
+function AppShellNavSection({ label, children }) {
   return (
     <Box className="AppShellNavSection" gap="small">
       <Box pad={{ horizontal: 'large' }}>
-        <Text weight="bold">{name}</Text>
+        <Text weight="bold">{label}</Text>
       </Box>
       <Box gap="none">
-        {routes?.map((route) => (
-          <Feature key={route.id} name={route?.feature}>
-            <AppShellNavItem {...route} />
-          </Feature>
+        {children?.map((child) => (
+          <AppShellNavItem {...child} />
         ))}
       </Box>
     </Box>
@@ -32,12 +29,11 @@ function AppShellNavSection({ id, name, routes }) {
 }
 
 function AppShellNavItem({
-  id,
   path,
   icon,
   label,
   menuBackground,
-  routes,
+  children,
   isNested = false,
   ...rest
 }) {
@@ -49,17 +45,17 @@ function AppShellNavItem({
       return true;
     }
 
-    return nav?.[id];
-  }, [id, nav, size]);
+    return nav?.[path];
+  }, [path, nav, size]);
 
   function toggleMenu() {
     setNav({
       ...nav,
-      [id]: !nav?.[id],
+      [path]: !nav?.[path],
     });
   }
 
-  if (!routes) {
+  if (!children) {
     return (
       <AppShellNavLink
         to={path}
@@ -96,8 +92,8 @@ function AppShellNavItem({
           background={menuBackground || theme?.appShell?.nav?.menu?.background}
           fill="horizontal"
         >
-          {routes.map((route) => {
-            return <AppShellNavItem key={route.id} {...route} isNested />;
+          {children.map((child) => {
+            return <AppShellNavItem key={child.id} {...child} isNested />;
           })}
         </Box>
       </Collapsible>
@@ -154,7 +150,9 @@ function AppShellNavLink({
       >
         {icon && (
           <Box className="NavLink__icon">
-            <Text color={theme?.appShell?.nav?.icon?.color}>{icon}</Text>
+            <Text color={theme?.appShell?.nav?.icon?.color}>
+              <Icon name={icon} size="16px" />
+            </Text>
           </Box>
         )}
 
@@ -187,11 +185,11 @@ function AppShellNavLink({
   );
 }
 
-export default function AppShellNav({ ...props }) {
+export default function AppShellNav({ nav, ...props }) {
   return (
     <Nav className="AppShellNav" gap="medium" {...props}>
-      {config?.nav?.sections?.map((section) => (
-        <AppShellNavSection key={section.id} {...section} />
+      {nav?.map((section) => (
+        <AppShellNavSection {...section} />
       ))}
     </Nav>
   );

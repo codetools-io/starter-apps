@@ -5,7 +5,7 @@ import { Box, Header, Sidebar, ThemeContext } from 'grommet';
 import { ReactComponent as Logo } from './img/logo-1.svg';
 import AppShellNav from './AppShellNav.js';
 
-export default function AppShellSidebar({ background }) {
+export default function AppShellSidebar({ background, nav }) {
   const theme = useContext(ThemeContext);
 
   return (
@@ -43,7 +43,7 @@ export default function AppShellSidebar({ background }) {
           </Link>
         </Header>
 
-        <AppShellNav />
+        <AppShellNav nav={nav} />
       </Box>
     </Sidebar>
   );

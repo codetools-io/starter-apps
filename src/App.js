@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Amplify from 'aws-amplify';
 import { BrowserRouter } from 'react-router-dom';
 
-import Router from 'Router';
+import Router from './Router';
 import AppShell from 'internal/components/AppShell';
 import ErrorBoundary from 'internal/components/ErrorBoundary';
 
@@ -15,10 +15,15 @@ if (process.env.NODE_ENV !== 'development') {
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
 export default function App() {
+  const [docs, setDocs] = useState();
   const [site, setSite] = useState();
 
   useEffect(() => {
-    fetch(`${PUBLIC_URL}/docs/site.json`)
+    fetch(`${PUBLIC_URL}/data/docs.json`)
+      .then((res) => res.json())
+      .then((data) => setDocs(data))
+      .catch((err) => console.error(err));
+    fetch(`${PUBLIC_URL}/data/site.json`)
       .then((res) => res.json())
       .then((data) => setSite(data))
       .catch((err) => console.error(err));
@@ -27,8 +32,8 @@ export default function App() {
   return (
     <ErrorBoundary>
       <BrowserRouter>
-        <AppShell>
-          <Router site={site} />
+        <AppShell {...site}>
+          <Router docs={docs} />
         </AppShell>
       </BrowserRouter>
     </ErrorBoundary>

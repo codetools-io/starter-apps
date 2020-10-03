@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { groupBy } from 'lodash';
 import {
   Box,
   Card,
@@ -11,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 import Socials from 'internal/components/Socials';
 
-function ComponentSection({ components, description, title }) {
+function HomeSection({ components, description, title }) {
   const size = useContext(ResponsiveContext);
 
   return (
@@ -30,15 +29,17 @@ function ComponentSection({ components, description, title }) {
         {components?.map((component) => {
           return (
             <Link
-              key={`${component?.data?.category}-${component?.data?.slug}`}
-              to={`/${component?.data?.category}/${component?.data?.slug}`}
+              key={component?.data.path}
+              to={component?.data.path}
               style={{ textDecoration: 'none' }}
             >
               <Card background="white" pad="medium" gap="small" fill>
                 <Heading level={4} margin="none">
-                  {component?.data?.displayName}
+                  {component?.data?.name}
                 </Heading>
-                <Paragraph margin="none">{component?.data?.short}</Paragraph>
+                <Paragraph margin="none">
+                  {component?.data?.description}
+                </Paragraph>
               </Card>
             </Link>
           );
@@ -63,24 +64,23 @@ function HomeHeader() {
     </Box>
   );
 }
-export default function Home({ site, ...props }) {
-  const docs = groupBy(site?.docs, 'data.category');
-
+export default function Home({ docs = {}, ...props }) {
   return (
     <Box className="Home" gap="large" flex={false} fill="horizontal" {...props}>
       <HomeHeader />
       <Box gap="large">
-        <ComponentSection
-          title="Features"
-          description="Components that implement a complete product feature in the application."
-          components={docs?.apps}
-        />
-
-        <ComponentSection
-          title="Shells"
-          description="Components that wrap an application globally."
-          components={docs?.shells}
-        />
+        {docs?.categories?.map((category) => {
+          return (
+            <HomeSection
+              key={category.data.path}
+              title={category.data.name}
+              description={category.data.description}
+              components={docs?.components.filter(
+                (component) => component.data.categoryId === category.data.id
+              )}
+            />
+          );
+        })}
       </Box>
     </Box>
   );

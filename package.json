@@ -48,6 +48,7 @@
     "jest-extended": "^0.11.5",
     "json-server": "^0.16.1",
     "lint-staged": "^10.2.11",
+    "lowdb": "^1.0.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1"
   },
@@ -60,8 +61,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.js",
     "lint": "eslint src/**/*.js",
-    "generate": "yarn generate:docs && yarn generate:samples",
-    "generate:docs": "node tools/generate-docs.js",
+    "generate": "yarn generate:data && yarn generate:samples",
+    "generate:data": "node tools/generate-data.js",
     "generate:samples": "node tools/generate-samples.js"
   },
   "eslintConfig": {

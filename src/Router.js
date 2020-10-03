@@ -2,65 +2,85 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { DocsPage } from 'internal/components/Docs';
 
-function DocRoute({ component, path, site }) {
+function DocRoute({ component, path, docs }) {
   return (
     <Route path={path}>
-      <DocsPage component={component} site={site} path={path} />
+      <DocsPage component={component} docs={docs} path={path} />
     </Route>
   );
 }
 
-export default function Router({ site }) {
+export default function Router({ docs }) {
   const Home = lazy(() => import('./internal/components/Home'));
-  const Calendar = lazy(() => import('./apps/Calendar'));
-  const Chat = lazy(() => import('./apps/Chat'));
-  const Store = lazy(() => import('./apps/Store'));
-  const Checkout = lazy(() => import('./apps/Checkout'));
-  const Cart = lazy(() => import('./apps/Cart'));
-  const Contacts = lazy(() => import('./apps/Contacts'));
-  const Dashboard = lazy(() => import('./apps/Dashboard'));
-  const Email = lazy(() => import('./apps/Email'));
-  const Notes = lazy(() => import('./apps/Notes'));
-  const Profile = lazy(() => import('./apps/Profile'));
-  const ProjectManager = lazy(() => import('./apps/ProjectManager'));
-  const Feed = lazy(() => import('./apps/Feed'));
+  const Calendar = lazy(() => import('./features/Calendar'));
+  const Chat = lazy(() => import('./features/Chat'));
+  const Store = lazy(() => import('./features/Commerce/Store'));
+  const Checkout = lazy(() => import('./features/Commerce/Checkout'));
+  const Cart = lazy(() => import('./features/Commerce/Cart'));
+  const Contacts = lazy(() => import('./features/Contacts'));
+  const Dashboard = lazy(() => import('./features/Dashboard'));
+  const Email = lazy(() => import('./features/Email'));
+  const Notes = lazy(() => import('./features/Notes'));
+  const ProjectManager = lazy(() => import('./features/ProjectManager'));
+  const Profile = lazy(() => import('./features/SocialMedia/Profile'));
+  const Feed = lazy(() => import('./features/SocialMedia/Feed'));
   const AppShell = lazy(() => import('./shells/AppShell'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>
         <Route path="/" exact>
-          <Home site={site} />
+          <Home docs={docs} />
         </Route>
-        <DocRoute site={site} component={Calendar} path={`/apps/calendar`} />
-        <DocRoute site={site} component={Chat} path={`/apps/chat`} />
-        <DocRoute site={site} component={Store} path={`/apps/commerce/store`} />
         <DocRoute
-          site={site}
+          docs={docs}
+          component={Calendar}
+          path={`/features/calendar`}
+        />
+        <DocRoute docs={docs} component={Chat} path={`/features/chat`} />
+        <DocRoute
+          docs={docs}
+          component={Store}
+          path={`/features/commerce/store`}
+        />
+        <DocRoute
+          docs={docs}
           component={Checkout}
-          path={`/apps/commerce/checkout`}
+          path={`/features/commerce/checkout`}
         />
-        <DocRoute site={site} component={Cart} path={`/apps/commerce/cart`} />
-        <DocRoute site={site} component={Contacts} path={`/apps/contacts`} />
-        <DocRoute site={site} component={Dashboard} path={`/apps/dashboard`} />
-        <DocRoute site={site} component={Email} path={`/apps/email`} />
-        <DocRoute site={site} component={Notes} path={`/apps/notes`} />
         <DocRoute
-          site={site}
+          docs={docs}
+          component={Cart}
+          path={`/features/commerce/cart`}
+        />
+        <DocRoute
+          docs={docs}
+          component={Contacts}
+          path={`/features/contacts`}
+        />
+        <DocRoute
+          docs={docs}
+          component={Dashboard}
+          path={`/features/dashboard`}
+        />
+        <DocRoute docs={docs} component={Email} path={`/features/email`} />
+        <DocRoute docs={docs} component={Notes} path={`/features/notes`} />
+        <DocRoute
+          docs={docs}
           component={Profile}
-          path={`/apps/social-media/profile`}
+          path={`/features/social-media/profile`}
         />
         <DocRoute
-          site={site}
+          docs={docs}
           component={Feed}
-          path={`/apps/social-media/feed`}
+          path={`/features/social-media/feed`}
         />
         <DocRoute
-          site={site}
+          docs={docs}
           component={ProjectManager}
-          path={`/apps/project-manager`}
+          path={`/features/project-manager`}
         />
-        <DocRoute site={site} component={AppShell} path={`/shells/app-shell`} />
+        <DocRoute docs={docs} component={AppShell} path={`/shells/app-shell`} />
       </Switch>
     </Suspense>
   );

@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 public/docs
+public/data
 
 cypress.env.json
 

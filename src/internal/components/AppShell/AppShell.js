@@ -3,10 +3,9 @@ import { Grid, Grommet } from 'grommet';
 import * as config from 'internal/config';
 import AppShellMain from './AppShellMain';
 import AppShellSidebar from './AppShellSidebar';
-
 import './AppShell.css';
 
-export default function AppShell({ children, ...props }) {
+export default function AppShell({ children, nav, ...props }) {
   return (
     <Grommet className="AppShell" theme={config?.theme} full>
       <Grid
@@ -18,7 +17,7 @@ export default function AppShell({ children, ...props }) {
           height: '100vh',
         }}
       >
-        <AppShellSidebar />
+        <AppShellSidebar nav={nav} />
         <AppShellMain>{children}</AppShellMain>
       </Grid>
     </Grommet>

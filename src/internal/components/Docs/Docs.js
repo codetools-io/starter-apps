@@ -19,7 +19,7 @@ import MonacoEditor from '@monaco-editor/react';
 
 import theme from './theme';
 
-const DOCS_BASE_PATH = `${process.env.PUBLIC_URL}/docs`;
+const DATA_BASE_PATH = `${process.env.PUBLIC_URL}/data`;
 const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 
@@ -43,13 +43,13 @@ export function DocsCode({ files = [], options }) {
   const [activeFileIndex, setActiveFileIndex] = useState(null);
 
   useEffect(() => {
-    if (activeFileIndex === null && files?.length) {
+    if (files?.length) {
       setActiveFileIndex(
         files?.findIndex((file) => file?.filename === `${file?.context}.js`)
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeFileIndex, files]);
+  }, [files]);
 
   return (
     <DocsCard height="large" pad="medium" flex={false}>
@@ -331,46 +331,32 @@ export function DocsProps({ properties }) {
   );
 }
 
-export function DocsPage({ component: Component, site, path }) {
+export function DocsPage({ component: Component, docs, path }) {
   const [files, setFiles] = useState();
-  const [content, setContent] = useState();
-  const [data, setData] = useState();
-  const [category, setCategory] = useState();
-  const [slug, setSlug] = useState();
+  const [doc, setDoc] = useState();
 
   useEffect(() => {
-    const docs = site?.docs?.find((doc) => {
-      return (
-        path?.startsWith(`/${doc?.data?.category}`) &&
-        path?.endsWith(`/${doc?.data?.slug}`)
-      );
-    });
-    setContent(docs?.content);
-    setData(docs?.data);
-    setCategory(docs?.data?.category);
-    setSlug(docs?.data?.slug);
-  }, [path, site]);
+    setDoc(docs?.components?.find((c) => c?.path === path));
+  }, [path, docs]);
 
   useEffect(() => {
-    fetch(`${DOCS_BASE_PATH}/${category}/${slug}/files.json`)
+    fetch(`${DATA_BASE_PATH}/files${path}/files.json`)
       .then((res) => res.json())
-      .then((data) => {
-        setFiles(data?.files);
-      })
+      .then((data) => setFiles(data.files))
       .catch((err) => console.error(err));
-  }, [path, category, slug]);
+  }, [path]);
 
   return (
     <Box className="DocsPage" gap="large" fill="horizontal">
       <DocsOverview
-        name={data?.displayName}
-        description={data?.short}
-        content={content}
+        name={doc?.data?.name}
+        description={doc?.data?.description}
+        content={doc?.content}
       />
       <DocsMain
         files={files || []}
-        sandboxUrl={`${SANDBOX_URL}/${data?.category}/${data?.componentName}`}
-        githubUrl={`${GITHUB_URL}/tree/master/src/${data?.category}/${data?.componentName}`}
+        sandboxUrl={`${SANDBOX_URL}/${doc?.directory}`}
+        githubUrl={`${GITHUB_URL}/tree/master/src/${doc?.directory}`}
       >
         <Component />
       </DocsMain>
