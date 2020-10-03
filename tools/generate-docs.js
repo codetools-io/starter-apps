@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const path = require('path');
-const fsPromises = require('fs/promises');
 const fs = require('fs-extra');
 const globby = require('globby');
 const matter = require('gray-matter');
@@ -39,7 +38,7 @@ async function getDocs(directories) {
   try {
     const rawDocs = await Promise.all(
       directories.map((directory) => {
-        return fsPromises.readFile(directory, { encoding: 'utf8' });
+        return fs.readFile(directory, { encoding: 'utf8' });
       })
     );
     return rawDocs.map((doc, index) => {
