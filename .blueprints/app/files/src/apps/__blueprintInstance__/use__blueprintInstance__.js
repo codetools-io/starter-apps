@@ -1,9 +1,11 @@
-import React from 'react';
-import { Box } from 'grommet';
+import { useMemo, useState } from 'react';
+import * as config from './config';
 
-export default function {{blueprintInstance}} ({ children, ...props }) {
+export default function use{{blueprintInstance}} ({ children, ...props }) {
 
-  return <Box className="{{blueprintInstance}}" {...props}>{children}</Box>;
+  return useMemo(() => {
+    return {}
+  }, [])
 };
 
 
