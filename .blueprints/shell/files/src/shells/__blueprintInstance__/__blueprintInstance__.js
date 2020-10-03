@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'grommet';
-import {{blueprintInstance}} from 'use{{blueprintInstance}}';
+import use{{blueprintInstance}} from './use{{blueprintInstance}}';
 
 export default function {{blueprintInstance}} ({ children, ...props }) {
   const state = use{{blueprintInstance}}();
