@@ -1,4 +1,4 @@
 {
   "name": "component",
-  "description": "Generic React component"
+  "description": "Generic component for internal use"
 }
