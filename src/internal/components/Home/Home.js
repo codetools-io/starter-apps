@@ -7,6 +7,7 @@ import {
   Paragraph,
   ResponsiveContext,
 } from 'grommet';
+import { sortBy } from 'lodash';
 import { Link } from 'react-router-dom';
 import Socials from 'internal/components/Socials';
 
@@ -75,7 +76,7 @@ export default function Home({ docs = {}, ...props }) {
               key={category.data.path}
               title={category.data.name}
               description={category.data.description}
-              components={docs?.components.filter(
+              components={sortBy(docs?.components, 'data.name').filter(
                 (component) => component.data.categoryId === category.data.id
               )}
             />

@@ -101,7 +101,7 @@ function generateSiteData() {
           key: `${category.data.path}`,
           path: `${category.data.path}`,
           label: category.data.name,
-          children: sortBy([...components, ...modules], 'data.name'),
+          children: sortBy([...components, ...modules], 'label'),
         };
       })
       .value();
