@@ -11,8 +11,8 @@ export default function AppShell({ children, nav, ...props }) {
       <Grid
         className="AppShellContainer"
         rows={['auto']}
-        columns={['1/4', '3/4']}
-        areas={[['sidebar', 'main', 'main', 'main']]}
+        columns={['medium', 'flex']}
+        areas={[['sidebar', 'main']]}
         style={{
           height: '100vh',
         }}
