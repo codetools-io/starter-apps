@@ -8,4 +8,4 @@ export { default as DocsPreview } from './DocsPreview';
 export { default as DocsPreviewModal } from './DocsPreviewModal';
 export { default as DocsProps } from './DocsProps';
 export { default as DocsTheme } from './DocsTheme';
-export { default as DocsXray } from './DocsXray';
+export { default as DocsArchitecture } from './DocsArchitecture';

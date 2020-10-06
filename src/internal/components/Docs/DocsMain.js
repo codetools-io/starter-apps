@@ -4,7 +4,7 @@ import { CodeSandbox, Expand, Github } from 'grommet-icons';
 
 import DocsCode from './DocsCode';
 import DocsPreview from './DocsPreview';
-import DocsXray from './DocsXray';
+import DocsArchitecture from './DocsArchitecture';
 
 const options = {
   fontSize: 16,
@@ -19,12 +19,14 @@ export default function DocsMain({
   files = [],
   sandboxUrl,
   githubUrl,
+  doc,
 }) {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
   const [fullScreen, setFullScreen] = useState(false);
   const showPreview = useMemo(() => active === 0, [active]);
   const showCode = useMemo(() => active === 1, [active]);
-  const showXray = useMemo(() => active === 2, [active]);
+  const showArchitecture = useMemo(() => active === 2, [active]);
+  const hasArchitecture = useMemo(() => doc?.components, [doc]);
 
   return (
     <Box gap="small" flex={false}>
@@ -32,7 +34,7 @@ export default function DocsMain({
         <Tabs activeIndex={active} onActive={(next) => setActive(next)}>
           <Tab title="Preview"></Tab>
           <Tab title="Code"></Tab>
-          <Tab title="Xray"></Tab>
+          {hasArchitecture ? <Tab title="Architecture"></Tab> : null}
         </Tabs>
         <Box direction="row" align="center" gap="medium">
           <Button
@@ -63,7 +65,7 @@ export default function DocsMain({
         />
       )}
       {showCode && <DocsCode files={files} options={options} />}
-      {showXray && <DocsXray children={children} />}
+      {showArchitecture && <DocsArchitecture children={children} doc={doc} />}
     </Box>
   );
 }

@@ -17,7 +17,7 @@ import useChat from './useChat';
 
 function ChatConversation({ participants, messages, user }) {
   return (
-    <Box height="100%" overflow="auto">
+    <Box className="ChatConversation" height="100%" overflow="auto">
       <InfiniteScroll
         step={5}
         items={messages?.sort((a, b) => a.sentAt - b.sentAt)}
@@ -61,7 +61,7 @@ function ChatConversations({
   selectConversation,
 }) {
   return (
-    <Box>
+    <Box className="ChatConversations">
       {conversations.map((conversation) => {
         return (
           <Button
@@ -95,7 +95,7 @@ function ChatNewConversation({
   startConversation,
 }) {
   return (
-    <Box>
+    <Box className="ChatNewConversation">
       <TextInput
         onChange={(e) => searchRecipients(e.target.value)}
         onSelect={(e) => {
@@ -110,6 +110,7 @@ function ChatNewConversation({
     </Box>
   );
 }
+
 export default function Chat({ children }) {
   const {
     clearContactSearch,
@@ -137,6 +138,7 @@ export default function Chat({ children }) {
 
   return (
     <Grid
+      className="Chat"
       columns={['1/4', '1/4', '1/4', '1/4']}
       rows={['auto', 'flex', 'auto']}
       areas={[
@@ -146,7 +148,12 @@ export default function Chat({ children }) {
       ]}
       fill
     >
-      <Box gridArea="ChatContactSearch" pad="small" border="right">
+      <Box
+        className="ChatContactSearch"
+        gridArea="ChatContactSearch"
+        pad="small"
+        border="right"
+      >
         <TextInput
           onChange={(e) => searchContacts(e.target.value)}
           onSelect={(e) => {
@@ -159,12 +166,23 @@ export default function Chat({ children }) {
         />
       </Box>
 
-      <Box gridArea="ChatHeader" pad="small" justify="center" border="bottom">
+      <Box
+        className="ChatHeader"
+        gridArea="ChatHeader"
+        pad="small"
+        justify="center"
+        border="bottom"
+      >
         <Heading level={4} margin="none">
           {composingConversation ? 'New message' : participantsLabel}
         </Heading>
       </Box>
-      <Box gridArea="ChatSidebar" fill="vertical" border="right">
+      <Box
+        className="ChatSidebar"
+        gridArea="ChatSidebar"
+        fill="vertical"
+        border="right"
+      >
         <ChatConversations
           conversations={conversations}
           user={user}
@@ -175,7 +193,13 @@ export default function Chat({ children }) {
           }}
         />
       </Box>
-      <Box gridArea="ChatCompose" pad="medium" border="right" justify="end">
+      <Box
+        className="ChatCompose"
+        gridArea="ChatCompose"
+        pad="medium"
+        border="right"
+        justify="end"
+      >
         <Button
           label="New Message"
           onClick={() => composeConversation()}
@@ -183,6 +207,7 @@ export default function Chat({ children }) {
         />
       </Box>
       <Box
+        className="ChatMain"
         gridArea="ChatMain"
         pad={{ horizontal: 'medium' }}
         overflow="auto"
@@ -200,7 +225,12 @@ export default function Chat({ children }) {
           <ChatConversation user={user} {...conversation} />
         )}
       </Box>
-      <Box gridArea="ChatMessage" pad="medium" border="top">
+      <Box
+        className="ChatMessage"
+        gridArea="ChatMessage"
+        pad="medium"
+        border="top"
+      >
         <Keyboard
           onEnter={(event) => {
             event.preventDefault();

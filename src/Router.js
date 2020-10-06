@@ -37,7 +37,12 @@ export default function Router({ docs }) {
           component={Calendar}
           path={`/features/calendar`}
         />
-        <DocRoute docs={docs} component={Chat} path={`/features/chat`} />
+        <DocRoute
+          docs={docs}
+          component={Chat}
+          path={`/features/chat`}
+          name={Chat.$$typeof.displayName}
+        />
         <DocRoute
           docs={docs}
           component={Store}

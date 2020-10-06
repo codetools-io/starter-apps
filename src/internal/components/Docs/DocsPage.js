@@ -8,7 +8,7 @@ const DATA_BASE_PATH = `${process.env.PUBLIC_URL}/data`;
 const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 
-export default function DocsPage({ component: Component, docs, path }) {
+export default function DocsPage({ component: Component, docs, path, name }) {
   const [files, setFiles] = useState();
   const [doc, setDoc] = useState();
 
@@ -34,6 +34,7 @@ export default function DocsPage({ component: Component, docs, path }) {
         files={files || []}
         sandboxUrl={`${SANDBOX_URL}/${doc?.directory}`}
         githubUrl={`${GITHUB_URL}/tree/master/src/${doc?.directory}`}
+        doc={doc}
       >
         <Component />
       </DocsMain>
