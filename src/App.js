@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Amplify from 'aws-amplify';
 import { BrowserRouter } from 'react-router-dom';
 
+import { trackUsage } from './analytics';
 import Router from './Router';
 import AppShell from 'internal/components/AppShell';
 import ErrorBoundary from 'internal/components/ErrorBoundary';
@@ -9,6 +10,8 @@ import ErrorBoundary from 'internal/components/ErrorBoundary';
 import awsconfig from './aws-exports';
 
 Amplify.configure(awsconfig);
+
+trackUsage();
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
