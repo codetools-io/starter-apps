@@ -6,6 +6,24 @@ categoryId: feature
 icon: Chat
 description: A feature for facilitating real-time text communication.
 path: /chat
+domain:
+  - name: Contact
+    description: A person that the user can communicate with and see details about
+  - name: Conversation
+    description: A thread of communcation between a Contact and the User
+  - name: Message
+    description: A message sent in a Conversation
+  - name: User
+    description: The person using the application
+hooks:
+  - name: onSearchContacts
+    description: A function called when a user enters text in the `ContactSearch` field
+  - name: onSendMessage
+    description: A function called when a user has entered a new message and pressed enter
+  - name: onStartConversation
+    description: A function called when a user has selected a name from the drop menu on the new message screen
+  - name: onUpdateMessage
+    description: A function called when a user enters text in the `ContactSearch` field
 components:
   Chat: The main component, which is the default export and wraps all other components.
   ChatContactSearch: No description given

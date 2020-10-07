@@ -3,7 +3,7 @@ import { Box } from 'grommet';
 
 import DocsCard from './DocsCard';
 
-function DocsArchitectureOverlay({ children, doc }) {
+function DocsComponentsOverlay({ children, doc }) {
   const [styles, setStyles] = useState('');
   useEffect(() => {
     if (doc?.components) {
@@ -15,13 +15,13 @@ function DocsArchitectureOverlay({ children, doc }) {
           }
 
           return `
-          .DocsArchitectureOverlay .${componentName} {
+          .DocsComponentsOverlay .${componentName} {
             position: relative;
             box-sizing: border-box;
             pointer-events: none;
           }
 
-          .DocsArchitectureOverlay .${componentName}:before {
+          .DocsComponentsOverlay .${componentName}:before {
             content: '';
             box-sizing: border-box;
             position: absolute;
@@ -33,7 +33,7 @@ function DocsArchitectureOverlay({ children, doc }) {
             background: rgba(0,0,0,0.5);
             z-index: 900000;
           }
-          .DocsArchitectureOverlay .${componentName}:after {
+          .DocsComponentsOverlay .${componentName}:after {
             content: '${componentName}';
             box-sizing: border-box;
             position: absolute;
@@ -61,7 +61,7 @@ function DocsArchitectureOverlay({ children, doc }) {
 
   return (
     <Box
-      className="DocsArchitectureOverlay"
+      className="DocsComponentsOverlay"
       style={{
         position: 'absolute',
         top: 0,
@@ -75,12 +75,12 @@ function DocsArchitectureOverlay({ children, doc }) {
     </Box>
   );
 }
-export default function DocsArchitecture({ children, doc, ...props }) {
+export default function DocsComponents({ children, doc, ...props }) {
   return (
     <DocsCard height="large" flex={false} {...props}>
       <Box overflow="auto" style={{ position: 'relative' }} fill>
         {children}
-        <DocsArchitectureOverlay doc={doc}>{children}</DocsArchitectureOverlay>
+        <DocsComponentsOverlay doc={doc}>{children}</DocsComponentsOverlay>
       </Box>
     </DocsCard>
   );

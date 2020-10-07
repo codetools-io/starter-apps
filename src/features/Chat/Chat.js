@@ -95,7 +95,7 @@ function ChatNewConversation({
   startConversation,
 }) {
   return (
-    <Box className="ChatNewConversation">
+    <Box className="ChatNewConversation" pad={{ top: 'medium' }}>
       <TextInput
         onChange={(e) => searchRecipients(e.target.value)}
         onSelect={(e) => {
@@ -105,13 +105,17 @@ function ChatNewConversation({
         placeholder="Type the name of a contact"
         suggestions={recipientSearchResults}
         value={recipientSearch}
-        plain
       />
     </Box>
   );
 }
 
-export default function Chat({ children }) {
+export default function Chat({
+  onSearchContacts = () => {},
+  onSendMessage = () => {},
+  onStartConversation = () => {},
+  onUpdateMessage = () => {},
+}) {
   const {
     clearContactSearch,
     clearRecipientSearch,

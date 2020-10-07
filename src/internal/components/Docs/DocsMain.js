@@ -1,13 +1,26 @@
 import React, { useMemo, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Box, Tab, Tabs } from 'grommet';
+import { Box, Tab, Tabs, Text } from 'grommet';
 
 import useRouter from 'internal/hooks/useRouter';
+import DocsAbout from './DocsAbout';
 import DocsCode from './DocsCode';
 import DocsPreview from './DocsPreview';
-import DocsArchitecture from './DocsArchitecture';
+import DocsComponents from './DocsComponents';
+import DocsHooks from './DocsHooks';
+import DocsDomain from './DocsDomain';
 import DocsActions from './DocsActions';
 
+function DocsMainTab({ icon, title, isActive }) {
+  return (
+    <Box direction="row" align="center" gap="xsmall" margin="xsmall">
+      {icon}
+      <Text size="small" color={isActive ? 'control' : 'text'}>
+        <strong>{title}</strong>
+      </Text>
+    </Box>
+  );
+}
 export default function DocsMain({
   children,
   files = [],
@@ -24,24 +37,48 @@ export default function DocsMain({
         title: 'Preview',
         key: 'preview',
         index: 0,
-        isValid: !!children,
+        isEnabledFeature: !!children,
         isActive: queryParams?.mode === 'preview' || !queryParams?.mode,
+      },
+      {
+        Component: DocsAbout,
+        title: 'About',
+        key: 'about',
+        index: 1,
+        isEnabledFeature: files?.length,
+        isActive: queryParams?.mode === 'about',
       },
       {
         Component: DocsCode,
         title: 'Code',
         key: 'code',
-        index: 1,
-        isValid: files?.length,
+        index: 2,
+        isEnabledFeature: files?.length,
         isActive: queryParams?.mode === 'code',
       },
       {
-        Component: DocsArchitecture,
-        title: 'Architecture',
-        key: 'architecture',
-        index: 2,
-        isValid: !!doc?.components,
-        isActive: queryParams?.mode === 'architecture',
+        Component: DocsComponents,
+        title: 'Components',
+        key: 'components',
+        index: 3,
+        isEnabledFeature: !!doc?.components,
+        isActive: queryParams?.mode === 'components',
+      },
+      {
+        Component: DocsDomain,
+        title: 'Domain',
+        key: 'domain',
+        index: 4,
+        isEnabledFeature: !!doc?.domain,
+        isActive: queryParams?.mode === 'domain',
+      },
+      {
+        Component: DocsHooks,
+        title: 'Hooks',
+        key: 'hooks',
+        index: 5,
+        isEnabledFeature: !!doc?.hooks,
+        isActive: queryParams?.mode === 'hooks',
       },
     ];
   }, [queryParams, children, doc, files]);
@@ -60,8 +97,8 @@ export default function DocsMain({
       <Box direction="row" justify="between">
         <Tabs activeIndex={activeTab.index} onActive={switchTab}>
           {tabs.map((tab) => {
-            return tab?.isValid ? (
-              <Tab key={tab?.title} title={tab?.title}></Tab>
+            return tab?.isEnabledFeature ? (
+              <Tab key={tab?.title} title={<DocsMainTab {...tab} />}></Tab>
             ) : null;
           })}
         </Tabs>
