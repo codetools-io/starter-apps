@@ -8,9 +8,7 @@ import ErrorBoundary from 'internal/components/ErrorBoundary';
 
 import awsconfig from './aws-exports';
 
-if (process.env.NODE_ENV !== 'development') {
-  Amplify.configure(awsconfig);
-}
+Amplify.configure(awsconfig);
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
