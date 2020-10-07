@@ -2,7 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Box, Button, Grid } from 'grommet';
 import MonacoEditor from '@monaco-editor/react';
 import DocsCard from './DocsCard';
-export default function DocsCode({ files = [], options }) {
+
+const options = {
+  fontSize: 16,
+  minimap: {
+    enabled: false,
+  },
+  readOnly: true,
+};
+export default function DocsCode({ files = [] }) {
   const [activeFileIndex, setActiveFileIndex] = useState(null);
 
   useEffect(() => {

@@ -40,6 +40,7 @@ export default function useRouter() {
       match,
       location,
       history,
+      url: match.url,
     };
   }, [params, match, location, history]);
 }
