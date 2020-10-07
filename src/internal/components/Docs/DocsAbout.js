@@ -7,8 +7,19 @@ export default function DocsAbout({ doc }) {
   return (
     <Box gap="small" flex={false}>
       <DocsCard>
-        <Box pad="medium">
-          {doc?.content && <Markdown>{doc?.content}</Markdown>}
+        <Box pad={{ horizontal: 'large', top: 'small', bottom: 'large' }}>
+          {doc?.content && (
+            <Markdown
+              components={{
+                p: {
+                  component: 'Paragraph',
+                  props: { size: 'medium' },
+                },
+              }}
+            >
+              {doc?.content}
+            </Markdown>
+          )}
         </Box>
       </DocsCard>
     </Box>
