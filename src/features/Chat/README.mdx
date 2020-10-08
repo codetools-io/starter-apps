@@ -15,15 +15,32 @@ domain:
     description: A message sent in a Conversation
   - name: User
     description: The person using the application
-hooks:
-  - name: onSearchContacts
-    description: A function called when a user enters text in the `ContactSearch` field
-  - name: onSendMessage
-    description: A function called when a user has entered a new message and pressed enter
-  - name: onStartConversation
-    description: A function called when a user has selected a name from the drop menu on the new message screen
-  - name: onUpdateMessage
-    description: A function called when a user enters text in the `ContactSearch` field
+props:
+  hooks:
+    - name: onSearchContacts
+      description: Called when a user enters text in the `ContactSearch` field
+      type: function
+      args:
+        - name: searchTerm
+          type: string
+          description: the term to search contacts for
+      returnValue: Promise
+    - name: onSendMessage
+      description: Called when a user has entered a new message and pressed enter
+      type: function
+      args:
+        - name: message
+          type: string
+          description: The message the user sent
+      returnValue: Promise
+    - name: onStartConversation
+      description: Called when a user has selected a contact's name from the drop menu on the new message screen
+      type: function
+      args:
+        - name: contact
+          type: object
+          description: The data associated with the contact
+      returnValue: Promise
 components:
   Chat: The main component, which is the default export and wraps all other components.
   ChatContactSearch: No description given

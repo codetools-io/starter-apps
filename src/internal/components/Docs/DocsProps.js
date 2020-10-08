@@ -3,23 +3,23 @@ import { Box, Grid, Heading, List, Markdown, Paragraph, Text } from 'grommet';
 
 import DocsCard from './DocsCard';
 
-export default function DocsProps({ properties }) {
+function DocsPropsHooks({ doc }) {
   return (
-    <Box gap="small" flex={false}>
-      <Heading level={4} margin="none">
-        Properties
+    <Box gap="small">
+      <Heading level={4} margin={{ bottom: 'none' }}>
+        Hooks
       </Heading>
       <DocsCard>
-        <List data={properties} pad="none">
+        <List data={doc?.props?.hooks} pad="none">
           {(datum, index) => {
             const isAlternate = index % 2;
-            const { name, description, format } = datum;
-            const { overview, args, returnValue } = description;
-            const formatAppend = args
+            const { name, description, type, args, returnValue } = datum;
+
+            const typeAppend = args
               ? `(${args?.map((a) => a?.name)?.join(', ')})`
               : ``;
             const areas = [
-              ['name', 'format', 'description'],
+              ['name', 'type', 'description'],
               args ? ['properties', 'properties', 'properties'] : null,
               returnValue
                 ? ['returnValue', 'returnValue', 'returnValue']
@@ -38,8 +38,8 @@ export default function DocsProps({ properties }) {
                   <Box gridArea="name" direction="row" gap="small">
                     <Text weight="bold">{name}</Text>
                   </Box>
-                  <Box gridArea="format">
-                    <Markdown>{`\`${format}${formatAppend}\``}</Markdown>
+                  <Box gridArea="type">
+                    <Markdown>{`\`${type}${typeAppend}\``}</Markdown>
                   </Box>
                   <Paragraph
                     gridArea="description"
@@ -47,7 +47,7 @@ export default function DocsProps({ properties }) {
                     textAlign="end"
                     fill
                   >
-                    {overview || description}
+                    {description}
                   </Paragraph>
                   {args && (
                     <Box
@@ -100,6 +100,13 @@ export default function DocsProps({ properties }) {
           }}
         </List>
       </DocsCard>
+    </Box>
+  );
+}
+export default function DocsProps({ doc }) {
+  return (
+    <Box gap="small" flex={false} width={{ max: 'xxlarge' }}>
+      {doc?.props?.hooks && <DocsPropsHooks doc={doc} />}
     </Box>
   );
 }

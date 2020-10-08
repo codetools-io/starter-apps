@@ -8,6 +8,7 @@ import DocsCode from './DocsCode';
 import DocsPreview from './DocsPreview';
 import DocsHooks from './DocsHooks';
 import DocsDomain from './DocsDomain';
+import DocsProps from './DocsProps';
 import DocsActions from './DocsActions';
 import DocsNav from './DocsNav';
 
@@ -55,6 +56,14 @@ export default function DocsMain({ children, files = [], doc }) {
         index: 4,
         isEnabledFeature: !!doc?.hooks,
         isActive: queryParams?.mode === 'hooks',
+      },
+      {
+        Component: DocsProps,
+        title: 'Props',
+        key: 'props',
+        index: 5,
+        isEnabledFeature: !!doc?.props,
+        isActive: queryParams?.mode === 'props',
       },
     ];
   }, [queryParams, children, doc, files]);
