@@ -21,8 +21,6 @@ export default function TooltipButton({
         ref={ref}
         onMouseOver={() => setOver(true)}
         onMouseLeave={() => setOver(false)}
-        onFocus={() => setOver(true)}
-        onBlur={() => setOver(false)}
         plain
         {...props}
       >
