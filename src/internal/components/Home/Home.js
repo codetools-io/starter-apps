@@ -30,8 +30,8 @@ function HomeSection({ components, description, title }) {
         {components?.map((component) => {
           return (
             <Link
-              key={component?.data.path}
-              to={component?.data.path}
+              key={component?.path}
+              to={component?.path}
               style={{ textDecoration: 'none' }}
             >
               <Card background="white" pad="medium" gap="small" fill>
