@@ -1,35 +1,19 @@
 import React, { useMemo, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Box, Tab, Tabs, Text } from 'grommet';
+import { Box } from 'grommet';
 
 import useRouter from 'internal/hooks/useRouter';
 import DocsAbout from './DocsAbout';
 import DocsCode from './DocsCode';
 import DocsPreview from './DocsPreview';
-import DocsComponents from './DocsComponents';
 import DocsHooks from './DocsHooks';
 import DocsDomain from './DocsDomain';
 import DocsActions from './DocsActions';
+import DocsNav from './DocsNav';
 
-function DocsMainTab({ icon, title, isActive }) {
-  return (
-    <Box direction="row" align="center" gap="xsmall" margin="xsmall">
-      {icon}
-      <Text size="small" color={isActive ? 'control' : 'text'}>
-        <strong>{title}</strong>
-      </Text>
-    </Box>
-  );
-}
-export default function DocsMain({
-  children,
-  files = [],
-  sandboxUrl,
-  githubUrl,
-  doc,
-}) {
-  const [fullScreen, setFullScreen] = useState(false);
+export default function DocsMain({ children, files = [], doc }) {
   const { queryParams, setQueryParam, url } = useRouter();
+  const [actions, setActions] = useState([]);
   const tabs = useMemo(() => {
     return [
       {
@@ -57,18 +41,10 @@ export default function DocsMain({
         isActive: queryParams?.mode === 'code',
       },
       {
-        Component: DocsComponents,
-        title: 'Components',
-        key: 'components',
-        index: 3,
-        isEnabledFeature: !!doc?.components,
-        isActive: queryParams?.mode === 'components',
-      },
-      {
         Component: DocsDomain,
         title: 'Domain',
         key: 'domain',
-        index: 4,
+        index: 3,
         isEnabledFeature: !!doc?.domain,
         isActive: queryParams?.mode === 'domain',
       },
@@ -76,18 +52,16 @@ export default function DocsMain({
         Component: DocsHooks,
         title: 'Hooks',
         key: 'hooks',
-        index: 5,
+        index: 4,
         isEnabledFeature: !!doc?.hooks,
         isActive: queryParams?.mode === 'hooks',
       },
     ];
   }, [queryParams, children, doc, files]);
-  const activeTab = useMemo(() => {
-    return tabs?.find((tab) => tab?.isActive) || tabs[0];
-  }, [tabs]);
 
-  function switchTab(tabIndex) {
-    if (activeTab.index !== tabIndex) {
+  function onChangeTab(tabIndex) {
+    if (!tabs[tabIndex]?.isActive) {
+      setActions([]);
       setQueryParam('mode', tabs[tabIndex]?.title?.toLowerCase());
     }
   }
@@ -95,21 +69,10 @@ export default function DocsMain({
   return (
     <Box gap="small" flex={false}>
       <Box direction="row" justify="between">
-        <Tabs activeIndex={activeTab.index} onActive={switchTab}>
-          {tabs.map((tab) => {
-            return tab?.isEnabledFeature ? (
-              <Tab key={tab?.title} title={<DocsMainTab {...tab} />}></Tab>
-            ) : null;
-          })}
-        </Tabs>
-        <DocsActions
-          githubUrl={githubUrl}
-          sandboxUrl={sandboxUrl}
-          onExpand={
-            activeTab?.key === 'preview' ? () => setFullScreen(true) : null
-          }
-        />
+        <DocsNav tabs={tabs} onChangeTab={onChangeTab} />
+        <DocsActions actions={actions} />
       </Box>
+
       <Switch>
         <Route path={`${url}`}>
           {tabs?.map((tab) => {
@@ -121,8 +84,7 @@ export default function DocsMain({
                   children={children}
                   doc={doc}
                   files={files}
-                  fullScreen={fullScreen}
-                  onShrink={() => setFullScreen(false)}
+                  loadActions={setActions}
                 />
               );
             }

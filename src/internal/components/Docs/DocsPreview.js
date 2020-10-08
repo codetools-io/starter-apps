@@ -1,22 +1,48 @@
-import React from 'react';
-import { Box } from 'grommet';
+import React, { useEffect, useState } from 'react';
+import { Text } from 'grommet';
+import { Cubes, Expand } from 'grommet-icons';
 import DocsPreviewModal from './DocsPreviewModal';
-import DocsCard from './DocsCard';
-export default function DocsPreview({
-  children,
-  fullScreen = false,
-  onShrink = () => {},
-  ...props
-}) {
-  if (fullScreen) {
-    return <DocsPreviewModal onShrink={onShrink}>{children}</DocsPreviewModal>;
+import DocsPreviewStandard from './DocsPreviewStandard';
+import DocsComponents from './DocsComponents';
+import TooltipButton from 'internal/components/TooltipButton';
+
+export default function DocsPreview({ children, doc, loadActions, ...props }) {
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isOverlayToggled, setIsOverlayToggled] = useState(false);
+  useEffect(() => {
+    loadActions([
+      <TooltipButton
+        tooltip={<Text size="small">Fullscreen View</Text>}
+        icon={<Expand size="18px" />}
+        onClick={() => setIsFullScreen(true)}
+        color={isFullScreen ? 'control' : 'text'}
+        align={{ bottom: 'top', right: 'right' }}
+      />,
+      <TooltipButton
+        tooltip={<Text size="small">Components View</Text>}
+        icon={<Cubes size="22px" />}
+        onClick={() => setIsOverlayToggled(!isOverlayToggled)}
+        color={isOverlayToggled ? 'control' : 'text'}
+        align={{ bottom: 'top', right: 'right' }}
+      />,
+    ]);
+  }, [isFullScreen, isOverlayToggled, loadActions]);
+
+  if (isFullScreen) {
+    return (
+      <DocsPreviewModal onShrink={() => setIsFullScreen(false)}>
+        {children}
+      </DocsPreviewModal>
+    );
+  }
+
+  if (isOverlayToggled) {
+    return <DocsComponents children={children} doc={doc} />;
   }
 
   return (
-    <DocsCard height="large" flex={false} {...props}>
-      <Box overflow="auto" fill>
-        {children}
-      </Box>
-    </DocsCard>
+    <DocsPreviewStandard onExpand={() => setIsFullScreen(true)}>
+      {children}
+    </DocsPreviewStandard>
   );
 }

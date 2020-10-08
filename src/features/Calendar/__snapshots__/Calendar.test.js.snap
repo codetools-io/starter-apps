@@ -255,7 +255,7 @@ exports[`Calendar can render 1`] = `
                       type="button"
                     >
                       <div
-                        class="StyledCalendar__StyledDay-sc-1y4xhmp-5 gBUPeV"
+                        class="StyledCalendar__StyledDay-sc-1y4xhmp-5 hMtPVo"
                       >
                         7
                       </div>
@@ -271,7 +271,7 @@ exports[`Calendar can render 1`] = `
                       type="button"
                     >
                       <div
-                        class="StyledCalendar__StyledDay-sc-1y4xhmp-5 hMtPVo"
+                        class="StyledCalendar__StyledDay-sc-1y4xhmp-5 gBUPeV"
                       >
                         8
                       </div>

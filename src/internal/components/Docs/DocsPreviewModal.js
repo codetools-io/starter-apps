@@ -1,8 +1,13 @@
 import React from 'react';
 import { Box, Button, Layer, ThemeContext } from 'grommet';
 import { Close } from 'grommet-icons';
-import DocsPreview from './DocsPreview';
-export default function DocsPreviewModal({ children, onShrink = () => {} }) {
+import DocsCard from './DocsCard';
+import DocsTheme from './DocsTheme';
+export default function DocsPreviewModal({
+  children,
+  onShrink = () => {},
+  ...props
+}) {
   return (
     <ThemeContext.Extend
       value={{
@@ -30,9 +35,11 @@ export default function DocsPreviewModal({ children, onShrink = () => {} }) {
           <Button icon={<Close color="white" />} onClick={() => onShrink()} />
         </Box>
         <Box height="100%" pad={{ top: 'medium' }}>
-          <DocsPreview onShrink={onShrink} fill>
-            {children}
-          </DocsPreview>
+          <DocsCard height="large" flex={false} {...props}>
+            <Box overflow="auto" fill>
+              <DocsTheme>{children}</DocsTheme>
+            </Box>
+          </DocsCard>
         </Box>
       </Layer>
     </ThemeContext.Extend>

@@ -1,15 +1,50 @@
-import React from 'react';
-import { Box, Heading, Paragraph } from 'grommet';
+import React, { useMemo } from 'react';
+import { Box, Button, Heading, Paragraph } from 'grommet';
+import { CodeSandbox, Github } from 'grommet-icons';
+export default function DocsOverview({
+  name,
+  description,
+  githubUrl,
+  sandboxUrl,
+}) {
+  const hasSocials = useMemo(() => {
+    return !!githubUrl || !!sandboxUrl;
+  }, [githubUrl, sandboxUrl]);
 
-export default function DocsOverview({ name, description }) {
   return (
     <Box gap="small" flex={false}>
       <Heading level={3} margin="none">
         {name}
       </Heading>
+
       <Paragraph margin="none" fill>
         {description}
       </Paragraph>
+      {hasSocials && (
+        <Box
+          direction="row"
+          align="baseline"
+          gap="small"
+          margin={{ top: 'xsmall' }}
+        >
+          {sandboxUrl && (
+            <Button
+              icon={<CodeSandbox size="22px" />}
+              color="control"
+              href={sandboxUrl}
+              plain
+            />
+          )}
+          {githubUrl && (
+            <Button
+              icon={<Github size="22px" />}
+              color="control"
+              href={githubUrl}
+              plain
+            />
+          )}
+        </Box>
+      )}
     </Box>
   );
 }

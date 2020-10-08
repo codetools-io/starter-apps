@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from 'grommet';
-
+import DocsTheme from './DocsTheme';
 import DocsCard from './DocsCard';
 
 function DocsComponentsOverlay({ children, doc }) {
@@ -79,8 +79,10 @@ export default function DocsComponents({ children, doc, ...props }) {
   return (
     <DocsCard height="large" flex={false} {...props}>
       <Box overflow="auto" style={{ position: 'relative' }} fill>
-        {children}
-        <DocsComponentsOverlay doc={doc}>{children}</DocsComponentsOverlay>
+        <DocsTheme>{children}</DocsTheme>
+        <DocsComponentsOverlay doc={doc}>
+          <DocsTheme>{children}</DocsTheme>
+        </DocsComponentsOverlay>
       </Box>
     </DocsCard>
   );

@@ -29,13 +29,10 @@ export default function DocsPage({ component: Component, docs, path, name }) {
         name={doc?.data?.name}
         description={doc?.data?.description}
         content={doc?.content}
-      />
-      <DocsMain
-        files={files || []}
         sandboxUrl={`${SANDBOX_URL}/${doc?.directory}`}
         githubUrl={`${GITHUB_URL}/tree/master/src/${doc?.directory}`}
-        doc={doc}
-      >
+      />
+      <DocsMain files={files || []} doc={doc}>
         <Component />
       </DocsMain>
       <Box fill></Box>
