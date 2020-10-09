@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { DocsPage } from 'internal/components/Docs';
 
-function DocRoute({ component, path, docs }) {
+function DocRoute({ component, path, docs, pageProps = {}, ...props }) {
   return (
-    <Route path={path}>
-      <DocsPage component={component} docs={docs} path={path} />
+    <Route path={path} {...props}>
+      <DocsPage component={component} docs={docs} path={path} {...pageProps} />
     </Route>
   );
 }
@@ -36,6 +36,14 @@ export default function Router({ docs }) {
           docs={docs}
           component={Calendar}
           path={`/features/calendar`}
+          pageProps={{
+            mainProps: {
+              pad: { bottom: 'large' },
+              componentProps: {
+                // height: 'xlarge',
+              },
+            },
+          }}
         />
         <DocRoute
           docs={docs}

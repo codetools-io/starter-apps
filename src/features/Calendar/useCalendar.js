@@ -1,12 +1,24 @@
 import { useMemo, useState } from 'react';
+import groupBy from './utils/groupBy';
+import * as config from './config';
 export default function useCalendar() {
-  const events = useState([
-    { id: 'event-1', name: 'Some event', date: '2020-08-28T13:40:33.729Z' },
-  ]);
-
-  const calendar = useMemo(() => {
-    return { events };
+  const [events] = useState(config?.events);
+  const [currentDate] = useState(new Date());
+  const eventsByDate = useMemo(() => {
+    return groupBy(
+      events?.map((event) => {
+        const eventDate = new Date(event?.date);
+        return {
+          ...event,
+          date: event,
+          _dateKey: eventDate?.toDateString(),
+        };
+      }),
+      '_dateKey'
+    );
   }, [events]);
 
-  return calendar;
+  return useMemo(() => {
+    return { currentDate, events, eventsByDate };
+  }, [currentDate, events, eventsByDate]);
 }

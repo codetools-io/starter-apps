@@ -12,7 +12,13 @@ import DocsProps from './DocsProps';
 import DocsActions from './DocsActions';
 import DocsNav from './DocsNav';
 
-export default function DocsMain({ children, files = [], doc }) {
+export default function DocsMain({
+  children,
+  files = [],
+  doc,
+  componentProps = {},
+  ...props
+}) {
   const { queryParams, setQueryParam, url } = useRouter();
   const [actions, setActions] = useState([]);
   const tabs = useMemo(() => {
@@ -76,7 +82,7 @@ export default function DocsMain({ children, files = [], doc }) {
   }
 
   return (
-    <Box gap="small" flex={false}>
+    <Box className="DocsMain" gap="small" flex={false} {...props}>
       <Box direction="row" justify="between">
         <DocsNav tabs={tabs} onChangeTab={onChangeTab} />
         <DocsActions actions={actions} />
@@ -94,6 +100,7 @@ export default function DocsMain({ children, files = [], doc }) {
                   doc={doc}
                   files={files}
                   loadActions={setActions}
+                  {...componentProps}
                 />
               );
             }

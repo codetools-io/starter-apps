@@ -12,6 +12,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
   useEffect(() => {
     loadActions([
       <TooltipButton
+        key="action-fullscreen"
         tooltip={<Text size="small">Fullscreen View</Text>}
         icon={<Expand size="18px" />}
         onClick={() => setIsFullScreen(true)}
@@ -20,6 +21,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       />,
       doc?.components && (
         <TooltipButton
+          key="action-overlay"
           tooltip={<Text size="small">Component View</Text>}
           icon={<Cubes size="22px" />}
           onClick={() => setIsOverlayToggled(!isOverlayToggled)}
@@ -42,9 +44,5 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
     return <DocsComponents children={children} doc={doc} />;
   }
 
-  return (
-    <DocsPreviewStandard onExpand={() => setIsFullScreen(true)}>
-      {children}
-    </DocsPreviewStandard>
-  );
+  return <DocsPreviewStandard {...props}>{children}</DocsPreviewStandard>;
 }
