@@ -48,7 +48,7 @@ exports[`Can render AppShell 1`] = `
                 </svg>
               </button>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 gbzvTG AppShellNotifications"
@@ -91,7 +91,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 jBgDoj"
+                            class="StyledText-sc-1sadyjn-0 hEtUkZ"
                           >
                             1
                           </span>
@@ -101,7 +101,7 @@ exports[`Can render AppShell 1`] = `
                   </div>
                 </button>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                 />
                 <button
                   aria-label="Open Drop"
@@ -141,7 +141,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 jBgDoj"
+                            class="StyledText-sc-1sadyjn-0 hEtUkZ"
                           >
                             1
                           </span>
@@ -151,7 +151,7 @@ exports[`Can render AppShell 1`] = `
                   </div>
                 </button>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                 />
                 <button
                   aria-label="Open Drop"
@@ -191,7 +191,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bBwIJT"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 jBgDoj"
+                            class="StyledText-sc-1sadyjn-0 hEtUkZ"
                           >
                             1
                           </span>
@@ -202,7 +202,7 @@ exports[`Can render AppShell 1`] = `
                 </button>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
               />
               <button
                 aria-label="Open Drop"
@@ -235,13 +235,13 @@ exports[`Can render AppShell 1`] = `
                     class="StyledBox-sc-13pk1d4-0 ddwlHv"
                   >
                     <span
-                      class="StyledText-sc-1sadyjn-0 gmtNWw"
+                      class="StyledText-sc-1sadyjn-0 fNZrpW"
                     >
                       First Section
                     </span>
                   </div>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 bFwQzJ"
@@ -258,7 +258,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="Home"
@@ -275,13 +275,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Home
                           </span>
@@ -300,7 +300,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="Group"
@@ -317,13 +317,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Members
                           </span>
@@ -342,7 +342,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="Install"
@@ -359,13 +359,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Orders
                           </span>
@@ -390,7 +390,7 @@ exports[`Can render AppShell 1`] = `
                               class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                             >
                               <span
-                                class="StyledText-sc-1sadyjn-0 hUokoe"
+                                class="StyledText-sc-1sadyjn-0 jlATGM"
                               >
                                 <svg
                                   aria-label="DocumentPerformance"
@@ -407,25 +407,25 @@ exports[`Can render AppShell 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                             />
                             <div
                               class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                             >
                               <span
-                                class="StyledText-sc-1sadyjn-0 kAlwbY"
+                                class="StyledText-sc-1sadyjn-0 jMqRbO"
                               >
                                 Reports
                               </span>
                             </div>
                             <div
-                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                             />
                             <div
                               class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__secondaryIcon"
                             >
                               <span
-                                class="StyledText-sc-1sadyjn-0 hUokoe"
+                                class="StyledText-sc-1sadyjn-0 jlATGM"
                               >
                                 <svg
                                   aria-label="Down"
@@ -446,7 +446,7 @@ exports[`Can render AppShell 1`] = `
                         </a>
                       </div>
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gTfmlI"
                       />
                       <div
                         aria-hidden="true"
@@ -467,7 +467,7 @@ exports[`Can render AppShell 1`] = `
                                 class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
                               >
                                 <span
-                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                  class="StyledText-sc-1sadyjn-0 guiJsI"
                                 >
                                   Weekly
                                 </span>
@@ -475,7 +475,7 @@ exports[`Can render AppShell 1`] = `
                             </div>
                           </a>
                           <div
-                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gTfmlI"
                           />
                           <a
                             class="AppShellNavLink"
@@ -489,7 +489,7 @@ exports[`Can render AppShell 1`] = `
                                 class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
                               >
                                 <span
-                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                  class="StyledText-sc-1sadyjn-0 guiJsI"
                                 >
                                   Monthly
                                 </span>
@@ -497,7 +497,7 @@ exports[`Can render AppShell 1`] = `
                             </div>
                           </a>
                           <div
-                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gTfmlI"
                           />
                           <a
                             class="AppShellNavLink"
@@ -511,7 +511,7 @@ exports[`Can render AppShell 1`] = `
                                 class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
                               >
                                 <span
-                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                  class="StyledText-sc-1sadyjn-0 guiJsI"
                                 >
                                   Quarterly
                                 </span>
@@ -519,7 +519,7 @@ exports[`Can render AppShell 1`] = `
                             </div>
                           </a>
                           <div
-                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gKqBBs"
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gTfmlI"
                           />
                           <a
                             class="AppShellNavLink"
@@ -533,7 +533,7 @@ exports[`Can render AppShell 1`] = `
                                 class="StyledBox-sc-13pk1d4-0 ckgvNK NavLink__label"
                               >
                                 <span
-                                  class="StyledText-sc-1sadyjn-0 fgyqci"
+                                  class="StyledText-sc-1sadyjn-0 guiJsI"
                                 >
                                   Yearly
                                 </span>
@@ -546,7 +546,7 @@ exports[`Can render AppShell 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
                 />
                 <div
                   class="StyledBox-sc-13pk1d4-0 bFwQzJ AppShellNavSection"
@@ -555,13 +555,13 @@ exports[`Can render AppShell 1`] = `
                     class="StyledBox-sc-13pk1d4-0 ddwlHv"
                   >
                     <span
-                      class="StyledText-sc-1sadyjn-0 gmtNWw"
+                      class="StyledText-sc-1sadyjn-0 fNZrpW"
                     >
                       Second Section
                     </span>
                   </div>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 bFwQzJ"
@@ -578,7 +578,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="Alert"
@@ -595,13 +595,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Alerts
                           </span>
@@ -620,7 +620,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="Globe"
@@ -637,13 +637,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Locations
                           </span>
@@ -662,7 +662,7 @@ exports[`Can render AppShell 1`] = `
                           class="StyledBox-sc-13pk1d4-0 bFwQzJ NavLink__icon"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 hUokoe"
+                            class="StyledText-sc-1sadyjn-0 jlATGM"
                           >
                             <svg
                               aria-label="SettingsOption"
@@ -679,13 +679,13 @@ exports[`Can render AppShell 1`] = `
                           </span>
                         </div>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iwLfhj NavLink__label"
                         >
                           <span
-                            class="StyledText-sc-1sadyjn-0 kAlwbY"
+                            class="StyledText-sc-1sadyjn-0 jMqRbO"
                           >
                             Settings
                           </span>

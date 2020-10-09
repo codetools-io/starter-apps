@@ -15,52 +15,52 @@ exports[`Cart can render 1`] = `
           class="StyledTable__StyledTableHeader-sc-1m3u5g-4 kdPLsZ"
         >
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             />
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             />
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Product
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Price
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Quantity
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
               scope="col"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Total
               </span>
@@ -71,10 +71,10 @@ exports[`Cart can render 1`] = `
           class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ"
         >
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <button
@@ -96,7 +96,7 @@ exports[`Cart can render 1`] = `
               </button>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -109,32 +109,32 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Coffee
               </span>
               <p
-                class="StyledParagraph-tbetod-0 sfzUl"
+                class="StyledParagraph-tbetod-0 cBEkme"
               >
                 Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
               </p>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $10.99
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -153,21 +153,21 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $32.97
               </span>
             </th>
           </tr>
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <button
@@ -189,7 +189,7 @@ exports[`Cart can render 1`] = `
               </button>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -202,32 +202,32 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Honey
               </span>
               <p
-                class="StyledParagraph-tbetod-0 sfzUl"
+                class="StyledParagraph-tbetod-0 cBEkme"
               >
                 Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
               </p>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $200.99
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -246,21 +246,21 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $602.97
               </span>
             </th>
           </tr>
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <button
@@ -282,7 +282,7 @@ exports[`Cart can render 1`] = `
               </button>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -295,32 +295,32 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Onions
               </span>
               <p
-                class="StyledParagraph-tbetod-0 sfzUl"
+                class="StyledParagraph-tbetod-0 cBEkme"
               >
                 Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
               </p>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $3,000.99
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -339,21 +339,21 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $3,000.99
               </span>
             </th>
           </tr>
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <button
@@ -375,7 +375,7 @@ exports[`Cart can render 1`] = `
               </button>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -388,32 +388,32 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Strawberries
               </span>
               <p
-                class="StyledParagraph-tbetod-0 sfzUl"
+                class="StyledParagraph-tbetod-0 cBEkme"
               >
                 Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
               </p>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $500.99
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -432,21 +432,21 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $3,506.93
               </span>
             </th>
           </tr>
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <button
@@ -468,7 +468,7 @@ exports[`Cart can render 1`] = `
               </button>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -481,32 +481,32 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Tea
               </span>
               <p
-                class="StyledParagraph-tbetod-0 sfzUl"
+                class="StyledParagraph-tbetod-0 cBEkme"
               >
                 Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
               </p>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $6,000.99
               </span>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <div
@@ -525,11 +525,11 @@ exports[`Cart can render 1`] = `
               </div>
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
               scope="row"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $12,001.98
               </span>
@@ -540,34 +540,34 @@ exports[`Cart can render 1`] = `
           class="StyledTable__StyledTableFooter-sc-1m3u5g-5 iKFIhK"
         >
           <tr
-            class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
           >
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
             />
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
             />
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
             />
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
             />
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cNkMga"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 lfNwmc"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 Total
               </span>
             </td>
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 gmtNWw"
+                class="StyledText-sc-1sadyjn-0 fNZrpW"
               >
                 $19,145.84
               </span>

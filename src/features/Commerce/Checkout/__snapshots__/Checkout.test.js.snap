@@ -24,12 +24,12 @@ exports[`Checkout can render 1`] = `
               class="StyledBox-sc-13pk1d4-0 caSSos"
             >
               <h4
-                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                class="StyledHeading-sc-1rdh4aw-0 fwxVsO"
               >
                 Billing Details
               </h4>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bIdaiR"
@@ -38,12 +38,12 @@ exports[`Checkout can render 1`] = `
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     First Name
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -58,18 +58,18 @@ exports[`Checkout can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                 />
                 <div
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Last Name
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -85,7 +85,7 @@ exports[`Checkout can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bFwQzJ"
@@ -94,12 +94,12 @@ exports[`Checkout can render 1`] = `
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Company Name
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -115,7 +115,7 @@ exports[`Checkout can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bIdaiR"
@@ -124,12 +124,12 @@ exports[`Checkout can render 1`] = `
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Email
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -144,18 +144,18 @@ exports[`Checkout can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                 />
                 <div
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Mobile
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -171,7 +171,7 @@ exports[`Checkout can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bIdaiR"
@@ -180,12 +180,12 @@ exports[`Checkout can render 1`] = `
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Country
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <button
                       aria-label="Open Drop"
@@ -203,7 +203,7 @@ exports[`Checkout can render 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="StyledTextInput-sc-1x30a0s-0 fVbmbP Select__SelectTextInput-sc-17idtfo-0 hWmVID"
+                              class="StyledTextInput-sc-1x30a0s-0 fVbmbP Select__SelectTextInput-sc-17idtfo-0 VIYrI"
                               name="country"
                               readonly=""
                               tabindex="-1"
@@ -234,18 +234,18 @@ exports[`Checkout can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                 />
                 <div
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     City
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -261,7 +261,7 @@ exports[`Checkout can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bFwQzJ"
@@ -270,12 +270,12 @@ exports[`Checkout can render 1`] = `
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <label
-                    class="StyledText-sc-1sadyjn-0 enbIRN"
+                    class="StyledText-sc-1sadyjn-0 hPvfbL"
                   >
                     Address
                   </label>
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -290,13 +290,13 @@ exports[`Checkout can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
                 />
                 <div
                   class="StyledBox-sc-13pk1d4-0 dtCrhk FormField__FormFieldBox-m9hood-0 eenrNp"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 cptOIG FormField__FormFieldContentBox-m9hood-1 ckZStK"
+                    class="StyledBox-sc-13pk1d4-0 brKoju FormField__FormFieldContentBox-m9hood-1 ckZStK"
                   >
                     <div
                       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -312,7 +312,7 @@ exports[`Checkout can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
               />
               <div
                 class="StyledBox-sc-13pk1d4-0 bFwQzJ"
@@ -339,18 +339,18 @@ exports[`Checkout can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
             />
             <div
               class="StyledBox-sc-13pk1d4-0 caSSos"
             >
               <h4
-                class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+                class="StyledHeading-sc-1rdh4aw-0 fwxVsO"
               >
                 Products
               </h4>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
               />
               <table
                 class="StyledTable-sc-1m3u5g-6 bJymoW"
@@ -359,24 +359,24 @@ exports[`Checkout can render 1`] = `
                   class="StyledTable__StyledTableHeader-sc-1m3u5g-4 kdPLsZ"
                 >
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
                       scope="col"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 gmtNWw"
+                        class="StyledText-sc-1sadyjn-0 fNZrpW"
                       >
                         Product
                       </span>
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 gsRqPi"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 kLEWHI"
                       scope="col"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 gmtNWw"
+                        class="StyledText-sc-1sadyjn-0 fNZrpW"
                       >
                         Total
                       </span>
@@ -387,10 +387,10 @@ exports[`Checkout can render 1`] = `
                   class="StyledTable__StyledTableBody-sc-1m3u5g-3 bMdIOJ"
                 >
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       Coffee
@@ -399,17 +399,17 @@ exports[`Checkout can render 1`] = `
                       )
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       $32.97
                     </th>
                   </tr>
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       Honey
@@ -418,17 +418,17 @@ exports[`Checkout can render 1`] = `
                       )
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       $602.97
                     </th>
                   </tr>
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       Onions
@@ -437,17 +437,17 @@ exports[`Checkout can render 1`] = `
                       )
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       $3,000.99
                     </th>
                   </tr>
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       Strawberries
@@ -456,17 +456,17 @@ exports[`Checkout can render 1`] = `
                       )
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       $3,506.93
                     </th>
                   </tr>
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       Tea
@@ -475,7 +475,7 @@ exports[`Checkout can render 1`] = `
                       )
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 glVxec"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 bXELjK"
                       scope="row"
                     >
                       $12,001.98
@@ -486,24 +486,24 @@ exports[`Checkout can render 1`] = `
                   class="StyledTable__StyledTableFooter-sc-1m3u5g-5 iKFIhK"
                 >
                   <tr
-                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 dSAyNg"
+                    class="StyledTable__StyledTableRow-sc-1m3u5g-2 enByxm"
                   >
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
                       scope="col"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 gmtNWw"
+                        class="StyledText-sc-1sadyjn-0 fNZrpW"
                       >
                         Total
                       </span>
                     </th>
                     <th
-                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 kgsbPu"
+                      class="StyledTable__StyledTableCell-sc-1m3u5g-0 jOusTU"
                       scope="col"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 gmtNWw"
+                        class="StyledText-sc-1sadyjn-0 fNZrpW"
                       >
                         $19,145.84
                       </span>

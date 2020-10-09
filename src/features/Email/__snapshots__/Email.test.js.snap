@@ -12,7 +12,7 @@ exports[`Email can render 1`] = `
         class="StyledGrid-sc-1wofa1l-0 lchlXV"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hyWSbu"
+          class="StyledBox-sc-13pk1d4-0 ecouMW"
         >
           <button
             class="StyledButton-sc-323bzc-0 gLndZo"
@@ -22,7 +22,7 @@ exports[`Email can render 1`] = `
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 cJVSWF"
+          class="StyledBox-sc-13pk1d4-0 bDJMkx"
         >
           <div
             class="StyledBox-sc-13pk1d4-0 hrelHl"
@@ -35,19 +35,19 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 fXihpF"
+                  class="StyledText-sc-1sadyjn-0 eTklrn"
                 >
                   Inbox
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 bDBJwM"
+                  class="StyledText-sc-1sadyjn-0 hOakvG"
                 >
                   2
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -57,14 +57,14 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Sent
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -74,14 +74,14 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Drafts
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -91,14 +91,14 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Trash
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -108,19 +108,19 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Important
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 bDBJwM"
+                  class="StyledText-sc-1sadyjn-0 hOakvG"
                 >
                   1
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -130,14 +130,14 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Spam
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -147,7 +147,7 @@ exports[`Email can render 1`] = `
                 class="StyledBox-sc-13pk1d4-0 dlZDBx"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   Starred
                 </span>
@@ -178,14 +178,14 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   home
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -208,14 +208,14 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   work
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -238,14 +238,14 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   church
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -268,14 +268,14 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   family
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -298,14 +298,14 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   vacation
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 liuKJs"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
             />
             <button
               class="StyledButton-sc-323bzc-0 jFJBys"
@@ -328,7 +328,7 @@ exports[`Email can render 1`] = `
                   />
                 </svg>
                 <span
-                  class="StyledText-sc-1sadyjn-0 hUokoe"
+                  class="StyledText-sc-1sadyjn-0 jlATGM"
                 >
                   finance
                 </span>
@@ -337,22 +337,22 @@ exports[`Email can render 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bTFfDM"
+          class="StyledBox-sc-13pk1d4-0 eQGABE"
         >
           <h4
-            class="StyledHeading-sc-1rdh4aw-0 bqNAXo"
+            class="StyledHeading-sc-1rdh4aw-0 fwxVsO"
           >
             Inbox
           </h4>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 jrzkwI"
+          class="StyledBox-sc-13pk1d4-0 bwZTfg"
         >
           <div
             class="StyledBox-sc-13pk1d4-0 bFwQzJ"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 fYAWkP"
+              class="StyledBox-sc-13pk1d4-0 aONTD"
             >
               <div
                 class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 ksQrmr"
@@ -379,7 +379,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 dRYvdr StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -391,20 +391,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Jane
                            
                           D
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #1
                       </span>
@@ -426,7 +426,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 gvYOlP StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -438,20 +438,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Bill
                            
                           S
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #2
                       </span>
@@ -473,7 +473,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 ehSFRY StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -485,20 +485,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Suzy
                            
                           Q
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #3
                       </span>
@@ -520,7 +520,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -532,20 +532,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mike
                            
                           S
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #4
                       </span>
@@ -557,7 +557,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 pQXmZ"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 hBLLxb"
@@ -577,7 +577,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 gSXPAN StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -589,20 +589,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Sarah
                            
                           T
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #5
                       </span>
@@ -614,7 +614,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 ikHrwq"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 dTfpun"
@@ -634,7 +634,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 epWjAl StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -646,20 +646,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mark
                            
                           W
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #6
                       </span>
@@ -671,7 +671,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 fwxlsh"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 bGHSXC"
@@ -691,7 +691,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 epWjAl StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -703,20 +703,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mark
                            
                           W
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #7
                       </span>
@@ -742,7 +742,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -754,20 +754,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mike
                            
                           S
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #13
                       </span>
@@ -779,7 +779,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 pQXmZ"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 hBLLxb"
@@ -799,7 +799,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -811,20 +811,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mike
                            
                           S
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #14
                       </span>
@@ -836,7 +836,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 pQXmZ"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 hBLLxb"
@@ -856,7 +856,7 @@ exports[`Email can render 1`] = `
                     class="StyledBox-sc-13pk1d4-0 hFQhjG StyledAvatar-sc-1suyamb-1 juEsgd"
                   />
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffjnxm"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
                   />
                   <div
                     class="StyledBox-sc-13pk1d4-0 jwQkzn"
@@ -868,20 +868,20 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 JPuAi"
                       >
                         <span
-                          class="StyledText-sc-1sadyjn-0 nnbzI"
+                          class="StyledText-sc-1sadyjn-0 gEUqcK"
                         >
                           Mike
                            
                           S
                         </span>
                         <span
-                          class="StyledText-sc-1sadyjn-0 ebqAyg"
+                          class="StyledText-sc-1sadyjn-0 cwLWgu"
                         >
                           Aug 26, 2020
                         </span>
                       </div>
                       <span
-                        class="StyledText-sc-1sadyjn-0 gWIGcR"
+                        class="StyledText-sc-1sadyjn-0 bWcvez"
                       >
                         subject for email #15
                       </span>
@@ -893,7 +893,7 @@ exports[`Email can render 1`] = `
                         class="StyledBox-sc-13pk1d4-0 pQXmZ"
                       />
                       <div
-                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jSWhoW"
+                        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dQaqYs"
                       />
                       <div
                         class="StyledBox-sc-13pk1d4-0 hBLLxb"
@@ -906,7 +906,7 @@ exports[`Email can render 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 eQxoQY"
+          class="StyledBox-sc-13pk1d4-0 iiEDLg"
         />
         <div
           class="StyledBox-sc-13pk1d4-0 bQPtJQ"

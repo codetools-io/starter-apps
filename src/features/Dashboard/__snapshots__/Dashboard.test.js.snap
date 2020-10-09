@@ -14,7 +14,7 @@ exports[`Can render Dashboard 1`] = `
         Status
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
       />
       <div
         class="StyledBox-sc-13pk1d4-0 jIGluG"
@@ -24,26 +24,26 @@ exports[`Can render Dashboard 1`] = `
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
         />
         <div
           class="StyledBox-sc-13pk1d4-0 jwQkzn"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDebtf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
     />
     <div
       class="StyledBox-sc-13pk1d4-0 gzfjUM"
@@ -54,7 +54,7 @@ exports[`Can render Dashboard 1`] = `
         Notifications
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
       />
       <div
         class="StyledBox-sc-13pk1d4-0 jIGluG"
@@ -64,38 +64,38 @@ exports[`Can render Dashboard 1`] = `
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
         />
         <div
           class="StyledBox-sc-13pk1d4-0 jwQkzn"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cxqgXz"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
         />
         <div
           class="StyledBox-sc-13pk1d4-0 jwQkzn"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDebtf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
     />
     <div
       class="StyledBox-sc-13pk1d4-0 gzfjUM"
@@ -106,7 +106,7 @@ exports[`Can render Dashboard 1`] = `
         Progress
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
       />
       <div
         class="StyledBox-sc-13pk1d4-0 jIGluG"
@@ -116,14 +116,14 @@ exports[`Can render Dashboard 1`] = `
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDebtf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
     />
     <div
       class="StyledBox-sc-13pk1d4-0 gzfjUM"
@@ -134,7 +134,7 @@ exports[`Can render Dashboard 1`] = `
         Analytics
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jtjTeE"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
       />
       <div
         class="StyledBox-sc-13pk1d4-0 jIGluG"
@@ -144,7 +144,7 @@ exports[`Can render Dashboard 1`] = `
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 gfTpGC"
+          class="StyledParagraph-tbetod-0 bvtaWl"
         >
           Loading…
         </p>
