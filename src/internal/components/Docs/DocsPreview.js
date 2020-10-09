@@ -18,15 +18,17 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
         color={isFullScreen ? 'control' : 'text'}
         align={{ bottom: 'top', right: 'right' }}
       />,
-      <TooltipButton
-        tooltip={<Text size="small">Component View</Text>}
-        icon={<Cubes size="22px" />}
-        onClick={() => setIsOverlayToggled(!isOverlayToggled)}
-        color={isOverlayToggled ? 'control' : 'text'}
-        align={{ bottom: 'top', right: 'right' }}
-      />,
+      doc?.components && (
+        <TooltipButton
+          tooltip={<Text size="small">Component View</Text>}
+          icon={<Cubes size="22px" />}
+          onClick={() => setIsOverlayToggled(!isOverlayToggled)}
+          color={isOverlayToggled ? 'control' : 'text'}
+          align={{ bottom: 'top', right: 'right' }}
+        />
+      ),
     ]);
-  }, [isFullScreen, isOverlayToggled, loadActions]);
+  }, [doc, isFullScreen, isOverlayToggled, loadActions]);
 
   if (isFullScreen) {
     return (
