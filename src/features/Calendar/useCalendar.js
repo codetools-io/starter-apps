@@ -10,7 +10,7 @@ export default function useCalendar() {
         const eventDate = new Date(event?.date);
         return {
           ...event,
-          date: event,
+          date: eventDate,
           _dateKey: eventDate?.toDateString(),
         };
       }),

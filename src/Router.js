@@ -39,9 +39,6 @@ export default function Router({ docs }) {
           pageProps={{
             mainProps: {
               pad: { bottom: 'large' },
-              componentProps: {
-                // height: 'xlarge',
-              },
             },
           }}
         />
