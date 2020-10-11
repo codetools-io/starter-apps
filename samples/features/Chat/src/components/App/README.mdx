@@ -6,8 +6,54 @@ categoryId: feature
 icon: Chat
 description: A feature for facilitating real-time text communication.
 path: /chat
+domain:
+  - name: Contact
+    description: A person that the user can communicate with and see details about
+  - name: Conversation
+    description: A thread of communcation between a Contact and the User
+  - name: Message
+    description: A message sent in a Conversation
+  - name: User
+    description: The person using the application
+props:
+  hooks:
+    - name: onSearchContacts
+      description: Called when a user enters text in the ContactSearch field
+      type: function
+      args:
+        - name: searchTerm
+          type: string
+          description: the term to search contacts for
+      returnValue: Promise
+    - name: onSendMessage
+      description: Called when a user has entered a new message and pressed enter
+      type: function
+      args:
+        - name: message
+          type: string
+          description: The message the user sent
+      returnValue: Promise
+    - name: onStartConversation
+      description: Called when a user has selected a contact's name from the drop menu on the new message screen
+      type: function
+      args:
+        - name: contact
+          type: object
+          description: The data associated with the contact
+      returnValue: Promise
+components:
+  Chat: The main component, which is the default export and wraps all other components.
+  ChatContactSearch: No description given
+  ChatHeader: No description given
+  ChatSidebar: No description given
+  ChatCompose: No description given
+  ChatMain: No description given
+  ChatMessage: No description given
+  ChatNewConversation: Handles starting new conversations.
+  ChatConversations: Shows a list of existing coversations and provides the ability to search them.
+  ChatConversation: The conversation that is currently being shown, and the input to send messages to it.
 ---
 
-# Chat
+## Overview
 
 A feature for facilitating real-time text communication.

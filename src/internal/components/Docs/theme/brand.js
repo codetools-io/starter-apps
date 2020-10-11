@@ -30,4 +30,24 @@ export const brand = {
       },
     },
   },
+  tab: {
+    color: {
+      light: 'brand-5',
+    },
+    active: {
+      color: {
+        light: 'brand',
+      },
+    },
+    border: {
+      color: {
+        light: 'brand-5',
+      },
+      active: {
+        color: {
+          light: 'brand',
+        },
+      },
+    },
+  },
 };

@@ -1,20 +1,22 @@
 import React from 'react';
-import { Box, Calendar as GrommetCalendar, ThemeContext } from 'grommet';
+import { Box } from 'grommet';
 
-// import useCalendar from './useCalendar';
-import styles from './Calendar.styles';
-export default function Calendar({ children }) {
-  // const { events } = useCalendar();
-  // Once custom days feature is released, this should be rewritten without the ThemeContext.Extend
+import CalendarMonth from './CalendarMonth';
+import CalendarWeek from './CalendarWeek';
+import useCalendar from './useCalendar';
+
+export default function Calendar({ children, ...props }) {
+  const calendar = useCalendar();
+
   return (
-    <ThemeContext.Extend value={styles}>
-      <Box pad="medium" direction="row" justify="center" fill>
-        <GrommetCalendar
-          className="fill"
-          date={new Date().toISOString()}
-          onSelect={(date) => {}}
-        />
-      </Box>
-    </ThemeContext.Extend>
+    <Box
+      pad={{ vertical: 'medium' }}
+      overflow={{ horizontal: 'hidden' }}
+      fill
+      {...props}
+    >
+      {calendar?.viewKey === 'month' && <CalendarMonth {...calendar} />}
+      {calendar?.viewKey === 'week' && <CalendarWeek {...calendar} />}
+    </Box>
   );
 }
