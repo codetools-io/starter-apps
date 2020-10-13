@@ -70,5 +70,32 @@ export const brand = {
       },
     },
   },
+  paragraph: {
+    small: {
+      size: '13px',
+      height: `${13 * 1.65}px`,
+      maxWidth: '267px',
+    },
+    medium: {
+      size: '15px',
+      height: `${15 * 1.65}px`,
+      maxWidth: '300px',
+    },
+    large: {
+      size: '18px',
+      height: `${18 * 1.65}px`,
+      maxWidth: '367px',
+    },
+    xlarge: {
+      size: '22px',
+      height: `${22 * 1.65}px`,
+      maxWidth: '433px',
+    },
+    xxlarge: {
+      size: '28px',
+      height: `${28 * 1.65}px`,
+      maxWidth: '567px',
+    },
+  },
   ...components,
 };
