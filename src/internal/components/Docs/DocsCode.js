@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Grid } from 'grommet';
+import { Box, Button, Grid, Text } from 'grommet';
 import MonacoEditor from '@monaco-editor/react';
+import useRouter from 'internal/hooks/useRouter';
 import DocsCard from './DocsCard';
 
 const options = {
@@ -11,20 +12,26 @@ const options = {
   readOnly: true,
 };
 export default function DocsCode({ files = [] }) {
+  const { queryParams, setQueryParam } = useRouter();
   const [activeFileIndex, setActiveFileIndex] = useState(null);
 
   useEffect(() => {
-    if (files?.length) {
+    if (files?.length && !queryParams?.filepath) {
       setActiveFileIndex(
-        files?.findIndex((file) => file?.filename === `${file?.context}.js`)
+        files?.findIndex((file) => file?.filepath === `${file?.context}.js`)
+      );
+    }
+    if (files?.length && queryParams?.filepath) {
+      setActiveFileIndex(
+        files?.findIndex((file) => file?.filepath === queryParams?.filepath)
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [files]);
+  }, [files, queryParams]);
 
   return (
     <DocsCard height="large" pad="medium" flex={false}>
-      <Box border fill>
+      <Box border={true} fill>
         <Grid columns={['auto', 'flex']} rows={['full']} fill>
           <Box overflow={{ vertical: 'auto' }}>
             {files.map((file, index) => {
@@ -46,8 +53,17 @@ export default function DocsCode({ files = [] }) {
                   flex={false}
                 >
                   <Button
-                    label={file?.filepath}
-                    onClick={() => setActiveFileIndex(index)}
+                    label={
+                      <Text
+                        weight={index === activeFileIndex ? 'bold' : 'normal'}
+                      >
+                        {file?.filepath}
+                      </Text>
+                    }
+                    onClick={() => {
+                      setQueryParam('filepath', file?.filepath);
+                      setActiveFileIndex(index);
+                    }}
                     size="large"
                     fill
                     plain

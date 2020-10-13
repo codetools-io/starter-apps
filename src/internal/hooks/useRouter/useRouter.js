@@ -33,6 +33,19 @@ export default function useRouter() {
           search: queryString.stringify(updatedQueryParams),
         });
       },
+      removeQueryParam: (key) => {
+        if (Object.keys(queryParams)?.length) {
+          const updatedQueryParams = Object.fromEntries(
+            Object.entries(queryParams)?.filter(([paramKey, paramVal]) => {
+              return paramKey !== key;
+            })
+          );
+          history.push({
+            ...location,
+            search: queryString.stringify(updatedQueryParams),
+          });
+        }
+      },
       replace: history.replace,
       pathname: location.pathname,
       params,
