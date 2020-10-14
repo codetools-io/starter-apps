@@ -151,7 +151,7 @@ function AppShellNavLink({
         {icon && (
           <Box className="NavLink__icon">
             <Text color={theme?.appShell?.nav?.icon?.color}>
-              <Icon name={icon} size="16px" />
+              <Icon name={icon} size="small" />
             </Text>
           </Box>
         )}

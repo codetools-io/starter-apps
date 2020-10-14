@@ -14,7 +14,6 @@ export default function AppShellSidebar({ background, nav }) {
       gridArea="sidebar"
       background={background || theme?.appShell?.sidebar?.background}
       pad={{ horizontal: 'none', vertical: 'medium' }}
-      overflow={{ vertical: 'scroll' }}
     >
       <Box gap="medium">
         <Header

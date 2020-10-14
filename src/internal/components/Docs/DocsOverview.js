@@ -29,19 +29,14 @@ export default function DocsOverview({
         >
           {sandboxUrl && (
             <Button
-              icon={<CodeSandbox size="22px" />}
+              icon={<CodeSandbox />}
               color="control"
               href={sandboxUrl}
               plain
             />
           )}
           {githubUrl && (
-            <Button
-              icon={<Github size="22px" />}
-              color="control"
-              href={githubUrl}
-              plain
-            />
+            <Button icon={<Github />} color="control" href={githubUrl} plain />
           )}
         </Box>
       )}

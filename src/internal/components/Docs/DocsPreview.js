@@ -23,7 +23,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
         <TooltipButton
           key="action-overlay"
           tooltip={<Text size="small">Component View</Text>}
-          icon={<Cubes size="22px" />}
+          icon={<Cubes />}
           onClick={() => setIsOverlayToggled(!isOverlayToggled)}
           color={isOverlayToggled ? 'control' : 'text'}
           align={{ bottom: 'top', right: 'right' }}

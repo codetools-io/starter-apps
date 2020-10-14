@@ -65,6 +65,7 @@ function HomeHeader() {
     </Box>
   );
 }
+
 export default function Home({ docs = {}, ...props }) {
   return (
     <Box className="Home" gap="large" flex={false} fill="horizontal" {...props}>

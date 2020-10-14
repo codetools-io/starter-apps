@@ -52,7 +52,7 @@ export const brand = {
   icon: {
     size: {
       small: '16px',
-      medium: '32px',
+      medium: '22px',
       large: '48px',
       xlarge: '96px',
     },

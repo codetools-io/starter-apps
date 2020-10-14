@@ -8,8 +8,7 @@ export default function AppShellMain({ children }) {
       gridArea="main"
       align="start"
       background="light-1"
-      pad={{ horizontal: 'large', vertical: 'large' }}
-      overflow={{ vertical: 'auto' }}
+      pad={{ horizontal: 'large', vertical: 'medium' }}
     >
       {children}
     </Main>

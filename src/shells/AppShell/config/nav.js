@@ -17,25 +17,25 @@ export const nav = {
       routes: [
         {
           id: 'home',
-          icon: <Home size="16px" />,
+          icon: <Home size="small" />,
           label: 'Home',
           path: '/app-shell/home',
         },
         {
           id: 'members',
-          icon: <Group size="16px" />,
+          icon: <Group size="small" />,
           label: 'Members',
           path: '/app-shell/members',
         },
         {
           id: 'orders',
-          icon: <Install size="16px" />,
+          icon: <Install size="small" />,
           label: 'Orders',
           path: '/app-shell/orders',
         },
         {
           id: 'reports',
-          icon: <DocumentPerformance size="16px" />,
+          icon: <DocumentPerformance size="small" />,
           label: 'Reports',
           path: '/app-shell/reports',
           routes: [
@@ -69,19 +69,19 @@ export const nav = {
       routes: [
         {
           id: 'alerts',
-          icon: <Alert size="16px" />,
+          icon: <Alert size="small" />,
           label: 'Alerts',
           path: '/app-shell/alerts',
         },
         {
           id: 'locations',
-          icon: <Globe size="16px" />,
+          icon: <Globe size="small" />,
           label: 'Locations',
           path: '/app-shell/locations',
         },
         {
           id: 'settings',
-          icon: <SettingsOption size="16px" />,
+          icon: <SettingsOption size="small" />,
           label: 'Settings',
           path: '/app-shell/settings',
         },
