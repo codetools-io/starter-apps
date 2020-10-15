@@ -47,6 +47,7 @@
     "jest-extended": "^0.11.5",
     "lint-staged": "^10.2.11",
     "lowdb": "^1.0.0",
+    "nodemon": "^2.0.5",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1"
   },
@@ -59,9 +60,10 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.js",
     "lint": "eslint src/**/*.js",
-    "generate": "yarn generate:data && yarn generate:samples",
-    "generate:data": "node tools/generate-data.js",
-    "generate:samples": "node tools/generate-samples.js"
+    "all:generate": "yarn data:generate && yarn samples:generate",
+    "data:watch": "nodemon -e mdx --watch src --exec 'yarn data:generate'",
+    "data:generate": "node tools/generate-data.js",
+    "samples:generate": "node tools/generate-samples.js"
   },
   "eslintConfig": {
     "extends": "react-app",
