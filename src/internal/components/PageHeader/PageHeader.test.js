@@ -1,5 +1,5 @@
-import React from 'react'
-import PageHeader from './PageHeader'
+import React from 'react';
+import PageHeader from './PageHeader';
 
 describe('PageHeader', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('PageHeader', () => {
       <PageHeader>
         <p>Content for the PageHeader</p>
       </PageHeader>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

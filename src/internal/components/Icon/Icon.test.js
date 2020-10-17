@@ -1,5 +1,5 @@
-import React from 'react'
-import Icon from './Icon'
+import React from 'react';
+import Icon from './Icon';
 
 describe('Icon', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Icon', () => {
       <Icon>
         <p>Content for the Icon</p>
       </Icon>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

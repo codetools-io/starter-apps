@@ -1,10 +1,17 @@
 ---
 type: shell
-id: { { blueprintInstance } }
-name: { { blueprintInstance } }
-flag: SHELL_{{blueprintInstance_ConstantFormat}}
-path: /{{blueprintInstance_DashedFormat}}
+id: {{blueprintInstance}}
+name: {{blueprintInstance}}
+categoryId: shell
 description: Description still needed
+path: /{{blueprintInstance_DashedFormat}}
+domain:
+  - name: EntityName
+  - description: A description of the entity
+components:
+  {{blueprintInstance}}: The default export and wraps all other components.
+grommet:
+  - Box
 ---
 
 # {{blueprintInstance}}

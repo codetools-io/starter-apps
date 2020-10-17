@@ -1,5 +1,5 @@
-import React from 'react'
-import TooltipButton from './TooltipButton'
+import React from 'react';
+import TooltipButton from './TooltipButton';
 
 describe('TooltipButton', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('TooltipButton', () => {
       <TooltipButton>
         <p>Content for the TooltipButton</p>
       </TooltipButton>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

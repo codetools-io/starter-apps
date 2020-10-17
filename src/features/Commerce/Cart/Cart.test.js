@@ -1,5 +1,5 @@
-import React from 'react'
-import Cart from './Cart'
+import React from 'react';
+import Cart from './Cart';
 
 describe('Cart', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Cart', () => {
       <Cart>
         <p>Content for the Cart</p>
       </Cart>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

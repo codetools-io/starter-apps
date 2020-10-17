@@ -1,5 +1,5 @@
-import React from 'react'
-import Checkout from './Checkout'
+import React from 'react';
+import Checkout from './Checkout';
 
 describe('Checkout', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Checkout', () => {
       <Checkout>
         <p>Content for the Checkout</p>
       </Checkout>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

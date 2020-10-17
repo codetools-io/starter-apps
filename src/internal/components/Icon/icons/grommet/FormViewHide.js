@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { FormViewHide } from 'grommet-icons';
 
-export default function FormViewHideIcon({...props}) {
-  return <FormViewHide {...props}/>
+export default function FormViewHideIcon({ ...props }) {
+  return <FormViewHide {...props} />;
 }
-  

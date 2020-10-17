@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { UserFemale } from 'grommet-icons';
 
-export default function UserFemaleIcon({...props}) {
-  return <UserFemale {...props}/>
+export default function UserFemaleIcon({ ...props }) {
+  return <UserFemale {...props} />;
 }
-  

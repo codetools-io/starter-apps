@@ -1,5 +1,5 @@
-import React from 'react'
-import Socials from './Socials'
+import React from 'react';
+import Socials from './Socials';
 
 describe('Socials', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Socials', () => {
       <Socials>
         <p>Content for the Socials</p>
       </Socials>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

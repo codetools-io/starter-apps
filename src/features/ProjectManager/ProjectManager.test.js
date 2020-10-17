@@ -1,5 +1,5 @@
-import React from 'react'
-import ProjectManager from './ProjectManager'
+import React from 'react';
+import ProjectManager from './ProjectManager';
 
 describe('ProjectManager', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('ProjectManager', () => {
       <ProjectManager>
         <p>Content for the ProjectManager</p>
       </ProjectManager>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

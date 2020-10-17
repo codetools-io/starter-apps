@@ -1,5 +1,5 @@
-import React from 'react'
-import Notes from './Notes'
+import React from 'react';
+import Notes from './Notes';
 
 describe('Notes', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Notes', () => {
       <Notes>
         <p>Content for the Notes</p>
       </Notes>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

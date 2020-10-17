@@ -1,5 +1,5 @@
-import React from 'react'
-import Docs from './Docs'
+import React from 'react';
+import Docs from './Docs';
 
 describe('Docs', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Docs', () => {
       <Docs>
         <p>Content for the Docs</p>
       </Docs>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

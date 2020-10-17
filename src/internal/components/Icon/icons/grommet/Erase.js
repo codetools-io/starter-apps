@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Erase } from 'grommet-icons';
 
-export default function EraseIcon({...props}) {
-  return <Erase {...props}/>
+export default function EraseIcon({ ...props }) {
+  return <Erase {...props} />;
 }
-  

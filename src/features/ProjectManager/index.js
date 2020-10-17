@@ -1,1 +1,1 @@
-export { default } from './ProjectManager'
+export { default } from './ProjectManager';
