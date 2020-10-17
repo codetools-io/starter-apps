@@ -3,148 +3,148 @@
 exports[`Can render Dashboard 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 hxmNSw Dashboard"
+    class="StyledBox-sc-13pk1d4-0 chkvLT Dashboard"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 gzfjUM"
+      class="StyledBox-sc-13pk1d4-0 hrGwMH"
     >
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 eEcLoL"
+        class="StyledHeading-sc-1rdh4aw-0 byUTnM"
       >
         Status
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
       />
       <div
-        class="StyledBox-sc-13pk1d4-0 jIGluG"
+        class="StyledBox-sc-13pk1d4-0 dWCjyN"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hleNBA"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 gzfjUM"
+      class="StyledBox-sc-13pk1d4-0 hrGwMH"
     >
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 eEcLoL"
+        class="StyledHeading-sc-1rdh4aw-0 byUTnM"
       >
         Notifications
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
       />
       <div
-        class="StyledBox-sc-13pk1d4-0 jIGluG"
+        class="StyledBox-sc-13pk1d4-0 dWCjyN"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hleNBA"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 gzfjUM"
+      class="StyledBox-sc-13pk1d4-0 hrGwMH"
     >
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 eEcLoL"
+        class="StyledHeading-sc-1rdh4aw-0 byUTnM"
       >
         Progress
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
       />
       <div
-        class="StyledBox-sc-13pk1d4-0 jIGluG"
+        class="StyledBox-sc-13pk1d4-0 dWCjyN"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>
       </div>
     </div>
     <div
-      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 EOmhf"
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hleNBA"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 gzfjUM"
+      class="StyledBox-sc-13pk1d4-0 hrGwMH"
     >
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 eEcLoL"
+        class="StyledHeading-sc-1rdh4aw-0 byUTnM"
       >
         Analytics
       </h3>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jxcSjk"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
       />
       <div
-        class="StyledBox-sc-13pk1d4-0 jIGluG"
+        class="StyledBox-sc-13pk1d4-0 dWCjyN"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jwQkzn"
+          class="StyledBox-sc-13pk1d4-0 bXEBrY"
           style="display: none;"
         />
         <p
-          class="StyledParagraph-tbetod-0 bvtaWl"
+          class="StyledParagraph-tbetod-0 gXnKZG"
         >
           Loading…
         </p>

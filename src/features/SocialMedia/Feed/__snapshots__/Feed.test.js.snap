@@ -6,95 +6,95 @@ exports[`Feed can render 1`] = `
     class="ErrorBoundary"
   >
     <div
-      class="StyledGrommet-sc-19lkkz7-0 lcXYAf"
+      class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
     >
       <div
-        class="StyledGrid-sc-1wofa1l-0 fbRuxQ"
+        class="StyledGrid-sc-1wofa1l-0 gkFTQP"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 iPMBjZ"
+          class="StyledBox-sc-13pk1d4-0 lniiPm"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 rpWqh"
+            class="StyledBox-sc-13pk1d4-0 iRLlcy"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 eQJNso StyledAvatar-sc-1suyamb-1 juEsgd"
+              class="StyledBox-sc-13pk1d4-0 ieCFzn StyledAvatar-sc-1suyamb-1"
             />
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
             />
             <div
-              class="StyledBox-sc-13pk1d4-0 iNKrsm"
+              class="StyledBox-sc-13pk1d4-0 hdDmGZ"
             >
               <textarea
-                class="StyledTextArea-sc-17i3mwp-0 foqGri"
+                class="StyledTextArea-sc-17i3mwp-0 dqFkmB"
                 placeholder="What's on your mind?"
               />
             </div>
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 YTVxH"
+          class="StyledBox-sc-13pk1d4-0 gRbLcs"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 vhdRd"
+            class="StyledBox-sc-13pk1d4-0 jxeweO"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 jREALc"
+              class="StyledBox-sc-13pk1d4-0 dZFOnT"
               title="A title for post 1"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                class="StyledBox-sc-13pk1d4-0 iSmarO"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 eQJNso StyledAvatar-sc-1suyamb-1 juEsgd"
+                  class="StyledBox-sc-13pk1d4-0 ieCFzn StyledAvatar-sc-1suyamb-1"
                 />
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                  class="StyledBox-sc-13pk1d4-0 gAsOLC"
                 >
                   <span
-                    class="StyledText-sc-1sadyjn-0 fNZrpW"
+                    class="StyledText-sc-1sadyjn-0 fiywiB"
                   >
                     John
                      
                     D
                   </span>
                   <span
-                    class="StyledText-sc-1sadyjn-0 LLslf"
+                    class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
                     1 month ago
                   </span>
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                class="StyledBox-sc-13pk1d4-0 gAsOLC"
               >
                 <span>
                   A much longer bit of content for post 1.
                 </span>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 rpWqh"
+                class="StyledBox-sc-13pk1d4-0 iRLlcy"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Like"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -106,27 +106,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Chat"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -139,27 +139,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Share"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -171,10 +171,10 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
@@ -182,61 +182,61 @@ exports[`Feed can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 jREALc"
+              class="StyledBox-sc-13pk1d4-0 dZFOnT"
               title="A title for post 2"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                class="StyledBox-sc-13pk1d4-0 iSmarO"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 dRYvdr StyledAvatar-sc-1suyamb-1 juEsgd"
+                  class="StyledBox-sc-13pk1d4-0 jxXpSk StyledAvatar-sc-1suyamb-1"
                 />
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                  class="StyledBox-sc-13pk1d4-0 gAsOLC"
                 >
                   <span
-                    class="StyledText-sc-1sadyjn-0 fNZrpW"
+                    class="StyledText-sc-1sadyjn-0 fiywiB"
                   >
                     Jane
                      
                     D
                   </span>
                   <span
-                    class="StyledText-sc-1sadyjn-0 LLslf"
+                    class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
                     1 month ago
                   </span>
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                class="StyledBox-sc-13pk1d4-0 gAsOLC"
               >
                 <span>
                   A much longer bit of content for post 2.
                 </span>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 rpWqh"
+                class="StyledBox-sc-13pk1d4-0 iRLlcy"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Like"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -248,27 +248,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Chat"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -281,27 +281,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Share"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -313,10 +313,10 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
@@ -324,61 +324,61 @@ exports[`Feed can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 jREALc"
+              class="StyledBox-sc-13pk1d4-0 dZFOnT"
               title="A title for post 3"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 bIdaiR"
+                class="StyledBox-sc-13pk1d4-0 iSmarO"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 gvYOlP StyledAvatar-sc-1suyamb-1 juEsgd"
+                  class="StyledBox-sc-13pk1d4-0 bICgJw StyledAvatar-sc-1suyamb-1"
                 />
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                  class="StyledBox-sc-13pk1d4-0 gAsOLC"
                 >
                   <span
-                    class="StyledText-sc-1sadyjn-0 fNZrpW"
+                    class="StyledText-sc-1sadyjn-0 fiywiB"
                   >
                     Bill
                      
                     S
                   </span>
                   <span
-                    class="StyledText-sc-1sadyjn-0 LLslf"
+                    class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
                     1 month ago
                   </span>
                 </div>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 bFwQzJ"
+                class="StyledBox-sc-13pk1d4-0 gAsOLC"
               >
                 <span>
                   A much longer bit of content for post 3.
                 </span>
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bNUOfk"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 rpWqh"
+                class="StyledBox-sc-13pk1d4-0 iRLlcy"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Like"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -390,27 +390,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Chat"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -423,27 +423,27 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrkxnQ"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 rpWqh"
+                  class="StyledBox-sc-13pk1d4-0 iRLlcy"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 fwCHxt"
+                    class="StyledButton-sc-323bzc-0 IBTSy"
                     type="button"
                   >
                     <svg
                       aria-label="Share"
-                      class="StyledIcon-ofa7kd-0 cQVwrT"
+                      class="StyledIcon-ofa7kd-0 bjwIvs"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -455,10 +455,10 @@ exports[`Feed can render 1`] = `
                     </svg>
                   </button>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bRyuLk"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 jlATGM"
+                    class="StyledText-sc-1sadyjn-0 keEqcz"
                   >
                     1
                   </span>
