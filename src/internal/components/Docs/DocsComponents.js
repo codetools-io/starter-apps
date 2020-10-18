@@ -77,13 +77,15 @@ function DocsComponentsOverlay({ children, doc }) {
 }
 export default function DocsComponents({ children, doc, ...props }) {
   return (
-    <DocsCard height="large" flex={false} {...props}>
-      <Box overflow="auto" style={{ position: 'relative' }} fill>
-        <DocsTheme>{children}</DocsTheme>
-        <DocsComponentsOverlay doc={doc}>
+    <Box className="DocsComponents">
+      <DocsCard height="large" flex={false} {...props}>
+        <Box overflow="auto" style={{ position: 'relative' }} fill>
           <DocsTheme>{children}</DocsTheme>
-        </DocsComponentsOverlay>
-      </Box>
-    </DocsCard>
+          <DocsComponentsOverlay doc={doc}>
+            <DocsTheme>{children}</DocsTheme>
+          </DocsComponentsOverlay>
+        </Box>
+      </DocsCard>
+    </Box>
   );
 }

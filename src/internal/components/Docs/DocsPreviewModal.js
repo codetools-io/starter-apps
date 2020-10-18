@@ -17,6 +17,7 @@ export default function DocsPreviewModal({
       }}
     >
       <Layer
+        className="DocsPreviewModal"
         onEsc={onShrink}
         onClickOutside={onShrink}
         margin={{

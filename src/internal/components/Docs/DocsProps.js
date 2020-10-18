@@ -105,7 +105,12 @@ function DocsPropsHooks({ doc }) {
 }
 export default function DocsProps({ doc }) {
   return (
-    <Box gap="small" flex={false} width={{ max: 'xxlarge' }}>
+    <Box
+      className="DocsProps"
+      gap="small"
+      flex={false}
+      width={{ max: 'xxlarge' }}
+    >
       {doc?.props?.hooks && <DocsPropsHooks doc={doc} />}
     </Box>
   );

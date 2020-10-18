@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text } from 'grommet';
+import { Box, Text } from 'grommet';
 import { Cubes, Expand } from 'grommet-icons';
 import DocsPreviewModal from './DocsPreviewModal';
 import DocsPreviewStandard from './DocsPreviewStandard';
@@ -34,15 +34,25 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
 
   if (isFullScreen) {
     return (
-      <DocsPreviewModal onShrink={() => setIsFullScreen(false)}>
-        {children}
-      </DocsPreviewModal>
+      <Box className="DocsPreview">
+        <DocsPreviewModal onShrink={() => setIsFullScreen(false)}>
+          {children}
+        </DocsPreviewModal>
+      </Box>
     );
   }
 
   if (isOverlayToggled) {
-    return <DocsComponents children={children} doc={doc} />;
+    return (
+      <Box className="DocsPreview">
+        <DocsComponents children={children} doc={doc} />
+      </Box>
+    );
   }
 
-  return <DocsPreviewStandard {...props}>{children}</DocsPreviewStandard>;
+  return (
+    <Box className="DocsPreview">
+      <DocsPreviewStandard {...props}>{children}</DocsPreviewStandard>
+    </Box>
+  );
 }

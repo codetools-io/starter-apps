@@ -5,7 +5,7 @@ import DocsCard from './DocsCard';
 
 export default function DocsHooks({ doc }) {
   return (
-    <Box gap="small" flex={false}>
+    <Box className="DocsHooks" gap="small" flex={false}>
       <DocsCard>
         <List data={doc?.hooks} pad="none">
           {(datum, index) => {

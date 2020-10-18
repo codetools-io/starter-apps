@@ -6,10 +6,12 @@ import DocsTheme from './DocsTheme';
 
 export default function DocsPreviewStandard({ children, ...props }) {
   return (
-    <DocsCard height="large" flex={false} {...props}>
-      <Box overflow="auto" fill>
-        <DocsTheme>{children}</DocsTheme>
-      </Box>
-    </DocsCard>
+    <Box className="DocsPreviewStandard">
+      <DocsCard height="large" flex={false} {...props}>
+        <Box overflow="auto" fill>
+          <DocsTheme>{children}</DocsTheme>
+        </Box>
+      </DocsCard>
+    </Box>
   );
 }

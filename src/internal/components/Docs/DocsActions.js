@@ -7,7 +7,7 @@ export default function DocsActions({ actions }) {
   }
 
   return (
-    <Box direction="row" align="center" gap="medium">
+    <Box className="DocsActions" direction="row" align="center" gap="medium">
       {actions}
     </Box>
   );

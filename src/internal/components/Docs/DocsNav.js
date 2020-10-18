@@ -17,12 +17,14 @@ export default function DocsNav({ tabs = [], onChangeTab }) {
   }, [tabs]);
 
   return (
-    <Tabs activeIndex={activeTab.index} onActive={onChangeTab}>
-      {tabs.map((tab) => {
-        return tab?.isEnabledFeature ? (
-          <Tab key={tab?.title} title={<DocsNavTab {...tab} />}></Tab>
-        ) : null;
-      })}
-    </Tabs>
+    <Box className="DocsNav">
+      <Tabs activeIndex={activeTab.index} onActive={onChangeTab}>
+        {tabs.map((tab) => {
+          return tab?.isEnabledFeature ? (
+            <Tab key={tab?.title} title={<DocsNavTab {...tab} />}></Tab>
+          ) : null;
+        })}
+      </Tabs>
+    </Box>
   );
 }

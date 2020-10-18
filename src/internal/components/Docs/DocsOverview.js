@@ -12,7 +12,7 @@ export default function DocsOverview({
   }, [githubUrl, sandboxUrl]);
 
   return (
-    <Box gap="small" flex={false}>
+    <Box className="DocsOverview" gap="small" flex={false}>
       <Heading level={3} margin="none">
         {name}
       </Heading>

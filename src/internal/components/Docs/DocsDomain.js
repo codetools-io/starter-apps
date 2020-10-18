@@ -5,7 +5,7 @@ import DocsCard from './DocsCard';
 
 export default function DocsDomain({ doc }) {
   return (
-    <Box gap="small" flex={false}>
+    <Box className="DocsDomain" gap="small" flex={false}>
       <DocsCard>
         <List data={doc?.domain} pad="none">
           {(datum, index) => {
