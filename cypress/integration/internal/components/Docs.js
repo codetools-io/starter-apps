@@ -1,14 +1,14 @@
 context('Docs', () => {
   beforeEach(() => {
     cy.visit('/features/chat');
-    cy.get('.DocsOverview').as('DocsOverview');
+    cy.get('.PageHeader').as('PageHeader');
     cy.get('.DocsMain').as('DocsMain');
     cy.get('.DocsNav').as('DocsNav');
     cy.get('.DocsActions').as('DocsActions');
   });
 
   it('can render', () => {
-    cy.get('@DocsOverview').should('exist');
+    cy.get('@PageHeader').should('exist');
     cy.get('@DocsMain').should('exist');
     cy.get('@DocsNav').should('exist');
     cy.get('@DocsActions').should('exist');

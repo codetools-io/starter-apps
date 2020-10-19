@@ -4,9 +4,7 @@ import Socials from './Socials';
 describe('Socials', () => {
   test('can render', () => {
     const { container } = renderComponent(
-      <Socials>
-        <p>Content for the Socials</p>
-      </Socials>
+      <Socials twitter github codeSandbox />
     );
 
     expect(container).toMatchSnapshot();

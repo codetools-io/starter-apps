@@ -12,7 +12,8 @@ import {
 } from 'grommet';
 import { Filter } from 'grommet-icons';
 import { Link } from 'react-router-dom';
-import Socials from 'internal/components/Socials';
+import PageHeader from 'internal/components/PageHeader';
+
 import useHome from './useHome';
 
 function HomeDocLink({
@@ -64,31 +65,6 @@ function HomeSection({ components, description, title, ...props }) {
         ))}
       </Grid>
     </Box>
-  );
-}
-
-function HomeHeader({ ...props }) {
-  return (
-    <Grid
-      columns={['1/4', '1/4', '1/4', '1/4']}
-      rows={['auto']}
-      areas={[
-        ['heading', 'heading', 'heading', 'heading'],
-        ['intro', 'intro', 'intro', 'intro'],
-        ['socials', 'socials', 'socials', 'socials'],
-      ]}
-      align="center"
-      alignContent="center"
-      {...props}
-    >
-      <Heading gridArea="heading" level={1} margin="none">
-        Starter Apps
-      </Heading>
-      <Paragraph gridArea="intro" margin="none" fill>
-        Grommet based UI solutions for various application types.
-      </Paragraph>
-      <Socials gridArea="socials" margin={{ top: 'small' }} />
-    </Grid>
   );
 }
 
@@ -183,7 +159,11 @@ export default function Home({ docs = {}, ...props }) {
 
   return (
     <Box className="Home" flex={false} fill="horizontal" {...props}>
-      <HomeHeader margin={{ top: 'small', bottom: 'large' }} />
+      <PageHeader
+        title="Starter Apps"
+        description="Grommet based UI solutions for various application types."
+        margin={{ top: 'small', bottom: 'large' }}
+      />
       <HomeFilters
         sections={[
           {

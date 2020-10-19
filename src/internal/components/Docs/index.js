@@ -2,7 +2,6 @@ export { default as Docs } from './Docs';
 export { default as DocsCard } from './DocsCard';
 export { default as DocsCode } from './DocsCode';
 export { default as DocsMain } from './DocsMain';
-export { default as DocsOverview } from './DocsOverview';
 export { default as DocsPage } from './DocsPage';
 export { default as DocsPreview } from './DocsPreview';
 export { default as DocsPreviewModal } from './DocsPreviewModal';

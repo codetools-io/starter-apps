@@ -1,19 +1,37 @@
 import React from 'react';
 import { Anchor, Box } from 'grommet';
-import { Github, Twitter } from 'grommet-icons';
+import { CodeSandbox, Github, Twitter } from 'grommet-icons';
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const TWITTER_URL = process.env.REACT_APP_TWITTER_URL;
+const CODE_SANDBOX_URL = process.env.REACT_APP_CODE_SANDBOX_URL;
 
-export default function Socials({ ...props }) {
+export default function Socials({
+  github = false,
+  githubUrl = GITHUB_URL,
+  twitter = false,
+  twitterUrl = TWITTER_URL,
+  codeSandbox = false,
+  codeSandboxUrl = CODE_SANDBOX_URL,
+  ...props
+}) {
   return (
     <Box direction="row" justify="start" align="center" gap="medium" {...props}>
-      <Anchor href={GITHUB_URL} color="text">
-        <Github />
-      </Anchor>
-      <Anchor href={TWITTER_URL} color="text">
-        <Twitter />
-      </Anchor>
+      {github && (
+        <Anchor href={githubUrl}>
+          <Github />
+        </Anchor>
+      )}
+      {twitter && (
+        <Anchor href={twitterUrl}>
+          <Twitter />
+        </Anchor>
+      )}
+      {codeSandbox && (
+        <Anchor href={codeSandboxUrl}>
+          <CodeSandbox />
+        </Anchor>
+      )}
     </Box>
   );
 }

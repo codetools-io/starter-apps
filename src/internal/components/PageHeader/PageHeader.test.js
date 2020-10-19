@@ -4,9 +4,10 @@ import PageHeader from './PageHeader';
 describe('PageHeader', () => {
   test('can render', () => {
     const { container } = renderComponent(
-      <PageHeader>
-        <p>Content for the PageHeader</p>
-      </PageHeader>
+      <PageHeader
+        title="Example of title"
+        description="A short description about the page"
+      />
     );
 
     expect(container).toMatchSnapshot();
