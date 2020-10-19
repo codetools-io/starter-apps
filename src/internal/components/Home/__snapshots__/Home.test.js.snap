@@ -63,8 +63,14 @@ exports[`Home can render 1`] = `
       style="position: relative;"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 bLkAjo"
+        class="StyledBox-sc-13pk1d4-0 bqkiVC"
       >
+        <div
+          class="StyledBox-sc-13pk1d4-0 iSmarO"
+        />
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
+        />
         <button
           aria-label="Open Drop"
           class="StyledButton-sc-323bzc-0 eVPMSD"

@@ -1,6 +1,7 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useMemo, useRef, useState } from 'react';
 import {
   Box,
+  Button,
   Card,
   CheckBox,
   DropButton,
@@ -10,7 +11,7 @@ import {
   ResponsiveContext,
   Text,
 } from 'grommet';
-import { Filter } from 'grommet-icons';
+import { Filter, FormClose } from 'grommet-icons';
 import { Link } from 'react-router-dom';
 import PageHeader from 'internal/components/PageHeader';
 
@@ -68,10 +69,28 @@ function HomeSection({ components, description, title, ...props }) {
   );
 }
 
-function HomeFilters({ sections = [], ...props }) {
+function HomeFilters({ sections = [], onClear = () => {}, ...props }) {
   const size = useContext(ResponsiveContext);
   const filterMenuRef = useRef();
   const [showDrop, setShowDrop] = useState(false);
+  const appliedFilters = useMemo(() => {
+    return sections
+      ?.map((section) => {
+        const title = section?.title;
+        const filters = Object.entries(section?.options)
+          ?.filter(([key, val]) => val)
+          ?.map(([key]) => key);
+        return { title, filters };
+      })
+      ?.filter((section) => section?.filters?.length);
+  }, [sections]);
+  const showAppliedFilters = useMemo(() => {
+    if (!showDrop && appliedFilters?.length) {
+      return true;
+    }
+
+    return false;
+  }, [appliedFilters, showDrop]);
 
   return (
     <Box
@@ -79,7 +98,34 @@ function HomeFilters({ sections = [], ...props }) {
       style={{ position: size !== 'small' ? 'relative' : 'static' }}
       {...props}
     >
-      <Box direction="row" justify="end" gap="medium">
+      <Box direction="row" justify="between" align="baseline" gap="medium">
+        <Box direction="row" gap="small">
+          {showAppliedFilters && <Text weight="bold">Filtered By: </Text>}
+          {showAppliedFilters &&
+            appliedFilters?.map((appliedFilters) => {
+              return (
+                <Box
+                  key={`applied-filter-${appliedFilters?.title}`}
+                  direction="row"
+                  align="baseline"
+                  gap="small"
+                >
+                  {appliedFilters?.filters?.map((filter) => {
+                    return (
+                      <Text
+                        key={`applied-filter-${appliedFilters?.title}-${filter}`}
+                      >
+                        {filter}
+                      </Text>
+                    );
+                  })}
+                </Box>
+              );
+            })}
+          {showAppliedFilters && (
+            <Button label="Clear" onClick={onClear} color="control" plain />
+          )}
+        </Box>
         <DropButton
           label="filter"
           icon={<Filter size="small" />}
@@ -125,6 +171,9 @@ function HomeFilters({ sections = [], ...props }) {
                   </Box>
                 );
               })}
+              <Box direction="row">
+                <Button label="Clear" onClick={onClear} color="control" plain />
+              </Box>
             </Box>
           }
           dropProps={{
@@ -150,6 +199,7 @@ function HomeFilters({ sections = [], ...props }) {
 export default function Home({ docs = {}, ...props }) {
   const {
     categories,
+    clearOptions,
     filteredComponents,
     moduleOptions,
     grommetOptions,
@@ -165,6 +215,7 @@ export default function Home({ docs = {}, ...props }) {
         margin={{ top: 'small', bottom: 'large' }}
       />
       <HomeFilters
+        onClear={clearOptions}
         sections={[
           {
             key: 'module-filters',

@@ -1,19 +1,28 @@
 import { useMemo, useState } from 'react';
-import { orderBy, uniqBy } from 'lodash';
+import { orderBy, intersectionBy } from 'lodash';
 
 export default ({ modules = [], components = [], categories = [] }) => {
   const uniqueGrommets = new Set(
     components?.flatMap((c) => c?.grommet)?.filter((c) => c)
   );
-  const [grommetOptions, setGrommetOptions] = useState(
-    Object.fromEntries([...uniqueGrommets]?.map((c) => [c, false]))
+  const initialGrommetOptions = Object.fromEntries(
+    [...uniqueGrommets]?.map((c) => [c, false])
   );
-  const [moduleOptions, setModuleOptions] = useState(
-    Object.fromEntries(modules?.map((m) => [m?.name, false]))
+  const initialModuleOptions = Object.fromEntries(
+    modules?.map((m) => [m?.name, false])
   );
-  const [categoryOptions, setCategoryOptions] = useState(
-    Object.fromEntries(categories?.map((c) => [c?.name, false]))
+  const initialCategoryOptions = Object.fromEntries(
+    categories?.map((c) => [c?.name, false])
   );
+  const [grommetOptions, setGrommetOptions] = useState({
+    ...initialGrommetOptions,
+  });
+  const [moduleOptions, setModuleOptions] = useState({
+    ...initialModuleOptions,
+  });
+  const [categoryOptions, setCategoryOptions] = useState({
+    ...initialCategoryOptions,
+  });
 
   const filteredCategories = useMemo(() => {
     if (Object.values(categoryOptions)?.every((c) => !c)) {
@@ -34,28 +43,40 @@ export default ({ modules = [], components = [], categories = [] }) => {
       return orderBy(components, ['name'], ['asc']);
     }
 
-    const filteredByModules = components?.filter(
-      (c) => moduleOptions[c?.data?.module?.name]
-    );
+    const filteredByModules = allModulesUnchecked
+      ? components
+      : components?.filter(
+          (component) => moduleOptions[component?.data?.module?.name]
+        );
     const grommetFilters = Object.entries(grommetOptions)
       ?.filter(([key, val]) => val)
       ?.map(([key, val]) => key);
-    const filteredByGrommet = components?.filter((c) =>
-      c?.grommet?.some((g) => grommetFilters?.includes(g))
-    );
+    const filteredByGrommet = allGrommetUnchecked
+      ? components
+      : components?.filter((component) =>
+          grommetFilters?.every((filter) =>
+            component?.grommet?.includes(filter)
+          )
+        );
 
     return orderBy(
-      uniqBy([...filteredByModules, ...filteredByGrommet], 'id'),
+      intersectionBy(filteredByModules, filteredByGrommet, 'id'),
       ['name'],
       ['asc']
     );
   }, [components, grommetOptions, moduleOptions]);
 
   return useMemo(() => {
+    function clearOptions() {
+      setGrommetOptions({ ...initialGrommetOptions });
+      setModuleOptions({ ...initialModuleOptions });
+      setCategoryOptions({ ...initialCategoryOptions });
+    }
     return {
       categories,
       modules,
       components,
+      clearOptions,
       filteredCategories,
       filteredComponents,
       categoryOptions,
@@ -72,6 +93,9 @@ export default ({ modules = [], components = [], categories = [] }) => {
     filteredCategories,
     filteredComponents,
     categoryOptions,
+    initialGrommetOptions,
+    initialModuleOptions,
+    initialCategoryOptions,
     moduleOptions,
     grommetOptions,
     setCategoryOptions,
