@@ -11,7 +11,7 @@ import {
   ResponsiveContext,
   Text,
 } from 'grommet';
-import { Filter, FormClose } from 'grommet-icons';
+import { Filter } from 'grommet-icons';
 import { Link } from 'react-router-dom';
 import PageHeader from 'internal/components/PageHeader';
 
