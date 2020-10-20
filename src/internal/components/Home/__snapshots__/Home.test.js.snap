@@ -60,7 +60,6 @@ exports[`Home can render 1`] = `
     </div>
     <div
       class="StyledBox-sc-13pk1d4-0 cYJHIB"
-      style="position: relative;"
     >
       <div
         class="StyledBox-sc-13pk1d4-0 bqkiVC"
@@ -100,8 +99,13 @@ exports[`Home can render 1`] = `
       </div>
       <div
         class="StyledBox-sc-13pk1d4-0 cYJHIB"
-        style="position: absolute; top: 100%;"
-      />
+        style="position: relative;"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 cYJHIB"
+          style="position: absolute; top: 100%;"
+        />
+      </div>
     </div>
     <div
       class="StyledBox-sc-13pk1d4-0 gAsOLC"
