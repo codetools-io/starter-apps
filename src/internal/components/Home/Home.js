@@ -69,6 +69,54 @@ function HomeSection({ components, description, title, ...props }) {
   );
 }
 
+function HomeFiltersMenu({ sections, onClear }) {
+  const size = useContext(ResponsiveContext);
+  return (
+    <Box
+      margin={{ top: 'small' }}
+      gap="large"
+      pad="medium"
+      round="small"
+      background="white"
+      elevation="small"
+      flex={false}
+      width={size === 'small' ? '90vw' : '100%'}
+    >
+      {sections?.map((section) => {
+        return (
+          <Box key={section?.key} gap="small" flex={false}>
+            <Heading margin="none" level={4}>
+              {section?.title}
+            </Heading>
+            <Grid gap="small" columns="small" rows={['auto']}>
+              {Object.keys(section?.options)?.map((option) => {
+                return (
+                  <Box key={`${section?.key}-filter-${option}`}>
+                    <CheckBox
+                      tabIndex="-1"
+                      label={<Text size="small">{option}</Text>}
+                      checked={section?.options?.[option]}
+                      onChange={(event) =>
+                        section?.updateOptions({
+                          ...section?.options,
+                          [option]: event?.target?.checked,
+                        })
+                      }
+                    />
+                  </Box>
+                );
+              })}
+            </Grid>
+          </Box>
+        );
+      })}
+      <Box direction="row">
+        <Button label="Clear" onClick={onClear} color="control" plain />
+      </Box>
+    </Box>
+  );
+}
+
 function HomeFilters({ sections = [], onClear = () => {}, ...props }) {
   const size = useContext(ResponsiveContext);
   const filterMenuRef = useRef();
@@ -93,11 +141,7 @@ function HomeFilters({ sections = [], onClear = () => {}, ...props }) {
   }, [appliedFilters, showDrop]);
 
   return (
-    <Box
-      fill="horizontal"
-      style={{ position: size !== 'small' ? 'relative' : 'static' }}
-      {...props}
-    >
+    <Box fill="horizontal" {...props}>
       <Box direction="row" justify="between" align="baseline" gap="medium">
         <Box direction="row" gap="small">
           {showAppliedFilters && <Text weight="bold">Filtered By: </Text>}
@@ -129,69 +173,30 @@ function HomeFilters({ sections = [], onClear = () => {}, ...props }) {
         <DropButton
           label="filter"
           icon={<Filter size="small" />}
-          onClick={() => setShowDrop(!showDrop)}
+          onOpen={() => setShowDrop(!showDrop)}
+          onClose={() => setShowDrop(!showDrop)}
           dropAlign={{ top: 'bottom', right: 'right' }}
-          disabled={showDrop}
           dropContent={
-            <Box
-              margin={{ top: 'small' }}
-              gap="large"
-              pad="medium"
-              round="small"
-              background="white"
-              elevation="small"
-              flex={false}
-              width={size === 'small' ? '90vw' : '100%'}
-            >
-              {sections?.map((section) => {
-                return (
-                  <Box key={section?.key} gap="small" flex={false}>
-                    <Heading margin="none" level={4}>
-                      {section?.title}
-                    </Heading>
-                    <Grid gap="small" columns="small" rows={['auto']}>
-                      {Object.keys(section?.options)?.map((option) => {
-                        return (
-                          <Box key={`${section?.key}-filter-${option}`}>
-                            <CheckBox
-                              tabIndex="-1"
-                              label={<Text size="small">{option}</Text>}
-                              checked={section?.options?.[option]}
-                              onChange={(event) =>
-                                section?.updateOptions({
-                                  ...section?.options,
-                                  [option]: event?.target?.checked,
-                                })
-                              }
-                            />
-                          </Box>
-                        );
-                      })}
-                    </Grid>
-                  </Box>
-                );
-              })}
-              <Box direction="row">
-                <Button label="Clear" onClick={onClear} color="control" plain />
-              </Box>
-            </Box>
+            <HomeFiltersMenu sections={sections} onClear={onClear} />
           }
           dropProps={{
-            onClickOutside: () => setShowDrop(!showDrop),
-            onEsc: () => setShowDrop(!showDrop),
             overflow: 'visible',
             plain: true,
           }}
           dropTarget={size !== 'small' ? filterMenuRef.current : null}
-          open={showDrop}
           primary
         />
       </Box>
       <Box
-        ref={filterMenuRef}
-        style={{ position: 'absolute', top: '100%' }}
         fill="horizontal"
-      ></Box>
+        style={{ position: size !== 'small' ? 'relative' : 'static' }}
+      >
+        <Box
+          ref={filterMenuRef}
+          style={{ position: 'absolute', top: '100%' }}
+          fill="horizontal"
+        ></Box>
+      </Box>
     </Box>
   );
 }
