@@ -1,16 +1,11 @@
-import React from 'react';
-import { ThemeContext } from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { base } from 'grommet/themes';
-import { themeExport } from './theme-export';
-import { brand } from './brand';
+import components from './components';
+import global from './global';
 
-const theme = deepMerge(base, themeExport, brand);
-
-export default function ParadiseTheme({ children, ...props }) {
-  return (
-    <ThemeContext.Extend value={theme} {...props}>
-      {children}
-    </ThemeContext.Extend>
-  );
-}
+export const theme = {
+  name: 'paradise',
+  rounding: 2,
+  spacing: 20,
+  defaultMode: 'light',
+  global,
+  ...components,
+};

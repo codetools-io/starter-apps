@@ -3,6 +3,7 @@ import { Box, Button, Grid, Select, Text } from 'grommet';
 import MonacoEditor from '@monaco-editor/react';
 import useRouter from 'internal/hooks/useRouter';
 import DocsCard from './DocsCard';
+import { orderBy } from 'lodash';
 
 const options = {
   fontSize: 16,
@@ -21,7 +22,10 @@ export default function DocsThemeCode({ themes = {}, loadActions }) {
   );
   const themeNames = useMemo(() => Object.keys(themes), [themes]);
   const themeFiles = useMemo(() => {
-    return themes?.[currentTheme] || [];
+    if (!themes?.[currentTheme]) {
+      return [];
+    }
+    return orderBy(themes?.[currentTheme], ['filename']);
   }, [currentTheme, themes]);
   const activeFile = useMemo(() => {
     return themeFiles?.find(

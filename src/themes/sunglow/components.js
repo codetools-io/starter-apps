@@ -1,160 +1,4 @@
-export const themeExport = {
-  name: 'StarterApps',
-  rounding: 2,
-  spacing: 20,
-  defaultMode: 'light',
-  global: {
-    colors: {
-      brand: {
-        dark: '#0353A4',
-        light: '#0466C8',
-      },
-      background: {
-        dark: '#111111',
-        light: '#FFFFFF',
-      },
-      'background-back': {
-        dark: '#111111',
-        light: '#EEEEEE',
-      },
-      'background-front': {
-        dark: '#222222',
-        light: '#FFFFFF',
-      },
-      'background-contrast': {
-        dark: '#FFFFFF11',
-        light: '#11111111',
-      },
-      text: {
-        dark: '#EEEEEE',
-        light: '#333333',
-      },
-      'text-strong': {
-        dark: '#FFFFFF',
-        light: '#000000',
-      },
-      'text-weak': {
-        dark: '#CCCCCC',
-        light: '#444444',
-      },
-      'text-xweak': {
-        dark: '#999999',
-        light: '#666666',
-      },
-      border: {
-        dark: '#444444',
-        light: '#CCCCCC',
-      },
-      control: 'brand',
-      'active-background': 'background-contrast',
-      'active-text': 'text-strong',
-      'selected-background': 'brand',
-      'selected-text': 'text-strong',
-      'status-critical': '#FF4040',
-      'status-warning': '#FFAA15',
-      'status-ok': '#00C781',
-      'status-unknown': '#CCCCCC',
-      'status-disabled': '#CCCCCC',
-      'graph-0': 'brand',
-      'graph-1': 'status-warning',
-    },
-    font: {
-      family: 'Helvetica',
-      size: '15px',
-      height: '20px',
-      maxWidth: '300px',
-    },
-    active: {
-      background: 'active-background',
-      color: 'active-text',
-    },
-    hover: {
-      background: 'active-background',
-      color: 'active-text',
-    },
-    selected: {
-      background: 'selected-background',
-      color: 'selected-text',
-    },
-    control: {
-      border: {
-        radius: '2px',
-      },
-    },
-    drop: {
-      border: {
-        radius: '2px',
-      },
-    },
-    borderSize: {
-      xsmall: '1px',
-      small: '2px',
-      medium: '3px',
-      large: '10px',
-      xlarge: '20px',
-    },
-    breakpoints: {
-      small: {
-        value: 640,
-        borderSize: {
-          xsmall: '1px',
-          small: '2px',
-          medium: '3px',
-          large: '5px',
-          xlarge: '10px',
-        },
-        edgeSize: {
-          none: '0px',
-          hair: '1px',
-          xxsmall: '2px',
-          xsmall: '3px',
-          small: '5px',
-          medium: '10px',
-          large: '20px',
-          xlarge: '40px',
-        },
-        size: {
-          xxsmall: '20px',
-          xsmall: '40px',
-          small: '80px',
-          medium: '160px',
-          large: '320px',
-          xlarge: '640px',
-          full: '100%',
-        },
-      },
-      medium: {
-        value: 1280,
-      },
-      large: {},
-    },
-    edgeSize: {
-      none: '0px',
-      hair: '1px',
-      xxsmall: '3px',
-      xsmall: '5px',
-      small: '10px',
-      medium: '20px',
-      large: '40px',
-      xlarge: '80px',
-      responsiveBreakpoint: 'small',
-    },
-    input: {
-      padding: '10px',
-      weight: 600,
-    },
-    spacing: '20px',
-    size: {
-      xxsmall: '40px',
-      xsmall: '80px',
-      small: '160px',
-      medium: '320px',
-      large: '640px',
-      xlarge: '960px',
-      xxlarge: '1280px',
-      full: '100%',
-    },
-  },
+export default {
   chart: {},
   diagram: {
     line: {},
@@ -449,6 +293,15 @@ export const themeExport = {
       },
     },
   },
+  icon: {
+    size: {
+      small: '18px',
+      medium: '22px',
+      large: '48px',
+      xlarge: '96px',
+    },
+    extend: undefined,
+  },
   paragraph: {
     small: {
       size: '13px',
@@ -474,6 +327,46 @@ export const themeExport = {
       size: '28px',
       height: '33px',
       maxWidth: '567px',
+    },
+  },
+  tab: {
+    color: {
+      light: 'brand-5',
+    },
+    active: {
+      color: {
+        light: 'brand',
+      },
+    },
+    border: {
+      color: {
+        light: 'brand-5',
+      },
+      active: {
+        color: {
+          light: 'brand',
+        },
+      },
+    },
+  },
+  table: {
+    header: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
+    },
+    body: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
+    },
+    footer: {
+      pad: {
+        horizontal: 'small',
+        vertical: 'small',
+      },
     },
   },
   text: {
