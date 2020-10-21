@@ -9,7 +9,7 @@ import DocsComponents from './DocsComponents';
 
 const themeOptions = ['grayscale', 'paradise', 'sunglow', 'caribbean'];
 export default function DocsPreview({ children, doc, loadActions, ...props }) {
-  const { queryParams, setQueryParam, url } = useRouter();
+  const { queryParams, setQueryParam } = useRouter();
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isOverlayToggled, setIsOverlayToggled] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(

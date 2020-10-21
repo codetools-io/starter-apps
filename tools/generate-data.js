@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require('path');
 const fs = require('fs-extra');
-const { sortBy } = require('lodash');
+const { sortBy, groupBy } = require('lodash');
 const docs = require('./lib/docs');
 const PROJECT_ROOT = path.resolve(__dirname, '../');
 const PROJECT_PUBLIC_DIR = path.resolve(PROJECT_ROOT, './public');
@@ -28,6 +28,11 @@ function generateDocData() {
       .value();
     const modules = docs.get('modules').value();
     const categories = docs.get('categories').value();
+    const themeFiles = docs.get('themes').value();
+    const themes = groupBy(themeFiles, 'directory');
+
+    fs.outputJSON(path.resolve(DATA_OUTPUT_DIR, `./themes.json`), themes);
+
     components.forEach((component) => {
       const files = docs
         .get('files')

@@ -17,6 +17,7 @@ export default function DocsPage({
   ...props
 }) {
   const [files, setFiles] = useState();
+  const [themes, setThemes] = useState();
   const [doc, setDoc] = useState();
 
   useEffect(() => {
@@ -29,6 +30,15 @@ export default function DocsPage({
       .then((data) => setFiles(data.files))
       .catch((err) => console.error(err));
   }, [path]);
+
+  useEffect(() => {
+    fetch(`${DATA_PATH}/themes.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setThemes(data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <Box className="DocsPage" fill="horizontal" {...props}>
@@ -43,7 +53,12 @@ export default function DocsPage({
         }}
         margin={{ top: 'small', bottom: 'large' }}
       />
-      <DocsMain files={files || []} doc={doc} {...mainProps}>
+      <DocsMain
+        files={files || []}
+        themes={themes || {}}
+        doc={doc}
+        {...mainProps}
+      >
         <Component {...componentProps} />
       </DocsMain>
     </Box>

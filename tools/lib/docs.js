@@ -50,6 +50,7 @@ function resolvePaths(db) {
 function loadDocs() {
   const db = low(new MemoryAdapter());
   const docFiles = globby.sync(`${PROJECT_SRC_DIR}/**/*.mdx`);
+  const themes = getThemeFiles();
   const docs = docFiles.map((docFile) => {
     const directory = path.dirname(docFile);
     const { content, data } = getDocFile(docFile);
@@ -91,6 +92,7 @@ function loadDocs() {
     modules: [],
     components: [],
     files: [],
+    themes: [],
   }).write();
 
   db.setState({
@@ -125,6 +127,7 @@ function loadDocs() {
     files: docs
       .filter((doc) => doc.data.type === 'component')
       .flatMap((component) => component.files),
+    themes,
   });
 
   db._.mixin({
@@ -157,6 +160,27 @@ function getSourceFiles(directory, data) {
         directory: path.dirname(relativeFilepath),
         context: data.id,
         path: data.path,
+      };
+    });
+}
+
+function getThemeFiles() {
+  const filepaths = globby.sync(`${PROJECT_SRC_DIR}/themes/**/*.js`);
+
+  return filepaths
+    .filter((filepath) => filepath.endsWith('.js'))
+    .map((filepath) => {
+      const content = fs.readFileSync(filepath, { encoding: 'utf8' });
+      const relativeFilepath = path.relative(
+        `${PROJECT_SRC_DIR}/themes`,
+        filepath
+      );
+
+      return {
+        content,
+        filepath: relativeFilepath,
+        filename: path.basename(filepath),
+        directory: path.dirname(relativeFilepath),
       };
     });
 }

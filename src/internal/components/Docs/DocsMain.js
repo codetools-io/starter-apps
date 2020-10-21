@@ -5,6 +5,7 @@ import { Box } from 'grommet';
 import useRouter from 'internal/hooks/useRouter';
 import DocsAbout from './DocsAbout';
 import DocsCode from './DocsCode';
+import DocsThemeCode from './DocsThemeCode';
 import DocsPreview from './DocsPreview';
 import DocsHooks from './DocsHooks';
 import DocsDomain from './DocsDomain';
@@ -15,6 +16,7 @@ import DocsNav from './DocsNav';
 export default function DocsMain({
   children,
   files = [],
+  themes = {},
   doc,
   componentProps = {},
   ...props
@@ -71,6 +73,14 @@ export default function DocsMain({
         isEnabledFeature: !!doc?.props,
         isActive: queryParams?.mode === 'props',
       },
+      {
+        Component: DocsThemeCode,
+        title: 'Theme',
+        key: 'theme',
+        index: 6,
+        isEnabledFeature: true,
+        isActive: queryParams?.mode === 'theme',
+      },
     ];
   }, [queryParams, children, doc, files]);
 
@@ -99,6 +109,7 @@ export default function DocsMain({
                   children={children}
                   doc={doc}
                   files={files}
+                  themes={themes}
                   loadActions={setActions}
                   {...componentProps}
                 />

@@ -36,7 +36,7 @@ context('Docs', () => {
     cy.get('.DocsAbout').should('exist');
   });
 
-  it('can toggle code', () => {
+  it('can toggle code for components', () => {
     cy.get('@DocsNav').contains('Code').click();
     cy.get('.DocsCode').should('exist');
   });
@@ -55,9 +55,11 @@ context('Docs', () => {
     cy.get('@DocsNav').contains('Preview').click();
     cy.get('.DocsPreviewActionTheme').click();
     cy.get('button').contains('paradise').click();
-    cy.get('button')
-      .contains('New Message')
-      .should('have.css', 'background-color', 'rgb(238, 66, 102)');
     cy.url().should('include', '?theme=paradise');
+  });
+
+  it('can toggle code for themes', () => {
+    cy.get('@DocsNav').contains('Theme').click();
+    cy.get('.DocsThemeCode').should('exist');
   });
 });
