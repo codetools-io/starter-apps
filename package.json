@@ -51,7 +51,8 @@
     "lowdb": "^1.0.0",
     "nodemon": "^2.0.5",
     "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "require-all": "^3.0.0"
   },
   "scripts": {
     "build": "react-scripts build",

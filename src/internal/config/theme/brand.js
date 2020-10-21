@@ -1,3 +1,4 @@
+import { FormDown, FormUp } from 'grommet-icons';
 import genericColors from './generic-colors';
 import brandColors from './brand-colors-blues';
 import shades from './shades';
@@ -18,7 +19,8 @@ export const brand = {
         dark: 'currentColor',
         light: 'currentColor',
       },
-      'selected-text': 'red',
+      'selected-text': 'white',
+      'selected-background': 'brand',
       'active-text': 'brand-1',
     },
     font: {
@@ -130,6 +132,11 @@ export const brand = {
       size: '28px',
       height: `${28 * 1.65}px`,
       maxWidth: '567px',
+    },
+  },
+  select: {
+    icons: {
+      color: 'text',
     },
   },
   ...components,

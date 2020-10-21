@@ -30,20 +30,34 @@ context('Docs', () => {
     cy.get('@DocsActions').get('svg[aria-label="Cubes"]').click();
     cy.get('.DocsComponents').should('exist');
   });
+
   it('can toggle about', () => {
     cy.get('@DocsNav').contains('About').click();
     cy.get('.DocsAbout').should('exist');
   });
+
   it('can toggle code', () => {
     cy.get('@DocsNav').contains('Code').click();
     cy.get('.DocsCode').should('exist');
   });
+
   it('can toggle domain', () => {
     cy.get('@DocsNav').contains('Domain').click();
     cy.get('.DocsDomain').should('exist');
   });
+
   it('can toggle props', () => {
     cy.get('@DocsNav').contains('Props').click();
     cy.get('.DocsProps').should('exist');
+  });
+
+  it('can update themes', () => {
+    cy.get('@DocsNav').contains('Preview').click();
+    cy.get('.DocsPreviewActionTheme').click();
+    cy.get('button').contains('paradise').click();
+    cy.get('button')
+      .contains('New Message')
+      .should('have.css', 'background-color', 'rgb(238, 66, 102)');
+    cy.url().should('include', '?theme=paradise');
   });
 });
