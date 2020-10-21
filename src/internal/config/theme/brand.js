@@ -1,4 +1,3 @@
-import { FormDown, FormUp } from 'grommet-icons';
 import genericColors from './generic-colors';
 import brandColors from './brand-colors-blues';
 import shades from './shades';

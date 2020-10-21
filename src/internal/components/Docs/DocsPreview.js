@@ -49,6 +49,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
         title="Fullscreen View"
       />,
     ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [doc, isFullScreen, isOverlayToggled, loadActions, currentTheme]);
 
   if (isFullScreen) {
