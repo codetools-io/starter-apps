@@ -315,7 +315,7 @@ export const themeExport = {
   },
   heading: {
     level: {
-      '1': {
+      1: {
         small: {
           size: '28px',
           height: '33px',
@@ -337,7 +337,7 @@ export const themeExport = {
           maxWidth: '1900px',
         },
       },
-      '2': {
+      2: {
         small: {
           size: '25px',
           height: '30px',
@@ -359,7 +359,7 @@ export const themeExport = {
           maxWidth: '1100px',
         },
       },
-      '3': {
+      3: {
         small: {
           size: '22px',
           height: '27px',
@@ -381,7 +381,7 @@ export const themeExport = {
           maxWidth: '833px',
         },
       },
-      '4': {
+      4: {
         small: {
           size: '18px',
           height: '23px',
@@ -403,7 +403,7 @@ export const themeExport = {
           maxWidth: '567px',
         },
       },
-      '5': {
+      5: {
         small: {
           size: '13px',
           height: '18px',
@@ -425,7 +425,7 @@ export const themeExport = {
           maxWidth: '267px',
         },
       },
-      '6': {
+      6: {
         small: {
           size: '12px',
           height: '17px',

@@ -6,8 +6,31 @@ categoryId: feature
 icon: Dashboard
 description: A feature for viewing high-level information about systems and organizations.
 path: /dashboard
+grommet:
+  - Box
+  - Card
+  - Heading
+  - Meter
+  - Paragraph
+  - Table
+  - TableBody
+  - TableCell
+  - TableHeader
+  - TableRow
+  - Text
+  - WorldMap
 ---
 
 ## Overview
 
 A feature for viewing high-level information about systems and organizations.
+
+One particularly interesting aspect of this dashboard is that tiles in the dashboard are populated and laid
+out on the fly by examining the contents of list. This means that all you need to do to
+add a new widget to the dashboard is to add the definition of the widget to the `widgets` directory and then
+add a reference to the `widgets` list in `config/config.js`. You can define new sections in the dashboard by
+modifying the `sections` list in the same file.
+
+This makes development easier because an individual tile on the dashboard is almost completely independent of
+others, but it also suggests the possibility that the contents of the dashboard could even be data driven because
+the lists defined in `config/config.js` could easily be defined as state which could be modified.

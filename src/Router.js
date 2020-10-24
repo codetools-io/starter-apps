@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { DocsPage } from 'internal/components/Docs';
+import { Docs } from 'internal/components/Docs';
 
 function DocRoute({ component, path, docs, pageProps = {}, ...props }) {
   return (
     <Route path={path} {...props}>
-      <DocsPage component={component} docs={docs} path={path} {...pageProps} />
+      <Docs component={component} docs={docs} path={path} {...pageProps} />
     </Route>
   );
 }
@@ -25,6 +25,7 @@ export default function Router({ docs }) {
   const Profile = lazy(() => import('./features/SocialMedia/Profile'));
   const Feed = lazy(() => import('./features/SocialMedia/Feed'));
   const AppShell = lazy(() => import('./shells/AppShell'));
+  const ImageEditor = lazy(() => import('./features/ImageEditor'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
@@ -86,6 +87,11 @@ export default function Router({ docs }) {
           path={`/features/project-manager`}
         />
         <DocRoute docs={docs} component={AppShell} path={`/shells/app-shell`} />
+        <DocRoute
+          docs={docs}
+          component={ImageEditor}
+          path={`/features/image-editor`}
+        />
       </Switch>
     </Suspense>
   );

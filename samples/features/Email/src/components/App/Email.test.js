@@ -1,5 +1,5 @@
-import React from 'react'
-import Email from './Email'
+import React from 'react';
+import Email from './Email';
 
 describe('Email', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Email', () => {
       <Email>
         <p>Content for the Email</p>
       </Email>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});

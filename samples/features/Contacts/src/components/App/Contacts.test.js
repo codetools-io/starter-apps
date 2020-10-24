@@ -1,5 +1,5 @@
-import React from 'react'
-import Contacts from './Contacts'
+import React from 'react';
+import Contacts from './Contacts';
 
 describe('Contacts', () => {
   test('can render', () => {
@@ -7,9 +7,8 @@ describe('Contacts', () => {
       <Contacts>
         <p>Content for the Contacts</p>
       </Contacts>
-    )
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});
