@@ -4,19 +4,24 @@ import useImageEditor from './useImageEditor';
 
 function ImageEditorHeader({ name, ...props }) {
   return (
-    <Box {...props}>
+    <Box className="ImageEditorHeader" {...props}>
       <Paragraph margin="none">{name}</Paragraph>
     </Box>
   );
 }
 
 function ImageEditorFooter({ children, ...props }) {
-  return <Box {...props}>{children}</Box>;
+  return (
+    <Box className="ImageEditorFooter" {...props}>
+      {children}
+    </Box>
+  );
 }
 
 function ImageEditorCanvas({ children, ...props }) {
   return (
     <Box
+      className="ImageEditorCanvas"
       overflow="auto"
       border={{ size: 'large', color: 'blue' }}
       flex
@@ -29,7 +34,11 @@ function ImageEditorCanvas({ children, ...props }) {
 
 function ImageEditorMain({ children, document, layers, ...props }) {
   return (
-    <Box border={{ size: 'large', color: 'purple' }} {...props}>
+    <Box
+      className="ImageEditorMain"
+      border={{ size: 'large', color: 'purple' }}
+      {...props}
+    >
       <ImageEditorHeader name={document?.name} />
       <ImageEditorCanvas>{children}</ImageEditorCanvas>
       <ImageEditorFooter>footer</ImageEditorFooter>
@@ -39,24 +48,10 @@ function ImageEditorMain({ children, document, layers, ...props }) {
 
 function ImageEditorSidebar({ layers, ...props }) {
   return (
-    <Box {...props}>
+    <Box className="ImageEditorSidebar" {...props}>
       <Heading level={3}>Sidebar</Heading>
     </Box>
   );
-}
-
-function ImageEditorLayer({ name, type, settings = {} }) {
-  switch (type) {
-    case 'image':
-      return (
-        <Box flex={false}>
-          <img alt={name} {...settings} />
-        </Box>
-      );
-
-    default:
-      return <Box>{name}</Box>;
-  }
 }
 
 export default function ImageEditor({ ...props }) {
