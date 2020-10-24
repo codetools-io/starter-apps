@@ -11,8 +11,15 @@ export const layers = [
     settings: {
       src: `${PUBLIC_URL}/placeholder/img/places/canyon-with-river.jpg`,
       width: '800px',
-      height: '1066px',
+      height: '533px',
       alt: 'Layer 1',
     },
+    filters: ['sepia(1)'],
   },
 ];
+
+export const document = {
+  name: 'Canyon With River',
+};
+
+export const filters = [[{ id: 'filter-1', name: 'Black & White' }]];
