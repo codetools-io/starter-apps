@@ -40,29 +40,46 @@ export default function useImageEditor() {
   }, [canvasEl]);
 
   useEffect(() => {
-    if (canvasEl && ctx) {
+    if (canvasEl && ctx && image) {
       drawImage();
     }
-  }, [canvasEl, ctx, drawImage]);
+  }, [canvasEl, ctx, drawImage, image]);
 
   return useMemo(() => {
-    function toggleFilter(filter) {
-      if (image?.filters?.some((f) => f?.key === filter?.key)) {
+    function updateFilterArg({ filterKey, argKey, value }) {
+      if (image?.filters?.some((f) => f?.key === filterKey)) {
         setImage({
           ...image,
-          filters: image?.filters?.filter((f) => f !== filter?.key),
-        });
-      } else {
-        setImage({
-          ...image,
-          filters: [...image?.filters, filter],
+          filters: image?.filters?.map((f) => {
+            if (f?.key !== filterKey) {
+              return f;
+            }
+
+            return {
+              ...f,
+              args: f?.args?.map((a) => {
+                if (a?.key !== argKey) {
+                  return a;
+                }
+
+                return {
+                  ...a,
+                  value,
+                };
+              }),
+            };
+          }),
         });
       }
     }
 
-    function applyFilter() {}
-    function clearFilter() {}
+    function removeFilter(filter) {
+      setImage({
+        ...image,
+        filters: image?.filters?.filter((f) => f !== filter?.key),
+      });
+    }
 
-    return { canvasEl, filters, image, applyFilter, clearFilter, toggleFilter };
+    return { canvasEl, filters, image, updateFilterArg, removeFilter };
   }, [canvasEl, filters, image]);
 }
