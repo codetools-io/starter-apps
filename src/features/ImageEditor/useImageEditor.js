@@ -6,10 +6,10 @@ export default function useImageEditor() {
   const [ctx, setCtx] = useState();
   const [image, setImage] = useState(config?.image);
   const [filters, setFilters] = useState(config?.filters);
+  const [toggledSettings, setToggledSettings] = useState();
 
   const drawImage = useCallback(() => {
     if (canvasEl?.current && ctx) {
-      console.log(canvasEl);
       const imageEl = new Image();
       imageEl.src = image.src;
       imageEl.onload = () => {
@@ -17,21 +17,24 @@ export default function useImageEditor() {
         canvasEl.current.height = imageEl.naturalHeight;
 
         // apply filters
-        const filters = image.filters
+        const appliedFilters = Object.values(filters)?.filter(
+          (f) => f?.applied
+        );
+        const filter = appliedFilters
           ?.map((filter) => {
-            const args = filter?.args
-              ?.map((a) => `${a?.value}${a?.unit}`)
+            const args = Object.entries(filter?.args)
+              ?.map(([key, arg]) => `${arg?.value}${arg?.unit}`)
               ?.join?.(', ');
             return `${filter?.name}(${args})`;
           })
           ?.join(' ');
-        ctx.filter = filters?.length ? filters : 'none';
+        ctx.filter = appliedFilters?.length ? filter : 'none';
 
         // draw image
         ctx.drawImage(imageEl, 0, 0);
       };
     }
-  }, [canvasEl, ctx, image]);
+  }, [canvasEl, ctx, image, filters]);
 
   useEffect(() => {
     if (canvasEl?.current) {
@@ -46,40 +49,37 @@ export default function useImageEditor() {
   }, [canvasEl, ctx, drawImage, image]);
 
   return useMemo(() => {
-    function updateFilterArg({ filterKey, argKey, value }) {
-      if (image?.filters?.some((f) => f?.key === filterKey)) {
-        setImage({
-          ...image,
-          filters: image?.filters?.map((f) => {
-            if (f?.key !== filterKey) {
-              return f;
-            }
-
-            return {
-              ...f,
-              args: f?.args?.map((a) => {
-                if (a?.key !== argKey) {
-                  return a;
-                }
-
-                return {
-                  ...a,
-                  value,
-                };
-              }),
-            };
-          }),
-        });
-      }
-    }
-
-    function removeFilter(filter) {
-      setImage({
-        ...image,
-        filters: image?.filters?.filter((f) => f !== filter?.key),
+    function updateFilter(key, updates) {
+      setFilters({
+        ...filters,
+        [key]: {
+          ...filters[key],
+          ...updates,
+        },
       });
     }
 
-    return { canvasEl, filters, image, updateFilterArg, removeFilter };
-  }, [canvasEl, filters, image]);
+    function applyFilter(key) {
+      updateFilter(key, { applied: true });
+    }
+
+    function clearFilter(key) {
+      updateFilter(key, { applied: false });
+    }
+
+    function toggleSettings(val) {
+      setToggledSettings(val);
+    }
+
+    return {
+      canvasEl,
+      filters,
+      image,
+      updateFilter,
+      applyFilter,
+      clearFilter,
+      toggledSettings,
+      toggleSettings,
+    };
+  }, [canvasEl, filters, image, toggledSettings]);
 }

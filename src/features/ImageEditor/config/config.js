@@ -10,69 +10,88 @@ export const image = {
   src: `${PUBLIC_URL}/placeholder/img/places/canyon-with-river.jpg`,
   width: '800px',
   height: '533px',
-  filters: [
-    {
-      key: 'filter-sepia',
-      title: 'Sepia',
-      name: 'sepia',
-      args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
-    },
-  ],
 };
 
-export const filters = [
-  {
-    key: 'filter-blur',
+export const filters = {
+  blur: {
+    key: 'blur',
     title: 'Blur',
     name: 'blur',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: 'px', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-brightness',
+  brightness: {
+    key: 'brightness',
     title: 'Brightness',
     name: 'brightness',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-contrast',
+  contrast: {
+    key: 'contrast',
     title: 'Contrast',
     name: 'contrast',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-grayscale',
+  grayscale: {
+    key: 'grayscale',
     title: 'Grayscale',
     name: 'grayscale',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-hue-rotate',
+  hue: {
+    key: 'hue-rotate',
     title: 'Hue',
     name: 'hue-rotate',
-    args: [{ key: 'amount', unit: 'deg', value: 180, min: 0, max: 360 }],
+    args: {
+      amount: { unit: 'deg', value: 180, min: 0, max: 360 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-invert',
+  invert: {
+    key: 'invert',
     title: 'Invert',
     name: 'invert',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-opacity',
+  opacity: {
+    key: 'opacity',
     title: 'Opacity',
     name: 'opacity',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-saturate',
+  saturate: {
+    key: 'saturate',
     title: 'Saturate',
     name: 'saturate',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-  {
-    key: 'filter-sepia',
+  sepia: {
+    key: 'sepia',
     title: 'Sepia',
     name: 'sepia',
-    args: [{ key: 'amount', unit: '%', value: 100, min: 0, max: 100 }],
+    args: {
+      amount: { unit: '%', value: 100, min: 0, max: 100 },
+    },
+    applied: false,
   },
-];
+};

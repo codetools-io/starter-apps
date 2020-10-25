@@ -14,9 +14,8 @@ import { Checkmark, Clear } from 'grommet-icons';
 import useImageEditor from './useImageEditor';
 
 function ImageEditorFilterMenu({
-  image,
   filter,
-  onUpdateFilterArg,
+  onUpdateFilter,
   onApplyFilter,
   onClearFilter,
 }) {
@@ -25,22 +24,26 @@ function ImageEditorFilterMenu({
       <Heading level={5} margin="none">
         {filter?.title}
       </Heading>
-      <Form onChange={(value) => {}}>
+      <Form>
         <Box direction="row" gap="small" fill="horizontal">
-          {filter?.args?.map((arg) => {
+          {Object.entries(filter?.args)?.map(([key, arg]) => {
             return (
-              <Box key={`${filter?.key}-${arg?.key}`} flex>
-                <FormField label={arg?.key}>
+              <Box key={`filter-${filter?.key}-arg-${key}`} flex>
+                <FormField label={key}>
                   <RangeInput
-                    name={arg?.key}
-                    value={arg?.value}
+                    name={key}
                     min={arg?.min}
                     max={arg?.max}
+                    value={arg?.value}
                     onChange={(event) => {
-                      onUpdateFilterArg({
-                        filterKey: filter?.key,
-                        argKey: arg?.key,
-                        value: event?.target?.value,
+                      onUpdateFilter(filter?.key, {
+                        args: {
+                          ...filter?.args,
+                          [key]: {
+                            ...arg,
+                            value: parseInt(event?.target?.value, 10),
+                          },
+                        },
                       });
                     }}
                   />
@@ -51,12 +54,12 @@ function ImageEditorFilterMenu({
 
           <Button
             icon={<Clear color="status-critical" />}
-            onClick={() => onClearFilter(filter)}
+            onClick={() => onClearFilter(filter?.key)}
             plain
           />
           <Button
             icon={<Checkmark color="status-ok" />}
-            onClick={() => onApplyFilter(filter)}
+            onClick={() => onApplyFilter(filter?.key)}
             plain
           />
         </Box>
@@ -66,47 +69,50 @@ function ImageEditorFilterMenu({
 }
 function ImageEditorFooter({
   image,
-  filters = [],
-  onUpdateFilterArg,
+  filters = {},
+  toggledSettings,
+  onUpdateFilter,
+  onClearFilter,
+  onApplyFilter,
+  onToggleSettings,
   ...props
 }) {
   const footerRef = useRef();
-  const [activeMenu, setActiveMenu] = useState();
-  function onApplyFilter() {
-    setActiveMenu(null);
-  }
-  function onClearFilter() {
-    setActiveMenu(null);
-  }
 
   return (
     <Box className="ImageEditorFooter" {...props}>
       <Box ref={footerRef}></Box>
       <Box direction="row" gap="small" pad="small">
-        {filters?.map((filter) => {
-          const isApplied = image?.filters?.some((f) => f?.key === filter?.key);
-
+        {Object.entries(filters)?.map(([key, filter]) => {
           return (
             <DropButton
-              key={filter?.key}
+              key={`filter-${key}`}
               label={filter?.title}
-              name={filter?.key}
+              name={key}
               dropAlign={{ bottom: 'top', left: 'left' }}
               dropContent={
                 <ImageEditorFilterMenu
-                  image={image}
-                  filter={
-                    isApplied
-                      ? image?.filters?.find((f) => f?.key === filter?.key)
-                      : filter
-                  }
-                  onUpdateFilterArg={onUpdateFilterArg}
-                  onApplyFilter={onApplyFilter}
-                  onClearFilter={onClearFilter}
+                  filter={filter}
+                  onUpdateFilter={onUpdateFilter}
+                  onApplyFilter={() => {
+                    onApplyFilter(key);
+                    onToggleSettings(null);
+                  }}
+                  onClearFilter={() => {
+                    onClearFilter(key);
+                    onToggleSettings(null);
+                  }}
                 />
               }
               dropTarget={footerRef.current}
-              color={isApplied ? 'brand-1' : 'brand-3'}
+              color={filter?.applied ? 'brand-1' : 'brand-3'}
+              onOpen={() => {
+                onApplyFilter(key);
+              }}
+              onClick={() => {
+                onToggleSettings(key);
+              }}
+              open={toggledSettings === key}
               primary
             />
           );
@@ -128,8 +134,11 @@ function ImageEditorMain({
   children,
   filters,
   image,
-  onUpdateFilterArg,
-  onRemoveFilter,
+  onUpdateFilter,
+  onApplyFilter,
+  onClearFilter,
+  toggledSettings,
+  onToggleSettings,
   ...props
 }) {
   return (
@@ -138,28 +147,26 @@ function ImageEditorMain({
       <ImageEditorFooter
         filters={filters}
         image={image}
-        onUpdateFilterArg={onUpdateFilterArg}
-        onRemoveFilter={onRemoveFilter}
+        onUpdateFilter={onUpdateFilter}
+        onApplyFilter={onApplyFilter}
+        onClearFilter={onClearFilter}
+        toggledSettings={toggledSettings}
+        onToggleSettings={onToggleSettings}
       />
-    </Box>
-  );
-}
-
-function ImageEditorSidebar({ image, ...props }) {
-  return (
-    <Box className="ImageEditorSidebar" {...props}>
-      <Heading level={3}>Sidebar</Heading>
     </Box>
   );
 }
 
 export default function ImageEditor({ ...props }) {
   const {
+    filters,
     canvasEl,
     image,
-    filters,
-    updateFilterArg,
-    removeFilter,
+    updateFilter,
+    applyFilter,
+    clearFilter,
+    toggledSettings,
+    toggleSettings,
   } = useImageEditor();
 
   return (
@@ -167,8 +174,11 @@ export default function ImageEditor({ ...props }) {
       <ImageEditorMain
         image={image}
         filters={filters}
-        onUpdateFilterArg={updateFilterArg}
-        onRemoveFilter={removeFilter}
+        onUpdateFilter={updateFilter}
+        onClearFilter={clearFilter}
+        onApplyFilter={applyFilter}
+        toggledSettings={toggledSettings}
+        onToggleSettings={toggleSettings}
         flex
       >
         <canvas ref={canvasEl} width="100%" height="100%">
