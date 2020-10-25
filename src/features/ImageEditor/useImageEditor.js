@@ -1,12 +1,37 @@
-import { useEffect, useRef, useMemo, useState } from 'react';
+import { useCallback, useEffect, useRef, useMemo, useState } from 'react';
 import * as config from './config';
 
 export default function useImageEditor() {
   const canvasEl = useRef();
   const [ctx, setCtx] = useState();
-  const [layers, setLayers] = useState(config?.layers);
-  const [document, setDocument] = useState(config?.document);
+  const [image, setImage] = useState(config?.image);
   const [filters, setFilters] = useState(config?.filters);
+
+  const drawImage = useCallback(() => {
+    if (canvasEl?.current && ctx) {
+      console.log(canvasEl);
+      const imageEl = new Image();
+      imageEl.src = image.src;
+      imageEl.onload = () => {
+        canvasEl.current.width = imageEl.naturalWidth;
+        canvasEl.current.height = imageEl.naturalHeight;
+
+        // apply filters
+        const filters = image.filters
+          ?.map((filter) => {
+            const args = filter?.args
+              ?.map((a) => `${a?.value}${a?.unit}`)
+              ?.join?.(', ');
+            return `${filter?.name}(${args})`;
+          })
+          ?.join(' ');
+        ctx.filter = filters?.length ? filters : 'none';
+
+        // draw image
+        ctx.drawImage(imageEl, 0, 0);
+      };
+    }
+  }, [canvasEl, ctx, image]);
 
   useEffect(() => {
     if (canvasEl?.current) {
@@ -15,33 +40,29 @@ export default function useImageEditor() {
   }, [canvasEl]);
 
   useEffect(() => {
-    if (ctx && layers?.length) {
-      function drawLayer(layer) {
-        const image = new Image();
-        image.src = layer.settings.src;
-        image.onload = () => {
-          canvasEl.current.width = image.naturalWidth;
-          canvasEl.current.height = image.naturalHeight;
-
-          // apply filters
-          ctx.filter = layer?.filters?.length
-            ? layer?.filters.join(' ')
-            : 'none';
-          // draw image
-          ctx.drawImage(image, 0, 0);
-
-          console.log(layer?.filters.join(' '));
-        };
-      }
-
-      layers.forEach((layer) => {
-        if (layer?.type === 'image') {
-          drawLayer(layer);
-        }
-      });
+    if (canvasEl && ctx) {
+      drawImage();
     }
-  }, [canvasEl, ctx, layers]);
+  }, [canvasEl, ctx, drawImage]);
+
   return useMemo(() => {
-    return { canvasEl, document, filters, layers };
-  }, [canvasEl, document, filters, layers]);
+    function toggleFilter(filter) {
+      if (image?.filters?.some((f) => f?.key === filter?.key)) {
+        setImage({
+          ...image,
+          filters: image?.filters?.filter((f) => f !== filter?.key),
+        });
+      } else {
+        setImage({
+          ...image,
+          filters: [...image?.filters, filter],
+        });
+      }
+    }
+
+    function applyFilter() {}
+    function clearFilter() {}
+
+    return { canvasEl, filters, image, applyFilter, clearFilter, toggleFilter };
+  }, [canvasEl, filters, image]);
 }

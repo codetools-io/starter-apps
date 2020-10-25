@@ -1,5 +1,14 @@
-import React, { useRef } from 'react';
-import { Box, Grid, Heading, Paragraph } from 'grommet';
+import React, { useRef, useState } from 'react';
+import {
+  Box,
+  Button,
+  DropButton,
+  Heading,
+  Paragraph,
+  RangeInput,
+  TextInput,
+} from 'grommet';
+import { Checkmark, Clear } from 'grommet-icons';
 import useImageEditor from './useImageEditor';
 
 function ImageEditorHeader({ name, ...props }) {
@@ -10,43 +19,102 @@ function ImageEditorHeader({ name, ...props }) {
   );
 }
 
-function ImageEditorFooter({ children, ...props }) {
+function ImageEditorFooter({
+  image,
+  filters = [],
+  onToggleFilter,
+  onApplyFilter,
+  onClearFilter,
+  ...props
+}) {
+  const footerRef = useRef();
+
   return (
     <Box className="ImageEditorFooter" {...props}>
-      {children}
+      <Box ref={footerRef} border={{ size: 'large', color: 'orange' }}></Box>
+      <Box direction="row" gap="small" pad="small">
+        {filters?.map((filter) => {
+          const isToggled = image?.filters?.some((f) => f?.key === filter?.key);
+
+          return (
+            <DropButton
+              key={filter?.key}
+              label={filter?.title}
+              name={filter?.key}
+              dropAlign={{ bottom: 'top', left: 'left' }}
+              dropContent={
+                <Box
+                  pad="large"
+                  background="light-2"
+                  direction="row"
+                  align="center"
+                  gap="small"
+                >
+                  {filter?.args?.map((arg) => {
+                    return (
+                      <RangeInput
+                        key={`${filter?.key}-${arg?.key}`}
+                        value={arg?.value}
+                        min={arg?.min}
+                        max={arg?.max}
+                      />
+                    );
+                  })}
+                  <Button
+                    icon={<Clear />}
+                    onClick={() => onClearFilter()}
+                    plain
+                  />
+                  <Button
+                    icon={<Checkmark />}
+                    onClick={() => onApplyFilter()}
+                    plain
+                  />
+                </Box>
+              }
+              dropTarget={footerRef.current}
+              onClick={(event) => onToggleFilter(filter)}
+              color={isToggled ? 'brand-1' : 'brand-3'}
+              primary
+            />
+          );
+        })}
+      </Box>
     </Box>
   );
 }
 
 function ImageEditorCanvas({ children, ...props }) {
   return (
-    <Box
-      className="ImageEditorCanvas"
-      overflow="auto"
-      border={{ size: 'large', color: 'blue' }}
-      flex
-      {...props}
-    >
+    <Box className="ImageEditorCanvas" overflow="auto" flex {...props}>
       {children}
     </Box>
   );
 }
 
-function ImageEditorMain({ children, document, layers, ...props }) {
+function ImageEditorMain({
+  children,
+  filters,
+  image,
+  onToggleFilter,
+  onClearFilter,
+  onApplyFilter,
+  ...props
+}) {
   return (
-    <Box
-      className="ImageEditorMain"
-      border={{ size: 'large', color: 'purple' }}
-      {...props}
-    >
-      <ImageEditorHeader name={document?.name} />
+    <Box className="ImageEditorMain" {...props}>
+      <ImageEditorHeader name={image?.title} />
       <ImageEditorCanvas>{children}</ImageEditorCanvas>
-      <ImageEditorFooter>footer</ImageEditorFooter>
+      <ImageEditorFooter
+        filters={filters}
+        image={image}
+        onToggleFilter={onToggleFilter}
+      />
     </Box>
   );
 }
 
-function ImageEditorSidebar({ layers, ...props }) {
+function ImageEditorSidebar({ image, ...props }) {
   return (
     <Box className="ImageEditorSidebar" {...props}>
       <Heading level={3}>Sidebar</Heading>
@@ -55,23 +123,31 @@ function ImageEditorSidebar({ layers, ...props }) {
 }
 
 export default function ImageEditor({ ...props }) {
-  const { canvasEl, document, layers } = useImageEditor();
+  const {
+    applyFilter,
+    canvasEl,
+    clearFilter,
+    image,
+    filters,
+    toggleFilter,
+  } = useImageEditor();
 
   return (
-    <Box
-      className="ImageEditor"
-      direction="row"
-      overflow="hidden"
-      border={{ size: 'large', color: 'orange' }}
-      {...props}
-    >
-      <ImageEditorMain document={document} layers={layers} flex>
+    <Box className="ImageEditor" direction="row" overflow="hidden" {...props}>
+      <ImageEditorMain
+        image={image}
+        filters={filters}
+        onToggleFilter={toggleFilter}
+        onClearFilter={clearFilter}
+        onApplyFilter={applyFilter}
+        flex
+      >
         <canvas ref={canvasEl} width="100%" height="100%">
           Could not load canvas
         </canvas>
       </ImageEditorMain>
 
-      <ImageEditorSidebar document={document} layers={layers} width="medium" />
+      <ImageEditorSidebar image={image} width="medium" />
     </Box>
   );
 }
