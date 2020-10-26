@@ -6,27 +6,29 @@ import TooltipButton from 'internal/components/TooltipButton';
 import DocsPreviewModal from './DocsPreviewModal';
 import DocsPreviewStandard from './DocsPreviewStandard';
 import DocsComponents from './DocsComponents';
-
-const themeOptions = ['grayscale', 'paradise', 'sunglow', 'caribbean'];
+const themeOptions = ['caribbean', 'default', 'paradise', 'sunglow'];
 export default function DocsPreview({ children, doc, loadActions, ...props }) {
   const { queryParams, setQueryParam } = useRouter();
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isOverlayToggled, setIsOverlayToggled] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(
-    queryParams?.theme || themeOptions[0]
+    queryParams?.theme || 'default'
   );
   useEffect(() => {
     loadActions([
-      <Select
-        key="action-theme"
-        className="DocsPreviewActionTheme"
-        options={themeOptions}
-        value={currentTheme}
-        onChange={({ value }) => {
-          setCurrentTheme(value);
-          setQueryParam('theme', value);
-        }}
-      />,
+      <Box key="action-theme" className="DocsPreviewActionTheme">
+        <Text color="text-xweak" size="small" margin={{ top: '-1rem' }}>
+          theme
+        </Text>
+        <Select
+          options={themeOptions}
+          value={currentTheme}
+          onChange={({ value }) => {
+            setCurrentTheme(value);
+            setQueryParam('theme', value);
+          }}
+        />
+      </Box>,
       doc?.components && (
         <TooltipButton
           key="action-overlay"

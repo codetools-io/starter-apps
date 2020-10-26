@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Box, Button, Grid, Select, Text } from 'grommet';
 import MonacoEditor from '@monaco-editor/react';
+import { orderBy } from 'lodash';
 import useRouter from 'internal/hooks/useRouter';
 import DocsCard from './DocsCard';
-import { orderBy } from 'lodash';
 
 const options = {
   fontSize: 16,
@@ -15,7 +15,7 @@ const options = {
 export default function DocsThemeCode({ themes = {}, loadActions }) {
   const { queryParams, setQueryParam } = useRouter();
   const [currentTheme, setCurrentTheme] = useState(
-    queryParams?.theme || 'grayscale'
+    queryParams?.theme || 'default'
   );
   const [activeFilename, setActiveFilename] = useState(
     queryParams?.theme_file || 'theme.js'
@@ -35,16 +35,19 @@ export default function DocsThemeCode({ themes = {}, loadActions }) {
 
   useEffect(() => {
     loadActions([
-      <Select
-        key="action-theme-code"
-        className="DocsThemeCodeActionTheme"
-        options={themeNames}
-        value={currentTheme}
-        onChange={({ value }) => {
-          setCurrentTheme(value);
-          setQueryParam('theme', value);
-        }}
-      />,
+      <Box key="action-theme-code" className="DocsThemeCodeActionTheme">
+        <Text color="text-xweak" size="small" margin={{ top: '-1rem' }}>
+          theme
+        </Text>
+        <Select
+          options={themeNames}
+          value={currentTheme}
+          onChange={({ value }) => {
+            setCurrentTheme(value);
+            setQueryParam('theme', value);
+          }}
+        />
+      </Box>,
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadActions, currentTheme, themeNames]);

@@ -78,7 +78,7 @@ export default function DocsMain({
         title: 'Theme',
         key: 'theme',
         index: 6,
-        isEnabledFeature: true,
+        isEnabledFeature: !!children,
         isActive: queryParams?.mode === 'theme',
       },
     ];
