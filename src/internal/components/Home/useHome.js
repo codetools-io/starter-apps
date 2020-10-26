@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { orderBy, intersectionBy } from 'lodash';
+import { countBy, orderBy, intersectionBy } from 'lodash';
 
 export default ({ modules = [], components = [], categories = [] }) => {
   const uniqueGrommets = new Set(
@@ -66,6 +66,31 @@ export default ({ modules = [], components = [], categories = [] }) => {
     );
   }, [components, grommetOptions, moduleOptions]);
 
+  const grommetCounts = useMemo(() => {
+    const counts = [...uniqueGrommets]?.reduce((accum, grommetName) => {
+      return {
+        ...accum,
+        [grommetName]: 0,
+      };
+    }, {});
+    components.forEach((component) => {
+      if (component?.grommet) {
+        component.grommet.forEach((grommetName) => {
+          counts[grommetName] = counts[grommetName] + 1;
+        });
+      }
+    });
+
+    return counts;
+  }, [components, uniqueGrommets]);
+
+  const moduleCounts = useMemo(() => {
+    return countBy(
+      components?.filter((c) => c?.moduleId),
+      'data.module.name'
+    );
+  }, [components]);
+
   return useMemo(() => {
     function clearOptions() {
       setGrommetOptions({ ...initialGrommetOptions });
@@ -80,7 +105,9 @@ export default ({ modules = [], components = [], categories = [] }) => {
       filteredCategories,
       filteredComponents,
       categoryOptions,
+      moduleCounts,
       moduleOptions,
+      grommetCounts,
       grommetOptions,
       setCategoryOptions,
       setGrommetOptions,
@@ -96,7 +123,9 @@ export default ({ modules = [], components = [], categories = [] }) => {
     initialGrommetOptions,
     initialModuleOptions,
     initialCategoryOptions,
+    moduleCounts,
     moduleOptions,
+    grommetCounts,
     grommetOptions,
     setCategoryOptions,
     setGrommetOptions,

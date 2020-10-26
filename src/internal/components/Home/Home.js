@@ -90,11 +90,19 @@ function HomeFiltersMenu({ sections, onClear }) {
             </Heading>
             <Grid gap="small" columns="small" rows={['auto']}>
               {Object.keys(section?.options)?.map((option) => {
+                const labelSuffix = section?.counts
+                  ? ` (${section?.counts?.[option]})`
+                  : null;
                 return (
                   <Box key={`${section?.key}-filter-${option}`}>
                     <CheckBox
                       tabIndex="-1"
-                      label={<Text size="small">{option}</Text>}
+                      label={
+                        <Text size="small">
+                          {option}
+                          {labelSuffix}
+                        </Text>
+                      }
                       checked={section?.options?.[option]}
                       onChange={(event) =>
                         section?.updateOptions({
@@ -206,8 +214,10 @@ export default function Home({ docs = {}, ...props }) {
     categories,
     clearOptions,
     filteredComponents,
+    moduleCounts,
     moduleOptions,
     grommetOptions,
+    grommetCounts,
     setGrommetOptions,
     setModuleOptions,
   } = useHome({ ...docs });
@@ -227,12 +237,14 @@ export default function Home({ docs = {}, ...props }) {
             title: 'Modules',
             options: moduleOptions,
             updateOptions: setModuleOptions,
+            counts: moduleCounts,
           },
           {
             key: 'grommet-filters',
             title: 'Components',
             options: grommetOptions,
             updateOptions: setGrommetOptions,
+            counts: grommetCounts,
           },
         ]}
       />
