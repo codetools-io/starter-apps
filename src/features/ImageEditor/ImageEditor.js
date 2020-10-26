@@ -18,7 +18,7 @@ function ImageEditorFilterMenu({
   onClearFilter,
 }) {
   return (
-    <Box pad="medium" background="light-2">
+    <Box className="ImageEditorFilterMenu" pad="medium" background="light-2">
       <Heading level={5} margin="none">
         {filter?.title}
       </Heading>
