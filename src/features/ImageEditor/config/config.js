@@ -8,8 +8,8 @@ export const image = {
   type: 'jpg',
   title: 'Canyon With River',
   src: `${PUBLIC_URL}/placeholder/img/places/canyon-with-river.jpg`,
-  width: '800px',
-  height: '533px',
+  width: 800,
+  height: 533,
 };
 
 export const filters = {

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import {
   Box,
   Button,
@@ -6,9 +6,7 @@ import {
   Form,
   FormField,
   Heading,
-  Paragraph,
   RangeInput,
-  TextInput,
 } from 'grommet';
 import { Checkmark, Clear } from 'grommet-icons';
 import useImageEditor from './useImageEditor';
@@ -142,7 +140,7 @@ function ImageEditorMain({
   ...props
 }) {
   return (
-    <Box className="ImageEditorMain" {...props}>
+    <Box className="ImageEditorMain" flex={false} overflow="auto" {...props}>
       <ImageEditorCanvas>{children}</ImageEditorCanvas>
       <ImageEditorFooter
         filters={filters}
@@ -170,7 +168,7 @@ export default function ImageEditor({ ...props }) {
   } = useImageEditor();
 
   return (
-    <Box className="ImageEditor" direction="row" overflow="hidden" {...props}>
+    <Box className="ImageEditor" overflow="hidden" {...props}>
       <ImageEditorMain
         image={image}
         filters={filters}
@@ -179,9 +177,16 @@ export default function ImageEditor({ ...props }) {
         onApplyFilter={applyFilter}
         toggledSettings={toggledSettings}
         onToggleSettings={toggleSettings}
-        flex
       >
-        <canvas ref={canvasEl} width="100%" height="100%">
+        <canvas
+          ref={canvasEl}
+          style={{
+            minWidth: image?.width,
+            maxWidth: image?.width,
+            minHeight: image?.height,
+            maxHeight: image?.height,
+          }}
+        >
           Could not load canvas
         </canvas>
       </ImageEditorMain>

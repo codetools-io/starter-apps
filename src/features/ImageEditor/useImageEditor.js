@@ -4,7 +4,7 @@ import * as config from './config';
 export default function useImageEditor() {
   const canvasEl = useRef();
   const [ctx, setCtx] = useState();
-  const [image, setImage] = useState(config?.image);
+  const [image] = useState(config?.image);
   const [filters, setFilters] = useState(config?.filters);
   const [toggledSettings, setToggledSettings] = useState();
 
@@ -13,8 +13,8 @@ export default function useImageEditor() {
       const imageEl = new Image();
       imageEl.src = image.src;
       imageEl.onload = () => {
-        canvasEl.current.width = imageEl.naturalWidth;
-        canvasEl.current.height = imageEl.naturalHeight;
+        canvasEl.current.width = image.width;
+        canvasEl.current.height = image.height;
 
         // apply filters
         const appliedFilters = Object.values(filters)?.filter(
