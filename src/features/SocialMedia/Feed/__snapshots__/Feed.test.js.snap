@@ -65,7 +65,7 @@ exports[`Feed can render 1`] = `
                   <span
                     class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
-                    1 month ago
+                    2 months ago
                   </span>
                 </div>
               </div>
@@ -207,7 +207,7 @@ exports[`Feed can render 1`] = `
                   <span
                     class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
-                    1 month ago
+                    2 months ago
                   </span>
                 </div>
               </div>
@@ -349,7 +349,7 @@ exports[`Feed can render 1`] = `
                   <span
                     class="StyledText-sc-1sadyjn-0 eIpmFk"
                   >
-                    1 month ago
+                    2 months ago
                   </span>
                 </div>
               </div>

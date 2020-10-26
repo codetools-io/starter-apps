@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageEditor can render 1`] = `
+<div>
+  <div
+    class="ErrorBoundary"
+  >
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 hvWhsF ImageEditor"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 jEDual ImageEditorMain"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 idlpba ImageEditorCanvas"
+          >
+            <canvas
+              style="min-width: 800px; max-width: 800px; min-height: 533px; max-height: 533px;"
+            >
+              Could not load canvas
+            </canvas>
+          </div>
+          <div
+            class="StyledBox-sc-13pk1d4-0 gAsOLC ImageEditorFooter"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gAsOLC"
+            />
+            <div
+              class="StyledBox-sc-13pk1d4-0 fexMXz"
+            >
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="blur"
+                type="button"
+              >
+                Blur
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="brightness"
+                type="button"
+              >
+                Brightness
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="contrast"
+                type="button"
+              >
+                Contrast
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="grayscale"
+                type="button"
+              >
+                Grayscale
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="hue"
+                type="button"
+              >
+                Hue
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="invert"
+                type="button"
+              >
+                Invert
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="opacity"
+                type="button"
+              >
+                Opacity
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="saturate"
+                type="button"
+              >
+                Saturate
+              </button>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+              />
+              <button
+                aria-label="Open Drop"
+                class="StyledButton-sc-323bzc-0 pQQje"
+                name="sepia"
+                type="button"
+              >
+                Sepia
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
