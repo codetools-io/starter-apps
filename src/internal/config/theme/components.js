@@ -5,7 +5,7 @@ export default {
     },
     nav: {
       menu: {
-        background: 'brand-3',
+        background: 'brand-2',
       },
       link: {
         color: 'white',
