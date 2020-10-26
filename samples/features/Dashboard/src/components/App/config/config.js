@@ -33,7 +33,7 @@ export const widgets = [
     label: 'Unread Email',
     value: 7,
     icon: Mail,
-    color: 'purple',
+    color: 'accent-1',
     section: 'section-2',
   },
   {
@@ -42,7 +42,7 @@ export const widgets = [
     label: 'Unread Messages',
     value: 3,
     icon: Chat,
-    color: 'blue',
+    color: 'accent-2',
     section: 'section-2',
   },
   {
@@ -51,7 +51,7 @@ export const widgets = [
     label: 'Orders',
     value: 3,
     icon: Cart,
-    color: 'green',
+    color: 'accent-3',
     section: 'section-2',
   },
   {
@@ -72,32 +72,32 @@ export const widgets = [
       continents: [
         {
           name: 'North America',
-          color: 'brand-alt-1',
+          color: 'light-6',
         },
         {
           name: 'Africa',
-          color: 'brand-alt-1',
+          color: 'light-6',
         },
         {
           name: 'Australia',
-          color: 'brand-alt-1',
+          color: 'light-6',
         },
       ],
       places: [
         {
           name: 'Washington, D.C.',
           location: [38.898748, -77.037684],
-          color: 'brand-2',
+          color: 'accent-1',
         },
         {
           name: 'Cape Town',
           location: [33.9249, 18.4241],
-          color: 'brand-2',
+          color: 'accent-1',
         },
         {
           name: 'Sydney',
           location: [-33.8830555556, 151.216666667],
-          color: 'brand-2',
+          color: 'accent-1',
         },
       ],
     },

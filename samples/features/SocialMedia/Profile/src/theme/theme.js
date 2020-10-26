@@ -1,6 +1,15 @@
 import { deepMerge } from 'grommet/utils';
 import { base } from 'grommet/themes';
-import { themeExport } from './theme-export';
-import { brand } from './brand';
+import components from './components';
+import global from './global';
 
-export default deepMerge(base, themeExport, brand);
+export const theme = {
+  name: 'default',
+  rounding: 2,
+  spacing: 20,
+  defaultMode: 'light',
+  global,
+  ...components,
+};
+
+export default deepMerge(base, theme);

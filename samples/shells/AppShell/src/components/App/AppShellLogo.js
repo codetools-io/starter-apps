@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from 'react';
 import { Box, Heading, Image, ResponsiveContext } from 'grommet';
 
 export default function AppShellLogo({
-  background = 'brand-3',
+  background = 'brand',
   text,
   logo,
   logoSmall,

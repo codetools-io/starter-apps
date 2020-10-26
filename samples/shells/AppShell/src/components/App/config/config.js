@@ -4,7 +4,6 @@ import moment from 'moment';
 import { Cart, ChatOption, Notification } from 'grommet-icons';
 export * from './nav';
 export * from './site';
-export * from './theme';
 
 const currentDate = new Date();
 

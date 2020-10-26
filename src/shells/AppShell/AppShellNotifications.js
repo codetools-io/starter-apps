@@ -49,7 +49,7 @@ function AppShellNotificationIndicator({ icon, count }) {
   return (
     <Box>
       <Stack anchor="top-right">
-        <Icon icon={icon} color="brand-3" />
+        <Icon icon={icon} color="brand" />
         <Box
           align="center"
           justify="center"

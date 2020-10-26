@@ -18,7 +18,7 @@ exports[`Can render AppShell 1`] = `
             class="StyledGrid-sc-1wofa1l-0 gmMNbX"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 bWsJrf AppShellLogo"
+              class="StyledBox-sc-13pk1d4-0 fSsyZG AppShellLogo"
             >
               <img
                 class="StyledImage-ey4zx9-0 dfToQT"
@@ -72,7 +72,7 @@ exports[`Can render AppShell 1`] = `
                         >
                           <svg
                             aria-label="Notification"
-                            class="StyledIcon-ofa7kd-0 TuvfI"
+                            class="StyledIcon-ofa7kd-0 lgGeuM"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -122,7 +122,7 @@ exports[`Can render AppShell 1`] = `
                         >
                           <svg
                             aria-label="ChatOption"
-                            class="StyledIcon-ofa7kd-0 TuvfI"
+                            class="StyledIcon-ofa7kd-0 lgGeuM"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -172,7 +172,7 @@ exports[`Can render AppShell 1`] = `
                         >
                           <svg
                             aria-label="Cart"
-                            class="StyledIcon-ofa7kd-0 TuvfI"
+                            class="StyledIcon-ofa7kd-0 lgGeuM"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -217,7 +217,7 @@ exports[`Can render AppShell 1`] = `
           </div>
         </header>
         <div
-          class="StyledBox-sc-13pk1d4-0 XuxDF AppShellSidebar"
+          class="StyledBox-sc-13pk1d4-0 iLchCg AppShellSidebar"
         >
           <div
             class="StyledBox-sc-13pk1d4-0 bXEBrY"
@@ -262,7 +262,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="Home"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -304,7 +304,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="Group"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -346,7 +346,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="Install"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -394,7 +394,7 @@ exports[`Can render AppShell 1`] = `
                               >
                                 <svg
                                   aria-label="DocumentPerformance"
-                                  class="StyledIcon-ofa7kd-0 bjwIvs"
+                                  class="StyledIcon-ofa7kd-0 kayAAo"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
@@ -429,7 +429,7 @@ exports[`Can render AppShell 1`] = `
                               >
                                 <svg
                                   aria-label="Down"
-                                  class="StyledIcon-ofa7kd-0 bjwIvs"
+                                  class="StyledIcon-ofa7kd-0 kayAAo"
                                   viewBox="0 0 24 24"
                                 >
                                   <polyline
@@ -453,7 +453,7 @@ exports[`Can render AppShell 1`] = `
                         class="StyledBox-sc-13pk1d4-0 gAsOLC Collapsible__AnimatedBox-sc-15kniua-0 cQpSwi"
                       >
                         <div
-                          class="StyledBox-sc-13pk1d4-0 dDnHii"
+                          class="StyledBox-sc-13pk1d4-0 bgKlGC"
                         >
                           <a
                             class="AppShellNavLink"
@@ -582,7 +582,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="Alert"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -624,7 +624,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="Globe"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -666,7 +666,7 @@ exports[`Can render AppShell 1`] = `
                           >
                             <svg
                               aria-label="SettingsOption"
-                              class="StyledIcon-ofa7kd-0 bjwIvs"
+                              class="StyledIcon-ofa7kd-0 kayAAo"
                               viewBox="0 0 24 24"
                             >
                               <path
