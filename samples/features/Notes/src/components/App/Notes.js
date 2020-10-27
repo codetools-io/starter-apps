@@ -71,8 +71,10 @@ function NoteForm({
   cancelEditNote,
   saveNote,
 }) {
-  const initialFields = { id, authorId, title, body, category };
-  const [fields, setFields] = useState(initialFields);
+  const initialFields = useMemo(() => {
+    return { id, authorId, title, body, category };
+  }, [id, authorId, title, body, category]);
+  const [fields, setFields] = useState({ ...initialFields });
   const hasChanges = useMemo(() => {
     return Object.entries(fields).some(([field, value]) => {
       return value !== initialFields[field];

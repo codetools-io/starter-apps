@@ -9,19 +9,23 @@ exports[`ImageEditor can render 1`] = `
       class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 hvWhsF ImageEditor"
+        class="StyledBox-sc-13pk1d4-0 gAsOLC ImageEditor"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jEDual ImageEditorMain"
+          class="StyledBox-sc-13pk1d4-0 gAsOLC ImageEditorMain"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 idlpba ImageEditorCanvas"
+            class="StyledBox-sc-13pk1d4-0 fEDgqx ImageEditorCanvas"
           >
-            <canvas
-              style="min-width: 800px; max-width: 800px; min-height: 533px; max-height: 533px;"
+            <div
+              class="StyledBox-sc-13pk1d4-0 ljUAMN"
             >
-              Could not load canvas
-            </canvas>
+              <canvas
+                style="min-width: 800px; max-width: 800px; min-height: 533px; max-height: 533px;"
+              >
+                Could not load canvas
+              </canvas>
+            </div>
           </div>
           <div
             class="StyledBox-sc-13pk1d4-0 gAsOLC ImageEditorFooter"
@@ -30,104 +34,112 @@ exports[`ImageEditor can render 1`] = `
               class="StyledBox-sc-13pk1d4-0 gAsOLC"
             />
             <div
-              class="StyledBox-sc-13pk1d4-0 fexMXz"
+              class="StyledBox-sc-13pk1d4-0 chkvLT"
             >
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="blur"
-                type="button"
-              >
-                Blur
-              </button>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="brightness"
-                type="button"
+                class="StyledBox-sc-13pk1d4-0 gdPqXV"
               >
-                Brightness
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="contrast"
-                type="button"
-              >
-                Contrast
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="grayscale"
-                type="button"
-              >
-                Grayscale
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="hue"
-                type="button"
-              >
-                Hue
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="invert"
-                type="button"
-              >
-                Invert
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="opacity"
-                type="button"
-              >
-                Opacity
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="saturate"
-                type="button"
-              >
-                Saturate
-              </button>
-              <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
-              />
-              <button
-                aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 OLzRh"
-                name="sepia"
-                type="button"
-              >
-                Sepia
-              </button>
+                <div
+                  class="StyledBox-sc-13pk1d4-0 gbOrjc"
+                >
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="blur"
+                    type="button"
+                  >
+                    Blur
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="brightness"
+                    type="button"
+                  >
+                    Brightness
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="contrast"
+                    type="button"
+                  >
+                    Contrast
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="grayscale"
+                    type="button"
+                  >
+                    Grayscale
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="hue"
+                    type="button"
+                  >
+                    Hue
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="invert"
+                    type="button"
+                  >
+                    Invert
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="opacity"
+                    type="button"
+                  >
+                    Opacity
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="saturate"
+                    type="button"
+                  >
+                    Saturate
+                  </button>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jqAFec"
+                  />
+                  <button
+                    aria-label="Open Drop"
+                    class="StyledButton-sc-323bzc-0 OLzRh"
+                    name="sepia"
+                    type="button"
+                  >
+                    Sepia
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

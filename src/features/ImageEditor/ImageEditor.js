@@ -138,7 +138,7 @@ function ImageEditorCanvas({ children, ...props }) {
       border
       {...props}
     >
-      <Box align="center" justify="center" overflow="auto" fill>
+      <Box align="center" justify="center" fill>
         {children}
       </Box>
     </Box>

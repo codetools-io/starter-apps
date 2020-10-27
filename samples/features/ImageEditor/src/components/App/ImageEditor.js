@@ -65,6 +65,7 @@ function ImageEditorFilterMenu({
     </Box>
   );
 }
+
 function ImageEditorFooter({
   image,
   filters = {},
@@ -80,41 +81,45 @@ function ImageEditorFooter({
   return (
     <Box className="ImageEditorFooter" {...props}>
       <Box ref={footerRef}></Box>
-      <Box direction="row" gap="small" pad="small">
-        {Object.entries(filters)?.map(([key, filter]) => {
-          return (
-            <DropButton
-              key={`filter-${key}`}
-              label={filter?.title}
-              name={key}
-              dropAlign={{ bottom: 'top', left: 'left' }}
-              dropContent={
-                <ImageEditorFilterMenu
-                  filter={filter}
-                  onUpdateFilter={onUpdateFilter}
-                  onApplyFilter={() => {
+      <Box pad="medium">
+        <Box overflow={{ horizontal: 'auto' }} align="center" fill="horizontal">
+          <Box direction="row-responsive" gap="small">
+            {Object.entries(filters)?.map(([key, filter]) => {
+              return (
+                <DropButton
+                  key={`filter-${key}`}
+                  label={filter?.title}
+                  name={key}
+                  dropAlign={{ bottom: 'top', left: 'left' }}
+                  dropContent={
+                    <ImageEditorFilterMenu
+                      filter={filter}
+                      onUpdateFilter={onUpdateFilter}
+                      onApplyFilter={() => {
+                        onApplyFilter(key);
+                        onToggleSettings(null);
+                      }}
+                      onClearFilter={() => {
+                        onClearFilter(key);
+                        onToggleSettings(null);
+                      }}
+                    />
+                  }
+                  dropTarget={footerRef.current}
+                  color={filter?.applied ? 'brand' : 'accent-1'}
+                  onOpen={() => {
                     onApplyFilter(key);
-                    onToggleSettings(null);
                   }}
-                  onClearFilter={() => {
-                    onClearFilter(key);
-                    onToggleSettings(null);
+                  onClick={() => {
+                    onToggleSettings(key);
                   }}
+                  open={toggledSettings === key}
+                  primary
                 />
-              }
-              dropTarget={footerRef.current}
-              color={filter?.applied ? 'brand' : 'accent-1'}
-              onOpen={() => {
-                onApplyFilter(key);
-              }}
-              onClick={() => {
-                onToggleSettings(key);
-              }}
-              open={toggledSettings === key}
-              primary
-            />
-          );
-        })}
+              );
+            })}
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
@@ -122,8 +127,20 @@ function ImageEditorFooter({
 
 function ImageEditorCanvas({ children, ...props }) {
   return (
-    <Box className="ImageEditorCanvas" overflow="auto" flex {...props}>
-      {children}
+    <Box
+      className="ImageEditorCanvas"
+      direction="row"
+      align="center"
+      justify="center"
+      pad="medium"
+      height="large"
+      flex
+      border
+      {...props}
+    >
+      <Box align="center" justify="center" fill>
+        {children}
+      </Box>
     </Box>
   );
 }
@@ -140,7 +157,7 @@ function ImageEditorMain({
   ...props
 }) {
   return (
-    <Box className="ImageEditorMain" flex={false} overflow="auto" {...props}>
+    <Box className="ImageEditorMain" {...props}>
       <ImageEditorCanvas>{children}</ImageEditorCanvas>
       <ImageEditorFooter
         filters={filters}
@@ -168,7 +185,7 @@ export default function ImageEditor({ ...props }) {
   } = useImageEditor();
 
   return (
-    <Box className="ImageEditor" overflow="hidden" {...props}>
+    <Box className="ImageEditor" {...props}>
       <ImageEditorMain
         image={image}
         filters={filters}
