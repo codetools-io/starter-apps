@@ -1,4 +1,4 @@
-export default {
+const globals = {
   colors: {
     brand: '#EE4266',
     'accent-1': '#540D6E',
@@ -178,3 +178,5 @@ export default {
     full: '100%',
   },
 };
+
+export default globals;

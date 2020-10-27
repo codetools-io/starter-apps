@@ -1,4 +1,4 @@
-export default {
+const components = {
   chart: {},
   diagram: {
     line: {},
@@ -402,3 +402,5 @@ export default {
     },
   },
 };
+
+export default components;

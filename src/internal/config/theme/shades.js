@@ -1,4 +1,4 @@
-export default {
+const shades = {
   'shade-1': '#F8F9FA',
   'shade-2': '#E9ECEF',
   'shade-3': '#DEE2E6',
@@ -9,3 +9,5 @@ export default {
   'shade-8': '#343A40',
   'shade-9': '#212529',
 };
+
+export default shades;

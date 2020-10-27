@@ -1,4 +1,4 @@
-export default {
+const components = {
   appShell: {
     sidebar: {
       background: 'brand-2',
@@ -19,3 +19,5 @@ export default {
     },
   },
 };
+
+export default components;

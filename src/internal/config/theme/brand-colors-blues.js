@@ -1,4 +1,4 @@
-export default {
+const colors = {
   brand: '#0466C8',
   'brand-0': '#057AF0',
   'brand-1': '#0466C8',
@@ -14,3 +14,5 @@ export default {
   'brand-alt-4': '#33415C',
   'brand-contrast': '#EEE',
 };
+
+export default colors;

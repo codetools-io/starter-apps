@@ -1,10 +1,14 @@
 import { useMemo, useState } from 'react';
 import { countBy, orderBy, intersectionBy } from 'lodash';
 
-export default ({ modules = [], components = [], categories = [] }) => {
-  const uniqueGrommets = new Set(
-    components?.flatMap((c) => c?.grommet)?.filter((c) => c)
-  );
+export default function useHome({
+  modules = [],
+  components = [],
+  categories = [],
+}) {
+  const uniqueGrommets = useMemo(() => {
+    return new Set(components?.flatMap((c) => c?.grommet)?.filter((c) => c));
+  }, [components]);
   const initialGrommetOptions = Object.fromEntries(
     [...uniqueGrommets]?.map((c) => [c, false])
   );
@@ -131,4 +135,4 @@ export default ({ modules = [], components = [], categories = [] }) => {
     setGrommetOptions,
     setModuleOptions,
   ]);
-};
+}
