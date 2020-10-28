@@ -53,7 +53,7 @@ context('Docs', () => {
 
   it('can update themes', () => {
     cy.get('@DocsNav').contains('Preview').click();
-    cy.get('.DocsPreviewActionTheme').click();
+    cy.get('.ThemePicker').click();
     cy.get('button').contains('paradise').click();
     cy.url().should('include', '?theme=paradise');
   });

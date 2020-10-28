@@ -6,6 +6,7 @@ import DocsTheme from './DocsTheme';
 export default function DocsPreviewModal({
   children,
   onShrink = () => {},
+  themeName,
   theme,
   ...props
 }) {
@@ -39,7 +40,9 @@ export default function DocsPreviewModal({
         <Box height="100%" pad={{ top: 'medium' }}>
           <DocsCard height="large" flex={false} {...props}>
             <Box overflow="auto" fill>
-              <DocsTheme name={theme}>{children}</DocsTheme>
+              <DocsTheme name={themeName} theme={theme}>
+                {children}
+              </DocsTheme>
             </Box>
           </DocsCard>
         </Box>
