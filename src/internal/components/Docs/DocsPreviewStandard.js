@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box } from 'grommet';
 
+import Theme from 'internal/components/Theme';
 import DocsCard from './DocsCard';
-import DocsTheme from './DocsTheme';
 
 export default function DocsPreviewStandard({
   children,
@@ -16,9 +16,9 @@ export default function DocsPreviewStandard({
     <Box className="DocsPreviewStandard">
       <DocsCard height="large" flex={false} {...props}>
         <Box overflow="auto" fill>
-          <DocsTheme name={themeName} theme={theme}>
+          <Theme name={themeName} theme={theme}>
             {children}
-          </DocsTheme>
+          </Theme>
         </Box>
       </DocsCard>
     </Box>

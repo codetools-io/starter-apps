@@ -60,6 +60,6 @@ context('Docs', () => {
 
   it('can toggle code for themes', () => {
     cy.get('@DocsNav').contains('Theme').click();
-    cy.get('.DocsThemeCode').should('exist');
+    cy.get('.DocsTheme').should('exist');
   });
 });

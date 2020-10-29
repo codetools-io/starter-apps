@@ -5,7 +5,7 @@ import { Box } from 'grommet';
 import useRouter from 'internal/hooks/useRouter';
 import DocsAbout from './DocsAbout';
 import DocsCode from './DocsCode';
-import DocsThemeCode from './DocsThemeCode';
+import DocsTheme from './DocsTheme';
 import DocsPreview from './DocsPreview';
 import DocsHooks from './DocsHooks';
 import DocsDomain from './DocsDomain';
@@ -74,7 +74,7 @@ export default function DocsMain({
         isActive: queryParams?.mode === 'props',
       },
       {
-        Component: DocsThemeCode,
+        Component: DocsTheme,
         title: 'Theme',
         key: 'theme',
         index: 6,
