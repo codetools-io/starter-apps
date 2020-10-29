@@ -13,7 +13,8 @@ const THEME_DESIGNER_ORIGIN = process?.env?.REACT_APP_THEME_DESIGNER_ORIGIN;
 const THEME_DESIGNER_STORAGE = process?.env?.REACT_APP_THEME_DESIGNER_STORAGE;
 
 export default function ThemePicker({
-  currentTheme,
+  themeName,
+  themes = [],
   onChange = () => {},
   onImport = () => {},
 }) {
@@ -22,12 +23,13 @@ export default function ThemePicker({
     'default',
     'paradise',
     'sunglow',
+    ...themes,
   ]);
   const [inputValue, setInputValue] = useState('');
   const [importingTheme, setImportingTheme] = useState(false);
   const showImport = useMemo(() => {
-    return currentTheme === 'import…' && !importingTheme;
-  }, [currentTheme, importingTheme]);
+    return themeName === 'import…' && !importingTheme;
+  }, [themeName, importingTheme]);
 
   function addTheme(themeName) {
     if (!themeOptions?.includes(themeName)) {
@@ -58,7 +60,7 @@ export default function ThemePicker({
       })
       .then((data) => {
         addTheme(data?.name);
-        onImport({ theme: data });
+        onImport({ theme: data, name: data?.name, url: themeEndpoint });
         setInputValue('');
       })
       .catch((err) => {
@@ -76,7 +78,7 @@ export default function ThemePicker({
       </Text>
       <Select
         options={[...themeOptions, 'import…']}
-        value={currentTheme}
+        value={themeName}
         onChange={onChange}
       />
       {showImport && (

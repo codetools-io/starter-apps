@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Text } from 'grommet';
 import { Cubes, Expand } from 'grommet-icons';
+import { useLocalStorage } from 'react-use';
 import useRouter from 'internal/hooks/useRouter';
 import TooltipButton from 'internal/components/TooltipButton';
 import ThemePicker from 'internal/components/ThemePicker';
@@ -12,24 +13,31 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
   const { queryParams, setQueryParam } = useRouter();
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isOverlayToggled, setIsOverlayToggled] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState(
-    queryParams?.theme || 'default'
-  );
+  const [themeName, setThemeName] = useState(queryParams?.theme || 'default');
   const [theme, setTheme] = useState();
+  const [externalThemes, setExternalThemes] = useLocalStorage(
+    'externalThemes',
+    {}
+  );
 
   useEffect(() => {
     loadActions([
       <ThemePicker
         key="action-theme"
-        currentTheme={currentTheme}
+        themeName={themeName}
+        themes={Object.keys(externalThemes)}
         onChange={({ value }) => {
-          setCurrentTheme(value);
+          setThemeName(value);
           setQueryParam('theme', value);
         }}
-        onImport={({ theme }) => {
-          setTheme(theme);
-          setCurrentTheme(theme?.name);
-          setQueryParam('theme', theme?.name);
+        onImport={({ theme, name, url }) => {
+          // setTheme(theme);
+          setThemeName(name);
+          setQueryParam('theme', name);
+          setExternalThemes({
+            ...externalThemes,
+            [name]: theme,
+          });
         }}
       />,
       doc?.components && (
@@ -55,14 +63,20 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       />,
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [doc, isFullScreen, isOverlayToggled, loadActions, currentTheme]);
+  }, [doc, isFullScreen, isOverlayToggled, loadActions, themeName]);
 
+  useEffect(() => {
+    if (queryParams?.theme && externalThemes?.[queryParams?.theme]) {
+      // setTheme(theme);
+      setTheme(externalThemes?.[queryParams?.theme]);
+    }
+  }, [queryParams, externalThemes]);
   if (isFullScreen) {
     return (
       <Box className="DocsPreview">
         <DocsPreviewModal
           onShrink={() => setIsFullScreen(false)}
-          themeName={currentTheme}
+          themeName={themeName}
           theme={theme}
         >
           {children}
@@ -81,7 +95,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
 
   return (
     <Box className="DocsPreview">
-      <DocsPreviewStandard themeName={currentTheme} theme={theme} {...props}>
+      <DocsPreviewStandard themeName={themeName} theme={theme} {...props}>
         {children}
       </DocsPreviewStandard>
     </Box>
