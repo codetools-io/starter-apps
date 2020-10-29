@@ -31,7 +31,6 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           setQueryParam('theme', value);
         }}
         onImport={({ theme, name, url }) => {
-          // setTheme(theme);
           setThemeName(name);
           setQueryParam('theme', name);
           setExternalThemes({
