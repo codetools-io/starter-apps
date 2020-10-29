@@ -60,6 +60,7 @@
     "build": "react-scripts build",
     "start": "react-scripts -r @cypress/instrument-cra start",
     "cypress": "cypress open",
+    "cypress-run": "cypress run",
     "test": "react-scripts test --env=jsdom --watchAll=false",
     "test-watch": "react-scripts test --env=jsdom",
     "coverage": "react-scripts test --env=jsdom  --watchAll=false --coverage",

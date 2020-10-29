@@ -35,7 +35,7 @@ export default function DocsTheme({ themes = {}, loadActions }) {
 
   useEffect(() => {
     loadActions([
-      <Box key="action-theme-code" className="DocsThemeActionTheme">
+      <Box key="action-theme" className="DocsThemeAction">
         <Text color="text-xweak" size="small" margin={{ top: '-1rem' }}>
           theme
         </Text>

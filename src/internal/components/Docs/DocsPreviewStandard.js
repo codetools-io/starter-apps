@@ -10,8 +10,6 @@ export default function DocsPreviewStandard({
   theme,
   ...props
 }) {
-  console.log(themeName);
-  console.log(theme);
   return (
     <Box className="DocsPreviewStandard">
       <DocsCard height="large" flex={false} {...props}>

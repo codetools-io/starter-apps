@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemePicker can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 gAsOLC ThemePicker"
+  >
+    <span
+      class="StyledText-sc-1sadyjn-0 KrtKs"
+    >
+      theme
+    </span>
+    <button
+      aria-label="Open Drop"
+      class="StyledButton-sc-323bzc-0 kUDdtj Select__StyledSelectDropButton-sc-17idtfo-1 bsheiM"
+      type="button"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 lhHpuy"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 gErjJY"
+        >
+          <div
+            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 flNVco"
+          >
+            <input
+              autocomplete="off"
+              class="StyledTextInput-sc-1x30a0s-0 ishQAc Select__SelectTextInput-sc-17idtfo-0 SgOJf"
+              readonly=""
+              tabindex="-1"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 dderd"
+          style="min-width: auto;"
+        >
+          <svg
+            aria-label="FormDown"
+            class="StyledIcon-ofa7kd-0 lgGeuM"
+            viewBox="0 0 24 24"
+          >
+            <polyline
+              fill="none"
+              points="18 9 12 15 6 9"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+`;
