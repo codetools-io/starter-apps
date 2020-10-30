@@ -23,6 +23,7 @@ export default function DocsMain({
 }) {
   const { queryParams, setQueryParam, url } = useRouter();
   const [actions, setActions] = useState([]);
+
   const tabs = useMemo(() => {
     return [
       {

@@ -1,19 +1,64 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Box, Button, Grid, Text } from 'grommet';
 import MonacoEditor from '@monaco-editor/react';
 import useRouter from 'internal/hooks/useRouter';
 import DocsCard from './DocsCard';
-
+import './DocsCode.css';
 const options = {
   fontSize: 16,
   minimap: {
     enabled: false,
   },
   readOnly: true,
+  smoothScrolling: true,
 };
 export default function DocsCode({ files = [] }) {
   const { queryParams, setQueryParam } = useRouter();
+  const editor = useRef();
   const [activeFileIndex, setActiveFileIndex] = useState(null);
+  const highlightLines = useCallback(
+    (editor) => {
+      const {
+        line_end,
+        line_start,
+        filepath,
+        highlighted_filepath,
+      } = queryParams;
+
+      if (filepath === highlighted_filepath && line_end && line_start) {
+        const selectionStart = parseInt(line_start, 10);
+        const selectionEnd = parseInt(line_end, 10);
+        editor.revealLine(selectionStart);
+        editor.deltaDecorations(
+          [],
+          [
+            {
+              range: {
+                startLineNumber: selectionStart,
+                endLineNumber: selectionEnd,
+              },
+              options: {
+                isWholeLine: true,
+                className: 'DocsCodeSelectedLine',
+                linesDecorationsClassName: 'DocsCodeSelectedGutter',
+              },
+            },
+          ]
+        );
+      }
+    },
+    [queryParams]
+  );
+  function onEditorMount(getValue, _editor) {
+    editor.current = _editor;
+    highlightLines(_editor);
+  }
+
+  function onChangeTab({ filepath, index }) {
+    setQueryParam('filepath', filepath);
+    setActiveFileIndex(index);
+    highlightLines(editor.current);
+  }
 
   useEffect(() => {
     if (files?.length && !queryParams?.filepath) {
@@ -29,6 +74,11 @@ export default function DocsCode({ files = [] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files, queryParams]);
 
+  useEffect(() => {
+    if (editor?.current) {
+      highlightLines(editor.current);
+    }
+  }, [queryParams, editor, highlightLines]);
   return (
     <Box className="DocsCode">
       <DocsCard height="large" pad="medium" flex={false}>
@@ -61,10 +111,9 @@ export default function DocsCode({ files = [] }) {
                           {file?.filepath}
                         </Text>
                       }
-                      onClick={() => {
-                        setQueryParam('filepath', file?.filepath);
-                        setActiveFileIndex(index);
-                      }}
+                      onClick={() =>
+                        onChangeTab({ filepath: file?.filepath, index })
+                      }
                       size="large"
                       fill
                       plain
@@ -81,6 +130,7 @@ export default function DocsCode({ files = [] }) {
                 height="100%"
                 value={files[activeFileIndex]?.content}
                 options={options}
+                editorDidMount={onEditorMount}
               />
             </Box>
           </Grid>
