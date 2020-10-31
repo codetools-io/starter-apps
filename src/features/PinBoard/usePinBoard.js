@@ -5,6 +5,7 @@ import * as config from './config';
 export default function usePinBoard() {
   const [notes, setNotes] = useState(config?.notes);
   const [board, setBoard] = useState(config?.board);
+
   return useMemo(() => {
     function moveNote({ id, x, y }) {
       setNotes(
@@ -47,6 +48,20 @@ export default function usePinBoard() {
       setNotes(notes?.filter((note) => !ids?.includes(note?.id)));
     }
 
-    return { addNote, board, moveNote, notes, removeNotes };
+    function updateNote(update) {
+      setNotes(
+        notes?.map((note) => {
+          if (note?.id !== update?.id) {
+            return note;
+          }
+          return {
+            ...note,
+            ...update,
+          };
+        })
+      );
+    }
+
+    return { addNote, board, updateNote, moveNote, notes, removeNotes };
   }, [board, notes]);
 }
