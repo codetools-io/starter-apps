@@ -26,6 +26,7 @@ export default function Router({ docs }) {
   const Feed = lazy(() => import('./features/SocialMedia/Feed'));
   const AppShell = lazy(() => import('./shells/AppShell'));
   const ImageEditor = lazy(() => import('./features/ImageEditor'));
+  const PinBoard = lazy(() => import('./features/PinBoard'));
 
   return (
     <Suspense fallback={<p>loading route…</p>}>
@@ -91,6 +92,11 @@ export default function Router({ docs }) {
           docs={docs}
           component={ImageEditor}
           path={`/features/image-editor`}
+        />
+        <DocRoute
+          docs={docs}
+          component={PinBoard}
+          path={`/features/pin-board`}
         />
       </Switch>
     </Suspense>
