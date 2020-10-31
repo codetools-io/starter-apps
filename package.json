@@ -59,6 +59,7 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "react-scripts -r @cypress/instrument-cra start",
+    "dev": "react-scripts start",
     "cypress": "cypress open",
     "cypress-run": "cypress run",
     "test": "react-scripts test --env=jsdom --watchAll=false",
@@ -99,7 +100,7 @@
     ]
   },
   "lint-staged": {
-    "*.{js,md,css}": [
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
       "git add"
     ]

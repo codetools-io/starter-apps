@@ -1,6 +1,20 @@
 {
   "compilerOptions": {
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "features/*": ["./src/features/*"],
+      "internal/*": ["./src/internal/*"],
+      "shells/*": ["./src/shells/*"],
+      "themes/*": ["./src/themes/*"]
+    }
   },
-  "include": ["src"]
+  "exclude": [
+    ".blueprints",
+    "build",
+    "coverage",
+    "cypress",
+    "node_modules",
+    "samples",
+    "tools"
+  ]
 }
