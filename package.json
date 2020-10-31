@@ -85,13 +85,7 @@
       "cy": true,
       "context": true,
       "Cypress": true
-    },
-    "ignorePatterns": [
-      "src/features/**/*",
-      "src/internal/**/*",
-      "src/shells/**/*",
-      "src/themes/**/*"
-    ]
+    }
   },
   "browserslist": {
     "production": [
