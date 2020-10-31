@@ -7,7 +7,21 @@ export default function useHome({
   categories = [],
 }) {
   const uniqueGrommets = useMemo(() => {
-    return new Set(components?.flatMap((c) => c?.grommet)?.filter((c) => c));
+    const grommets = new Set(
+      components?.flatMap((c) => c?.grommet)?.filter((c) => c)
+    );
+    return [...grommets]?.sort((a, b) => {
+      const nameA = a?.toUpperCase?.();
+      const nameB = b?.toUpperCase?.();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      return 0;
+    });
   }, [components]);
   const initialGrommetOptions = Object.fromEntries(
     [...uniqueGrommets]?.map((c) => [c, false])
