@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Box, Card, CardBody, Heading, Paragraph } from 'grommet';
+import { Box, Button, Card, CardBody, Heading, Paragraph } from 'grommet';
+import { Trash } from 'grommet-icons';
+
 import usePinBoard from './usePinBoard';
 
 export default function PinBoard({ children, ...props }) {
@@ -11,10 +13,10 @@ export default function PinBoard({ children, ...props }) {
     movementX: null,
     movementY: null,
   };
-  const { board, moveNote, notes } = usePinBoard();
+  const { addNote, board, moveNote, notes, removeNotes } = usePinBoard();
   const targetRef = useRef({});
   const [coordinates, setCoordinates] = useState(defaultCoordinates);
-  const [selectedId, setSelectedId] = useState();
+  const [selectedIds, setSelectedIds] = useState([]);
 
   const onDragStart = useCallback(
     (e, note) => {
@@ -56,12 +58,24 @@ export default function PinBoard({ children, ...props }) {
     e.preventDefault();
   }
 
-  function onSelect(id) {
-    if (selectedId === id) {
-      setSelectedId(null);
+  function onSelect(e, id) {
+    e.preventDefault();
+    if (selectedIds.includes(id)) {
+      setSelectedIds(selectedIds?.filter((selectedId) => selectedId !== id));
     } else {
-      setSelectedId(id);
+      setSelectedIds([...selectedIds, id]);
     }
+  }
+
+  function onClickBoard(e) {
+    e.preventDefault();
+    setSelectedIds([]);
+  }
+
+  function onDoubleClickBoard(e) {
+    e.preventDefault();
+    const rect = e.target.getBoundingClientRect();
+    addNote({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   }
 
   useEffect(() => {
@@ -82,41 +96,70 @@ export default function PinBoard({ children, ...props }) {
   return (
     <Box className="PinBoard" height="large" {...props}>
       <Box
-        ref={targetRef}
-        onDrop={onDrop}
-        onDragOver={onDragOver}
-        style={{ position: 'relative' }}
+        direction="row"
+        justify="between"
+        align="center"
         flex={false}
-        overflow="auto"
-        fill
+        height="xsmall"
+        pad="medium"
       >
-        {notes?.map((note) => {
-          const isSelected = note?.id === selectedId;
-          return (
-            <Card
-              key={note?.id}
-              onDragStart={(e) => onDragStart(e, note)}
-              onDrag={onDrag}
-              onDragEnd={onDragEnd}
-              style={{
-                position: 'absolute',
-                left: `${note?.x}px`,
-                top: `${note?.y}px`,
-                height: `${note?.height}px`,
-                width: `${note?.width}px`,
-                transition: `box-shadow 0.5s ease-in-out`,
-                outline: 'transparent',
-              }}
-              background="background-front"
-              elevation={isSelected ? 'large' : 'small'}
-              onClick={() => onSelect(note?.id)}
-              pad="small"
-              draggable
-            >
-              <Paragraph margin="none">{note?.title}</Paragraph>
-            </Card>
-          );
-        })}
+        <Box></Box>
+        <Box direction="row" align="center">
+          {selectedIds?.length > 0 ? (
+            <Button
+              icon={<Trash />}
+              onClick={() => removeNotes(selectedIds)}
+              plain
+            />
+          ) : null}
+        </Box>
+      </Box>
+      <Box pad={{ horizontal: 'medium', bottom: 'medium' }} fill>
+        <Box
+          ref={targetRef}
+          onDrop={onDrop}
+          onDragOver={onDragOver}
+          style={{ position: 'relative' }}
+          flex={false}
+          overflow="auto"
+          onDoubleClick={onDoubleClickBoard}
+          border
+          fill
+        >
+          {notes?.map((note) => {
+            const isSelected = selectedIds.includes(note?.id);
+
+            return (
+              <Card
+                key={note?.id}
+                onDragStart={(e) => onDragStart(e, note)}
+                onDrag={onDrag}
+                onDragEnd={onDragEnd}
+                style={{
+                  position: 'absolute',
+                  left: `${note?.x}px`,
+                  top: `${note?.y}px`,
+                  height: `${note?.height}px`,
+                  width: `${note?.width}px`,
+                  transition: `box-shadow 0.5s ease-in-out`,
+                  outline: 'transparent',
+                }}
+                background="background-front"
+                elevation="none"
+                border={{
+                  side: 'all',
+                  color: isSelected ? 'brand' : 'light-3',
+                  size: isSelected ? 'medium' : 'xsmall',
+                }}
+                onClick={(e) => onSelect(e, note?.id)}
+                pad="small"
+                draggable
+              >
+                <Paragraph margin="none">{note?.title}</Paragraph>
+              </Card>
+            );
+          })}
+        </Box>
       </Box>
     </Box>
   );
