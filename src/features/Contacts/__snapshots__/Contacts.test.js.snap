@@ -6,177 +6,177 @@ exports[`Contacts can render 1`] = `
     class="ErrorBoundary"
   >
     <div
-      class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
+      class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
     >
       <div
-        class="StyledGrid-sc-1wofa1l-0 btTscx"
+        class="StyledGrid-sc-1wofa1l-0 fdydnQ"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 inPCpt"
+          class="StyledBox-sc-13pk1d4-0 IFvIg"
         >
           <div
-            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 flNVco"
+            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
           >
             <input
               autocomplete="off"
-              class="StyledTextInput-sc-1x30a0s-0 ishQAc"
+              class="StyledTextInput-sc-1x30a0s-0 fXMpul"
               placeholder="Search contacts"
               value=""
             />
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 cfLXkh"
+          class="StyledBox-sc-13pk1d4-0 XQutc"
         >
           <button
-            class="StyledButton-sc-323bzc-0 eVPMSD"
+            class="StyledButton-sc-323bzc-0 hmOcFG"
             type="button"
           >
             Edit
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 Cjabn"
+          class="StyledBox-sc-13pk1d4-0 karquW"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 gAsOLC"
+            class="StyledBox-sc-13pk1d4-0 dYebPD"
           >
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 lBzwv"
+                class="StyledBox-sc-13pk1d4-0 QTdZW"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Jane
                    
                   D
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Some Company Inc.
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
             />
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 cBcwjm"
+                class="StyledBox-sc-13pk1d4-0 eWPtUz"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Bill
                    
                   S
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Another Company Inc.
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
             />
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 cBcwjm"
+                class="StyledBox-sc-13pk1d4-0 eWPtUz"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Suzy
                    
                   Q
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Not A Company Inc.
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
             />
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 cBcwjm"
+                class="StyledBox-sc-13pk1d4-0 eWPtUz"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Mike
                    
                   S
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Same Company Inc.
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
             />
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 cBcwjm"
+                class="StyledBox-sc-13pk1d4-0 eWPtUz"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Sarah
                    
                   T
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Should Be A Company Inc.
                 </span>
               </div>
             </button>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
             />
             <button
-              class="StyledButton-sc-323bzc-0 kUDdtj"
+              class="StyledButton-sc-323bzc-0 ebqXLG"
               type="button"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 cBcwjm"
+                class="StyledBox-sc-13pk1d4-0 eWPtUz"
               >
                 <span
-                  class="StyledText-sc-1sadyjn-0 keEqcz"
+                  class="StyledText-sc-1sadyjn-0 DkZvS"
                 >
                   Mark
                    
                   W
                 </span>
                 <span
-                  class="StyledText-sc-1sadyjn-0 eIpmFk"
+                  class="StyledText-sc-1sadyjn-0 fCoioF"
                 >
                   Was A Company Inc.
                 </span>
@@ -185,220 +185,220 @@ exports[`Contacts can render 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 ebomOA"
+          class="StyledBox-sc-13pk1d4-0 czTvA-d"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 iSmarO"
+            class="StyledBox-sc-13pk1d4-0 bEnuwL"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 gAsOLC"
+              class="StyledBox-sc-13pk1d4-0 dYebPD"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                class="StyledBox-sc-13pk1d4-0 dYebPD"
               >
                 <img
-                  class="StyledImage-ey4zx9-0 ddxXmi"
+                  class="StyledImage-ey4zx9-0 dMlsqP"
                   src="/placeholder/img/avatars/girl1.jpg"
                 />
               </div>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jVmRoH"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ZUJgG"
               />
               <h4
-                class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                class="StyledHeading-sc-1rdh4aw-0 ijaako"
               >
                 Jane
                  
                 D
               </h4>
               <div
-                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jVmRoH"
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ZUJgG"
               />
               <span
-                class="StyledText-sc-1sadyjn-0 faTntD"
+                class="StyledText-sc-1sadyjn-0 gOVGlS"
               >
                 Some Company Inc.
               </span>
             </div>
             <div
-              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hRwOln"
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
             />
             <div
-              class="StyledBox-sc-13pk1d4-0 bXEBrY"
+              class="StyledBox-sc-13pk1d4-0 kluzTJ"
             >
               <ul
-                class="List__StyledList-sc-130gdqg-0 bgDkeV"
+                class="List__StyledList-sc-130gdqg-0 kOISDA"
               >
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         First Name
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       Jane
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Last Name
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       D
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Company
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       Some Company Inc.
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Email
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       janed@example.com
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Mobile
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       (555) 555-1234
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Home
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       (555) 555-5678
                     </div>
                   </div>
                 </li>
                 <li
-                  class="StyledBox-sc-13pk1d4-0 bxwoU List__StyledItem-sc-130gdqg-1 dwvmYp"
+                  class="StyledBox-sc-13pk1d4-0 iFIcEV List__StyledItem-sc-130gdqg-1 gpBpoU"
                 >
                   <div
-                    class="StyledBox-sc-13pk1d4-0 iSmarO"
+                    class="StyledBox-sc-13pk1d4-0 bEnuwL"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 kJuWxj"
+                      class="StyledBox-sc-13pk1d4-0 gfZcJy"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 fiywiB"
+                        class="StyledText-sc-1sadyjn-0 JhXAc"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 iGRskX"
+                      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
                     />
                     <div
-                      class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
                     >
                       (555) 555-1000
                     </div>

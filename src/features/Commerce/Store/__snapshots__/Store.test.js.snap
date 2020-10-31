@@ -6,57 +6,57 @@ exports[`Store can render 1`] = `
     class="ErrorBoundary"
   >
     <div
-      class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
+      class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 gAsOLC"
+        class="StyledBox-sc-13pk1d4-0 dYebPD"
       >
         <div
-          class="StyledGrid-sc-1wofa1l-0 jrLXJD Store"
+          class="StyledGrid-sc-1wofa1l-0 jNzcQG Store"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 kPiijc"
+            class="StyledBox-sc-13pk1d4-0 cZJDzt"
           >
             <form>
               <div
-                class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                class="StyledBox-sc-13pk1d4-0 dYebPD"
               >
                 <div
-                  class="StyledBox-sc-13pk1d4-0 gMTHwR"
+                  class="StyledBox-sc-13pk1d4-0 fumbms"
                 >
                   <h5
-                    class="StyledHeading-sc-1rdh4aw-0 kzWpOS"
+                    class="StyledHeading-sc-1rdh4aw-0 fsIjVH"
                   >
                     Price
                   </h5>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 dXitLD FormField__FormFieldBox-m9hood-0 eQPoge"
+                    class="StyledBox-sc-13pk1d4-0 dLXLoO FormField__FormFieldBox-m9hood-0 jGEMXj"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 jAtpHk FormField__FormFieldContentBox-m9hood-1"
+                      class="StyledBox-sc-13pk1d4-0 euBdwh FormField__FormFieldContentBox-m9hood-1"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                        class="StyledBox-sc-13pk1d4-0 dYebPD"
                       >
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="price-1"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="price-1"
                               name="price"
                               type="radio"
                               value="0.00-24.99"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <span
@@ -66,24 +66,24 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="price-2"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="price-2"
                               name="price"
                               type="radio"
                               value="25.00-99.99"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <span
@@ -93,24 +93,24 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="price-3"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="price-3"
                               name="price"
                               type="radio"
                               value="100.00-499.99"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <span
@@ -120,24 +120,24 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="price-4"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="price-4"
                               name="price"
                               type="radio"
                               value="500.00-99999999999.99"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <span
@@ -147,28 +147,28 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="price-5"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
                               checked=""
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="price-5"
                               name="price"
                               type="radio"
                               value="0.00-99999999999.99"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 lnLanI StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 gFTKcF StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             >
                               <svg
-                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 jCfXLO"
+                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 hVSGD"
                                 preserveAspectRatio="xMidYMid meet"
                                 viewBox="0 0 24 24"
                               >
@@ -191,42 +191,42 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 gMTHwR"
+                  class="StyledBox-sc-13pk1d4-0 fumbms"
                 >
                   <h5
-                    class="StyledHeading-sc-1rdh4aw-0 kzWpOS"
+                    class="StyledHeading-sc-1rdh4aw-0 fsIjVH"
                   >
                     Category
                   </h5>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 dXitLD FormField__FormFieldBox-m9hood-0 eQPoge"
+                    class="StyledBox-sc-13pk1d4-0 dLXLoO FormField__FormFieldBox-m9hood-0 jGEMXj"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 jAtpHk FormField__FormFieldContentBox-m9hood-1"
+                      class="StyledBox-sc-13pk1d4-0 euBdwh FormField__FormFieldContentBox-m9hood-1"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                        class="StyledBox-sc-13pk1d4-0 dYebPD"
                       >
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-category-1"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-category-1"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -234,22 +234,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-category-2"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-category-2"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -257,22 +257,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-category-3"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-category-3"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -280,22 +280,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-category-4"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-category-4"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -303,22 +303,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-category-5"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-category-5"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -330,42 +330,42 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 gMTHwR"
+                  class="StyledBox-sc-13pk1d4-0 fumbms"
                 >
                   <h5
-                    class="StyledHeading-sc-1rdh4aw-0 kzWpOS"
+                    class="StyledHeading-sc-1rdh4aw-0 fsIjVH"
                   >
                     Brand
                   </h5>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 dXitLD FormField__FormFieldBox-m9hood-0 eQPoge"
+                    class="StyledBox-sc-13pk1d4-0 dLXLoO FormField__FormFieldBox-m9hood-0 jGEMXj"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 jAtpHk FormField__FormFieldContentBox-m9hood-1"
+                      class="StyledBox-sc-13pk1d4-0 euBdwh FormField__FormFieldContentBox-m9hood-1"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                        class="StyledBox-sc-13pk1d4-0 dYebPD"
                       >
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-brand-1"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-brand-1"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -373,22 +373,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-brand-2"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-brand-2"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -396,22 +396,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-brand-3"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-brand-3"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -419,22 +419,22 @@ exports[`Store can render 1`] = `
                           </span>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 coVUXB"
+                          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 htOOow"
                           for="store-brand-4"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 hxGMLz StyledCheckBox-sc-1dbk5ju-6 iilsmH"
+                            class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
                           >
                             <input
-                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 eIaMyx"
+                              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 fYuA-Ds"
                               id="store-brand-4"
                               type="checkbox"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hrXAPA StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 coocwN"
+                              class="StyledBox-sc-13pk1d4-0 jYPXhZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
                             />
                           </div>
                           <span>
@@ -446,52 +446,52 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                 />
                 <div
-                  class="StyledBox-sc-13pk1d4-0 gMTHwR"
+                  class="StyledBox-sc-13pk1d4-0 fumbms"
                 >
                   <h5
-                    class="StyledHeading-sc-1rdh4aw-0 kzWpOS"
+                    class="StyledHeading-sc-1rdh4aw-0 fsIjVH"
                   >
                     Rating
                   </h5>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 PeZyz"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kDNLiy"
                   />
                   <div
-                    class="StyledBox-sc-13pk1d4-0 dXitLD FormField__FormFieldBox-m9hood-0 eQPoge"
+                    class="StyledBox-sc-13pk1d4-0 dLXLoO FormField__FormFieldBox-m9hood-0 jGEMXj"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 jAtpHk FormField__FormFieldContentBox-m9hood-1"
+                      class="StyledBox-sc-13pk1d4-0 euBdwh FormField__FormFieldContentBox-m9hood-1"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 gAsOLC"
+                        class="StyledBox-sc-13pk1d4-0 dYebPD"
                       >
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-5"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-5"
                               name="rating"
                               type="radio"
                               value="5"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iSmarO"
+                            class="StyledBox-sc-13pk1d4-0 bEnuwL"
                           >
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -502,7 +502,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -513,7 +513,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -524,7 +524,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -535,7 +535,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -547,32 +547,32 @@ exports[`Store can render 1`] = `
                           </div>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-4"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-4"
                               name="rating"
                               type="radio"
                               value="4"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iSmarO"
+                            class="StyledBox-sc-13pk1d4-0 bEnuwL"
                           >
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -583,7 +583,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -594,7 +594,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -605,7 +605,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -616,7 +616,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -628,32 +628,32 @@ exports[`Store can render 1`] = `
                           </div>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-3"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-3"
                               name="rating"
                               type="radio"
                               value="3"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iSmarO"
+                            class="StyledBox-sc-13pk1d4-0 bEnuwL"
                           >
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -664,7 +664,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -675,7 +675,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -686,7 +686,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -697,7 +697,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -709,32 +709,32 @@ exports[`Store can render 1`] = `
                           </div>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-2"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-2"
                               name="rating"
                               type="radio"
                               value="2"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iSmarO"
+                            class="StyledBox-sc-13pk1d4-0 bEnuwL"
                           >
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -745,7 +745,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -756,7 +756,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -767,7 +767,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -778,7 +778,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -790,32 +790,32 @@ exports[`Store can render 1`] = `
                           </div>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-1"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-1"
                               name="rating"
                               type="radio"
                               value="1"
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 ljravc StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 cMdTKN StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             />
                           </div>
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iSmarO"
+                            class="StyledBox-sc-13pk1d4-0 bEnuwL"
                           >
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 ivqtA"
+                              class="StyledIcon-ofa7kd-0 eRoOjd"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -826,7 +826,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -837,7 +837,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -848,7 +848,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -859,7 +859,7 @@ exports[`Store can render 1`] = `
                             </svg>
                             <svg
                               aria-label="Star"
-                              class="StyledIcon-ofa7kd-0 gkyWxk"
+                              class="StyledIcon-ofa7kd-0 dEeaTZ"
                               viewBox="0 0 24 24"
                             >
                               <polygon
@@ -871,28 +871,28 @@ exports[`Store can render 1`] = `
                           </div>
                         </label>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                         />
                         <label
-                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 cywtwT"
+                          class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hnWETW"
                           for="rating-any"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 iXCcFC StyledRadioButton-g1f6ld-5 gFvNRB"
+                            class="StyledBox-sc-13pk1d4-0 bHWzdD StyledRadioButton-g1f6ld-5 imYubY"
                           >
                             <input
                               checked=""
-                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fcnQDm"
+                              class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
                               id="rating-any"
                               name="rating"
                               type="radio"
                               value=""
                             />
                             <div
-                              class="StyledBox-sc-13pk1d4-0 lnLanI StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 csMKZz"
+                              class="StyledBox-sc-13pk1d4-0 gFTKcF StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
                             >
                               <svg
-                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 jCfXLO"
+                                class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 hVSGD"
                                 preserveAspectRatio="xMidYMid meet"
                                 viewBox="0 0 24 24"
                               >
@@ -918,34 +918,34 @@ exports[`Store can render 1`] = `
             </form>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 fHRyTm"
+            class="StyledBox-sc-13pk1d4-0 bXSMjD"
             style="position: relative; transform: scale(1);"
           >
             <div
-              class="StyledGrid-sc-1wofa1l-0 hlDHtZ"
+              class="StyledGrid-sc-1wofa1l-0 hWBgsw"
             >
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/coffee-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $10.99
                       </span>
@@ -953,26 +953,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Coffee
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -980,27 +980,27 @@ exports[`Store can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/honey-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $200.99
                       </span>
@@ -1008,26 +1008,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Honey
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -1035,27 +1035,27 @@ exports[`Store can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/onion-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $50.99
                       </span>
@@ -1063,26 +1063,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Onions
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -1090,27 +1090,27 @@ exports[`Store can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/strawberry-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $399.99
                       </span>
@@ -1118,26 +1118,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Strawberries
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -1145,27 +1145,27 @@ exports[`Store can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/tea-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $6,000.99
                       </span>
@@ -1173,26 +1173,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Tea
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -1200,27 +1200,27 @@ exports[`Store can render 1`] = `
                 </div>
               </div>
               <div
-                class="StyledBox-sc-13pk1d4-0 eeTkHG"
+                class="StyledBox-sc-13pk1d4-0 ikNWCf"
               >
                 <div
-                  class="StyledStack-ajspsk-0 exHXcQ"
+                  class="StyledStack-ajspsk-0 fDjhAR"
                 >
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 egnOtZ"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
                   >
                     <img
-                      class="StyledImage-ey4zx9-0 igMWQZ"
+                      class="StyledImage-ey4zx9-0 JknTg"
                       src="/placeholder/img/food/raspberry-1200xauto.jpg"
                     />
                   </div>
                   <div
-                    class="StyledStack__StyledStackLayer-ajspsk-1 fvVIsC"
+                    class="StyledStack__StyledStackLayer-ajspsk-1 idIGDH"
                   >
                     <div
-                      class="StyledBox-sc-13pk1d4-0 hmagxf"
+                      class="StyledBox-sc-13pk1d4-0 ksMiLS"
                     >
                       <span
-                        class="StyledText-sc-1sadyjn-0 keEqcz"
+                        class="StyledText-sc-1sadyjn-0 DkZvS"
                       >
                         $6,000.99
                       </span>
@@ -1228,26 +1228,26 @@ exports[`Store can render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StyledBox-sc-13pk1d4-0 iIIbdL"
+                  class="StyledBox-sc-13pk1d4-0 jsieLm"
                 >
                   <h4
-                    class="StyledHeading-sc-1rdh4aw-0 ffBimN"
+                    class="StyledHeading-sc-1rdh4aw-0 ijaako"
                   >
                     Raspberries
                   </h4>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <span
-                    class="StyledText-sc-1sadyjn-0 eNvfRO"
+                    class="StyledText-sc-1sadyjn-0 kZUujH"
                   >
                     Reprehenderit in sint eiusmod esse Lorem laboris cillum nostrud ut quis ipsum non duis magna. Ea sit non id qui minim do nisi tempor ad. Proident ipsum aliqua nisi magna reprehenderit deserunt exercitation veniam laborum ad est aliquip amet. Culpa ullamco id esse culpa exercitation. Velit amet aliqua cillum tempor dolor laborum laborum. Tempor do officia ex enim anim. Labore do qui est occaecat fugiat et anim id laboris.
                   </span>
                   <div
-                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eaIbGj"
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ggstca"
                   />
                   <button
-                    class="StyledButton-sc-323bzc-0 eVPMSD"
+                    class="StyledButton-sc-323bzc-0 hmOcFG"
                     type="button"
                   >
                     Add to Cart
@@ -1256,7 +1256,7 @@ exports[`Store can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 xArXz"
+              class="StyledBox-sc-13pk1d4-0 foeyVW"
               style="position: sticky; bottom: 98%;"
             />
           </div>

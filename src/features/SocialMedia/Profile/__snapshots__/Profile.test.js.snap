@@ -2,30 +2,30 @@
 
 exports[`Profile can render 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 gAsOLC"
+  className="StyledBox-sc-13pk1d4-0 dYebPD"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 hBItWG"
+    className="StyledBox-sc-13pk1d4-0 dSOMTn"
   >
     <div
-      className="StyledBox-sc-13pk1d4-0 gAsOLC Masthead"
+      className="StyledBox-sc-13pk1d4-0 dYebPD Masthead"
     >
       <div
-        className="StyledStack-ajspsk-0 iTqOTQ"
+        className="StyledStack-ajspsk-0 ilzlNt"
       >
         <div
-          className="StyledStack__StyledStackLayer-ajspsk-1 kOplDO"
+          className="StyledStack__StyledStackLayer-ajspsk-1 ZrOtH"
         >
           <img
-            className="StyledImage-ey4zx9-0 igMWQZ"
+            className="StyledImage-ey4zx9-0 JknTg"
             src="/placeholder/img/space/astronaut3.jpeg"
           />
         </div>
         <div
-          className="StyledStack__StyledStackLayer-ajspsk-1 czStoR"
+          className="StyledStack__StyledStackLayer-ajspsk-1 bnpxHo"
         >
           <h1
-            className="StyledHeading-sc-1rdh4aw-0 iqdStB"
+            className="StyledHeading-sc-1rdh4aw-0 gvxPBk"
           >
             Hi. I'm John!
           </h1>
@@ -34,19 +34,19 @@ exports[`Profile can render 1`] = `
     </div>
   </div>
   <div
-    className="StyledBox-sc-13pk1d4-0 gAsOLC"
+    className="StyledBox-sc-13pk1d4-0 dYebPD"
   >
     <div
-      className="StyledBox-sc-13pk1d4-0 gAsOLC StyledTabs-a4fwxl-2 erKcXO"
+      className="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX"
       role="tablist"
     >
       <div
-        className="StyledBox-sc-13pk1d4-0 kKNmXB StyledTabs__StyledTabsHeader-a4fwxl-0 khkUrJ"
+        className="StyledBox-sc-13pk1d4-0 dByFSU StyledTabs__StyledTabsHeader-a4fwxl-0 gwFYfs"
       >
         <button
           aria-expanded={true}
           aria-selected={true}
-          className="StyledButton-sc-323bzc-0 kUDdtj"
+          className="StyledButton-sc-323bzc-0 ebqXLG"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -56,25 +56,25 @@ exports[`Profile can render 1`] = `
           type="button"
         >
           <div
-            className="StyledBox-sc-13pk1d4-0 fVMALA StyledTab-sc-1nnwnsb-0 hHDRIn"
+            className="StyledBox-sc-13pk1d4-0 cLWgPR StyledTab-sc-1nnwnsb-0 kVEPVO"
           >
             <div
-              className="StyledBox-sc-13pk1d4-0 khAtni"
+              className="StyledBox-sc-13pk1d4-0 iEStkL"
             >
               <span
-                className="StyledText-sc-1sadyjn-0 fiywiB"
+                className="StyledText-sc-1sadyjn-0 JhXAc"
               >
                 5
               </span>
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
                
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
               <span
-                className="StyledText-sc-1sadyjn-0 keEqcz"
+                className="StyledText-sc-1sadyjn-0 DkZvS"
               >
                 Posts
               </span>
@@ -84,7 +84,7 @@ exports[`Profile can render 1`] = `
         <button
           aria-expanded={false}
           aria-selected={false}
-          className="StyledButton-sc-323bzc-0 kUDdtj"
+          className="StyledButton-sc-323bzc-0 ebqXLG"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -94,25 +94,25 @@ exports[`Profile can render 1`] = `
           type="button"
         >
           <div
-            className="StyledBox-sc-13pk1d4-0 hBQQwM StyledTab-sc-1nnwnsb-0 hHDRIn"
+            className="StyledBox-sc-13pk1d4-0 gdixjB StyledTab-sc-1nnwnsb-0 kVEPVO"
           >
             <div
-              className="StyledBox-sc-13pk1d4-0 khAtni"
+              className="StyledBox-sc-13pk1d4-0 iEStkL"
             >
               <span
-                className="StyledText-sc-1sadyjn-0 fiywiB"
+                className="StyledText-sc-1sadyjn-0 JhXAc"
               >
                 1
               </span>
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
                
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
               <span
-                className="StyledText-sc-1sadyjn-0 keEqcz"
+                className="StyledText-sc-1sadyjn-0 DkZvS"
               >
                 Followers
               </span>
@@ -122,7 +122,7 @@ exports[`Profile can render 1`] = `
         <button
           aria-expanded={false}
           aria-selected={false}
-          className="StyledButton-sc-323bzc-0 kUDdtj"
+          className="StyledButton-sc-323bzc-0 ebqXLG"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -132,25 +132,25 @@ exports[`Profile can render 1`] = `
           type="button"
         >
           <div
-            className="StyledBox-sc-13pk1d4-0 hBQQwM StyledTab-sc-1nnwnsb-0 hHDRIn"
+            className="StyledBox-sc-13pk1d4-0 gdixjB StyledTab-sc-1nnwnsb-0 kVEPVO"
           >
             <div
-              className="StyledBox-sc-13pk1d4-0 khAtni"
+              className="StyledBox-sc-13pk1d4-0 iEStkL"
             >
               <span
-                className="StyledText-sc-1sadyjn-0 fiywiB"
+                className="StyledText-sc-1sadyjn-0 JhXAc"
               >
                 1
               </span>
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
                
               <div
-                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 fpjWzv"
+                className="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
               />
               <span
-                className="StyledText-sc-1sadyjn-0 keEqcz"
+                className="StyledText-sc-1sadyjn-0 DkZvS"
               >
                 Following
               </span>
@@ -160,7 +160,7 @@ exports[`Profile can render 1`] = `
       </div>
       <div
         aria-label=" Tab Contents"
-        className="StyledTabs__StyledTabPanel-a4fwxl-1 duqWsi"
+        className="StyledTabs__StyledTabPanel-a4fwxl-1 ixxRXT"
         role="tabpanel"
       />
     </div>

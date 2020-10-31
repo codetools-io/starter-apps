@@ -6,60 +6,60 @@ exports[`Notes can render 1`] = `
     class="ErrorBoundary"
   >
     <div
-      class="StyledGrommet-sc-19lkkz7-0 ggTDHw"
+      class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
     >
       <div
-        class="StyledGrid-sc-1wofa1l-0 ksoUtT"
+        class="StyledGrid-sc-1wofa1l-0 kKIkOi"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 iUOkdZ"
+          class="StyledBox-sc-13pk1d4-0 bymJxs"
         >
           <div
-            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 flNVco"
+            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
           >
             <input
               autocomplete="off"
-              class="StyledTextInput-sc-1x30a0s-0 ishQAc"
+              class="StyledTextInput-sc-1x30a0s-0 fXMpul"
               placeholder="Search notes"
               value=""
             />
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 efgYNe"
+          class="StyledBox-sc-13pk1d4-0 hpJDoj"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 bspXqH"
+          class="StyledBox-sc-13pk1d4-0 bOxnYy"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 gAsOLC"
+            class="StyledBox-sc-13pk1d4-0 dYebPD"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 hPeuvi"
+              class="StyledBox-sc-13pk1d4-0 DHqWT"
               tabindex="0"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 keEqcz"
+                class="StyledText-sc-1sadyjn-0 DkZvS"
               >
                 Example Note
               </span>
               <span
-                class="StyledText-sc-1sadyjn-0 eIpmFk"
+                class="StyledText-sc-1sadyjn-0 fCoioF"
               >
                 General
               </span>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 hPeuvi"
+              class="StyledBox-sc-13pk1d4-0 DHqWT"
               tabindex="0"
             >
               <span
-                class="StyledText-sc-1sadyjn-0 keEqcz"
+                class="StyledText-sc-1sadyjn-0 DkZvS"
               >
                 Another Example Note
               </span>
               <span
-                class="StyledText-sc-1sadyjn-0 eIpmFk"
+                class="StyledText-sc-1sadyjn-0 fCoioF"
               >
                 Work
               </span>
@@ -67,17 +67,17 @@ exports[`Notes can render 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 bgrdFH"
+          class="StyledBox-sc-13pk1d4-0 djsuwe"
         >
           <button
-            class="StyledButton-sc-323bzc-0 eVPMSD"
+            class="StyledButton-sc-323bzc-0 hmOcFG"
             type="button"
           >
             New
           </button>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 cxgmfM"
+          class="StyledBox-sc-13pk1d4-0 gvUrkt"
         />
       </div>
     </div>

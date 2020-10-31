@@ -3,30 +3,30 @@
 exports[`ThemePicker can render 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 gAsOLC ThemePicker"
+    class="StyledBox-sc-13pk1d4-0 dYebPD ThemePicker"
   >
     <span
-      class="StyledText-sc-1sadyjn-0 KrtKs"
+      class="StyledText-sc-1sadyjn-0 dXXMHF"
     >
       theme
     </span>
     <button
       aria-label="Open Drop"
-      class="StyledButton-sc-323bzc-0 kUDdtj Select__StyledSelectDropButton-sc-17idtfo-1 bsheiM"
+      class="StyledButton-sc-323bzc-0 ebqXLG Select__StyledSelectDropButton-sc-17idtfo-1 iGEQF"
       type="button"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 lhHpuy"
+        class="StyledBox-sc-13pk1d4-0 jmuHez"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 gErjJY"
+          class="StyledBox-sc-13pk1d4-0 iAryDB"
         >
           <div
-            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 flNVco"
+            class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
           >
             <input
               autocomplete="off"
-              class="StyledTextInput-sc-1x30a0s-0 ishQAc Select__SelectTextInput-sc-17idtfo-0 SgOJf"
+              class="StyledTextInput-sc-1x30a0s-0 fXMpul Select__SelectTextInput-sc-17idtfo-0 bIurki"
               readonly=""
               tabindex="-1"
               type="text"
@@ -35,12 +35,12 @@ exports[`ThemePicker can render 1`] = `
           </div>
         </div>
         <div
-          class="StyledBox-sc-13pk1d4-0 dderd"
+          class="StyledBox-sc-13pk1d4-0 eA-DBEo"
           style="min-width: auto;"
         >
           <svg
             aria-label="FormDown"
-            class="StyledIcon-ofa7kd-0 lgGeuM"
+            class="StyledIcon-ofa7kd-0 fuviCN"
             viewBox="0 0 24 24"
           >
             <polyline
