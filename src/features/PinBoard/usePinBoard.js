@@ -4,7 +4,7 @@ import * as config from './config';
 
 export default function usePinBoard() {
   const [notes, setNotes] = useState(config?.notes);
-  const [board, setBoard] = useState(config?.board);
+  const [board] = useState(config?.board);
 
   return useMemo(() => {
     function moveNote({ id, x, y }) {

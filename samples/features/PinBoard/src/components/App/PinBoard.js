@@ -1,26 +1,27 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Box, Button, Card, Paragraph, Stack, TextInput } from 'grommet';
 import { Edit, Trash } from 'grommet-icons';
 
 import usePinBoard from './usePinBoard';
 
 export default function PinBoard({ children, ...props }) {
-  const defaultCoordinates = {
-    initialX: null,
-    initialY: null,
-    completionX: null,
-    completionY: null,
-    movementX: null,
-    movementY: null,
-  };
-  const {
-    addNote,
-    board,
-    updateNote,
-    moveNote,
-    notes,
-    removeNotes,
-  } = usePinBoard();
+  const defaultCoordinates = useMemo(() => {
+    return {
+      initialX: null,
+      initialY: null,
+      completionX: null,
+      completionY: null,
+      movementX: null,
+      movementY: null,
+    };
+  }, []);
+  const { addNote, updateNote, moveNote, notes, removeNotes } = usePinBoard();
   const targetRef = useRef({});
   const [coordinates, setCoordinates] = useState(defaultCoordinates);
   const [selectedIds, setSelectedIds] = useState([]);
@@ -40,7 +41,8 @@ export default function PinBoard({ children, ...props }) {
     },
     [coordinates]
   );
-  const onDrag = useCallback((e) => {}, [coordinates]);
+
+  const onDrag = useCallback((e) => {}, []);
 
   const onDragEnd = useCallback(
     (e) => {
@@ -78,7 +80,6 @@ export default function PinBoard({ children, ...props }) {
     }
   }
 
-  // toggles edit mode for a note
   function onEditNote(e, id) {
     e.preventDefault();
 
@@ -89,10 +90,6 @@ export default function PinBoard({ children, ...props }) {
     if (!editModeIds?.includes(id)) {
       setEditModeIds([...editModeIds, id]);
     }
-  }
-
-  function onEditNotes() {
-    console.log('edit the notes');
   }
 
   function onRemoveNotes() {
@@ -124,7 +121,7 @@ export default function PinBoard({ children, ...props }) {
       });
       setCoordinates(defaultCoordinates);
     }
-  }, [coordinates]);
+  }, [coordinates, defaultCoordinates, moveNote]);
 
   return (
     <Box className="PinBoard" height="large" {...props}>
@@ -159,7 +156,7 @@ export default function PinBoard({ children, ...props }) {
           overflow="auto"
           onDoubleClick={(e) => onDoubleClickBoard(e)}
           round="small"
-          border
+          border="all"
           fill
         >
           {notes?.map((note) => {
@@ -190,7 +187,6 @@ export default function PinBoard({ children, ...props }) {
                   size: isSelected ? 'medium' : 'xsmall',
                 }}
                 onClick={(e) => onSelectNote(e, note?.id)}
-                on
                 pad="small"
                 draggable
               >

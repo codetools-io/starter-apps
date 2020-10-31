@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PinBoard can render 1`] = `
+<div>
+  <div
+    class="ErrorBoundary"
+  >
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 YrSOo PinBoard"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 dXBA-dC PinBoardToolbar"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 dYebPD"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 dfYOnT"
+          />
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 iJWAwL PinBoardMain"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 fqkQPy PinBoardBoard"
+            style="position: relative;"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              draggable="true"
+              style="position: absolute; left: 25px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              tabindex="0"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 cxNasQ"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 fDjhAR"
+                  direction="row"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
+                    >
+                      <p
+                        class="StyledParagraph-tbetod-0 gHUcCr"
+                      >
+                        Note #1
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              draggable="true"
+              style="position: absolute; left: 275px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              tabindex="0"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 cxNasQ"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 fDjhAR"
+                  direction="row"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
+                    >
+                      <p
+                        class="StyledParagraph-tbetod-0 gHUcCr"
+                      >
+                        Note #2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              draggable="true"
+              style="position: absolute; left: 525px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              tabindex="0"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 cxNasQ"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 fDjhAR"
+                  direction="row"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
+                    >
+                      <p
+                        class="StyledParagraph-tbetod-0 gHUcCr"
+                      >
+                        Note #3
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              draggable="true"
+              style="position: absolute; left: 775px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              tabindex="0"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 cxNasQ"
+              >
+                <div
+                  class="StyledStack-ajspsk-0 fDjhAR"
+                  direction="row"
+                >
+                  <div
+                    class="StyledStack__StyledStackLayer-ajspsk-1 jeVJjk"
+                  >
+                    <div
+                      class="StyledBox-sc-13pk1d4-0 dYebPD"
+                    >
+                      <p
+                        class="StyledParagraph-tbetod-0 gHUcCr"
+                      >
+                        Note #4
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
