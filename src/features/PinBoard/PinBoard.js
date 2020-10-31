@@ -80,18 +80,15 @@ export default function PinBoard({ children, ...props }) {
   }, [coordinates]);
 
   return (
-    <div className="PinBoard" {...props}>
+    <Box className="PinBoard" height="large" {...props}>
       <Box
         ref={targetRef}
         onDrop={onDrop}
         onDragOver={onDragOver}
-        pad="none"
         style={{ position: 'relative' }}
         flex={false}
-        height="large"
-        width="xxlarge"
-        border={{ color: 'light-6', size: 'large' }}
         overflow="auto"
+        fill
       >
         {notes?.map((note) => {
           const isSelected = note?.id === selectedId;
@@ -107,7 +104,7 @@ export default function PinBoard({ children, ...props }) {
                 top: `${note?.y}px`,
                 height: `${note?.height}px`,
                 width: `${note?.width}px`,
-                transition: `all 0.25s ease-in-out`,
+                transition: `box-shadow 0.5s ease-in-out`,
                 outline: 'transparent',
               }}
               background="background-front"
@@ -121,6 +118,6 @@ export default function PinBoard({ children, ...props }) {
           );
         })}
       </Box>
-    </div>
+    </Box>
   );
 }
