@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Box, Card, Heading } from 'grommet';
+import { Box, Card, CardBody, Heading, Paragraph } from 'grommet';
 import usePinBoard from './usePinBoard';
 
 export default function PinBoard({ children, ...props }) {
@@ -14,6 +14,7 @@ export default function PinBoard({ children, ...props }) {
   const { board, moveNote, notes } = usePinBoard();
   const targetRef = useRef({});
   const [coordinates, setCoordinates] = useState(defaultCoordinates);
+  const [selectedId, setSelectedId] = useState();
 
   const onDragStart = useCallback(
     (e, note) => {
@@ -55,6 +56,14 @@ export default function PinBoard({ children, ...props }) {
     e.preventDefault();
   }
 
+  function onSelect(id) {
+    if (selectedId === id) {
+      setSelectedId(null);
+    } else {
+      setSelectedId(id);
+    }
+  }
+
   useEffect(() => {
     if (
       coordinates?.id &&
@@ -85,10 +94,10 @@ export default function PinBoard({ children, ...props }) {
         overflow="auto"
       >
         {notes?.map((note) => {
+          const isSelected = note?.id === selectedId;
           return (
             <Card
               key={note?.id}
-              pad="small"
               onDragStart={(e) => onDragStart(e, note)}
               onDrag={onDrag}
               onDragEnd={onDragEnd}
@@ -98,10 +107,16 @@ export default function PinBoard({ children, ...props }) {
                 top: `${note?.y}px`,
                 height: `${note?.height}px`,
                 width: `${note?.width}px`,
+                transition: `all 0.25s ease-in-out`,
+                outline: 'transparent',
               }}
+              background="background-front"
+              elevation={isSelected ? 'large' : 'small'}
+              onClick={() => onSelect(note?.id)}
+              pad="small"
               draggable
             >
-              <Heading margin="none">{note?.title}</Heading>
+              <Paragraph margin="none">{note?.title}</Paragraph>
             </Card>
           );
         })}
