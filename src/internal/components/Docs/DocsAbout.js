@@ -69,8 +69,7 @@ export default function DocsAbout({ doc }) {
                 if (isArray) {
                   const rawValue = value.trim().slice(1, -1);
                   const newValue = JSON.parse(rawValue);
-                  console.log(newValue);
-                  console.log('is array', Array.isArray(newValue));
+
                   return {
                     ...accum,
                     [key]: newValue,
@@ -147,6 +146,14 @@ export default function DocsAbout({ doc }) {
                 },
                 code: {
                   component: DocsAboutInlineCode,
+                },
+                hr: {
+                  component: () => (
+                    <Box
+                      border={{ side: 'bottom' }}
+                      margin={{ top: 'xlarge', bottom: 'xlarge' }}
+                    />
+                  ),
                 },
                 Preview: {
                   component: DocsAboutPreview,
