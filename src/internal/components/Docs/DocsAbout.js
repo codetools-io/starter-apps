@@ -46,7 +46,47 @@ export default function DocsAbout({ doc }) {
       return {
         ...accum,
         [componentName]: {
-          component: Component,
+          component: (props) => {
+            const parsedProps = Object.entries(props).reduce(
+              (accum, [key, value]) => {
+                const isObject =
+                  typeof value === 'string' &&
+                  value.trim().startsWith('{{') &&
+                  value.trim().endsWith('}}');
+                const isArray =
+                  typeof value === 'string' &&
+                  value.trim().startsWith('{[') &&
+                  value.trim().endsWith(']}');
+                if (isObject) {
+                  const rawValue = value.trim().slice(1, -1);
+                  const newValue = JSON.parse(rawValue);
+                  return {
+                    ...accum,
+                    [key]: newValue,
+                  };
+                }
+
+                if (isArray) {
+                  const rawValue = value.trim().slice(1, -1);
+                  const newValue = JSON.parse(rawValue);
+                  console.log(newValue);
+                  console.log('is array', Array.isArray(newValue));
+                  return {
+                    ...accum,
+                    [key]: newValue,
+                  };
+                }
+
+                return {
+                  ...accum,
+                  [key]: value,
+                };
+              },
+              {}
+            );
+
+            return <Component {...parsedProps} />;
+          },
         },
       };
     }, {});

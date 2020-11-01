@@ -45,7 +45,26 @@ A container for the board notes and board settings.
 A container that notes can be arranged in.
 
 <Preview>
-  <PinBoardNotes />
+  <PinBoardNotes
+    notes={[
+      {
+        "id": "note-1",
+        "title": "Note #1",
+        "x": 25,
+        "y": 25,
+        "width": 225,
+        "height": 75
+      },
+      {
+        "id": "note-2",
+        "title": "Note #2",
+        "x": 275,
+        "y": 25,
+        "width": 225,
+        "height": 75
+      }
+    ]}
+  />
 </Preview>
 
 ### PinBoardNote
@@ -53,5 +72,14 @@ A container that notes can be arranged in.
 A draggable container for a note.
 
 <Preview>
-  <PinBoardNote />
+  <PinBoardNote
+    note={{
+      "id": "note-1",
+      "title": "Note #1",
+      "x": 25,
+      "y": 25,
+      "width": 225,
+      "height": 75
+    }}
+  />
 </Preview>

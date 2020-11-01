@@ -17,17 +17,17 @@ export default function CalendarEvent({ event }) {
       dropContent={
         <Box pad="large" width={{ max: 'large' }}>
           <Paragraph margin="none">
-            <Text>{event.date.fromNow()}</Text>
+            <Text>{event?.date?.fromNow?.()}</Text>
           </Paragraph>
           <Heading level={4} margin="none">
-            {event.name}
+            {event?.name}
           </Heading>
           <Text size="xsmall">
-            {event.date.format('dddd, MMMM Do YYYY @ h:mm a')}
+            {event?.date?.format?.('dddd, MMMM Do YYYY @ h:mm a')}
           </Text>
 
           <Box margin={{ top: 'medium' }}>
-            <Markdown>{event.description}</Markdown>
+            <Markdown>{event?.description}</Markdown>
           </Box>
         </Box>
       }

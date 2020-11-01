@@ -85,7 +85,10 @@
       "cy": true,
       "context": true,
       "Cypress": true
-    }
+    },
+    "ignorePatterns": [
+      "**/*.mdx"
+    ]
   },
   "browserslist": {
     "production": [
