@@ -1,5 +1,5 @@
 import React, { useMemo, lazy } from 'react';
-import { Box, Markdown, Heading, Paragraph, Text } from 'grommet';
+import { Box, Markdown, Heading, Paragraph } from 'grommet';
 
 import DocsCard from './DocsCard';
 
