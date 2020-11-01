@@ -49,6 +49,7 @@ export default function DocsAbout({ doc }) {
           component: (props) => {
             const parsedProps = Object.entries(props).reduce(
               (accum, [key, value]) => {
+                const DATE_REGEX = /^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])/;
                 const isObject =
                   typeof value === 'string' &&
                   value.trim().startsWith('{{') &&
@@ -57,6 +58,13 @@ export default function DocsAbout({ doc }) {
                   typeof value === 'string' &&
                   value.trim().startsWith('{[') &&
                   value.trim().endsWith(']}');
+                const isUndefined = typeof value === 'undefined';
+                const isDate = DATE_REGEX.test(value);
+
+                if (isUndefined) {
+                  return accum;
+                }
+
                 if (isObject) {
                   const rawValue = value.trim().slice(1, -1);
                   const newValue = JSON.parse(rawValue);
@@ -73,6 +81,13 @@ export default function DocsAbout({ doc }) {
                   return {
                     ...accum,
                     [key]: newValue,
+                  };
+                }
+
+                if (isDate) {
+                  return {
+                    ...accum,
+                    [key]: new Date(value),
                   };
                 }
 
