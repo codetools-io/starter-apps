@@ -80,6 +80,7 @@ export default function ThemePicker({
         options={[...themeOptions, 'import…']}
         value={themeName}
         onChange={onChange}
+        size="small"
       />
       {showImport && (
         <Layer position="center">
