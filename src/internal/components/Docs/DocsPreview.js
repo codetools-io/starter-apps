@@ -53,12 +53,12 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       <TooltipButton
         key="action-fullscreen"
         className="DocsPreviewActionFullscreen"
-        tooltip={<Text size="small">Fullscreen View</Text>}
+        tooltip={<Text size="small">Fullscreen</Text>}
         icon={<Expand size="18px" />}
         onClick={() => setIsFullScreen(true)}
         color={isFullScreen ? 'control' : 'text'}
         align={{ bottom: 'top', right: 'right' }}
-        title="Fullscreen View"
+        title="Fullscreen"
       />,
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
