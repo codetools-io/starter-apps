@@ -2,17 +2,23 @@ import React from 'react';
 import { Box, Button, Card, Paragraph, Stack, TextInput } from 'grommet';
 import { Edit } from 'grommet-icons';
 export default function PinBoardNote({
-  isEditable,
-  isHovered,
-  isSelected,
-  note,
-  onDrag,
-  onDragEnd,
-  onDragStart,
-  onEditNote,
-  onSelectNote,
-  setHoveredNote,
-  updateNote,
+  isEditable = false,
+  isHovered = false,
+  isSelected = false,
+  note = {
+    title: 'New Note',
+    x: 25,
+    y: 25,
+    width: 225,
+    height: 75,
+  },
+  onDrag = () => {},
+  onDragEnd = () => {},
+  onDragStart = () => {},
+  onEditNote = () => {},
+  onSelectNote = () => {},
+  setHoveredNote = () => {},
+  updateNote = () => {},
 }) {
   return (
     <Card
@@ -38,6 +44,8 @@ export default function PinBoardNote({
       }}
       onClick={(e) => onSelectNote(e, note?.id)}
       pad="small"
+      height={{ min: 'xsmall' }}
+      width={{ min: 'xsmall' }}
       draggable
     >
       {isEditable ? (

@@ -1,22 +1,29 @@
 import genericColors from './generic-colors';
-import shades from './shades';
 import components from './components';
 
 const brandColors = {
-  brand: '#0466C8',
-  'brand-0': '#057AF0',
-  'brand-1': '#0466C8',
-  'brand-2': '#0353A4',
-  'brand-3': '#023E7D',
-  'brand-4': '#002855',
-  'brand-5': '#001845',
-  'brand-6': '#001233',
-  'brand-alt': '#7D8597',
-  'brand-alt-1': '#979DAC',
-  'brand-alt-2': '#7D8597',
-  'brand-alt-3': '#5C677D',
-  'brand-alt-4': '#33415C',
+  brand: '#33415C',
+  'brand-0': '#33415C',
+  'brand-1': '#33415C',
+  'brand-2': '#5C677D',
+  'brand-3': '#7D8597',
+  'brand-4': '#979DAC',
+  'brand-5': '#979DAC',
+  'brand-6': '#979DAC',
+  'brand-alt-1': '#33415C',
+  'brand-alt-2': '#5C677D',
+  'brand-alt-3': '#7D8597',
+  'brand-alt-4': '#979DAC',
   'brand-contrast': '#EEE',
+  'shade-1': '#F8F9FA',
+  'shade-2': '#E9ECEF',
+  'shade-3': '#DEE2E6',
+  'shade-4': '#CED4DA',
+  'shade-5': '#ADB5BD',
+  'shade-6': '#6C757D',
+  'shade-7': '#495057',
+  'shade-8': '#343A40',
+  'shade-9': '#212529',
 };
 
 export const brand = {
@@ -24,13 +31,12 @@ export const brand = {
     colors: {
       ...brandColors,
       ...genericColors,
-      ...shades,
       focus: 'brand-alt',
-      text: { light: 'shade-7' },
-      'text-strong': { light: 'shade-8' },
-      'text-weak': { light: 'shade-6' },
-      'text-xweak': { light: 'shade-5' },
-      border: { light: 'shade-2' },
+      text: { light: 'brand-2' },
+      'text-strong': { light: 'brand-1' },
+      'text-weak': { light: 'brand-3' },
+      'text-xweak': { light: 'brand-4' },
+      border: { light: 'shade-4' },
       icon: {
         dark: 'currentColor',
         light: 'currentColor',
@@ -38,6 +44,12 @@ export const brand = {
       'selected-text': 'white',
       'selected-background': 'brand',
       'active-text': 'brand-1',
+      heading1: `${brandColors['brand-alt-1']}`,
+      heading2: `${brandColors['brand-alt-2']}`,
+      heading3: `${brandColors['brand-alt-3']}`,
+      heading4: `${brandColors['brand-alt-4']}`,
+      heading5: `${brandColors['brand-alt-4']}`,
+      heading6: `${brandColors['brand-alt-4']}`,
     },
     font: {
       family: 'Montserrat',
@@ -153,6 +165,21 @@ export const brand = {
   select: {
     icons: {
       color: 'text',
+    },
+  },
+  heading: {
+    extend: (props) => {
+      const headingKey = `heading${props?.level}`;
+      const color = props?.theme?.global?.colors?.[headingKey];
+
+      return {
+        color,
+      };
+    },
+  },
+  layer: {
+    overlay: {
+      background: 'rgba(51, 65, 92, 0.85)',
     },
   },
   ...components,

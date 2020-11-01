@@ -2,7 +2,10 @@ import React from 'react';
 import { Box, Button } from 'grommet';
 import { Trash } from 'grommet-icons';
 
-export default function PinBoardToolbar({ onRemoveNotes, selectedIds }) {
+export default function PinBoardToolbar({
+  onRemoveNotes = () => {},
+  selectedIds,
+}) {
   return (
     <Box
       className="PinBoardToolbar"

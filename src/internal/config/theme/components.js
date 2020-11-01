@@ -1,11 +1,11 @@
 const components = {
   appShell: {
     sidebar: {
-      background: 'brand-2',
+      background: 'brand-1',
     },
     nav: {
       menu: {
-        background: 'brand-2',
+        background: 'brand-1',
       },
       link: {
         color: 'white',

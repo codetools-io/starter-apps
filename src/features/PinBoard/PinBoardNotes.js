@@ -4,21 +4,21 @@ import { Box } from 'grommet';
 import PinBoardNote from './PinBoardNote';
 
 export default function PinBoardNotes({
-  editModeIds,
+  editModeIds = [],
   hoveredNote,
-  notes,
-  onDoubleClickBoard,
-  onDrag,
-  onDragEnd,
-  onDragOver,
-  onDragStart,
-  onDrop,
-  onEditNote,
-  onSelectNote,
-  selectedIds,
-  setHoveredNote,
+  notes = [],
+  onDoubleClickBoard = () => {},
+  onDrag = () => {},
+  onDragEnd = () => {},
+  onDragOver = () => {},
+  onDragStart = () => {},
+  onDrop = () => {},
+  onEditNote = () => {},
+  onSelectNote = () => {},
+  selectedIds = [],
+  setHoveredNote = () => {},
   target,
-  updateNote,
+  updateNote = () => {},
 }) {
   return (
     <Box
@@ -32,9 +32,10 @@ export default function PinBoardNotes({
       onDoubleClick={(e) => onDoubleClickBoard(e)}
       round="small"
       border="all"
+      height={{ min: 'small' }}
       fill
     >
-      {notes?.map((note) => {
+      {notes?.map?.((note) => {
         const isSelected = selectedIds.includes(note?.id);
         const isEditable = editModeIds.includes(note?.id);
         const isHovered = hoveredNote === note?.id || isSelected;

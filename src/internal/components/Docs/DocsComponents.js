@@ -30,7 +30,7 @@ function DocsComponentsOverlay({ children, doc }) {
             width: 100%;
             top: 0;
             left: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(51, 65, 92, 0.65);
             z-index: 900000;
           }
           .DocsComponentsOverlay .${componentName}:after {
@@ -42,7 +42,7 @@ function DocsComponentsOverlay({ children, doc }) {
             top: 0;
             left: 0;
             display: flex;
-            border: 5px dashed rgba(255, 255, 255, 0.35);
+            border: 5px dashed rgba(51, 65, 92, 0.75);
             justify-content: center;
             align-items: center;
             color: #fff;
