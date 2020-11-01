@@ -4,7 +4,7 @@ import { Box, DropButton, Heading, Markdown, Paragraph, Text } from 'grommet';
 export default function CalendarEvent({ event }) {
   return (
     <DropButton
-      key={event?.id}
+      className="CalendarEvent"
       label={
         <Box
           background="brand"

@@ -42,7 +42,7 @@ function DocsComponentsOverlay({ children, doc }) {
             top: 0;
             left: 0;
             display: flex;
-            border: 5px dashed #fff;
+            border: 5px dashed rgba(255, 255, 255, 0.35);
             justify-content: center;
             align-items: center;
             color: #fff;

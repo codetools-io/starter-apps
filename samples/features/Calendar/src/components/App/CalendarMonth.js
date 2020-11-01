@@ -53,7 +53,7 @@ function CalendarMonthHeader({
   const dateFormatter = new Intl.DateTimeFormat(locale, options);
 
   return (
-    <Box>
+    <Box className="CalendarMonth">
       <Box
         direction="row"
         justify="between"

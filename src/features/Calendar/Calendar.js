@@ -10,6 +10,7 @@ export default function Calendar({ children, ...props }) {
 
   return (
     <Box
+      className="Calendar"
       pad={{ vertical: 'medium' }}
       overflow={{ horizontal: 'hidden' }}
       fill

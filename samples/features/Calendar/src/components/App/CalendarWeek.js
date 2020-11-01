@@ -16,6 +16,7 @@ function CalendarWeekHeader({
 }) {
   return (
     <Box
+      className="CalendarWeek"
       direction="row"
       justify="between"
       align="center"
