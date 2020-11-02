@@ -25,13 +25,13 @@ exports[`PinBoard can render 1`] = `
           class="StyledBox-sc-13pk1d4-0 iJWAwL PinBoardMain"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 fqkQPy PinBoardNotes"
+            class="StyledBox-sc-13pk1d4-0 lmwuWN PinBoardNotes"
             style="position: relative;"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              class="StyledBox-sc-13pk1d4-0 ToXqb PinBoardNote"
               draggable="true"
-              style="position: absolute; left: 25px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              style="position: absolute; left: 25px; top: 25px; height: 75px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
               tabindex="0"
             >
               <div
@@ -58,9 +58,9 @@ exports[`PinBoard can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              class="StyledBox-sc-13pk1d4-0 ToXqb PinBoardNote"
               draggable="true"
-              style="position: absolute; left: 275px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              style="position: absolute; left: 275px; top: 25px; height: 75px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
               tabindex="0"
             >
               <div
@@ -87,9 +87,9 @@ exports[`PinBoard can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              class="StyledBox-sc-13pk1d4-0 ToXqb PinBoardNote"
               draggable="true"
-              style="position: absolute; left: 525px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              style="position: absolute; left: 525px; top: 25px; height: 75px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
               tabindex="0"
             >
               <div
@@ -116,9 +116,9 @@ exports[`PinBoard can render 1`] = `
               </div>
             </div>
             <div
-              class="StyledBox-sc-13pk1d4-0 iRbHHe PinBoardNote"
+              class="StyledBox-sc-13pk1d4-0 ToXqb PinBoardNote"
               draggable="true"
-              style="position: absolute; left: 775px; top: 25px; height: 300px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
+              style="position: absolute; left: 775px; top: 25px; height: 75px; width: 225px; transition: box-shadow 0.5s ease-in-out; outline: transparent;"
               tabindex="0"
             >
               <div
