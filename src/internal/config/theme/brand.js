@@ -24,6 +24,10 @@ const brandColors = {
   'shade-7': '#495057',
   'shade-8': '#343A40',
   'shade-9': '#212529',
+  'accent-1': '#06D6A0',
+  'accent-2': '#FFD166',
+  'accent-3': '#EF476F',
+  'accent-4': '#118AB2',
 };
 
 export const brand = {

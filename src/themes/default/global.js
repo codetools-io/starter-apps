@@ -1,10 +1,10 @@
 const globals = {
   colors: {
-    brand: '#212529',
-    'accent-1': '#495057',
-    'accent-2': '#6C757D',
-    'accent-3': '#ADB5BD',
-    'accent-4': '#343A40',
+    brand: '#33415C',
+    'accent-1': '#06D6A0',
+    'accent-2': '#FFD166',
+    'accent-3': '#EF476F',
+    'accent-4': '#118AB2',
     'neutral-1': '#495057',
     'neutral-2': '#6C757D',
     'neutral-3': '#ADB5BD',
