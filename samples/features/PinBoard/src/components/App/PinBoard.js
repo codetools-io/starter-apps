@@ -5,9 +5,10 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { Box, Button, Card, Paragraph, Stack, TextInput } from 'grommet';
-import { Edit, Trash } from 'grommet-icons';
+import { Box } from 'grommet';
 
+import PinBoardNotes from './PinBoardNotes';
+import PinBoardToolbar from './PinBoardToolbar';
 import usePinBoard from './usePinBoard';
 
 export default function PinBoard({ children, ...props }) {
@@ -125,106 +126,32 @@ export default function PinBoard({ children, ...props }) {
 
   return (
     <Box className="PinBoard" height="large" {...props}>
-      <Box
-        className="PinBoardToolbar"
-        direction="row"
-        justify="between"
-        align="center"
-        flex={false}
-        height="xsmall"
-        pad="medium"
-      >
-        <Box></Box>
-        <Box direction="row" align="center" gap="medium">
-          {selectedIds?.length > 0 ? (
-            <Button icon={<Trash />} onClick={onRemoveNotes} plain />
-          ) : null}
-        </Box>
-      </Box>
+      <PinBoardToolbar
+        onRemoveNotes={onRemoveNotes}
+        selectedIds={selectedIds}
+      />
       <Box
         className="PinBoardMain"
         pad={{ horizontal: 'medium', bottom: 'medium' }}
         fill
       >
-        <Box
-          className="PinBoardBoard"
-          ref={targetRef}
-          onDrop={onDrop}
+        <PinBoardNotes
+          editModeIds={editModeIds}
+          hoveredNote={hoveredNote}
+          notes={notes}
+          onDoubleClickBoard={onDoubleClickBoard}
+          onDrag={onDrag}
+          onDragEnd={onDragEnd}
           onDragOver={onDragOver}
-          style={{ position: 'relative' }}
-          flex={false}
-          overflow="auto"
-          onDoubleClick={(e) => onDoubleClickBoard(e)}
-          round="small"
-          border="all"
-          fill
-        >
-          {notes?.map((note) => {
-            const isSelected = selectedIds.includes(note?.id);
-            const isEditable = editModeIds.includes(note?.id);
-            const isHovered = hoveredNote === note?.id || isSelected;
-            return (
-              <Card
-                key={note?.id}
-                className="PinBoardNote"
-                onDragStart={(e) => onDragStart(e, note)}
-                onDrag={onDrag}
-                onDragEnd={onDragEnd}
-                style={{
-                  position: 'absolute',
-                  left: `${note?.x}px`,
-                  top: `${note?.y}px`,
-                  height: `${note?.height}px`,
-                  width: `${note?.width}px`,
-                  transition: `box-shadow 0.5s ease-in-out`,
-                  outline: 'transparent',
-                }}
-                background="background-front"
-                elevation="none"
-                border={{
-                  side: 'all',
-                  color: isSelected ? 'brand' : 'light-3',
-                  size: isSelected ? 'medium' : 'xsmall',
-                }}
-                onClick={(e) => onSelectNote(e, note?.id)}
-                pad="small"
-                draggable
-              >
-                {isEditable ? (
-                  <TextInput
-                    value={note?.title}
-                    onChange={(e) => {
-                      updateNote({
-                        id: note?.id,
-                        title: e?.target?.value,
-                      });
-                    }}
-                  />
-                ) : (
-                  <Box
-                    onMouseEnter={() => setHoveredNote(note?.id)}
-                    onMouseLeave={() => setHoveredNote(null)}
-                    fill
-                  >
-                    <Stack direction="row" anchor="top-right">
-                      <Box>
-                        <Paragraph margin="none">{note?.title}</Paragraph>
-                      </Box>
-
-                      {isHovered && (
-                        <Button
-                          icon={<Edit size="small" color="dark-6" />}
-                          onClick={(e) => onEditNote(e, note?.id)}
-                          plain
-                        />
-                      )}
-                    </Stack>
-                  </Box>
-                )}
-              </Card>
-            );
-          })}
-        </Box>
+          onDragStart={onDragStart}
+          onDrop={onDrop}
+          onEditNote={onEditNote}
+          onSelectNote={onSelectNote}
+          selectedIds={selectedIds}
+          setHoveredNote={setHoveredNote}
+          target={targetRef}
+          updateNote={updateNote}
+        />
       </Box>
     </Box>
   );

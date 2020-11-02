@@ -14,8 +14,8 @@ domain:
 components:
   PinBoard: The default export and wraps all other components.
   PinBoardToolbar: Container for actions that can be performed on notes.
-  PinBoardMain: A container for the board and for board settings.
-  PinBoardBoard: A container that notes can be arranged in.
+  PinBoardMain: A container for the board notes and board settings.
+  PinBoardNotes: A container that notes can be arranged in.
   PinBoardNote: A draggable container for a note.
 grommet:
   - Box
@@ -26,6 +26,68 @@ grommet:
   - TextInput
 ---
 
-# PinBoard
+## Components
 
-Description still needed
+### PinBoardToolbar
+
+Container for actions that can be performed on notes.
+
+<Preview height="xsmall">
+  <PinBoardToolbar selectedIds={['note-1', 'note-2']} />
+</Preview>
+
+---
+
+### PinBoardMain
+
+A container for the board notes and board settings.
+
+(No Preview)
+
+---
+
+### PinBoardNotes
+
+A container that notes can be arranged in.
+
+<Preview>
+  <PinBoardNotes
+    notes={[
+      {
+        "id": "note-1",
+        "title": "Note #1",
+        "x": 25,
+        "y": 25,
+        "width": 225,
+        "height": 75
+      },
+      {
+        "id": "note-2",
+        "title": "Note #2",
+        "x": 275,
+        "y": 25,
+        "width": 225,
+        "height": 75
+      }
+    ]}
+  />
+</Preview>
+
+---
+
+### PinBoardNote
+
+A draggable container for a note.
+
+<Preview>
+  <PinBoardNote
+    note={{
+      "id": "note-1",
+      "title": "Note #1",
+      "x": 25,
+      "y": 25,
+      "width": 225,
+      "height": 75
+    }}
+  />
+</Preview>

@@ -6,6 +6,11 @@ icon: Calendar
 categoryId: feature
 path: /calendar
 description: A feature for managing dates, events, and reminders.
+domain:
+  - name: Agenda
+    description: A list of events that will occur on a specific date
+  - name: Event
+    description: Something that will happen on a specific date and time
 grommet:
   - Box
   - Button
@@ -24,7 +29,26 @@ components:
   CalendarMonth: A day by day view of the days in a month, and the events occuring on those days.
   CalendarMonthCell: A single day in the month view.
 ---
-
 ## Overview
 
 A feature for managing dates, events, and reminders.
+
+## Components
+
+### CalendarAgenda
+
+An hour by hour view of events for a given week.
+
+### CalendarEvent
+
+An event scheduled on the calendar. Allows toggling for more details.
+
+### CalendarMonth
+
+A day by day view of the days in a month, and the events occuring on those days.
+
+### CalendarMonthCell
+
+A single day in the month view.
+
+

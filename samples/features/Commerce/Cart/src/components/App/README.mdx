@@ -6,6 +6,13 @@ name: Cart
 categoryId: feature
 description: A feature for showing items that a customer is about to purchase.
 path: /cart
+domain:
+  - name: Cart
+    description: A collection of products that will be purchased when the user is done shopping and ready to pay.
+  - name: Line Item
+    description: A specific entry in a cart, which includes a product, product pricing, purchase quantity, and total cost for the number of products being purchased.
+  - name: Product
+    description: An item a user intends to purchase.
 grommet:
   - Box
   - Button
