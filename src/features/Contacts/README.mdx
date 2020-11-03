@@ -6,6 +6,18 @@ categoryId: feature
 icon: ContactInfo
 description: A feature for managing information about lists of people.
 path: /contacts
+components:
+  Contacts: Main component and default export
+  Contact: Allows for viewing information about an individual contact
+  ContactForm: Allows for editing a contact
+  ContactsHeader: Contains actions for specific contacts (ex. edit)
+  ContactsList: Contain a list of all available contacts
+  ContactsMain: Contains the current contact and the form for editing the content
+  ContactsSearch: Searches contacts and displays search results
+  ContactsSidebar: Contains the contact listing
+domain:
+  - name: Contact
+    description: A person that the user is affiliated with
 grommet:
   - Box
   - Button
