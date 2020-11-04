@@ -24,6 +24,7 @@ export default function ProgressWidget({ title, icon, data, ...props }) {
   const Icon = icon ? icon : null;
   return (
     <Card
+      className="ProgressWidget"
       background="white"
       pad="medium"
       gap="medium"

@@ -8,7 +8,7 @@ function DashboardWidget({ type, ...props }) {
 
   return (
     <Suspense fallback={fallback}>
-      <Box flex>
+      <Box className="DashboardWidget" flex>
         <Component {...props} />
       </Box>
     </Suspense>
@@ -17,7 +17,7 @@ function DashboardWidget({ type, ...props }) {
 
 function DashboardSection({ id, title, widgets }) {
   return (
-    <Box flex={false} gap="medium">
+    <Box className="DashboardSection" flex={false} gap="medium">
       {title && (
         <Heading level={3} margin="none">
           {title}

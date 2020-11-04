@@ -21,6 +21,7 @@ export default function TableWidget({
 }) {
   return (
     <Card
+      className="TableWidget"
       background="white"
       pad="medium"
       gap="medium"

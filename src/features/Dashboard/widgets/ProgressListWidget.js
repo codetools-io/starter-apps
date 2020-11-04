@@ -28,6 +28,7 @@ export default function ProgressListWidget({
 }) {
   return (
     <Card
+      className="ProgressListWidget"
       background="white"
       pad="medium"
       gap="medium"

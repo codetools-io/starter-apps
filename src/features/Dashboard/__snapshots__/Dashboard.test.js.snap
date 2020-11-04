@@ -6,7 +6,7 @@ exports[`Can render Dashboard 1`] = `
     class="StyledBox-sc-13pk1d4-0 gaMuRK Dashboard"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dIHSGy"
+      class="StyledBox-sc-13pk1d4-0 dIHSGy DashboardSection"
     >
       <h3
         class="StyledHeading-sc-1rdh4aw-0 nltgZ"
@@ -20,7 +20,7 @@ exports[`Can render Dashboard 1`] = `
         class="StyledBox-sc-13pk1d4-0 cWZCJA"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -32,7 +32,7 @@ exports[`Can render Dashboard 1`] = `
           class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -46,7 +46,7 @@ exports[`Can render Dashboard 1`] = `
       class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dLcqZl"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 dIHSGy"
+      class="StyledBox-sc-13pk1d4-0 dIHSGy DashboardSection"
     >
       <h3
         class="StyledHeading-sc-1rdh4aw-0 nltgZ"
@@ -60,7 +60,7 @@ exports[`Can render Dashboard 1`] = `
         class="StyledBox-sc-13pk1d4-0 cWZCJA"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -72,7 +72,7 @@ exports[`Can render Dashboard 1`] = `
           class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -84,7 +84,7 @@ exports[`Can render Dashboard 1`] = `
           class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
         />
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -98,7 +98,7 @@ exports[`Can render Dashboard 1`] = `
       class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dLcqZl"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 dIHSGy"
+      class="StyledBox-sc-13pk1d4-0 dIHSGy DashboardSection"
     >
       <h3
         class="StyledHeading-sc-1rdh4aw-0 nltgZ"
@@ -112,7 +112,7 @@ exports[`Can render Dashboard 1`] = `
         class="StyledBox-sc-13pk1d4-0 cWZCJA"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p
@@ -126,7 +126,7 @@ exports[`Can render Dashboard 1`] = `
       class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dLcqZl"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 dIHSGy"
+      class="StyledBox-sc-13pk1d4-0 dIHSGy DashboardSection"
     >
       <h3
         class="StyledHeading-sc-1rdh4aw-0 nltgZ"
@@ -140,7 +140,7 @@ exports[`Can render Dashboard 1`] = `
         class="StyledBox-sc-13pk1d4-0 cWZCJA"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kluzTJ"
+          class="StyledBox-sc-13pk1d4-0 kluzTJ DashboardWidget"
           style="display: none;"
         />
         <p

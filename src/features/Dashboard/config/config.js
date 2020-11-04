@@ -7,9 +7,9 @@ export const widgets = [
     title: 'Goals',
     description: 'Company financial goals',
     data: [
-      { value: 25, label: 'Month' },
-      { value: 75, label: 'Quarter' },
-      { value: 50, label: 'Year' },
+      { value: 25, label: 'Month', color: 'accent-4' },
+      { value: 75, label: 'Quarter', color: 'accent-4' },
+      { value: 50, label: 'Year', color: 'accent-4' },
     ],
     section: 'section-1',
   },
@@ -59,7 +59,7 @@ export const widgets = [
     type: 'Progress',
     title: 'Sprint Completion',
     icon: Tasks,
-    data: { value: 66, label: 'Sprint 64' },
+    data: { value: 66, label: 'Sprint 64', color: 'accent-4' },
     section: 'section-3',
   },
   {
@@ -87,17 +87,17 @@ export const widgets = [
         {
           name: 'Washington, D.C.',
           location: [38.898748, -77.037684],
-          color: 'accent-1',
+          color: 'accent-4',
         },
         {
           name: 'Cape Town',
           location: [33.9249, 18.4241],
-          color: 'accent-1',
+          color: 'accent-4',
         },
         {
           name: 'Sydney',
           location: [-33.8830555556, 151.216666667],
-          color: 'accent-1',
+          color: 'accent-4',
         },
       ],
     },
