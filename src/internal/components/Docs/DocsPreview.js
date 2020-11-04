@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Text } from 'grommet';
-import { Cubes, Expand } from 'grommet-icons';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Box, Button, Text } from 'grommet';
+import { Cubes, Expand, Monitor, PhoneVertical } from 'grommet-icons';
 import { useLocalStorage } from 'react-use';
 import useRouter from 'internal/hooks/useRouter';
 import TooltipButton from 'internal/components/TooltipButton';
@@ -12,6 +12,7 @@ import DocsComponents from './DocsComponents';
 export default function DocsPreview({ children, doc, loadActions, ...props }) {
   const { queryParams, setQueryParam } = useRouter();
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [isOverlayToggled, setIsOverlayToggled] = useState(false);
   const [themeName, setThemeName] = useState(queryParams?.theme || 'default');
   const [theme, setTheme] = useState();
@@ -19,6 +20,13 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
     'externalThemes',
     {}
   );
+  const cardSize = useMemo(() => {
+    if (!isMobile) {
+      return { height: 'large' };
+    }
+
+    return { alignSelf: 'center', height: 'large', width: 'small' };
+  }, [isMobile]);
 
   useEffect(() => {
     loadActions([
@@ -43,17 +51,39 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
         <TooltipButton
           key="action-overlay"
           className="DocsPreviewActionOverlay"
-          tooltip={<Text size="small">Component View</Text>}
+          tooltip={<Text size="small">component view</Text>}
           icon={<Cubes />}
           onClick={() => setIsOverlayToggled(!isOverlayToggled)}
           color={isOverlayToggled ? 'control' : 'text'}
           align={{ bottom: 'top', right: 'right' }}
         />
       ),
+      doc?.components && (
+        <TooltipButton
+          key="action-mobile"
+          className="DocsPreviewActionMobile"
+          tooltip={<Text size="small">mobile view</Text>}
+          icon={<PhoneVertical />}
+          onClick={() => setIsMobile(!isMobile)}
+          color={isMobile ? 'control' : 'text'}
+          align={{ bottom: 'top', right: 'right' }}
+        />
+      ),
+      doc?.components && (
+        <TooltipButton
+          key="action-desktop"
+          className="DocsPreviewActionDesktop"
+          tooltip={<Text size="small">desktop view</Text>}
+          icon={<Monitor />}
+          onClick={() => setIsMobile(!isMobile)}
+          color={!isMobile ? 'control' : 'text'}
+          align={{ bottom: 'top', right: 'right' }}
+        />
+      ),
       <TooltipButton
         key="action-fullscreen"
         className="DocsPreviewActionFullscreen"
-        tooltip={<Text size="small">Fullscreen</Text>}
+        tooltip={<Text size="small">fullscreen view</Text>}
         icon={<Expand size="18px" />}
         onClick={() => setIsFullScreen(true)}
         color={isFullScreen ? 'control' : 'text'}
@@ -62,7 +92,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       />,
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [doc, isFullScreen, isOverlayToggled, loadActions, themeName]);
+  }, [doc, isFullScreen, isOverlayToggled, isMobile, loadActions, themeName]);
 
   useEffect(() => {
     if (queryParams?.theme && externalThemes?.[queryParams?.theme]) {
@@ -70,6 +100,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       setTheme(externalThemes?.[queryParams?.theme]);
     }
   }, [queryParams, externalThemes]);
+
   if (isFullScreen) {
     return (
       <Box className="DocsPreview">
@@ -77,6 +108,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           onShrink={() => setIsFullScreen(false)}
           themeName={themeName}
           theme={theme}
+          {...cardSize}
         >
           {children}
         </DocsPreviewModal>
@@ -87,14 +119,19 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
   if (isOverlayToggled) {
     return (
       <Box className="DocsPreview">
-        <DocsComponents children={children} doc={doc} />
+        <DocsComponents children={children} doc={doc} {...cardSize} />
       </Box>
     );
   }
 
   return (
     <Box className="DocsPreview">
-      <DocsPreviewStandard themeName={themeName} theme={theme} {...props}>
+      <DocsPreviewStandard
+        themeName={themeName}
+        theme={theme}
+        {...cardSize}
+        {...props}
+      >
         {children}
       </DocsPreviewStandard>
     </Box>
