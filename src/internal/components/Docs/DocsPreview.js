@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Box, Button, Text } from 'grommet';
+import { Box, Text } from 'grommet';
 import { Cubes, Expand, Monitor, PhoneVertical } from 'grommet-icons';
 import { useLocalStorage } from 'react-use';
 import useRouter from 'internal/hooks/useRouter';
