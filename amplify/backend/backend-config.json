@@ -1,20 +1,6 @@
 {
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
-      "type": "cicd"
-    }
-  },
-  "auth": {
-    "cognitocc501e77": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation"
-    }
-  },
-  "analytics": {
-    "StarterAppsPinpoint": {
-      "service": "Pinpoint",
-      "providerPlugin": "awscloudformation"
-    }
-  }
+  "hosting": {},
+  "auth": {},
+  "analytics": {},
+  "api": {}
 }

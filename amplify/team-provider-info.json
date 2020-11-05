@@ -10,17 +10,6 @@
       "StackName": "amplify-starterapps-master-92251",
       "StackId": "arn:aws:cloudformation:us-east-1:714022322010:stack/amplify-starterapps-master-92251/62148e90-fffb-11ea-b4e3-0e65dccd8cb7",
       "AmplifyAppId": "d31xfygwtfk9pw"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d31xfygwtfk9pw",
-          "type": "cicd"
-        }
-      },
-      "auth": {
-        "cognitocc501e77": {}
-      }
     }
   }
 }
