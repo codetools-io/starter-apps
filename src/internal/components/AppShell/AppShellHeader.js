@@ -1,11 +1,11 @@
 import React from 'react';
-import { Anchor, Box } from 'grommet';
-import { Github, Twitter } from 'grommet-icons';
+import { Box, Button } from 'grommet';
 
-const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
-const TWITTER_URL = process.env.REACT_APP_TWITTER_URL;
-
-export default function AppShellHeader() {
+export default function AppShellHeader({
+  currentUser,
+  login = () => {},
+  logout = () => {},
+}) {
   return (
     <Box
       gridArea="header"
@@ -15,12 +15,11 @@ export default function AppShellHeader() {
       pad={{ horizontal: 'large', vertical: 'medium' }}
       gap="medium"
     >
-      <Anchor href={GITHUB_URL} color="text">
-        <Github />
-      </Anchor>
-      <Anchor href={TWITTER_URL} color="text">
-        <Twitter />
-      </Anchor>
+      {currentUser ? (
+        <Button label="Logout" onClick={logout} />
+      ) : (
+        <Button label="Login" onClick={login} />
+      )}
     </Box>
   );
 }

@@ -1,0 +1,4 @@
+type Favorite @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  component: String!
+}

@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "StarterApps",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authstarterapps4e125e03",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

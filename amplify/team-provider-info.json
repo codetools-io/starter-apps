@@ -10,6 +10,13 @@
       "StackName": "amplify-starterapps-master-92251",
       "StackId": "arn:aws:cloudformation:us-east-1:714022322010:stack/amplify-starterapps-master-92251/62148e90-fffb-11ea-b4e3-0e65dccd8cb7",
       "AmplifyAppId": "d31xfygwtfk9pw"
+    },
+    "categories": {
+      "auth": {
+        "starterapps4e125e03": {
+          "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"390642922339-f4itduhivi150m9jrkvbd3ue1mffk1p6.apps.googleusercontent.com\",\"client_secret\":\"X6292gxleTpVJTVFs6UICpE5\"}]"
+        }
+      }
     }
   }
 }
