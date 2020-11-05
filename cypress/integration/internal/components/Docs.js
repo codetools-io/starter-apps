@@ -19,6 +19,19 @@ context('Docs', () => {
     cy.get('.DocsPreviewStandard').should('exist');
   });
 
+  it('can toggle mobile preview in standard view', () => {
+    cy.get('@DocsNav').contains('Preview').click();
+    cy.get('@DocsActions').get('svg[aria-label="PhoneVertical"]').click();
+    cy.get('.DocsCard').invoke('width').should('equal', 320);
+  });
+
+  it('can toggle desktop preview in standard view', () => {
+    cy.get('@DocsNav').contains('Preview').click();
+    cy.get('@DocsActions').get('svg[aria-label="PhoneVertical"]').click();
+    cy.get('@DocsActions').get('svg[aria-label="Monitor"]').click();
+    cy.get('.DocsCard').invoke('width').should('equal', 1520);
+  });
+
   it('can toggle preview in modal view', () => {
     cy.get('@DocsNav').contains('Preview').click();
     cy.get('@DocsActions').get('svg[aria-label="Expand"]').click();

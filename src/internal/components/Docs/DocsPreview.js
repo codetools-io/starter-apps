@@ -25,7 +25,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       return { height: 'large' };
     }
 
-    return { alignSelf: 'center', height: 'large', width: 'small' };
+    return { alignSelf: 'center', height: 'large', width: 'medium' };
   }, [isMobile]);
 
   useEffect(() => {
