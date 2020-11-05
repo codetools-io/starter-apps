@@ -58,28 +58,24 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           align={{ bottom: 'top', right: 'right' }}
         />
       ),
-      doc?.components && (
-        <TooltipButton
-          key="action-mobile"
-          className="DocsPreviewActionMobile"
-          tooltip={<Text size="small">mobile view</Text>}
-          icon={<PhoneVertical />}
-          onClick={() => setIsMobile(!isMobile)}
-          color={isMobile ? 'control' : 'text'}
-          align={{ bottom: 'top', right: 'right' }}
-        />
-      ),
-      doc?.components && (
-        <TooltipButton
-          key="action-desktop"
-          className="DocsPreviewActionDesktop"
-          tooltip={<Text size="small">desktop view</Text>}
-          icon={<Monitor />}
-          onClick={() => setIsMobile(!isMobile)}
-          color={!isMobile ? 'control' : 'text'}
-          align={{ bottom: 'top', right: 'right' }}
-        />
-      ),
+      <TooltipButton
+        key="action-mobile"
+        className="DocsPreviewActionMobile"
+        tooltip={<Text size="small">mobile view</Text>}
+        icon={<PhoneVertical />}
+        onClick={() => setIsMobile(!isMobile)}
+        color={isMobile ? 'control' : 'text'}
+        align={{ bottom: 'top', right: 'right' }}
+      />,
+      <TooltipButton
+        key="action-desktop"
+        className="DocsPreviewActionDesktop"
+        tooltip={<Text size="small">desktop view</Text>}
+        icon={<Monitor />}
+        onClick={() => setIsMobile(!isMobile)}
+        color={!isMobile ? 'control' : 'text'}
+        align={{ bottom: 'top', right: 'right' }}
+      />,
       <TooltipButton
         key="action-fullscreen"
         className="DocsPreviewActionFullscreen"
