@@ -1,6 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Box, Text } from 'grommet';
-import { Cubes, Expand, Monitor, PhoneVertical } from 'grommet-icons';
+import {
+  Cubes,
+  Expand,
+  Monitor,
+  PhoneHorizontal,
+  PhoneVertical,
+  PersonalComputer,
+} from 'grommet-icons';
 import { useLocalStorage } from 'react-use';
 import useRouter from 'internal/hooks/useRouter';
 import TooltipButton from 'internal/components/TooltipButton';
@@ -10,9 +17,15 @@ import DocsPreviewStandard from './DocsPreviewStandard';
 import DocsComponents from './DocsComponents';
 
 export default function DocsPreview({ children, doc, loadActions, ...props }) {
+  const viewportIcons = {
+    small: <PhoneVertical />,
+    medium: <PhoneHorizontal />,
+    large: <PersonalComputer />,
+    xlarge: <Monitor />,
+  };
   const { queryParams, setQueryParam } = useRouter();
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [viewport, setViewport] = useState();
   const [isOverlayToggled, setIsOverlayToggled] = useState(false);
   const [themeName, setThemeName] = useState(queryParams?.theme || 'default');
   const [theme, setTheme] = useState();
@@ -21,12 +34,20 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
     {}
   );
   const cardSize = useMemo(() => {
-    if (!isMobile) {
+    if (!viewport) {
       return { height: 'large' };
     }
 
-    return { alignSelf: 'center', height: 'large', width: 'medium' };
-  }, [isMobile]);
+    return { height: 'large', width: viewport };
+  }, [viewport]);
+
+  function toggleViewport(viewportSize) {
+    if (viewport === viewportSize) {
+      setViewport(null);
+    } else {
+      setViewport(viewportSize);
+    }
+  }
 
   useEffect(() => {
     loadActions([
@@ -58,24 +79,17 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           align={{ bottom: 'top', right: 'right' }}
         />
       ),
-      <TooltipButton
-        key="action-mobile"
-        className="DocsPreviewActionMobile"
-        tooltip={<Text size="small">mobile view</Text>}
-        icon={<PhoneVertical />}
-        onClick={() => setIsMobile(!isMobile)}
-        color={isMobile ? 'control' : 'text'}
-        align={{ bottom: 'top', right: 'right' }}
-      />,
-      <TooltipButton
-        key="action-desktop"
-        className="DocsPreviewActionDesktop"
-        tooltip={<Text size="small">desktop view</Text>}
-        icon={<Monitor />}
-        onClick={() => setIsMobile(!isMobile)}
-        color={!isMobile ? 'control' : 'text'}
-        align={{ bottom: 'top', right: 'right' }}
-      />,
+      doc?.viewports?.map((v) => (
+        <TooltipButton
+          key={`action-viewport-${v}`}
+          className={`DocsPreviewActionViewport`}
+          tooltip={<Text size="small">{`${v} view`}</Text>}
+          icon={viewportIcons[v]}
+          onClick={() => toggleViewport(v)}
+          color={viewport === v ? 'control' : 'text'}
+          align={{ bottom: 'top', right: 'right' }}
+        />
+      )),
       <TooltipButton
         key="action-fullscreen"
         className="DocsPreviewActionFullscreen"
@@ -88,7 +102,7 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
       />,
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [doc, isFullScreen, isOverlayToggled, isMobile, loadActions, themeName]);
+  }, [doc, isFullScreen, isOverlayToggled, viewport, loadActions, themeName]);
 
   useEffect(() => {
     if (queryParams?.theme && externalThemes?.[queryParams?.theme]) {
