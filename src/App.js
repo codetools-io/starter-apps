@@ -38,6 +38,10 @@ export default function App() {
       .catch((err) => console.error(err));
   }, []);
 
+  useEffect(() => {
+    analytics.trackUserId();
+  }, []);
+
   function login() {
     Auth.federatedSignIn({ provider: 'Google' });
   }
