@@ -20,10 +20,6 @@ export function trackUsage() {
       enable: true,
       type: 'SPA',
       getUrl: () => {
-        console.log(
-          'getting the url:',
-          window.location.origin + window.location.pathname
-        );
         // the default function
         return window.location.origin + window.location.pathname;
       },
