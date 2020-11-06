@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Amplify, { Auth } from 'aws-amplify';
-import Router from './Router';
 import AppShell from 'internal/components/AppShell';
 import ErrorBoundary from 'internal/components/ErrorBoundary';
+import Router from './Router';
 import awsConfig from './aws-exports';
+import * as analytics from './analytics';
+
 const PUBLIC_URL = process.env.PUBLIC_URL;
+
 Amplify.configure(awsConfig);
+
+analytics.trackUsage();
 
 export default function App() {
   const [docs, setDocs] = useState();

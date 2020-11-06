@@ -8,7 +8,12 @@
       "customAuth": false
     }
   },
-  "analytics": {},
+  "analytics": {
+    "StarterApps": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
+  },
   "api": {
     "StarterApps": {
       "service": "AppSync",
