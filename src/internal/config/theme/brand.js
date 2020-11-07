@@ -186,5 +186,25 @@ export const brand = {
       background: 'rgba(51, 65, 92, 0.85)',
     },
   },
+  anchor: {
+    fontWeight: 400,
+    color: 'brand-2',
+    hover: {
+      color: 'brand-1',
+      textDecoration: 'none',
+    },
+    extend: (props) => {
+      const activeColor = props?.theme?.global?.colors?.['brand-1'];
+
+      return `
+        :hover {
+          color: ${activeColor}
+        }
+        &.active {
+          color: ${activeColor}
+        }
+      `;
+    },
+  },
   ...components,
 };

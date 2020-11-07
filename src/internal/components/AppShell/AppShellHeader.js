@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Button } from 'grommet';
-
+import { Avatar, Box, Button, Nav } from 'grommet';
+import Link from 'internal/components/Link';
 export default function AppShellHeader({
   currentUser,
   login = () => {},
@@ -10,13 +10,19 @@ export default function AppShellHeader({
     <Box
       gridArea="header"
       direction="row"
-      justify="end"
+      justify="between"
+      align="center"
       background="light-1"
       pad={{ horizontal: 'large', vertical: 'medium' }}
       gap="medium"
     >
+      <Nav direction="row">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      </Nav>
       {currentUser ? (
-        <Button label="Logout" onClick={logout} />
+        <Avatar src={currentUser?.attributes?.picture} />
       ) : (
         <Button label="Login" onClick={login} />
       )}
