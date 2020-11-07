@@ -1,6 +1,7 @@
 import React from 'react';
-import { Avatar, Box, Button, Nav } from 'grommet';
+import { Box, Button, Nav } from 'grommet';
 import Link from 'internal/components/Link';
+import AppShellUserMenu from './AppShellUserMenu';
 export default function AppShellHeader({
   currentUser,
   login = () => {},
@@ -22,9 +23,9 @@ export default function AppShellHeader({
         <Link to="/contact">Contact</Link>
       </Nav>
       {currentUser ? (
-        <Avatar src={currentUser?.attributes?.picture} />
+        <AppShellUserMenu currentUser={currentUser} logout={logout} />
       ) : (
-        <Button label="Login" onClick={login} />
+        <Button label="Login" onClick={login} primary />
       )}
     </Box>
   );
