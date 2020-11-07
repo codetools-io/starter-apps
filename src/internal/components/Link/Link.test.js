@@ -1,15 +1,12 @@
-import React from 'react'
-import Link from './Link'
+import React from 'react';
+import Link from './Link';
 
 describe('Link', () => {
   test('can render', () => {
     const { container } = renderComponent(
-      <Link>
-        <p>Content for the Link</p>
-      </Link>
-    )
+      <Link to="/">Content for the Link</Link>
+    );
 
-    expect(container).toMatchSnapshot()
-  })
-})
-
+    expect(container).toMatchSnapshot();
+  });
+});
