@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Anchor, ThemeContext } from 'grommet';
+import { Anchor } from 'grommet';
 
 export function RouterLink({ children, className, to, ...props }) {
   return (
