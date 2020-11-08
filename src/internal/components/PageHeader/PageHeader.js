@@ -2,15 +2,7 @@ import React from 'react';
 import { Grid, Heading, Paragraph } from 'grommet';
 import Socials from 'internal/components/Socials';
 
-export default function PageHeader({
-  title,
-  description,
-  socials = {
-    github: true,
-    twitter: true,
-  },
-  ...props
-}) {
+export default function PageHeader({ title, description, socials, ...props }) {
   return (
     <Grid
       className="PageHeader"
@@ -29,10 +21,14 @@ export default function PageHeader({
       <Heading gridArea="heading" level={1} margin="none">
         {title}
       </Heading>
-      <Paragraph gridArea="intro" margin="none" fill>
-        {description}
-      </Paragraph>
-      <Socials gridArea="socials" margin={{ top: 'small' }} {...socials} />
+      {description && (
+        <Paragraph gridArea="intro" margin="none" fill>
+          {description}
+        </Paragraph>
+      )}
+      {socials && (
+        <Socials gridArea="socials" margin={{ top: 'small' }} {...socials} />
+      )}
     </Grid>
   );
 }

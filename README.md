@@ -1,3 +1,3 @@
 # Starter Apps
 
-Grommet based UI solutions for applications.
+Solutions for building Grommet based applications.

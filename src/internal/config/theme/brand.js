@@ -122,7 +122,7 @@ export const brand = {
     size: {
       small: '16px',
       medium: '22px',
-      large: '48px',
+      large: '36px',
       xlarge: '96px',
     },
     extend: undefined,
@@ -143,27 +143,27 @@ export const brand = {
     small: {
       size: '13px',
       height: `${13 * 1.65}px`,
-      maxWidth: '267px',
+      maxWidth: '300px',
     },
     medium: {
       size: '15px',
       height: `${15 * 1.65}px`,
-      maxWidth: '300px',
+      maxWidth: '600px',
     },
     large: {
       size: '18px',
       height: `${18 * 1.65}px`,
-      maxWidth: '367px',
+      maxWidth: '600px',
     },
     xlarge: {
-      size: '22px',
-      height: `${22 * 1.65}px`,
-      maxWidth: '433px',
+      size: '24px',
+      height: `${24 * 1.65}px`,
+      maxWidth: '600px',
     },
     xxlarge: {
-      size: '28px',
-      height: `${28 * 1.65}px`,
-      maxWidth: '567px',
+      size: '32px',
+      height: `${32 * 1.65}px`,
+      maxWidth: '600px',
     },
   },
   select: {
