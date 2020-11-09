@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bookmarks can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 cxNasQ Bookmarks"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 jDoFwS"
+    >
+      <h1
+        class="StyledHeading-sc-1rdh4aw-0 xhldK"
+      >
+        Coming Soon!
+      </h1>
+    </div>
+  </div>
+</div>
+`;

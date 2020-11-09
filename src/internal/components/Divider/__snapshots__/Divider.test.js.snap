@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider can render 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 liGFHN"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 izWPUw"
+    />
+    <div
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
+    />
+    <span
+      class="StyledText-sc-1sadyjn-0 eTkzRk"
+    />
+    <div
+      class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ffHQai"
+    />
+    <div
+      class="StyledBox-sc-13pk1d4-0 izWPUw"
+    />
+  </div>
+</div>
+`;
