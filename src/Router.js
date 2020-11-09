@@ -13,6 +13,7 @@ function DocRoute({ component, path, docs, pageProps = {}, ...props }) {
 export default function Router({ docs }) {
   const Home = lazy(() => import('./internal/pages/Home'));
   const About = lazy(() => import('./internal/pages/About'));
+  const Bookmarks = lazy(() => import('./internal/pages/Bookmarks'));
   const Contact = lazy(() => import('./internal/pages/Contact'));
   const Calendar = lazy(() => import('./features/Calendar'));
   const Chat = lazy(() => import('./features/Chat'));
@@ -38,6 +39,9 @@ export default function Router({ docs }) {
         </Route>
         <Route path="/about">
           <About docs={docs} />
+        </Route>
+        <Route path="/bookmarks">
+          <Bookmarks docs={docs} />
         </Route>
         <Route path="/contact">
           <Contact docs={docs} />

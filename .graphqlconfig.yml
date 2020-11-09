@@ -1,6 +1,6 @@
 projects:
   StarterApps:
-    schemaPath: src/graphql/schema.json
+    schemaPath: amplify/backend/api/StarterApps/build/schema.graphql
     includes:
       - src/graphql/**/*.js
     excludes:
