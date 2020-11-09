@@ -8,9 +8,6 @@ context('Home', () => {
       cy.contains('Starter Apps');
       cy.contains('Features');
       cy.contains('Shells');
-      cy.contains('filter');
-      cy.get('svg[aria-label="Github"]');
-      cy.get('svg[aria-label="Twitter"]');
     });
   });
 
