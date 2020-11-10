@@ -1,27 +1,31 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getFavorite = /* GraphQL */ `
-  query GetFavorite($id: ID!) {
-    getFavorite(id: $id) {
+export const getBookmark = /* GraphQL */ `
+  query GetBookmark($id: ID!) {
+    getBookmark(id: $id) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const listFavorites = /* GraphQL */ `
-  query ListFavorites(
-    $filter: ModelFavoriteFilterInput
+export const listBookmarks = /* GraphQL */ `
+  query ListBookmarks(
+    $filter: ModelBookmarkFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listFavorites(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listBookmarks(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        component
+        componentId
+        categoryId
+        moduleId
         createdAt
         updatedAt
         owner

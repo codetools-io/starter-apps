@@ -1,4 +1,6 @@
-type Favorite @model @auth(rules: [{ allow: owner }]) {
+type Bookmark @model @auth(rules: [{ allow: owner }]) {
   id: ID!
-  component: String!
+  componentId: String!
+  categoryId: String!
+  moduleId: String
 }

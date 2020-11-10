@@ -1,33 +1,39 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateFavorite = /* GraphQL */ `
-  subscription OnCreateFavorite($owner: String!) {
-    onCreateFavorite(owner: $owner) {
+export const onCreateBookmark = /* GraphQL */ `
+  subscription OnCreateBookmark($owner: String!) {
+    onCreateBookmark(owner: $owner) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const onUpdateFavorite = /* GraphQL */ `
-  subscription OnUpdateFavorite($owner: String!) {
-    onUpdateFavorite(owner: $owner) {
+export const onUpdateBookmark = /* GraphQL */ `
+  subscription OnUpdateBookmark($owner: String!) {
+    onUpdateBookmark(owner: $owner) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const onDeleteFavorite = /* GraphQL */ `
-  subscription OnDeleteFavorite($owner: String!) {
-    onDeleteFavorite(owner: $owner) {
+export const onDeleteBookmark = /* GraphQL */ `
+  subscription OnDeleteBookmark($owner: String!) {
+    onDeleteBookmark(owner: $owner) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner

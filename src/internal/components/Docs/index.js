@@ -6,3 +6,4 @@ export { default as DocsPreview } from './DocsPreview';
 export { default as DocsPreviewModal } from './DocsPreviewModal';
 export { default as DocsProps } from './DocsProps';
 export { default as DocsComponents } from './DocsComponents';
+export { default as DocsRoute } from './DocsRoute';

@@ -1,16 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Docs } from 'internal/components/Docs';
-
-function DocRoute({ component, path, docs, pageProps = {}, ...props }) {
-  return (
-    <Route path={path} {...props}>
-      <Docs component={component} docs={docs} path={path} {...pageProps} />
-    </Route>
-  );
-}
-
-export default function Router({ docs }) {
+import { DocsRoute } from 'internal/components/Docs';
+export default function Router({ docs, bookmarks, onBookmark }) {
   const Home = lazy(() => import('./internal/pages/Home'));
   const About = lazy(() => import('./internal/pages/About'));
   const Bookmarks = lazy(() => import('./internal/pages/Bookmarks'));
@@ -35,19 +26,21 @@ export default function Router({ docs }) {
     <Suspense fallback={<p>loading route…</p>}>
       <Switch>
         <Route path="/" exact>
-          <Home docs={docs} />
+          <Home docs={docs} bookmarks={bookmarks} />
         </Route>
         <Route path="/about">
-          <About docs={docs} />
+          <About />
         </Route>
         <Route path="/bookmarks">
-          <Bookmarks docs={docs} />
+          <Bookmarks docs={docs} bookmarks={bookmarks} />
         </Route>
         <Route path="/contact">
-          <Contact docs={docs} />
+          <Contact />
         </Route>
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Calendar}
           path={`/features/calendar`}
           pageProps={{
@@ -56,57 +49,101 @@ export default function Router({ docs }) {
             },
           }}
         />
-        <DocRoute docs={docs} component={Chat} path={`/features/chat`} />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
+          component={Chat}
+          path={`/features/chat`}
+        />
+        <DocsRoute
+          docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Store}
           path={`/features/commerce/store`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Checkout}
           path={`/features/commerce/checkout`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Cart}
           path={`/features/commerce/cart`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Contacts}
           path={`/features/contacts`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Dashboard}
           path={`/features/dashboard`}
         />
-        <DocRoute docs={docs} component={Email} path={`/features/email`} />
-        <DocRoute docs={docs} component={Notes} path={`/features/notes`} />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
+          component={Email}
+          path={`/features/email`}
+        />
+        <DocsRoute
+          docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
+          component={Notes}
+          path={`/features/notes`}
+        />
+        <DocsRoute
+          docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Profile}
           path={`/features/social-media/profile`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={Feed}
           path={`/features/social-media/feed`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={ProjectManager}
           path={`/features/project-manager`}
         />
-        <DocRoute docs={docs} component={AppShell} path={`/shells/app-shell`} />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
+          component={AppShell}
+          path={`/shells/app-shell`}
+        />
+        <DocsRoute
+          docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={ImageEditor}
           path={`/features/image-editor`}
         />
-        <DocRoute
+        <DocsRoute
           docs={docs}
+          bookmarks={bookmarks}
+          onBookmark={onBookmark}
           component={PinBoard}
           path={`/features/pin-board`}
         />

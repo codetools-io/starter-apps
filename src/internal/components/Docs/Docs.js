@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Box } from 'grommet';
 import PageHeader from 'internal/components/PageHeader';
 import DocsMain from './DocsMain';
@@ -6,7 +6,7 @@ import DocsMain from './DocsMain';
 const DATA_PATH = `${process.env.PUBLIC_URL}/data`;
 const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
-
+const TWITTER_SHARE_URL = process.env.REACT_APP_TWITTER_SHARE_URL;
 export default function Docs({
   component: Component,
   docs,
@@ -14,11 +14,19 @@ export default function Docs({
   name,
   componentProps = {},
   mainProps = {},
+  bookmarks = [],
+  onBookmark = () => {},
   ...props
 }) {
   const [files, setFiles] = useState();
   const [themes, setThemes] = useState();
   const [doc, setDoc] = useState();
+  const isBookmarked = useMemo(() => {
+    return (
+      bookmarks?.some((bookmark) => bookmark?.componentId === doc?.id) &&
+      bookmarks?.some((bookmark) => bookmark?.categoryId === doc?.categoryId)
+    );
+  }, [bookmarks, doc]);
 
   useEffect(() => {
     setDoc(docs?.components?.find((c) => c?.path === path));
@@ -46,10 +54,33 @@ export default function Docs({
         title={doc?.data?.name}
         description={doc?.data?.description}
         socials={{
-          github: true,
-          codeSandbox: true,
-          codeSandboxUrl: `${SANDBOX_URL}/${doc?.directory}`,
-          githubUrl: `${GITHUB_URL}/tree/master/src/${doc?.directory}`,
+          github: {
+            url: `${GITHUB_URL}/tree/master/src/${doc?.directory}`,
+            text: 'View Source',
+            size: 'small',
+          },
+          codeSandbox: {
+            url: `${SANDBOX_URL}/${doc?.directory}`,
+            text: 'Create Sandbox',
+            size: 'small',
+          },
+          twitter: {
+            url: TWITTER_SHARE_URL,
+            text: 'Share',
+            size: 'small',
+          },
+          bookmark: {
+            text: 'Save',
+            size: 'small',
+            color: isBookmarked ? 'brand-1' : 'brand-2',
+            onClick: () => {
+              onBookmark({
+                componentId: doc?.id,
+                categoryId: doc?.categoryId,
+                moduleId: doc?.moduleId,
+              });
+            },
+          },
         }}
         margin={{ top: 'small', bottom: 'large' }}
       />

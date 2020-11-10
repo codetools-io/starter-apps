@@ -1,42 +1,48 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createFavorite = /* GraphQL */ `
-  mutation CreateFavorite(
-    $input: CreateFavoriteInput!
-    $condition: ModelFavoriteConditionInput
+export const createBookmark = /* GraphQL */ `
+  mutation CreateBookmark(
+    $input: CreateBookmarkInput!
+    $condition: ModelBookmarkConditionInput
   ) {
-    createFavorite(input: $input, condition: $condition) {
+    createBookmark(input: $input, condition: $condition) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const updateFavorite = /* GraphQL */ `
-  mutation UpdateFavorite(
-    $input: UpdateFavoriteInput!
-    $condition: ModelFavoriteConditionInput
+export const updateBookmark = /* GraphQL */ `
+  mutation UpdateBookmark(
+    $input: UpdateBookmarkInput!
+    $condition: ModelBookmarkConditionInput
   ) {
-    updateFavorite(input: $input, condition: $condition) {
+    updateBookmark(input: $input, condition: $condition) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const deleteFavorite = /* GraphQL */ `
-  mutation DeleteFavorite(
-    $input: DeleteFavoriteInput!
-    $condition: ModelFavoriteConditionInput
+export const deleteBookmark = /* GraphQL */ `
+  mutation DeleteBookmark(
+    $input: DeleteBookmarkInput!
+    $condition: ModelBookmarkConditionInput
   ) {
-    deleteFavorite(input: $input, condition: $condition) {
+    deleteBookmark(input: $input, condition: $condition) {
       id
-      component
+      componentId
+      categoryId
+      moduleId
       createdAt
       updatedAt
       owner
