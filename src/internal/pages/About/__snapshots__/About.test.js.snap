@@ -23,7 +23,7 @@ exports[`About can render 1`] = `
         <p
           class="StyledParagraph-tbetod-0 ePvWtP"
         >
-          StarterApps is a resource for solutions to building Grommet based applications. We provide developers with examples of how real-world applications can be built with Grommet.
+          Starter Apps is a resource for solutions to building Grommet based applications. We provide developers with examples of how real-world applications can be built with Grommet.
         </p>
       </div>
       <div
