@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Card } from 'grommet';
-import ContactForm from 'internal/components/ContactForm';
+// import ContactForm from 'internal/components/ContactForm';
 import ContactPlatforms from 'internal/components/ContactPlatforms';
-import Divider from 'internal/components/Divider';
+// import Divider from 'internal/components/Divider';
 import PageHeader from 'internal/components/PageHeader';
 
 export default function Contact({ children, ...props }) {
