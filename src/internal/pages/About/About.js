@@ -15,7 +15,7 @@ export default function About({ children, ...props }) {
             size="xlarge"
             textAlign="center"
           >
-            StarterApps is a resource for solutions to building Grommet based
+            Starter Apps is a resource for solutions to building Grommet based
             applications. We provide developers with examples of how real-world
             applications can be built with Grommet.
           </Paragraph>
