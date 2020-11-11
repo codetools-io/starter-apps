@@ -7,6 +7,7 @@ const DATA_PATH = `${process.env.PUBLIC_URL}/data`;
 const SANDBOX_URL = process.env.REACT_APP_SANDBOX_URL;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const TWITTER_SHARE_URL = process.env.REACT_APP_TWITTER_SHARE_URL;
+const TWITTER_USER = process.env.REACT_APP_TWITTER_USER;
 export default function Docs({
   component: Component,
   docs,
@@ -28,6 +29,16 @@ export default function Docs({
     );
   }, [bookmarks, doc]);
 
+  const shareUrl = useMemo(() => {
+    const textParam = doc?.name
+      ? encodeURIComponent(`${doc?.name} starter app by CodeTools.io`)
+      : encodeURIComponent(`Starter App by CodeTools.io`);
+    const urlParam = encodeURIComponent(
+      `${window.location.origin}${window.location.pathname}`
+    );
+    const twitterUser = encodeURIComponent(TWITTER_USER?.replace('@', ''));
+    return `${TWITTER_SHARE_URL}?text=${textParam}&url=${urlParam}&via=${twitterUser}`;
+  }, [doc]);
   useEffect(() => {
     setDoc(docs?.components?.find((c) => c?.path === path));
   }, [path, docs]);
@@ -65,7 +76,7 @@ export default function Docs({
             size: 'small',
           },
           twitter: {
-            url: TWITTER_SHARE_URL,
+            url: shareUrl,
             text: 'Share',
             size: 'small',
           },
