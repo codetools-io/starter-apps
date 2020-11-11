@@ -3,16 +3,65 @@
 exports[`Bookmarks can render 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 cxNasQ Bookmarks"
+    class="StyledBox-sc-13pk1d4-0 jqlWKB Bookmarks"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 jDoFwS"
+      class="StyledBox-sc-13pk1d4-0 dYebPD"
     >
-      <h1
-        class="StyledHeading-sc-1rdh4aw-0 xhldK"
+      <div
+        class="StyledBox-sc-13pk1d4-0 dvIeIL"
       >
-        Coming Soon!
-      </h1>
+        <h2
+          class="StyledHeading-sc-1rdh4aw-0 iqLQKP"
+        >
+          No bookmarks found…
+        </h2>
+        <div
+          class="StyledBox-sc-13pk1d4-0 bEnuwL"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 DkZvS"
+          >
+            You can add bookmarks by navigating to the component and clicking
+             
+          </span>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 dfYOnT"
+          >
+            <svg
+              aria-label="Bookmark"
+              class="StyledIcon-ofa7kd-0 blPEoF"
+              viewBox="0 0 24 24"
+            >
+              <polygon
+                fill="none"
+                points="5 1 5 22 12 17 19 22 19 1"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+            <div
+              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 bAwsPu"
+            />
+            <span
+              class="StyledText-sc-1sadyjn-0 gOVGlS"
+            >
+              Save
+            </span>
+          </div>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 eBVJAG"
+          />
+          <span
+            class="StyledText-sc-1sadyjn-0 DkZvS"
+          >
+            .
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
