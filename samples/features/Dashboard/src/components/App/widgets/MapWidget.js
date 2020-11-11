@@ -8,6 +8,7 @@ function Map({ continents = [], places = [] }) {
 export default function MapWidget({ title, description, data, ...props }) {
   return (
     <Card
+      className="MapWidget"
       background="white"
       pad="medium"
       gap="medium"

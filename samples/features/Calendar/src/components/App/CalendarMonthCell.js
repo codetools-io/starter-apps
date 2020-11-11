@@ -25,7 +25,7 @@ export default function CalendarMonthCell({
       <Box direction="row" justify="end">
         <Text weight={weight}>{day}</Text>
       </Box>
-      <Box>
+      <Box gap="xsmall">
         {agenda?.map((event) => {
           if (!event.date.isSame(date, 'day')) {
             return null;
