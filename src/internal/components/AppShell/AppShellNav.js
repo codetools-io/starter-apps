@@ -1,7 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { useLocalStorage } from 'react-use';
-import classNames from 'classnames';
 import {
   Box,
   Collapsible,
@@ -13,15 +12,17 @@ import {
 import Icon from 'internal/components/Icon';
 import { Up, Down } from 'grommet-icons';
 
-function AppShellNavSection({ label, children }) {
+function AppShellNavSection({ label, children, isMobile = false }) {
   return (
-    <Box className="AppShellNavSection" gap="small">
+    <Box className="AppShellNavSection" gap={isMobile ? 'medium' : 'small'}>
       <Box pad={{ horizontal: 'large' }}>
-        <Text weight="bold">{label}</Text>
+        <Text weight="bold" size={isMobile ? 'large' : 'medium'}>
+          {label}
+        </Text>
       </Box>
-      <Box gap="none">
+      <Box gap={isMobile ? 'medium' : 'none'}>
         {children?.map((child) => (
-          <AppShellNavItem {...child} />
+          <AppShellNavItem {...child} isMobile={isMobile} />
         ))}
       </Box>
     </Box>
@@ -35,6 +36,7 @@ function AppShellNavItem({
   menuBackground,
   children,
   isNested = false,
+  isMobile = false,
   ...rest
 }) {
   const theme = useContext(ThemeContext);
@@ -62,6 +64,7 @@ function AppShellNavItem({
         icon={icon}
         label={label}
         isNested={isNested}
+        isMobile={isMobile}
         {...rest}
       />
     );
@@ -82,6 +85,7 @@ function AppShellNavItem({
             toggleMenu();
           }}
           isNested={isNested}
+          isMobile={isMobile}
           {...rest}
         />
       </Box>
@@ -93,7 +97,14 @@ function AppShellNavItem({
           fill="horizontal"
         >
           {children.map((child) => {
-            return <AppShellNavItem key={child.id} {...child} isNested />;
+            return (
+              <AppShellNavItem
+                key={child.id}
+                {...child}
+                isMobile={isMobile}
+                isNested
+              />
+            );
           })}
         </Box>
       </Collapsible>
@@ -108,21 +119,16 @@ function AppShellNavLink({
   icon,
   secondaryIcon,
   label,
-  size = 'medium',
   onClick = (event) => {},
   isNested,
+  isMobile = false,
   ...props
 }) {
   const theme = useContext(ThemeContext);
-  const screenSize = useContext(ResponsiveContext);
-  const className = classNames({
-    AppShellNavLink: true,
-    'is-small': screenSize === 'small',
-  });
 
   return (
     <RouterNavLink
-      className={className}
+      className="AppShellNavLink"
       to={to}
       style={{
         ...theme.anchor,
@@ -151,7 +157,7 @@ function AppShellNavLink({
         {icon && (
           <Box className="NavLink__icon">
             <Text color={theme?.appShell?.nav?.icon?.color}>
-              <Icon name={icon} size="small" />
+              <Icon name={icon} size={isMobile ? 'medium' : 'small'} />
             </Text>
           </Box>
         )}
@@ -163,7 +169,7 @@ function AppShellNavLink({
             flex
           >
             <Text
-              size={size}
+              size={isMobile ? 'large' : 'medium'}
               color={theme?.appShell?.nav?.link?.color}
               margin={{ left: isNested ? 'medium' : 'none' }}
               truncate
@@ -185,11 +191,11 @@ function AppShellNavLink({
   );
 }
 
-export default function AppShellNav({ nav, ...props }) {
+export default function AppShellNav({ nav, isMobile = false, ...props }) {
   return (
-    <Nav className="AppShellNav" gap="medium" {...props}>
+    <Nav className="AppShellNav" gap={isMobile ? 'large' : 'medium'} {...props}>
       {nav?.map((section) => (
-        <AppShellNavSection {...section} />
+        <AppShellNavSection {...section} isMobile={isMobile} />
       ))}
     </Nav>
   );

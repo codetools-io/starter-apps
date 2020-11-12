@@ -85,7 +85,7 @@ export const brand = {
     },
     breakpoints: {
       small: {
-        value: 800,
+        value: 675,
         borderSize: {
           xsmall: '1px',
           small: '2px',
@@ -114,7 +114,7 @@ export const brand = {
         },
       },
       medium: {
-        value: 1280,
+        value: 800,
       },
       large: {},
     },

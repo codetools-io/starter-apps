@@ -1,9 +1,8 @@
 import React from 'react';
-import { Grid, Grommet } from 'grommet';
+import { Grommet } from 'grommet';
 import * as config from 'internal/config';
-import AppShellHeader from './AppShellHeader';
-import AppShellMain from './AppShellMain';
-import AppShellSidebar from './AppShellSidebar';
+
+import AppShellContainer from './AppShellContainer';
 import './AppShell.css';
 
 export default function AppShell({
@@ -16,24 +15,15 @@ export default function AppShell({
 }) {
   return (
     <Grommet className="AppShell" theme={config?.theme} full>
-      <Grid
-        className="AppShellContainer"
-        rows={['auto', 'flex']}
-        columns={['medium', 'flex']}
-        areas={[
-          ['sidebar', 'header'],
-          ['sidebar', 'main'],
-        ]}
-        style={{ minHeight: '100vh' }}
+      <AppShellContainer
+        nav={nav}
+        currentUser={currentUser}
+        login={login}
+        logout={logout}
+        {...props}
       >
-        <AppShellSidebar nav={nav} />
-        <AppShellHeader
-          currentUser={currentUser}
-          login={login}
-          logout={logout}
-        />
-        <AppShellMain>{children}</AppShellMain>
-      </Grid>
+        {children}
+      </AppShellContainer>
     </Grommet>
   );
 }
