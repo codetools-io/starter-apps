@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Heading, Paragraph } from 'grommet';
 import Socials from 'internal/components/Socials';
 
 export default function PageHeader({ title, description, socials, ...props }) {
+  useEffect(() => {
+    document.title =
+      title === 'Starter Apps' ? title : `${title} | Starter Apps`;
+  });
   return (
     <Grid
       className="PageHeader"
