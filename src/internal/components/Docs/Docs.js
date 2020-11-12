@@ -59,6 +59,10 @@ export default function Docs({
       .catch((err) => console.error(err));
   }, []);
 
+  if (!doc) {
+    return <Box>loading docs…</Box>;
+  }
+
   return (
     <Box className="Docs" fill="horizontal" {...props}>
       <PageHeader

@@ -7,6 +7,7 @@ export default function PageHeader({ title, description, socials, ...props }) {
     document.title =
       title === 'Starter Apps' ? title : `${title} | Starter Apps`;
   });
+
   return (
     <Grid
       className="PageHeader"
