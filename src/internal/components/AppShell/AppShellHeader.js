@@ -6,8 +6,10 @@ import AppShellUserMenu from './AppShellUserMenu';
 
 function AppShellMobileHeader({
   currentUser,
+  showMenu,
   login = () => {},
   logout = () => {},
+  toggleMenu = () => {},
 }) {
   return (
     <Box
@@ -19,7 +21,13 @@ function AppShellMobileHeader({
       pad={{ horizontal: 'large', vertical: 'medium' }}
       gap="medium"
     >
-      <Button icon={<Menu />} plain />
+      <Button
+        icon={<Menu />}
+        onClick={() => {
+          toggleMenu(!showMenu);
+        }}
+        plain
+      />
       {currentUser ? (
         <AppShellUserMenu currentUser={currentUser} logout={logout} />
       ) : (

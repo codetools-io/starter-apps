@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { Grid, ResponsiveContext } from 'grommet';
 
 import AppShellHeader from './AppShellHeader';
@@ -13,6 +13,7 @@ export default function AppShellContainer({
   logout = () => {},
   ...props
 }) {
+  const [showMenu, toggleMenu] = useState(false);
   const size = useContext(ResponsiveContext);
   const areas = useMemo(() => {
     if (size === 'small') {
@@ -44,8 +45,14 @@ export default function AppShellContainer({
       areas={areas}
       style={{ minHeight: '100vh' }}
     >
-      <AppShellHeader currentUser={currentUser} login={login} logout={logout} />
-      <AppShellSidebar nav={nav} />
+      <AppShellHeader
+        currentUser={currentUser}
+        login={login}
+        logout={logout}
+        showMenu={showMenu}
+        toggleMenu={toggleMenu}
+      />
+      <AppShellSidebar nav={nav} showMenu={showMenu} />
       <AppShellMain>{children}</AppShellMain>
     </Grid>
   );

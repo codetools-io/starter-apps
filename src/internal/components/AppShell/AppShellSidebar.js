@@ -4,7 +4,7 @@ import { Box, Header, ResponsiveContext, Sidebar, ThemeContext } from 'grommet';
 import { ReactComponent as Logo } from './img/logo-1.svg';
 import AppShellNav from './AppShellNav.js';
 
-export default function AppShellSidebar({ background, nav }) {
+export default function AppShellSidebar({ background, nav, showMenu = false }) {
   const theme = useContext(ThemeContext);
   const size = useContext(ResponsiveContext);
   const isMobile = useMemo(() => {
@@ -33,6 +33,10 @@ export default function AppShellSidebar({ background, nav }) {
 
     return nav;
   }, [isMobile, nav]);
+
+  if (isMobile === true && showMenu === false) {
+    return null;
+  }
 
   return (
     <Sidebar
