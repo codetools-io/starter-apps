@@ -3,8 +3,8 @@ import Profile from './Profile';
 
 describe('Profile', () => {
   test('can render', () => {
-    const result = render(<Profile />);
+    const { container } = renderContainer(<Profile />);
 
-    expect(result.toJSON()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
