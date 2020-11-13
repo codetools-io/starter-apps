@@ -9,7 +9,7 @@ export default function About({ children, ...props }) {
       <PageHeader title="About" />
 
       <Card pad="large" gap="medium" background="white">
-        <Box height="medium" align="center" direction="center">
+        <Box height="medium" align="center">
           <Paragraph
             margin={{ horizontal: 'auto' }}
             size="xlarge"
