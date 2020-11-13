@@ -52,7 +52,7 @@ export default function AppShellContainer({
         showMenu={showMenu}
         toggleMenu={toggleMenu}
       />
-      <AppShellSidebar nav={nav} showMenu={showMenu} />
+      <AppShellSidebar nav={nav} showMenu={showMenu} toggleMenu={toggleMenu} />
       <AppShellMain>{children}</AppShellMain>
     </Grid>
   );

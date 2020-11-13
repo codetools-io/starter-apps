@@ -20,6 +20,7 @@ function AppShellMobileHeader({
       background="light-1"
       pad={{ horizontal: 'large', vertical: 'medium' }}
       gap="medium"
+      style={{ position: 'sticky', top: '0px' }}
     >
       <Button
         icon={<Menu />}
