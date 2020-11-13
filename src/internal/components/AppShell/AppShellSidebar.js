@@ -40,6 +40,8 @@ function AppShellMobileNav({
         className="AppShellSidebar"
         background={background || theme?.appShell?.sidebar?.background}
         pad={{ horizontal: 'none', vertical: 'medium' }}
+        overflow="auto"
+        flex
       >
         <Box gap="medium">
           <Header
