@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Box, Button, Layer, Nav, ResponsiveContext } from 'grommet';
+import { Box, Button, Nav, ResponsiveContext } from 'grommet';
 import { Menu } from 'grommet-icons';
 import Link from 'internal/components/Link';
 import AppShellUserMenu from './AppShellUserMenu';
@@ -32,7 +32,7 @@ function AppShellMobileHeader({
       {currentUser ? (
         <AppShellUserMenu currentUser={currentUser} logout={logout} />
       ) : (
-        <Button label="Login" onClick={login} primary />
+        <Button label="Login" onClick={login} />
       )}
     </Box>
   );

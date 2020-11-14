@@ -1,5 +1,6 @@
 import React, { useContext, useMemo, useRef, useState } from 'react';
 import {
+  Anchor,
   Box,
   Button,
   Card,
@@ -71,6 +72,11 @@ function HomeSection({ components, description, title, ...props }) {
 
 function HomeFiltersMenu({ sections, onClear }) {
   const size = useContext(ResponsiveContext);
+  const showClear = useMemo(() => {
+    return sections?.some((section) => {
+      return Object.values(section?.options)?.some((option) => option);
+    });
+  }, [sections]);
   return (
     <Box
       margin={{ top: 'small' }}
@@ -88,7 +94,7 @@ function HomeFiltersMenu({ sections, onClear }) {
             <Heading margin="none" level={4}>
               {section?.title}
             </Heading>
-            <Grid gap="small" columns="small" rows={['auto']}>
+            <Grid gap="small" columns="small" rows={['auto']} fill>
               {Object.keys(section?.options)?.map((option) => {
                 const labelSuffix = section?.counts
                   ? ` (${section?.counts?.[option]})`
@@ -118,9 +124,11 @@ function HomeFiltersMenu({ sections, onClear }) {
           </Box>
         );
       })}
-      <Box direction="row">
-        <Button label="Clear" onClick={onClear} color="control" plain />
-      </Box>
+      {showClear && (
+        <Box direction="row">
+          <Button label="Clear" onClick={onClear} color="control" plain />
+        </Box>
+      )}
     </Box>
   );
 }
@@ -192,7 +200,6 @@ function HomeFilters({ sections = [], onClear = () => {}, ...props }) {
             plain: true,
           }}
           dropTarget={size !== 'small' ? filterMenuRef.current : null}
-          primary
         />
       </Box>
       <Box
@@ -226,9 +233,17 @@ export default function Home({ docs = {}, ...props }) {
     <Box className="Home" flex={false} fill="horizontal" {...props}>
       <PageHeader
         title="Starter Apps"
-        description="Grommet based UI solutions for various application types."
+        description={
+          <Text>
+            Examples of React based applications built with{' '}
+            <Anchor href="https://v2.grommet.io" target="_blank">
+              Grommet
+            </Anchor>
+          </Text>
+        }
         margin={{ top: 'small', bottom: 'large' }}
       />
+
       <HomeFilters
         onClear={clearOptions}
         sections={[
