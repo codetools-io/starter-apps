@@ -3,7 +3,8 @@ const brandColors = {
   'brand-2': '#5C677D',
   'brand-3': '#7D8597',
   'brand-4': '#979DAC',
-  'brand-5': '#238FFB',
+  'brand-5': '#5fadfc',
+  'brand-5-dark': '#238FFB',
   'brand-6': '#0466C8',
   'brand-7': '#0353A4',
   'brand-8': '#023E7D',
@@ -105,8 +106,8 @@ const colors = {
   heading6: brandColors['brand-2'],
 
   link: brandColors['brand-5'],
-  'hovered-link': brandColors['brand-6'],
-  'active-link': brandColors['brand-7'],
+  'hovered-link': brandColors['brand-5-dark'],
+  'active-link': brandColors['brand-6'],
 
   'primary-button-color': brandColors['brand-2'],
   'primary-button-border-color': brandColors['brand-2'],

@@ -13,7 +13,6 @@ export default function Socials({
   twitter = false,
   ...props
 }) {
-  console.log(bookmark);
   return (
     <Box direction="row" justify="start" align="center" gap="medium" {...props}>
       {github && (

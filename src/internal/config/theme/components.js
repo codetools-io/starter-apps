@@ -143,6 +143,32 @@ const grommetComponents = {
       },
     },
   },
+
+  tab: {
+    color: 'link',
+    active: {
+      color: 'active-link',
+    },
+    hover: {
+      color: { light: 'hovered-link' },
+    },
+
+    border: {
+      color: {
+        light: 'transparent',
+      },
+      active: {
+        color: {
+          light: 'active-link',
+        },
+      },
+      hover: {
+        color: {
+          light: 'transparent',
+        },
+      },
+    },
+  },
 };
 
 const customComponents = {
