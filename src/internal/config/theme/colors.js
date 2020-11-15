@@ -79,7 +79,7 @@ const colors = {
   'text-weak': { light: 'brand-4' },
   'text-xweak': { light: 'brand-4' },
   border: { light: 'shade-2' },
-  control: 'brand',
+  control: 'brand-5',
   'active-background': 'background-contrast',
   'active-text': 'brand-1',
   'selected-background': 'brand',

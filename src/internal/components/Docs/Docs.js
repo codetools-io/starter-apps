@@ -85,9 +85,8 @@ export default function Docs({
             size: 'small',
           },
           bookmark: {
-            text: 'Save',
+            text: isBookmarked ? 'Remove Bookmark' : 'Add Bookmark',
             size: 'small',
-            color: isBookmarked ? 'brand-1' : 'brand-2',
             onClick: () => {
               onBookmark({
                 componentId: doc?.id,

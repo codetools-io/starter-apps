@@ -45,8 +45,10 @@ function BookmarksDocLink({
 function BookmarkButtonPreview() {
   return (
     <Box direction="row" align="center" gap="xsmall">
-      <Bookmark size="small" />
-      <Text size="small">Save</Text>
+      <Bookmark size="small" color="link" />
+      <Text size="small" color="link">
+        Add Bookmark
+      </Text>
     </Box>
   );
 }

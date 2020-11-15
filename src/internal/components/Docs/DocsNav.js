@@ -5,9 +5,7 @@ function DocsNavTab({ icon, title, isActive }) {
   return (
     <Box direction="row" align="center" gap="xsmall" margin="xsmall">
       {icon}
-      <Text size="small" color={isActive ? 'control' : 'text'}>
-        <strong>{title}</strong>
-      </Text>
+      {title}
     </Box>
   );
 }

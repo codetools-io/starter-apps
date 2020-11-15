@@ -8,18 +8,6 @@ const grommetComponents = {
     },
     extend: undefined,
   },
-  tab: {
-    color: 'text',
-    active: {
-      color: 'active-text',
-    },
-    border: {
-      color: 'text',
-      active: {
-        color: 'active-text',
-      },
-    },
-  },
   paragraph: {
     small: {
       size: '13px',

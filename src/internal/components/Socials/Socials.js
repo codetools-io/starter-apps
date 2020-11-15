@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Text } from 'grommet';
+import { Box, Anchor, Button, Text } from 'grommet';
 import { Bookmark, CodeSandbox, Github, Twitter } from 'grommet-icons';
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
@@ -13,10 +13,11 @@ export default function Socials({
   twitter = false,
   ...props
 }) {
+  console.log(bookmark);
   return (
     <Box direction="row" justify="start" align="center" gap="medium" {...props}>
       {github && (
-        <Button
+        <Anchor
           href={github?.url || GITHUB_URL}
           icon={<Github size={github?.size || 'medium'} />}
           label={
@@ -25,11 +26,10 @@ export default function Socials({
             ) : null
           }
           gap="small"
-          plain
         />
       )}
       {twitter && (
-        <Button
+        <Anchor
           href={twitter?.url || TWITTER_URL}
           icon={<Twitter size={twitter?.size || 'medium'} />}
           label={
@@ -38,11 +38,10 @@ export default function Socials({
             ) : null
           }
           gap="small"
-          plain
         />
       )}
       {codeSandbox && (
-        <Button
+        <Anchor
           href={codeSandbox?.url || CODE_SANDBOX_URL}
           icon={<CodeSandbox size={codeSandbox?.size || 'medium'} />}
           label={
@@ -53,21 +52,15 @@ export default function Socials({
             ) : null
           }
           gap="small"
-          plain
         />
       )}
 
       {bookmark && (
         <Button
-          icon={
-            <Bookmark
-              size={bookmark?.size || 'medium'}
-              color={bookmark?.color}
-            />
-          }
+          icon={<Bookmark size={bookmark?.size || 'medium'} color="link" />}
           label={
             bookmark?.text ? (
-              <Text size={bookmark?.size || 'medium'} color={bookmark?.color}>
+              <Text size={bookmark?.size || 'medium'} color="link">
                 {bookmark?.text}
               </Text>
             ) : null
