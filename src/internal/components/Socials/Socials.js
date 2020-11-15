@@ -14,14 +14,20 @@ export default function Socials({
   ...props
 }) {
   return (
-    <Box direction="row" justify="start" align="center" gap="medium" {...props}>
+    <Box
+      direction="row"
+      justify="start"
+      align="baseline"
+      gap="medium"
+      {...props}
+    >
       {github && (
         <Anchor
           href={github?.url || GITHUB_URL}
-          icon={<Github size={github?.size || 'medium'} />}
+          icon={<Github size={github?.size || 'small'} />}
           label={
             github?.text ? (
-              <Text size={github?.size || 'medium'}>{github?.text}</Text>
+              <Text size={github?.size || 'small'}>{github?.text}</Text>
             ) : null
           }
           gap="small"
@@ -30,10 +36,10 @@ export default function Socials({
       {twitter && (
         <Anchor
           href={twitter?.url || TWITTER_URL}
-          icon={<Twitter size={twitter?.size || 'medium'} />}
+          icon={<Twitter size={twitter?.size || 'small'} />}
           label={
             twitter?.text ? (
-              <Text size={twitter?.size || 'medium'}>{twitter?.text}</Text>
+              <Text size={twitter?.size || 'small'}>{twitter?.text}</Text>
             ) : null
           }
           gap="small"
@@ -42,10 +48,10 @@ export default function Socials({
       {codeSandbox && (
         <Anchor
           href={codeSandbox?.url || CODE_SANDBOX_URL}
-          icon={<CodeSandbox size={codeSandbox?.size || 'medium'} />}
+          icon={<CodeSandbox size={codeSandbox?.size || 'small'} />}
           label={
             codeSandbox?.text ? (
-              <Text size={codeSandbox?.size || 'medium'}>
+              <Text size={codeSandbox?.size || 'small'}>
                 {codeSandbox?.text}
               </Text>
             ) : null
@@ -56,10 +62,10 @@ export default function Socials({
 
       {bookmark && (
         <Button
-          icon={<Bookmark size={bookmark?.size || 'medium'} color="link" />}
+          icon={<Bookmark size={bookmark?.size || 'small'} color="link" />}
           label={
             bookmark?.text ? (
-              <Text size={bookmark?.size || 'medium'} color="link">
+              <Text size={bookmark?.size || 'small'} color="link">
                 {bookmark?.text}
               </Text>
             ) : null

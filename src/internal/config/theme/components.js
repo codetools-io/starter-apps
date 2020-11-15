@@ -52,7 +52,7 @@ const grommetComponents = {
   },
   layer: {
     overlay: {
-      background: 'rgba(51, 65, 92, 0.85)',
+      background: 'rgba(0, 0, 0, 0.5)',
     },
   },
   anchor: {
@@ -77,37 +77,37 @@ const grommetComponents = {
   },
   button: {
     primary: {
-      background: { color: 'primary-button-color' },
-      border: { color: 'primary-button-color', width: '1px', radius: '4px' },
-      color: 'primary-button-text-color',
+      background: { color: 'primary-button' },
+      border: { color: 'primary-button', width: '1px', radius: '4px' },
+      color: 'primary-button-text',
       extend: (props) => {
         return `
           :hover {
-            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['primary-button-border-color']};
+            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['primary-button-border']};
           }
         `;
       },
     },
     secondary: {
-      background: { color: 'secondary-button-color' },
-      border: { color: 'secondary-button-color', width: '1px', radius: '4px' },
-      color: 'secondary-button-text-color',
+      background: { color: 'secondary-button' },
+      border: { color: 'secondary-button', width: '1px', radius: '4px' },
+      color: 'secondary-button-text',
       extend: (props) => {
         return `
           :hover {
-            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['secondary-button-border-color']};
+            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['secondary-button-border']};
           }
         `;
       },
     },
     default: {
-      background: { color: 'default-button-color' },
+      background: { color: 'default-button' },
       border: {
-        color: 'default-button-border-color',
+        color: 'default-button-border',
         width: '1px',
         radius: '4px',
       },
-      color: 'default-button-text-color',
+      color: 'default-button-text',
       extend: (props) => {
         return `
           :hover {
@@ -121,7 +121,7 @@ const grommetComponents = {
       secondary: {},
       default: {
         border: {
-          color: 'default-button-text-color',
+          color: 'default-button-text',
         },
       },
     },
@@ -145,12 +145,12 @@ const grommetComponents = {
   },
 
   tab: {
-    color: 'link',
+    color: 'default-button-text',
     active: {
-      color: 'active-link',
+      color: 'default-button-text',
     },
     hover: {
-      color: { light: 'hovered-link' },
+      color: { light: 'default-button-text' },
     },
 
     border: {
@@ -159,12 +159,12 @@ const grommetComponents = {
       },
       active: {
         color: {
-          light: 'active-link',
+          light: 'default-button-text',
         },
       },
       hover: {
         color: {
-          light: 'transparent',
+          light: 'default-button-border',
         },
       },
     },
@@ -174,11 +174,11 @@ const grommetComponents = {
 const customComponents = {
   appShell: {
     sidebar: {
-      background: 'brand-1',
+      background: 'shade-8',
     },
     nav: {
       menu: {
-        background: 'brand-1',
+        background: 'shade-8',
       },
       link: {
         color: 'white',

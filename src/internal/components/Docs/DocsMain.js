@@ -94,7 +94,13 @@ export default function DocsMain({
 
   return (
     <Box className="DocsMain" gap="small" flex={false} {...props}>
-      <Box direction="row" justify="between">
+      <Box
+        direction="row-responsive"
+        justify="between"
+        align="baseline"
+        wrap={true}
+        gap="medium"
+      >
         <DocsNav tabs={tabs} onChangeTab={onChangeTab} />
         <DocsActions actions={actions} />
       </Box>

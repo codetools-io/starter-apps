@@ -75,7 +75,9 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           tooltip={<Text size="small">component view</Text>}
           icon={<Cubes />}
           onClick={() => setIsOverlayToggled(!isOverlayToggled)}
-          color={isOverlayToggled ? 'control' : 'text'}
+          color={
+            isOverlayToggled ? 'default-button-text' : 'default-button-border'
+          }
           align={{ bottom: 'top', right: 'right' }}
         />
       ),

@@ -73,9 +73,6 @@ export default function ThemePicker({
 
   return (
     <Box className="ThemePicker">
-      <Text color="text-xweak" size="small" margin={{ top: '-1rem' }}>
-        theme
-      </Text>
       <Select
         options={[...themeOptions, 'import…']}
         value={themeName}

@@ -8,7 +8,7 @@ export default function TooltipButton({
   tooltip,
   tooltipProps = {
     pad: 'xsmall',
-    background: 'dark-1',
+    background: 'shade-6',
   },
   ...props
 }) {

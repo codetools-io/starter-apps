@@ -1,16 +1,6 @@
 import React, { useMemo } from 'react';
-import { Box, Tab, Tabs, Text } from 'grommet';
+import { Box, Tab, Tabs } from 'grommet';
 
-function DocsNavTab({ tab }) {
-  const title = (
-    <Box direction="row" align="center" gap="xsmall" margin="xsmall">
-      <Text size="small" color={tab?.isActive ? 'control' : 'text'}>
-        <strong>{tab?.title}</strong>
-      </Text>
-    </Box>
-  );
-  return <Tab title={title} />;
-}
 export default function DocsNav({ tabs = [], onChangeTab }) {
   const activeTab = useMemo(() => {
     return tabs?.find((tab) => tab?.isActive) || tabs[0];
