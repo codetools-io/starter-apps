@@ -15,12 +15,11 @@ export default function About({ children, ...props }) {
             size="xlarge"
             textAlign="center"
           >
-            Starter Apps is a resource for solutions to building React based
-            applications with Grommet. We provide developers with examples of
-            ways that real-world applications can be built with React and{' '}
+            Starter Apps is a resource for showing how applications can be built
+            using React and{' '}
             <Anchor href="https://v2.grommet.io" target="_blank">
               Grommet
-            </Anchor>{' '}
+            </Anchor>
             .
           </Paragraph>
         </Box>

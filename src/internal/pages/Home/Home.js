@@ -235,7 +235,7 @@ export default function Home({ docs = {}, ...props }) {
         title="Starter Apps"
         description={
           <Text>
-            Examples of React based applications built with{' '}
+            Example applications built with React and{' '}
             <Anchor href="https://v2.grommet.io" target="_blank">
               Grommet
             </Anchor>
