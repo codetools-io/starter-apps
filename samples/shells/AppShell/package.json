@@ -5,6 +5,7 @@
   "dependencies": {
     "accounting": "^0.4.1",
     "classnames": "^2.2.6",
+    "faker": "^5.1.0",
     "grommet": "^2.15.0",
     "grommet-icons": "^4.4.0",
     "history": "^5.0.0",

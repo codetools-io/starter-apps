@@ -53,6 +53,7 @@ function ProjectShort({ id, name, type, category, progress, ...props }) {
             icon={<More />}
             dropAlign={{ top: 'bottom', right: 'right' }}
             dropContent={<Box pad="large" background="light-2" />}
+            plain
           />
         </Box>
       </Grid>

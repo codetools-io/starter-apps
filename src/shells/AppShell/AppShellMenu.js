@@ -21,6 +21,7 @@ export default function AppShellMenu({
           <Text onClick={authHandler}>{authLabel}</Text>
         </Box>
       }
+      plain
     />
   );
 }

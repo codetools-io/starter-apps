@@ -16,7 +16,19 @@ exports[`Home can render 1`] = `
       <p
         class="StyledParagraph-tbetod-0 eYnGVp"
       >
-        Grommet based UI solutions for various application types.
+        <span
+          class="StyledText-sc-1sadyjn-0 DkZvS"
+        >
+          Example applications built with React and
+           
+          <a
+            class="StyledAnchor-sc-1rp7lwl-0 eCyBYb"
+            href="https://v2.grommet.io"
+            target="_blank"
+          >
+            Grommet
+          </a>
+        </span>
       </p>
     </div>
     <div
@@ -33,7 +45,7 @@ exports[`Home can render 1`] = `
         />
         <button
           aria-label="Open Drop"
-          class="StyledButton-sc-323bzc-0 hmOcFG"
+          class="StyledButton-sc-323bzc-0 iZFCLM"
           type="button"
         >
           <div
@@ -41,7 +53,7 @@ exports[`Home can render 1`] = `
           >
             <svg
               aria-label="Filter"
-              class="StyledIcon-ofa7kd-0 kUEYDt"
+              class="StyledIcon-ofa7kd-0 blPEoF"
               viewBox="0 0 24 24"
             >
               <polygon

@@ -67,6 +67,7 @@ function ChatConversations({
           <Button
             key={conversation.id}
             onClick={() => selectConversation(conversation.id)}
+            plain
           >
             <Box
               background={conversationId === conversation.id ? 'light-1' : null}

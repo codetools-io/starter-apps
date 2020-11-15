@@ -9,6 +9,7 @@ export default function ContactsList({ contacts, contactId, openContact }) {
           <Button
             key={`contact-${contact.id}`}
             onClick={() => openContact(contact.id)}
+            plain
           >
             <Box
               background={contactId === contact.id ? 'light-1' : null}

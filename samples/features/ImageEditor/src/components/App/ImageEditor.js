@@ -106,7 +106,7 @@ function ImageEditorFooter({
                     />
                   }
                   dropTarget={footerRef.current}
-                  color={filter?.applied ? 'brand' : 'accent-1'}
+                  color={filter?.applied ? 'brand' : 'shade-7'}
                   onOpen={() => {
                     onApplyFilter(key);
                   }}

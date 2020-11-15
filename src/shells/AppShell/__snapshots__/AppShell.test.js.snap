@@ -31,7 +31,7 @@ exports[`Can render AppShell 1`] = `
             >
               <button
                 aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 hiyJPE AppShellSearch"
+                class="StyledButton-sc-323bzc-0 bZMlsb AppShellSearch"
                 type="button"
               >
                 <svg
@@ -55,7 +55,7 @@ exports[`Can render AppShell 1`] = `
               >
                 <button
                   aria-label="Open Drop"
-                  class="StyledButton-sc-323bzc-0 hiyJPE"
+                  class="StyledButton-sc-323bzc-0 bZMlsb"
                   type="button"
                 >
                   <div
@@ -105,7 +105,7 @@ exports[`Can render AppShell 1`] = `
                 />
                 <button
                   aria-label="Open Drop"
-                  class="StyledButton-sc-323bzc-0 hiyJPE"
+                  class="StyledButton-sc-323bzc-0 bZMlsb"
                   type="button"
                 >
                   <div
@@ -155,7 +155,7 @@ exports[`Can render AppShell 1`] = `
                 />
                 <button
                   aria-label="Open Drop"
-                  class="StyledButton-sc-323bzc-0 hiyJPE"
+                  class="StyledButton-sc-323bzc-0 bZMlsb"
                   type="button"
                 >
                   <div
@@ -206,7 +206,7 @@ exports[`Can render AppShell 1`] = `
               />
               <button
                 aria-label="Open Drop"
-                class="StyledButton-sc-323bzc-0 hiyJPE AppShellMenu"
+                class="StyledButton-sc-323bzc-0 bZMlsb AppShellMenu"
                 type="button"
               >
                 <div

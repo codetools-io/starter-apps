@@ -41,6 +41,7 @@ function AppShellNotification({ category, notifications = [] }) {
         plain: true,
         overflow: 'visible',
       }}
+      plain
     />
   );
 }

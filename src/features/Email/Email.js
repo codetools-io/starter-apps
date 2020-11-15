@@ -78,7 +78,7 @@ function EmailShort({
   background,
 }) {
   return (
-    <Button onClick={onClick}>
+    <Button onClick={onClick} plain>
       <Box
         direction="row"
         pad="medium"

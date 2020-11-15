@@ -47,6 +47,7 @@ export default function Cart({ children, ...props }) {
               <Button
                 icon={<FormClose />}
                 onClick={() => removeProduct(lineItem.id)}
+                plain
               />
             </TableCell>
             <TableCell scope="row">

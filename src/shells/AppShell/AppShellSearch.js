@@ -30,6 +30,7 @@ export default function AppShellSearch({ searchHandler }) {
       }}
       onClose={() => setIsOpen(false)}
       onOpen={() => setIsOpen(true)}
+      plain
     />
   );
 }
