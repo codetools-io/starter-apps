@@ -35,7 +35,11 @@ export default function DocsPreviewModal({
           flex={false}
           background="transparent"
         >
-          <Button icon={<Close color="white" />} onClick={() => onShrink()} />
+          <Button
+            icon={<Close color="white" />}
+            onClick={() => onShrink()}
+            plain
+          />
         </Box>
         <Box height="100%" pad={{ top: 'medium' }}>
           <DocsCard height="large" flex={false} {...props}>

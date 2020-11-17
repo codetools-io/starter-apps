@@ -13,7 +13,13 @@ export default function DocsDomain({ doc }) {
             const { name, description } = datum;
 
             return (
-              <Box background={isAlternate ? 'light-1' : 'white'}>
+              <Box
+                background={
+                  isAlternate
+                    ? 'DocsDomainAlternateBackgroundColor'
+                    : 'DocsDomainBackgroundColor'
+                }
+              >
                 <Grid
                   columns={['small', 'flex']}
                   rows={['auto']}

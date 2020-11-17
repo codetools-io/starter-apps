@@ -73,11 +73,16 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           key="action-overlay"
           className="DocsPreviewActionOverlay"
           tooltip={<Text size="small">component view</Text>}
-          icon={<Cubes />}
-          onClick={() => setIsOverlayToggled(!isOverlayToggled)}
-          color={
-            isOverlayToggled ? 'default-button-text' : 'default-button-border'
+          icon={
+            <Cubes
+              color={
+                isOverlayToggled
+                  ? 'DocsPreviewButtonToggledColor'
+                  : 'DocsPreviewButtonColor'
+              }
+            />
           }
+          onClick={() => setIsOverlayToggled(!isOverlayToggled)}
           align={{ bottom: 'top', right: 'right' }}
         />
       ),
@@ -88,7 +93,6 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
           tooltip={<Text size="small">{`${v} view`}</Text>}
           icon={viewportIcons[v]}
           onClick={() => toggleViewport(v)}
-          color={viewport === v ? 'control' : 'text'}
           align={{ bottom: 'top', right: 'right' }}
         />
       )),
@@ -96,9 +100,17 @@ export default function DocsPreview({ children, doc, loadActions, ...props }) {
         key="action-fullscreen"
         className="DocsPreviewActionFullscreen"
         tooltip={<Text size="small">fullscreen view</Text>}
-        icon={<Expand size="18px" />}
+        icon={
+          <Expand
+            size="18px"
+            color={
+              isFullScreen
+                ? 'DocsPreviewButtonToggledColor'
+                : 'DocsPreviewButtonColor'
+            }
+          />
+        }
         onClick={() => setIsFullScreen(true)}
-        color={isFullScreen ? 'control' : 'text'}
         align={{ bottom: 'top', right: 'right' }}
         title="Fullscreen"
       />,

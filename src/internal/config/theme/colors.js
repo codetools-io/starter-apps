@@ -43,7 +43,7 @@ const colors = {
   'text-strong': { light: brand.shade8 },
   'text-weak': { light: brand.shade9 },
   'text-xweak': { light: brand.shade5 },
-  border: brand.shade5,
+  border: brand.shade2,
   control: brand.shade5,
   'active-background': brand.shade2,
   'active-text': brand.shade7,
@@ -73,8 +73,8 @@ const colors = {
   Heading6Color: brand.shade8,
 
   AnchorColor: brand.color2,
-  AnchorHoverColor: brand.color3,
-  AnchorActiveColor: brand.color4,
+  AnchorActiveColor: brand.color3,
+  AnchorHoverColor: brand.color4,
 
   ButtonDefaultBackground: 'transparent',
   ButtonDefaultBorderColor: brand.shade5,
@@ -100,11 +100,11 @@ const colors = {
   SelectIconsColor: brand.shade5,
 
   TabColor: brand.shade5,
-  TabActiveColor: brand.shade7,
-  TabHoverColor: brand.shade6,
+  TabActiveColor: brand.shade6,
+  TabHoverColor: brand.shade7,
   TabBorderColor: brand.shade5,
-  TabActiveBorderColor: brand.shade7,
-  TabHoverBorderColor: brand.shade6,
+  TabActiveBorderColor: brand.color2,
+  TabHoverBorderColor: brand.color3,
 
   // Custom Components
   AppShellSidebarBackgroundColor: brand.shade9,
@@ -112,6 +112,29 @@ const colors = {
   AppShellNavLinkColor: 'white',
   AppShellNavActiveColor: 'white',
   AppShellNavIconColor: 'white',
+
+  DocsCodeBorderColor: brand.shade1,
+  DocsCodeTabBackgroundColor: 'white',
+  DocsCodeTabActiveBackgroundColor: brand.shade1,
+  DocsCodeTabBorderColor: brand.shade1,
+  DocsCodeTabActiveBorderColor: brand.shade1,
+
+  DocsDomainBackgroundColor: 'white',
+  DocsDomainAlternateBackgroundColor: brand.shade1,
+
+  DocsPreviewButtonColor: brand.shade5,
+  DocsPreviewButtonToggledColor: brand.shade6,
+
+  DocsPropsItemBackgroundColor: 'white',
+  DocsPropsItemAlternateBackgroundColor: brand.shade1,
+  DocsPropsDescriptionColor: brand.shade8,
+  DocsPropsReturnColor: brand.shade9,
+
+  DocsThemeBorderColor: brand.shade1,
+  DocsThemeTabBackgroundColor: 'white',
+  DocsThemeTabActiveBackgroundColor: brand.shade1,
+  DocsThemeTabBorderColor: brand.shade1,
+  DocsThemeTabActiveBorderColor: brand.shade1,
 };
 
 export default colors;

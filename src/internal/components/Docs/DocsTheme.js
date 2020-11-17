@@ -36,9 +36,6 @@ export default function DocsTheme({ themes = {}, loadActions }) {
   useEffect(() => {
     loadActions([
       <Box key="action-theme" className="DocsThemeAction">
-        <Text color="text-xweak" size="small" margin={{ top: '-1rem' }}>
-          theme
-        </Text>
         <Select
           options={themeNames}
           value={currentTheme}
@@ -55,7 +52,7 @@ export default function DocsTheme({ themes = {}, loadActions }) {
   return (
     <Box className="DocsTheme">
       <DocsCard height="large" pad="medium" flex={false}>
-        <Box border={true} fill>
+        <Box border={{ color: 'DocsThemeBorderColor' }} fill>
           <Grid columns={['auto', 'flex']} rows={['full']} fill>
             <Box overflow={{ vertical: 'auto' }}>
               {themeFiles?.map((themeFile) => {
@@ -63,12 +60,23 @@ export default function DocsTheme({ themes = {}, loadActions }) {
                 return (
                   <Box
                     key={`theme-${themeFile?.filename}`}
-                    background={isActive ? 'white' : 'shade-1'}
+                    background={
+                      isActive
+                        ? 'DocsThemeTabActiveBackgroundColor'
+                        : 'DocsThemeTabBackgroundColor'
+                    }
                     border={[
-                      'bottom',
+                      {
+                        side: 'bottom',
+                        color: isActive
+                          ? 'DocsThemeTabActiveBorderColor'
+                          : 'DocsThemeTabBorderColor',
+                      },
                       {
                         side: 'right',
-                        color: isActive ? 'transparent' : 'border',
+                        color: isActive
+                          ? 'DocsThemeTabActiveBorderColor'
+                          : 'DocsThemeTabBorderColor',
                       },
                     ]}
                     direction="row"
@@ -93,7 +101,10 @@ export default function DocsTheme({ themes = {}, loadActions }) {
                   </Box>
                 );
               })}
-              <Box border="right" flex />
+              <Box
+                border={{ color: 'DocsThemeBorderColor', side: 'right' }}
+                flex
+              />
             </Box>
             <Box>
               <MonacoEditor

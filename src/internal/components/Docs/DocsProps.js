@@ -6,9 +6,6 @@ import DocsCard from './DocsCard';
 function DocsPropsHooks({ doc }) {
   return (
     <Box gap="small">
-      <Heading level={4} margin={{ bottom: 'none' }}>
-        Hooks
-      </Heading>
       <DocsCard>
         <List data={doc?.props?.hooks} pad="none">
           {(datum, index) => {
@@ -26,7 +23,13 @@ function DocsPropsHooks({ doc }) {
                 : null,
             ]?.filter((area) => area);
             return (
-              <Box background={isAlternate ? 'light-1' : 'white'}>
+              <Box
+                background={
+                  isAlternate
+                    ? 'DocsPropsItemAlternateBackgroundColor'
+                    : 'DocsPropsItemBackgroundColor'
+                }
+              >
                 <Grid
                   columns={['auto', 'flex', '1/2']}
                   rows={['auto']}
@@ -75,7 +78,9 @@ function DocsPropsHooks({ doc }) {
                               gap="small"
                             >
                               <Markdown>{`\`${argName} <${argType}>\``}</Markdown>
-                              <Text color="dark-4">{argDescription}</Text>
+                              <Text color="DocsPropsDescriptionColor">
+                                {argDescription}
+                              </Text>
                             </Box>
                           );
                         })}
@@ -90,7 +95,7 @@ function DocsPropsHooks({ doc }) {
                       justify="start"
                       gap="small"
                     >
-                      <Text color="dark-4">returns</Text>
+                      <Text color="DocsPropsReturnColor">returns</Text>
                       <Markdown>{`\`${returnValue}\``}</Markdown>
                     </Box>
                   )}

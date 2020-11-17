@@ -12,6 +12,47 @@ const options = {
   readOnly: true,
   smoothScrolling: true,
 };
+
+function DocsCodeTab({ file, index, activeFileIndex, onChangeTab = () => {} }) {
+  return (
+    <Box
+      background={
+        index === activeFileIndex
+          ? 'DocsCodeTabActiveBackgroundColor'
+          : 'DocsCodeTabBackgroundColor'
+      }
+      border={[
+        {
+          side: 'bottom',
+          color: 'DocsCodeTabBorderColor',
+        },
+        {
+          side: 'right',
+          color:
+            index === activeFileIndex
+              ? 'DocsCodeTabActiveBorderColor'
+              : 'DocsCodeTabBorderColor',
+        },
+      ]}
+      direction="row"
+      justify="center"
+      pad="small"
+      flex={false}
+    >
+      <Button
+        label={
+          <Text weight={index === activeFileIndex ? 'bold' : 'normal'}>
+            {file?.filepath}
+          </Text>
+        }
+        onClick={() => onChangeTab({ filepath: file?.filepath, index })}
+        size="large"
+        fill
+        plain
+      />
+    </Box>
+  );
+}
 export default function DocsCode({ files = [] }) {
   const { queryParams, setQueryParam } = useRouter();
   const editor = useRef();
@@ -82,46 +123,24 @@ export default function DocsCode({ files = [] }) {
   return (
     <Box className="DocsCode">
       <DocsCard height="large" pad="medium" flex={false}>
-        <Box border={true} fill>
+        <Box border={{ color: 'DocsCodeBorderColor' }} fill>
           <Grid columns={['auto', 'flex']} rows={['full']} fill>
             <Box overflow={{ vertical: 'auto' }}>
               {files.map((file, index) => {
                 return (
-                  <Box
+                  <DocsCodeTab
                     key={`file-${file?.context}-${file?.filepath}`}
-                    background={index === activeFileIndex ? 'white' : 'shade-1'}
-                    border={[
-                      'bottom',
-                      {
-                        side: 'right',
-                        color:
-                          index === activeFileIndex ? 'transparent' : 'border',
-                      },
-                    ]}
-                    direction="row"
-                    justify="center"
-                    pad="small"
-                    flex={false}
-                  >
-                    <Button
-                      label={
-                        <Text
-                          weight={index === activeFileIndex ? 'bold' : 'normal'}
-                        >
-                          {file?.filepath}
-                        </Text>
-                      }
-                      onClick={() =>
-                        onChangeTab({ filepath: file?.filepath, index })
-                      }
-                      size="large"
-                      fill
-                      plain
-                    />
-                  </Box>
+                    file={file}
+                    index={index}
+                    activeFileIndex={activeFileIndex}
+                    onChangeTab={onChangeTab}
+                  />
                 );
               })}
-              <Box border="right" flex />
+              <Box
+                border={{ color: 'DocsCodeBorderColor', side: 'right' }}
+                flex
+              />
             </Box>
             <Box>
               <MonacoEditor
