@@ -43,10 +43,12 @@ const colors = {
   'text-strong': { light: brand.shade8 },
   'text-weak': { light: brand.shade9 },
   'text-xweak': { light: brand.shade5 },
-  border: { light: 'navy' },
+  border: brand.shade5,
   control: brand.shade5,
   'active-background': brand.shade2,
   'active-text': brand.shade7,
+  'hovered-background': brand.shade2,
+  'hovered-text': brand.shade7,
   'selected-background': brand.shade1,
   'selected-text': brand.shade7,
   'status-critical': '#FF4040',
@@ -94,6 +96,8 @@ const colors = {
   CheckBoxHoverBorderColor: brand.shade6,
 
   LayerOverlayBackground: `${brand.shade9}88`,
+
+  SelectIconsColor: brand.shade5,
 
   TabColor: brand.shade5,
   TabActiveColor: brand.shade7,

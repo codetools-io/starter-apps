@@ -154,7 +154,7 @@ const grommetComponents = {
   },
   select: {
     icons: {
-      color: 'text',
+      color: 'SelectIconsColor',
     },
   },
   tab: {

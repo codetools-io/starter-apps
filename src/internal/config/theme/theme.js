@@ -20,8 +20,8 @@ export const theme = {
       color: 'active-text',
     },
     hover: {
-      background: 'active-background',
-      color: 'active-text',
+      background: 'hovered-background',
+      color: 'hovered-text',
     },
     selected: {
       background: 'selected-background',
@@ -29,12 +29,12 @@ export const theme = {
     },
     control: {
       border: {
-        radius: '2px',
+        radius: '4px',
       },
     },
     drop: {
       border: {
-        radius: '2px',
+        radius: '4px',
       },
     },
     borderSize: {
