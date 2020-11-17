@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Anchor, Button, Text } from 'grommet';
+import React, { useContext } from 'react';
+import { Box, Anchor, Button, Text, ThemeContext } from 'grommet';
 import { Bookmark, CodeSandbox, Github, Twitter } from 'grommet-icons';
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
@@ -13,6 +13,8 @@ export default function Socials({
   twitter = false,
   ...props
 }) {
+  const theme = useContext(ThemeContext);
+  console.log(theme);
   return (
     <Box
       direction="row"
@@ -31,6 +33,10 @@ export default function Socials({
             ) : null
           }
           gap="small"
+          color="SocialsColor"
+          onHover={{
+            color: 'SocialsHoverColor',
+          }}
         />
       )}
       {twitter && (
@@ -43,6 +49,10 @@ export default function Socials({
             ) : null
           }
           gap="small"
+          color="SocialsColor"
+          onHover={{
+            color: 'SocialsHoverColor',
+          }}
         />
       )}
       {codeSandbox && (
@@ -57,21 +67,27 @@ export default function Socials({
             ) : null
           }
           gap="small"
+          color="SocialsColor"
+          onHover={{
+            color: 'SocialsHoverColor',
+          }}
         />
       )}
 
       {bookmark && (
         <Button
-          icon={<Bookmark size={bookmark?.size || 'small'} color="link" />}
-          label={
-            bookmark?.text ? (
-              <Text size={bookmark?.size || 'small'} color="link">
-                {bookmark?.text}
-              </Text>
-            ) : null
+          icon={
+            <Bookmark size={bookmark?.size || 'small'} color="SocialsColor" />
           }
+          label={bookmark?.text ? bookmark?.text : null}
           gap="small"
           onClick={bookmark?.onClick}
+          style={{
+            fontSize: bookmark?.size
+              ? theme?.text?.[bookmark.size]?.size
+              : theme?.text?.small?.size,
+            color: theme?.global?.colors?.SocialsColor,
+          }}
           plain
         />
       )}

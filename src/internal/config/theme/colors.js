@@ -135,6 +135,11 @@ const colors = {
   DocsThemeTabActiveBackgroundColor: brand.shade1,
   DocsThemeTabBorderColor: brand.shade1,
   DocsThemeTabActiveBorderColor: brand.shade1,
+
+  TooltipButtonBackgroundColor: brand.shade2,
+
+  SocialsColor: brand.shade5,
+  SocialsHoverColor: brand.shade6,
 };
 
 export default colors;
