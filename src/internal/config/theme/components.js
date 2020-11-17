@@ -1,4 +1,116 @@
+import { getColor } from './utils';
+
 const grommetComponents = {
+  anchor: {
+    fontWeight: 400,
+    color: 'AnchorColor',
+    hover: {
+      textDecoration: 'none',
+    },
+    extend: (props) => {
+      return `
+        :hover {
+          color: ${getColor(props, 'AnchorHoverColor')}
+        }
+        &.active {
+          color: ${getColor(props, 'AnchorActiveColor')}
+        }
+      `;
+    },
+  },
+  button: {
+    default: {
+      background: { color: 'ButtonDefaultBackground' },
+      border: {
+        color: 'ButtonDefaultBorderColor',
+        width: '1px',
+        radius: '4px',
+      },
+      color: 'ButtonDefaultColor',
+      extend: (props) => {
+        const color = getColor(props, 'ButtonDefaultHoverBorderColor');
+        return `
+          :hover {
+            box-shadow: 0px 0px 0px 1px ${color};
+          }
+        `;
+      },
+    },
+    primary: {
+      background: { color: 'ButtonPrimaryBackground' },
+      border: {
+        color: 'ButtonPrimaryBorderColor',
+        width: '1px',
+        radius: '4px',
+      },
+      color: 'ButtonPrimaryColor',
+      extend: (props) => {
+        const color = getColor(props, 'ButtonPrimaryHoverBorderColor');
+        return `
+          :hover {
+            box-shadow: 0px 0px 0px 1px ${color};
+          }
+        `;
+      },
+    },
+    secondary: {
+      background: { color: 'ButtonSecondaryBackground' },
+      border: {
+        color: 'ButtonSecondaryBorderColor',
+        width: '1px',
+        radius: '4px',
+      },
+      color: 'ButtonSecondaryColor',
+      extend: (props) => {
+        const color = getColor(props, 'ButtonSecondaryHoverBorderColor');
+        return `
+          :hover {
+            box-shadow: 0px 0px 0px 1px ${color};
+          }
+        `;
+      },
+    },
+    size: {
+      small: {
+        border: {
+          radius: '2px',
+        },
+      },
+      medium: {
+        border: {
+          radius: '4px',
+        },
+      },
+      large: {
+        border: {
+          radius: '8px',
+        },
+      },
+    },
+  },
+  checkBox: {
+    color: 'CheckBoxCheckedBorderColor',
+    border: {
+      color: 'CheckBoxBorderColor',
+      width: '1px',
+    },
+    check: {
+      thickness: '2px',
+      radius: '4px',
+    },
+    hover: {
+      border: {
+        color: 'CheckBoxHoverBorderColor',
+      },
+    },
+  },
+  heading: {
+    extend: (props) => {
+      return {
+        color: getColor(props, `Heading${props?.level}Color`),
+      };
+    },
+  },
   icon: {
     size: {
       small: '16px',
@@ -7,6 +119,11 @@ const grommetComponents = {
       xlarge: '96px',
     },
     extend: undefined,
+  },
+  layer: {
+    overlay: {
+      background: 'LayerOverlayBackground',
+    },
   },
   paragraph: {
     small: {
@@ -40,132 +157,32 @@ const grommetComponents = {
       color: 'text',
     },
   },
-  heading: {
-    extend: (props) => {
-      const headingKey = `heading${props?.level}`;
-      const color = props?.theme?.global?.colors?.[headingKey];
-
-      return {
-        color,
-      };
-    },
-  },
-  layer: {
-    overlay: {
-      background: 'rgba(0, 0, 0, 0.5)',
-    },
-  },
-  anchor: {
-    fontWeight: 400,
-    color: 'link',
-    hover: {
-      textDecoration: 'none',
-    },
-    extend: (props) => {
-      const activeColor = props?.theme?.global?.colors?.['active-link'];
-      const hoverColor = props?.theme?.global?.colors?.['hovered-link'];
-
-      return `
-        :hover {
-          color: ${hoverColor}
-        }
-        &.active {
-          color: ${activeColor}
-        }
-      `;
-    },
-  },
-  button: {
-    primary: {
-      background: { color: 'primary-button' },
-      border: { color: 'primary-button', width: '1px', radius: '4px' },
-      color: 'primary-button-text',
-      extend: (props) => {
-        return `
-          :hover {
-            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['primary-button-border']};
-          }
-        `;
-      },
-    },
-    secondary: {
-      background: { color: 'secondary-button' },
-      border: { color: 'secondary-button', width: '1px', radius: '4px' },
-      color: 'secondary-button-text',
-      extend: (props) => {
-        return `
-          :hover {
-            box-shadow: 0px 0px 0px 2px ${props?.theme?.global?.colors?.['secondary-button-border']};
-          }
-        `;
-      },
-    },
-    default: {
-      background: { color: 'default-button' },
-      border: {
-        color: 'default-button-border',
-        width: '1px',
-        radius: '4px',
-      },
-      color: 'default-button-text',
-      extend: (props) => {
-        return `
-          :hover {
-            box-shadow: 0px 0px 0px 2px currentColor;
-          }
-        `;
-      },
-    },
-    hover: {
-      primary: {},
-      secondary: {},
-      default: {
-        border: {
-          color: 'default-button-text',
-        },
-      },
-    },
-    size: {
-      small: {
-        border: {
-          radius: '2px',
-        },
-      },
-      medium: {
-        border: {
-          radius: '4px',
-        },
-      },
-      large: {
-        border: {
-          radius: '8px',
-        },
-      },
-    },
-  },
-
   tab: {
-    color: 'default-button-text',
+    color: 'TabColor',
     active: {
-      color: 'default-button-text',
+      color: 'TabActiveColor',
     },
     hover: {
-      color: { light: 'default-button-text' },
+      // color: { light: 'TabHoverColor' },
+      color: 'TabHoverColor',
     },
 
     border: {
-      color: {
-        light: 'transparent',
-      },
+      // color: {
+      //   light: 'TabBorderColor',
+      // },
+      color: 'TabBorderColor',
       active: {
-        color: {
-          light: 'default-button-text',
-        },
+        // color: {
+        //   light: 'TabActiveBorderColor',
+        // },
+        color: 'TabActiveBorderColor',
       },
       hover: {
-        color: {
-          light: 'default-button-border',
-        },
+        // color: {
+        //   light: 'TabHoverBorderColor',
+        // },
+        color: 'TabHoverBorderColor',
       },
     },
   },
@@ -174,20 +191,20 @@ const grommetComponents = {
 const customComponents = {
   appShell: {
     sidebar: {
-      background: 'shade-8',
+      background: 'AppShellSidebarBackgroundColor',
     },
     nav: {
       menu: {
-        background: 'shade-8',
+        background: 'AppShellNavMenuBackgroundColor',
       },
       link: {
-        color: 'white',
+        color: 'AppShellNavLinkColor',
       },
       active: {
-        color: 'white',
+        color: 'AppShellNavActiveColor',
       },
       icon: {
-        color: 'white',
+        color: 'AppShellNavIconColor',
       },
     },
   },
