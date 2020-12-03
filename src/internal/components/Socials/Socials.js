@@ -14,7 +14,7 @@ export default function Socials({
   ...props
 }) {
   const theme = useContext(ThemeContext);
-  console.log(theme);
+
   return (
     <Box
       direction="row"
