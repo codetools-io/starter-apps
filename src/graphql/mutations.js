@@ -11,6 +11,9 @@ export const createBookmark = /* GraphQL */ `
       componentId
       categoryId
       moduleId
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
       owner
@@ -27,6 +30,9 @@ export const updateBookmark = /* GraphQL */ `
       componentId
       categoryId
       moduleId
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
       owner
@@ -43,6 +49,9 @@ export const deleteBookmark = /* GraphQL */ `
       componentId
       categoryId
       moduleId
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
       owner
