@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Heading, List, Markdown, Paragraph, Text } from 'grommet';
+import { Box, Grid, List, Markdown, Paragraph, Text } from 'grommet';
 
 import DocsCard from './DocsCard';
 
